@@ -1,0 +1,5 @@
+dispatch : 派发
+
+trigger : 触发，扳机
+
+post : 快速

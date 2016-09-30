@@ -1,0 +1,90 @@
+http://192.168.13.12/Bonobo.Git.Server/CCDP_Android_onLine.git
+git@github.com:jimole775/studyNote
+
+vim 		#创建并编辑文件
+
+rm 		#删除文件
+rmdir 		#删除文件夹
+ls -all 	#查看所有文件
+ls -all ～/.ssh
+		#查找所有文件，过滤出以.ssh结尾的文件
+cd 		#进入下级目录
+cd .. 		#返回上级
+mkdir		#创建文件夹	
+
+git status 	#文件监听状态
+git add 	#添加暂存文件 ||保存最新版本
+git reset HEAD <filename>
+		#取消某个文件的暂存
+
+git commit -a -m "write something mark here"    
+		#提交，并跳过审查（-a）
+git commit --amend 
+		#重新提交
+
+git remote -v 
+		#查看当前的远程仓库
+
+git remote add [shortname] [url]
+		#添加新的远程仓库，shortname给项目定义别名，如果不定义，统一为origin
+git remote show [shortname] 
+		#查看shortname项目的信息
+git fetch [shortname]
+		#从远程仓库抓取本地没有的数据		
+
+git log --since=2.weeks  
+		#输出最近两个星期的日志
+
+git reset -hard <branchName/tag/commitID> 	
+		#返回指定的commit状态，包括本地文件
+
+git reset -soft <branchName/tag/commitID> 	
+		#返回指定的commit状态，不包括本地文件
+
+git branch 	#查看现在本地分支情况
+
+git branch -r 	#查看服务器端分支情况
+
+git branch <branchName> 			
+		#创建一个名为branchName的新分支
+
+git branch -d <branchName> 			
+		#删除一个名为branchName的旧分支
+
+git branch -m <oldBranchName> <newBranchName> 	
+		#将名为oldBranchName的分支名称修改为newBranchName
+
+git branch -m <newBranchName> 			
+		#将正在工作分支名称修改为newBranchName
+
+git checkout -- <filename>
+		#取消修改
+git checkout <localBranchName> 			
+		#切换到名为localBranchName的本地分支上
+
+git checkout <remoteBranchName> 		
+		#切换到名为remoteBranchName的远程分支上，此时未新建分支，而是处于一个名为no branch的临时分支上，还需要使用git branch -b 来创建一个新分支并将该临时分支挂接到新分支上
+
+git checkout -b <branchName> 			
+		#创建一个名为branchName的新分支，并切换到该分支上
+
+git merge <branchName> 				
+		#将名为branchName的分支合并到当前所处在的分支上
+
+git pull 	#从服务器的仓库中获取代码，和本地代码合并
+
+git push 	#将本地代码推送到服务器的仓库中
+
+git push -f 	#强制将本地代码推送到服务器的仓库中，用来推送本地index和服务器index有矛盾的分支
+
+git push origin --delete <branchName> 		
+		#删除名为branchName的远程分支
+
+git clone <userName>@<serviceAddress>:<serviceProjectDirectory/projectName> <localProjectDirectory>/ 
+		#从服务器端克隆项目到本地
+
+ssh-keygen	#生成秘匙操作
+ssh -T git@github.com 
+		#以ssh方式尝试连接服务器
+ssh -T -v git@github.com 
+		#以ssh方式尝试连接服务器,并显示细节

@@ -1,0 +1,5 @@
+1，动画事件如果不生效，可以尝试添加setTimeout事件。
+
+2，当img元素width和height同时改变时，动画会不生效，所以只取其中一个值也可以达到相同效果
+
+3, transition属性并不适用于width:auto   height:auto;这种值.保守估计,这种动画效果和JQ的 animation() 方法逻辑类似,不过渲染方法不同而已

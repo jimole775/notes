@@ -1,0 +1,8 @@
+JQ滚动条滚动到【底部】可以使用scrollTop($(id)[0].scrollHeight)达到效果
+		到【顶部】可以使用scrollTop(0)达到效果
+
+
+或者使用锚链接达到效果：
+		<a href="#t1"></a>		//锚链接
+
+		<a name="t1"></a>		//链接目标

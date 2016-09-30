@@ -1,0 +1,24 @@
+/**
+ * Created by Andy on 2016/8/25.
+ */
+
+//在JS里面，可以直接使用Modernizr对象监听相对应的元素有没有支持；
+    if(Modernizr.canvas){
+        //do something
+    }else{
+        //do something
+    }
+
+
+//如果在CSS里面，可以使用 点 符号 加上驼峰形式的CSS属性 外加 ID 或者 CLASS 给相应的元素 添加样式，
+    .borderradius #id{
+        borderr-adius:"10px";
+    }
+
+    .borderradius .class{
+        borderr-adius:"10px";
+    }
+
+    .no-borderradius .class{            //不支持时，使用no-xxxxx
+        border:none;
+    }

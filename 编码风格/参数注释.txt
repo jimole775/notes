@@ -1,0 +1,9 @@
+样例：
+
+  	* @param {String} id the error ID that maps to an ID on a web page.
+     	* @param {String} message human readable error.
+     	* @param {Error} [err] the original error, if there is one.
+     	*
+     	* @returns {Error}
+
+参数说明 已经按顺序排列，所以，每行注释不需再带参数名，直接标注需要的实参类型；最后再标明输出类型
