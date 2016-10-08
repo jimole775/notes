@@ -1,0 +1,5 @@
+每一个功能模块，都有一个index.js；
+其主要功能是配置路由；
+$stateprovider.state("tab.conversations",{absteact:true,url:'/conversation',views:{'tab-converstions':require('./main')}})；
+
+url可以使用变量，留意如何实现

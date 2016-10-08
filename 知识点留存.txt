@@ -1,0 +1,17 @@
+1.要登录路由器的时候本地IP必须改为动态获取
+
+2.MEAN.IO
+3.Angular.js
+4.Node.js
+5.MongoDB
+6.Express for Node.js
+
+
+7.var window["document"] = (function(){return function(){}})();
+
+区别于 var func = window["document"];
+       func = (function(){return function(){}})();
+
+
+
+8.css的block和inline的区别：--inline内容底部对其，--block内容顶部对其

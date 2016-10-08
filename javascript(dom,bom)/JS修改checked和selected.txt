@@ -1,0 +1,39 @@
+
+
+=================================================§checked值修改的机制§=======================================================
+
+修改checked 的方法 
+if($('#ckAll ').attr('checked') == 'checked'){
+                
+$('#ckAll').removeAttr('checked');
+            
+}else{
+                
+$('#ckAll').attr('checked','checked');
+            
+}
+
+
+
+************在宝马编程项目中，拼接字串形式的标签元素，使用prop("checked",[false/true])无效？？
+
+************在chrome浏览器，使用.prop("checked","") .prop("checked","checked") 能生效，使用.attr("checked","checked").attr("checked",[true/false])都失效 (JQ版本1.10)
+
+
+::总结 - 建议全部使用dom方法（element.checked = ["checked"/""];），不要使用JQ方法 去修改checked值
+::远程 - 既然用JS修改checked值无法触发change监听函数，那就直接使用$(id).click()方式实现虚拟点击；
+
+
+
+
+====================================================§chenge事件触发机制§========================================================
+
+
+1,radio   -- 当在radio上面监听时，必须是被选中的时候才会触发监听事件，如果是取消选择的话，豪无反应
+2，checkbox  -- 基本每次改变都会触发监听事件；
+3,inputText  -- 触发的时候必须在 输入框 失去焦点时；
+4，inputNuber  -- 将不会触发，所以，对输入框的监听，最后自己写一个方法；
+：：总结，也就是说，如果是点击input标签，基本都会触发change事件，但是如果只是label的话，radio只有在checked为true时生效
+
+
+

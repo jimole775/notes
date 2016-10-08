@@ -1,0 +1,6 @@
+关于路由跳转并传送ID；
+$state.go('www.url.com',{params:aaa});		//在路径后加入参数对象
+$state('url',{url:'www.url.com:params'})   	//定义路径时加入参数
+
+调用：	var get=$stateParams.params;		//通过$stateParams注入得到参数
+console.log(get)		//此时输出aaa;

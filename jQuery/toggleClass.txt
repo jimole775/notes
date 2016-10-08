@@ -1,0 +1,3 @@
+$(ele).toggleClass("className");	//有则删，无则加；
+
+$(ele).toggleClass("className",bolean);	//根据开关决定增或删

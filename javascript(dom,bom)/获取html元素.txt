@@ -1,0 +1,10 @@
+
+
+document.documentElement === html;
+
+document.doctype === <!DOCTYPE html>
+
+document.firstChild === <!DOCTYPE html>		//所以说document下的第一个元素不是html
+
+document.firstElementChild === html;
+

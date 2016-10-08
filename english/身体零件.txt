@@ -1,0 +1,52 @@
+eye
+ear
+mouth
+nose
+face
+cheek
+hair
+
+Ã¼Ã«		//eyebrow	
+ºú×Ó		//mustache
+ÏÂ°Í		//chin
+ÏÂò¢		//jaw
+È§¹Ç		//cheekbone||marlar
+Í«¿×		//pupilla
+
+tooth
+lip
+tongue
+
+arm
+hand
+finger
+leg
+foot
+toe
+nail		//Ö¸¼×£¬Öº¼×
+
+
+skin
+villus		//ÈÞÃ«
+
+
+
+blood
+blood vessel		//Ñª¹Ü
+
+
+ÐÄ		//heart
+¸Î		//hepar
+Æ¢		//spleen
+·Î		//lungs
+Éö		//kidney
+Î¸		//stomach
+
+
+ÐØ		//chest
+Èé·¿		//bosom
+¸¹		//abdomen
+Ñü		//waist
+¶Ç		//belly
+Æ¨¹É		//bottom
+¸ØÃÅ		//anus

@@ -1,0 +1,4 @@
+increase
+reduce
+time
+divide

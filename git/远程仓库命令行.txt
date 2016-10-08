@@ -1,0 +1,16 @@
+
+查看远程仓库：$ git remote -v
+
+添加远程仓库：$ git remote add [name] [url]
+
+删除远程仓库：$ git remote rm [name]
+
+修改远程仓库：$ git remote set-url --push [name] [newUrl]
+
+拉取远程仓库：$ git pull [remoteName] [localBranchName]
+
+推送远程仓库：$ git push [remoteName] [localBranchName]
+
+查看项目的信息: $ git remote show [remoteName] 
+
+显示远程分支: $ git remote show
