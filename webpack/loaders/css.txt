@@ -1,0 +1,3 @@
+npm install css-loader style-loader --save-dev
+
+{test:/\.css$/,loader:"style!css"}
