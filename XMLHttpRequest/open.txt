@@ -1,0 +1,2 @@
+//ทรฮสบ๓ฬจ
+open(method,url,sync)
