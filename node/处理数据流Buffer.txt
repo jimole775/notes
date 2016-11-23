@@ -10,18 +10,18 @@ req.on('data' , function(chunk){
     var rems = [];
 
     for(var i=0;i<chunk.length;i++){
-        if(chunk[i]==13 && chunk[i+1]==10){ //13和10代表\r \n，图片文件流有头和脚，通过\r\n标记分割
+        if(chunk[i]==13 && chunk[i+1]==10){
             num++;
             rems.push(i);
 
             if(num==4){
-                start = i+2;//每1byte解析一次
+                start = i+2;
                 isStart = true;
 
                 var str = (new Buffer(imgsays)).toString();
                 filename = str.match(/filename=".*"/g)[0].split('"')[1];
                 path = './databox/'+filename;
-                ws = fs.createWriteStream(path);//使用文件流工具
+                ws = fs.createWriteStream(path);
 
             }else if(i==chunk.length-2){    //说明到了数据尾部的\r\n
                 end = rems[rems.length-2];
@@ -35,6 +35,13 @@ req.on('data' , function(chunk){
     }
 
     if(isStart){
-        ws.write(chunk.slice(start , end));
+        ws.write(chunk.slice(start, end));
     }
+});
+
+req.on("end",function(){
+    ws.end();
+    console.log("保存"+filename+"成功");
+    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8'});
+    res.end('<div id="path">'+path+'</div>');
 });
