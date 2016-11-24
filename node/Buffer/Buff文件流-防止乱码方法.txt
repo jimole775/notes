@@ -23,4 +23,4 @@ readStream.on('end', function () {
 });
 
 
-//以上方法被集成在源方法 Buffer.concat(Ary,length)
+//以上方法被集成在源方法 Buffer.concat(Ary,bufferlength)
