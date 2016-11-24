@@ -1,4 +1,5 @@
-var ws = fs.createWriteStream(path);
+var ws = fs.createWriteStream(path);  //需要在流状态外面创建
+
 ws.write(chrunk,"utf-8");
 
 ws.end();//标记结束写文件
