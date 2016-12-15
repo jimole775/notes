@@ -49,39 +49,6 @@ sudo chmod  775 package.json
 
 
 
-
-
-
-=========================§ES语法支持§=========================
-
-可以安装 balbel-loader
-    npm install balbel-loader balbel-core balbel-preset-es2015 --save-dev
-    npm install --save babel-polyfill  //低版本浏览器兼容工具
-安装完成之后，配置webpack.config.js
-    module.exports = {
-      entry:{
-          app:["./main.js"]
-      },
-      ouput:{
-          filename:"bundle.js"
-      },
-
-      module:{
-	  loaders:[{
-		test:/\.css$/,   		//用来匹配相对应文件的正则表达式
-		loader:'style!css',   		//告诉webpack要利用哪种加载器来处理test所匹配的文件
-		loaders:["style-loader","css-loader"]   //两种加载器的用法
-		exclude:/node_modules/		//避免外部文件也进行预编译	
-	}]
-
-      }
-
-    }
-
-
-
-
-
 =========================§加载CSS和IMG§=========================
 
 1，首先，安装必要的加载器  css-loader img-loader style-loader
