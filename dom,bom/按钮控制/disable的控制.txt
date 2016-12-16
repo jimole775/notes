@@ -1,0 +1,36 @@
+
+disabled只对input select有用,
+所以，在angular控件中，ng-disabled只能使用在input元素中
+
+
+而button或者其他元素，
+可以使用css属性，pointer-events: none;达到同样效果
+
+-------------------------|分割线|---------------------------
+设置规则：
+
+jq:	
+==============§实现§===============
+$().attr("disabled",""); ****注意和prop的区别****
+$().attr("disabled","disabled");
+$().attr("disabled",true);
+
+$().prop("disabled",true); 
+$().prop("disabled","disabled");
+
+================§取消§================
+$().attr("disabled",false);
+
+$().prop("disabled",""); ****注意和attr的区别****
+$().prop("disabled",false);
+
+
+-------------------------|分割线|---------------------------
+angular:
+ng-disabled="{[false|true]}";	//判断式返回的boolean值
+
+
+-------------------------|分割线|-----------------------------
+js:
+element.disabled = "{[false|true]}";	//判断式返回的boolean值
+
