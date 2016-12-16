@@ -1,0 +1,6 @@
+track by $index  //过滤掉ng-repeat中的重复项
+
+orderBy:user.idnex //升序
+orderBy:user.idnex:'desc' //升序
+
+注意前提：track by 和 orderBy 不能共用于一个指令
