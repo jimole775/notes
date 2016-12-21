@@ -1,15 +1,20 @@
 
-=========================§ES语法支持§=========================
+=========================§安装§=========================
 
 可以安装 balbel-loader
     npm install balbel-loader balbel-core balbel-preset-es2015 --save-dev
     npm install --save babel-polyfill  //低版本浏览器兼容工具
 
-
-//balbel-preset-es2015 属于babel6翻译插件；
+//balbel-loader balbel-core 属于webpack的加载器插件；
+//balbel-preset-es2015 属于babel6翻译插件；（可单独安装，手动翻译:babel es6.js --watch --out-file es5.js）
 //babel-polyfill 属于版本兼容插件；
+
+
+
+=========================§配置§=========================
+
 //插件安装完成之后需要配置运行环境；
-//如果使用webpack进行翻译，就使用以下的配置，
+//如果使用webpack进行翻译，就使用以下的配置:
 
     module.exports = {
       entry:{
