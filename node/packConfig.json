@@ -1,0 +1,9 @@
+{
+  "inject":[
+    "VariablesMgr.js",
+    "YHTool.js",
+    "LoadingAnimation.js",
+    "RemoteActive.js",
+    "ScrollInit.js"
+  ]
+}
