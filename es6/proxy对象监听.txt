@@ -1,0 +1,12 @@
+
+var _obj = {name:"dude",age:"21"};
+var interceptor = {  //随便对象名	
+	set:function(){	//必备设置，
+		"use strict";
+		console.log("is changed!");
+	}
+};
+
+_obj = new Proxy(_obj,interceptor);  //只调用对象
+
+_obj.age = 25;
