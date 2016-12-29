@@ -1,0 +1,11 @@
+//这种方法可以实时监听变量状态；用于按钮点击的状态关联比较合适
+
+	$scope.popState = false;
+	$scope.clickTrigger = function(){
+		$scope.popState = !$scope.popState;
+		$scope.$emit("popState");
+	};
+
+	$rootScope.$on("popState",function(scope){
+		$scope.popState = scope.targetScope[scope.name];
+	});
