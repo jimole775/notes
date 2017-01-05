@@ -10,3 +10,7 @@ var interceptor = {  //随便对象名
 _obj = new Proxy(_obj,interceptor);  //只调用对象
 
 _obj.age = 25;
+
+
+
+***//在chrome,最新firefox都可以正常运行,Proxy属于全局对象,在ie,node_repl(可能就旧版的node的原因)都报Proxy未定义,
