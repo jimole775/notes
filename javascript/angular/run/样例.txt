@@ -1,0 +1,18 @@
+说明：此样例用来监听每次路由跳转时，验证用户的权限！
+
+angular.module("app",[]);
+
+app.run(function($rootScope,AuthService){
+	$rootScope.$on("$routeChangeStart",function(evt,next,current){
+		//如果用户未登录
+		if(!AuthService.userLoggedIn()){
+			if(next.templateUrl === "login.html"){
+				//已经转向登录路由因此无需重定向
+			}else{
+				$location.path("/login");
+			}
+		}
+	
+	})
+
+})
