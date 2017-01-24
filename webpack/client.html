@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    var ws = new WebSocket("ws://192.168.1.26:8000");
+
+</script>
+<button onclick="addPhrase()">asdasdasd</button>
+<script>
+    var ws = new WebSocket("ws://192.168.1.26:8000");
+    ws.onopen = function(res){
+        console.log(res);
+        console.log("握手成功");
+    };
+    ws.onerror = function(e){
+        console.log(e);
+    };
+    ws.onmessage = function(res){
+      console.log(res);
+    };
+    function addPhrase(){
+        ws.send(Math.random().toString());
+    }
+</script>
+</body>
+</html>
