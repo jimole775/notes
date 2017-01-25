@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="random" onclick="addPhrase()">发送随机数</button>
+<script>
+    (function () {
+        var ws = new WebSocket("ws://192.168.1.26:81");
+        ws.onopen = function (res) {
+            console.log(res);
+            console.log("握手成功");
+        };
+        ws.onerror = function (e) {
+            console.log(e);
+        };
+        ws.onmessage = function (res) {
+            document.body.innerHTML += res.data + "<br>";
+        };
+        window.addPhrase = function () {
+            var _random = Math.random().toString();
+            document.getElementById("random").innerText = "发送随机数:" + _random;
+
+            ws.send(document.cookie + "&" + _random);
+        }
+
+    })()
+</script>
+</body>
+</html>
