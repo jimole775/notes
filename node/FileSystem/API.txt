@@ -1,0 +1,7 @@
+fs.mkdir()	//创建文件夹
+fs.mkdirSync()	//同步创建文件夹
+fs.writeFile()	//写文件
+fs.writeStream()//写文件流
+fs.readFile()	//读文件
+fs.readStream()	//读文件流
+fs.readFileSync()//同步读取文件；

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            width:1000px;
+            margin:0 auto;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            line-height: 18px;
+            color: #333333;
+            background-color: #ffffff;
+        }
+        table {
+            max-width: 100%;
+            background-color: transparent;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        .toolTable {
+            text-align: center;
+            line-height: 36px;
+            border-collapse: collapse;
+            border: none;
+            margin: 10px 0 20px 0;
+        }
+        .table {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+        .table th, .table td {
+            padding: 8px;
+            line-height: 18px;
+            text-align: left;
+            vertical-align: top;
+            border-top: 1px solid #dddddd;
+        }
+        .table tbody tr:hover td, .table tbody tr:hover th {
+            background-color: #f5f5f5;
+        }
+        .toolTable th, .toolTable td {
+            border: solid #ccc 1px;
+        }
+        dl {
+            margin-bottom: 18px;
+        }
+        #font_area dt {
+            color: #A00;
+            font-size: 15pt;
+            margin: 20px 0 15px 0;
+        }
+        dt {
+            font-weight: bold;
+            line-height: 17px;
+        }
+    </style>
+</head>
+<body>
+<div id="font_area">
+    <dl>
+        <dt>Georgia </dt>
+        <dd style="font-family: Georgia"><span style="font-size: 26px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(26px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 22px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(22px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span> </dd>
+        <dt>Impact </dt>
+        <dd style="font-family: Impact"><span style="font-size: 26px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(26px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 22px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(22px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span> </dd>
+        <dt>Verdana </dt>
+        <dd style="font-family: Verdana"><span style="font-size: 24px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(24px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 20px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(20px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Trebuchet MS </dt>
+        <dd style="font-family: Trebuchet MS"><span style="font-size: 24px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(24px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 20px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(20px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>微软雅黑 </dt>
+        <dd style="font-family: Microsoft YaHei, '微软雅黑'"><span style="font-size: 24px">24px 微软雅黑 中文字体 <strong>加粗中文字体 ©一方天</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(24px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 20px">20px 微软雅黑 中文字体 <strong>加粗中文字体 ©一方天</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(20px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span> </dd>
+        <dt>宋体 </dt>
+        <dd style="font-family: '宋体'"><span style="font-size: 26px">26px 宋体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(26px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 18px">18px 宋体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>黑体 <small><font size="2">* 慎用加粗</font></small> </dt>
+        <dd style="font-family: '黑体'"><span style="font-size: 26px">26px 黑体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(26px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 18px">18px 黑体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+    </dl>
+    <a id="nonWidthFonts" name="nonWidthFonts"></a>
+    <h2>英文非等宽字体</h2>
+    <dl>
+        <dt>Arial </dt>
+        <dd style="font-family: Arial"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(10px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Comic Sans MS </dt>
+        <dd style="font-family: Comic Sans MS"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>10px</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Georgia </dt>
+        <dd style="font-family: Georgia"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(10px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Tahoma </dt>
+        <dd style="font-family: Tahoma"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(10px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Time News Roman </dt>
+        <dd style="font-family: Time News Roman"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Trebuchet MS </dt>
+        <dd style="font-family: Trebuchet MS"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Verdana </dt>
+        <dd style="font-family: Verdana"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 11px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(11px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(10px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+    </dl>
+    <a id="widthFonts" name="widthFonts"></a>
+    <h2>英文等宽字体</h2>
+    <dl>
+        <dt>Courier New </dt>
+        <dd style="font-family: Courier New"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Hei </dt>
+        <dd style="font-family: Hei"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>Monaco </dt>
+        <dd style="font-family: Monaco"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>simhei </dt>
+        <dd style="font-family: simhei"><span style="font-size: 18px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(18px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 16px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(16px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+    </dl>
+    <a id="chineseFonts" name="chineseFonts"></a>
+    <h2>中文字体</h2>
+    <dl>
+        <dt>宋体 </dt>
+        <dd style="font-family: '宋体'"><span style="font-size: 14px">14px 宋体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">12px 宋体 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>微软雅黑 </dt>
+        <dd style="font-family:'Microsoft YaHei', '微软雅黑'"><span style="font-size: 14px">14px 微软雅黑 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(14px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+    <span style="font-size: 12px">12px 微软雅黑 中文字体 <strong>加粗中文字体</strong><br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ <em>(12px)</em><br>
+    abcdefghijklmnopqrstuvwxyz 0123456789</span><br>
+        </dd>
+        <dt>MingLiU 11px 中文字 </dt>
+        <dd style="font-family: MingLiU; font-size: 11px">11px清晰中文字体 <strong>加粗中文字体</strong> <em>(11px)</em> </dd>
+        <dt>PMingLiU 11px 中文字 </dt>
+        <dd style="font-family: PMingLiU; font-size: 11px">11px清晰中文字体 <strong>加粗中文字体</strong> <em>(11px)</em> </dd>
+        <dt>常见11px使用范例：Tahoma,Verdana,Arial,PMingLiu,MingLiu </dt>
+        <dd style="font-family: tahoma, verdana, arial, PMingLiu, MingLiu; font-size: 11px">11px清晰中文字体 <strong>加粗中文字体</strong> <em>(11px)</em> </dd>
+        <dt>MS UI Gothic 10px 中文字 </dt>
+        <dd style="font-family: MS UI Gothic; font-size: 10px">據說這種字體繁體中文會顯示得稍微好一點，但都看不怎麽清楚<em>(10px)</em> </dd>
+    </dl>
+    <div style="text-align: left">&nbsp;</div>
+</div>
+</body>
+</html>
