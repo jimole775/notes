@@ -11,7 +11,3 @@
 
 区别于 var func = window["document"];
        func = (function(){return function(){}})();
-
-
-
-8.css的block和inline的区别：--inline内容底部对其，--block内容顶部对其
