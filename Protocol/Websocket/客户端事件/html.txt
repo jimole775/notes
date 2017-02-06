@@ -1,0 +1,5 @@
+var ws = new WebSocket("ws://192.168.1.26:81");
+ws.onopen 	//成功握手之后的事件
+ws.onerror 	//错误事件
+ws.onmessage	//接收数据事件
+ws.send		//发送数据事件
