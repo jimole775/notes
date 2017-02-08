@@ -2,4 +2,6 @@ dispatch : 派发
 
 trigger : 触发，扳机
 
-post : 快速
+post : 快速行进,邮件，邮寄，粘贴，岗位
+
+algorithm : 算法，计算程序

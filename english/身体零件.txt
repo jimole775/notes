@@ -1,29 +1,37 @@
-eye
-ear
-mouth
-nose
-face
-cheek
-hair
-
-Ã¼Ã«		//eyebrow	
-ºú×Ó		//mustache
-ÏÂ°Í		//chin
-ÏÂò¢		//jaw
-È§¹Ç		//cheekbone||marlar
-Í«¿×		//pupilla
-
-tooth
-lip
-tongue
 
 arm
-hand
+
+blood
+blood vessel		//Ñª¹Ü
+
+cheek
+
+eye
+ear
+
+face
 finger
-leg
 foot
-toe
+
+hand
+hair
+
+knee
+	
+lip
+leg
+
+mouth
+
+nose
 nail		//Ö¸¼×£¬Öº¼×
+
+tongue
+toe
+tooth
+
+
+
 
 
 skin
@@ -31,8 +39,6 @@ villus		//ÈÞÃ«
 
 
 
-blood
-blood vessel		//Ñª¹Ü
 
 
 ÐÄ		//heart
@@ -50,3 +56,11 @@ blood vessel		//Ñª¹Ü
 ¶Ç		//belly
 Æ¨¹É		//bottom
 ¸ØÃÅ		//anus
+
+
+Ã¼Ã«		//eyebrow	
+ºú×Ó		//mustache
+ÏÂ°Í		//chin
+ÏÂò¢		//jaw
+È§¹Ç		//cheekbone||marlar
+Í«¿×		//pupilla
