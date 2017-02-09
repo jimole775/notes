@@ -1,2 +1,21 @@
-1,push到远程服务器的时候，一般情况下只push master分支，
-  如果需要push其他分支，必须使用 -u 命令；
+1，创建远程分支
+   push到远程服务器的时候；
+   push带的参数是哪个分支名，就push到哪个分支；
+   如果要push的分支远程仓库没有，必须使用 -u 命令，相当于创建远程分支。
+
+exp:
+$git push -u origin test //创建并上传分支数据
+
+2，修改远程分支的关联；
+   如果需要把本地的test分支当成远程分支master的版本；
+   需要用到 : 命令。
+
+exp:
+$git push origin test:master //关联test和master
+
+3，删除远程分支；
+   和修改分支关联一样，使用 : 命令，不过不需要在键入本地分支名；
+   实际的效果相当于，把远程分支指向一个空的分支，就是删除了。  
+
+exp:
+$git push origin :test //删除远程的test分支   
