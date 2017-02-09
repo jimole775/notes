@@ -6,5 +6,6 @@ post : 快速
 
 algorithm : 算法，计算程序
 
+compute:計算
 
 delivered:(v)发动，发表，递送，交付
