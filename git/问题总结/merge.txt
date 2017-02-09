@@ -1,8 +1,0 @@
-1,merge命令只能是 HEAD 较早版本的 merge 较迟版本的。
-
-exp: 
-//如果master分支的最后修改版本为A，test分支的最后修改版本为B
-$git master merge test  //正确
-$git test merge master	//already up-to-date
-
-	
