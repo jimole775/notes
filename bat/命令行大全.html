@@ -1,0 +1,1825 @@
+<style>
+    .item,.node, i {
+        font-family: Verdana, sans-serif;
+        color: #595959;
+        font-size: 9pt;
+    }
+
+    i {
+        margin-left:50px;
+        font-style: normal;
+    }
+    .node{
+        font-size: 15pt;
+        line-height: 100%;
+    }
+    .desc {
+        font-family: 宋体;
+        color: #595959;
+        font-size: 9pt;
+    }
+
+</style>
+<div class="main">
+    <div id="article_details" class="details">
+        <div class="article_title">
+            <h1>
+        <span class="link_title">
+        windows批处理命令大全 </span>
+            </h1>
+        </div>
+        <div id="article_content" class="article_content">
+            <p><span class="node">1 echo </span>
+                <span class="desc">和</span>
+                <span class="node"> @</span>
+            </p>
+
+            <p>
+                <span class="item">@</span>
+                <span class="desc"><i>#</i>关闭单行回显</span>
+            </p>
+
+            <p><span
+                    class="item">echo off </span><span
+                    class="desc"><i>#</i>从下一行开始关闭回显</span></p>
+            <p><span
+                    class="item">@echo off </span><span
+                    class="desc"><i>#</i>从本行开始关闭回显。一般批处理第一行都是这个</span></p>
+
+            <p><span
+                    class="item">echo on </span><span
+                    class="desc"><i>#</i>从下一行开始打开回显</span></p>
+
+            <p><span
+                    class="item">echo </span><span
+                    class="desc"><i>#</i>显示当前是</span><span
+                    class="item"> echo off </span><span
+                    class="desc">状态还是</span><span
+                    class="item"> echo on </span><span
+                    class="desc">状态</span></p>
+
+            <p><span
+                    class="item">echo. </span><span
+                    class="desc"><i>#</i>输出一个</span><span
+                    class="item">”</span><span
+                    class="desc">回车换行</span><span
+                    class="item">”</span><span
+                    class="desc">，空白行</span></p>
+
+            <p><span
+                    class="item"> </span><span
+                    class="desc"><i>#</i>(同</span><span
+                    class="item">echo, echo; echo+ echo[ echo] echo/ echo")</span>
+            </p>
+
+            <p><span
+                    class="node">2 errorlevel</span></p>
+
+            <p><span
+                    class="item">echo %errorlevel%</span></p>
+
+            <p><span class="desc">每个命令运行结束，可以用这个命令行格式查看返回码</span>
+            </p>
+
+            <p><span
+                    class="desc">默认值为</span><span
+                    class="item">0</span><span
+                    class="desc">，一般命令执行出错会设</span><span
+                    class="item"> errorlevel </span><span
+                    class="desc">为</span><span
+                    class="item">1</span></p>
+
+            <p><span
+                    class="node">3 dir</span></p>
+
+            <p><span
+                    class="item">dir </span><span
+                    class="desc"><i>#</i>显示当前目录中的文件和子目录</span></p>
+
+            <p><span
+                    class="item">dir /a </span><span
+                    class="desc"><i>#</i>显示当前目录中的文件和子目录，包括隐藏文件和系统文件</span></p>
+
+            <p><span
+                    class="item">dir c: /a:d </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item"> C </span><span
+                    class="desc">盘当前目录中的目录</span></p>
+
+            <p><span
+                    class="item">dir c: /a:-d </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item"> C </span><span
+                    class="desc">盘根目录中的文件</span></p>
+
+            <p><span
+                    class="item">dir c:" /b/p <i>#</i>/b</span><span
+                    class="desc">只显示文件名，</span><span
+                    class="item">/p</span><span
+                    class="desc">分页显示</span></p>
+
+            <p><span
+                    class="item">dir *.exe /s </span><span
+                    class="desc"><i>#</i>显示当前目录和子目录里所有的</span><span
+                    class="item">.exe</span><span
+                    class="desc">文件</span></p>
+
+            <p><span
+                    class="node">4 cd</span></p>
+
+            <p><span
+                    class="item">cd" </span><span
+                    class="desc"><i>#</i>进入根目录</span></p>
+
+            <p><span
+                    class="item">cd </span><span
+                    class="desc"><i>#</i>显示当前目录</span></p>
+
+            <p><span
+                    class="item">cd /d d:"sdk </span><span
+                    class="desc"><i>#</i>可以同时更改盘符和目录</span></p>
+
+            <p><span
+                    class="node">5 md</span></p>
+
+            <p><span
+                    class="item">md d:"a"b"c </span><span
+                    class="desc"><i>#</i>如果</span><span
+                    class="item"> d:"a </span><span
+                    class="desc">不存在，将会自动创建中级目录</span></p>
+
+            <p><span
+                    class="item"></span><span
+                    class="desc"><i>#</i>如果命令扩展名被停用，则需要键入</span><span
+                    class="item"> mkdir "a"b"c</span><span
+                    class="desc">。</span></p>
+
+            <p><span
+                    class="node">6 rd</span></p>
+
+            <p><span
+                    class="item">rd abc </span><span
+                    class="desc"><i>#</i>删除当前目录里的</span><span
+                    class="item"> abc </span><span
+                    class="desc">子目录，要求为空目录</span></p>
+
+            <p><span
+                    class="item">rd /s/q d:"temp </span><span
+                    class="desc"><i>#</i>删除</span><span
+                    class="item"> d:"temp </span><span
+                    class="desc">文件夹及其子文件夹和文件，</span><span
+                    class="item">/q</span><span
+                    class="desc">安静模式</span></p>
+
+            <p><span
+                    class="node">7 del</span></p>
+
+            <p><span
+                    class="item">del d:"test.txt </span><span
+                    class="desc"><i>#</i>删除指定文件，不能是隐藏、系统、只读文件</span></p>
+
+            <p><span
+                    class="item">del /q/a/f d:"temp"*.*</span></p>
+
+            <p><span class="desc">删除</span><span
+                    class="item"> d:"temp </span><span
+                    class="desc">文件夹里面的所有文件，包括隐藏、只读、系统文件，不包括子目录</span></p>
+
+            <p><span
+                    class="item">del /q/a/f/s d:"temp"*.*</span></p>
+
+            <p><span class="desc">删除</span><span
+                    class="item"> d:"temp </span><span
+                    class="desc">及子文件夹里面的所有文件，包括隐藏、只读、系统文件，不包括子目录</span></p>
+
+            <p><span
+                    class="node">8 ren</span></p>
+
+            <p><span
+                    class="item"></span></p>
+
+            <p><span
+                    class="item">ren d:"temp tmp </span><span
+                    class="desc"><i>#</i>支持对文件夹的重命名</span></p>
+
+            <p><span
+                    class="node">9 cls</span></p>
+
+            <p><span class="desc">清屏</span></p>
+
+            <p><span
+                    class="node">10 type</span></p>
+
+            <p><span class="desc">显示文件内容</span>
+            </p>
+
+            <p><span
+                    class="item">type c:"boot.ini </span><span
+                    class="desc"><i>#</i>显示指定文件的内容，程序文件一般会显示乱码</span></p>
+
+            <p><span
+                    class="item">type *.txt </span><span
+                    class="desc"><i>#</i>显示当前目录里所有</span><span
+                    class="item">.txt</span><span
+                    class="desc">文件的内容</span></p>
+
+            <p><span
+                    class="node">11 copy</span></p>
+
+            <p><span class="desc">拷贝文件</span></p>
+
+            <p><span
+                    class="item">copy c:"test.txt d:"test.bak</span>
+            </p>
+
+            <p><span class="desc">复制</span><span
+                    class="item"> c:"test.txt </span><span
+                    class="desc">文件到</span><span
+                    class="item"> d:" </span><span
+                    class="desc">，并重命名为</span><span
+                    class="item"> test.bak</span></p>
+
+            <p><span
+                    class="item">copy con test.txt</span></p>
+
+            <p><span
+                    class="desc">从屏幕上等待输入，按</span><span
+                    class="item"> Ctrl+Z </span><span
+                    class="desc">结束输入，输入内容存为</span><span
+                    class="item">test.txt</span><span
+                    class="desc">文件</span></p>
+
+            <p><span
+                    class="item">con</span><span
+                    class="desc">代表屏幕，</span><span
+                    class="item">prn</span><span
+                    class="desc">代表打印机，</span><span
+                    class="item">nul</span><span
+                    class="desc">代表空设备</span></p>
+
+            <p><span
+                    class="item">copy 1.txt + 2.txt 3.txt</span></p>
+
+            <p><span class="desc">合并</span><span
+                    class="item"> 1.txt </span><span
+                    class="desc">和</span><span
+                    class="item"> 2.txt </span><span
+                    class="desc">的内容，保存为</span><span
+                    class="item"> 3.txt </span><span
+                    class="desc">文件</span></p>
+
+            <p><span
+                    class="desc">如果不指定</span><span
+                    class="item"> 3.txt </span><span
+                    class="desc">，则保存到</span><span
+                    class="item"> 1.txt</span></p>
+
+            <p><span
+                    class="item">copy test.txt +</span></p>
+
+            <p><span class="desc">复制文件到自己，实际上是修改了文件日期</span>
+            </p>
+
+            <p><span
+                    class="node">12 title</span></p>
+
+            <p><span class="desc">设置</span><span
+                    class="item">cmd</span><span
+                    class="desc">窗口的标题</span></p>
+
+            <p><span
+                    class="item">title </span><span
+                    class="desc">新标题</span><span
+                    class="item"> </span><span
+                    class="desc"><i>#</i>可以看到</span><span
+                    class="item">cmd</span><span
+                    class="desc">窗口的标题栏变了</span></p>
+
+            <p><span
+                    class="node">13 ver</span></p>
+
+            <p><span class="desc">显示系统版本</span>
+            </p>
+
+            <p><span
+                    class="node">14 label </span><span
+                    class="desc">和</span><span
+                    class="item"> vol</span></p>
+
+            <p><span class="desc">设置卷标</span></p>
+
+            <p><span
+                    class="item">vol </span><span
+                    class="desc"><i>#</i>显示卷标</span></p>
+
+            <p><span
+                    class="item">label </span><span
+                    class="desc"><i>#</i>显示卷标，同时提示输入新卷标</span></p>
+
+            <p><span
+                    class="item">label c:system </span><span
+                    class="desc"><i>#</i>设置</span><span
+                    class="item">C</span><span
+                    class="desc">盘的卷标为</span><span
+                    class="item"> system</span></p>
+
+            <p><span
+                    class="node">15 pause</span></p>
+
+            <p><span class="desc">暂停命令</span></p>
+
+            <p><span
+                    class="node">16 rem </span><span
+                    class="desc">和</span><span
+                    class="node"> ::</span></p>
+
+            <p><span class="desc">注释命令</span></p>
+
+            <p><span class="desc">注释行不执行操作</span>
+            </p>
+
+            <p><span
+                    class="node">17 date </span><span
+                    class="desc">和</span><span
+                    class="node"> time</span></p>
+
+            <p><span class="desc">日期和时间</span>
+            </p>
+
+            <p><span
+                    class="item">date </span><span
+                    class="desc"><i>#</i>显示当前日期，并提示输入新日期，按</span><span
+                    class="item">""</span><span
+                    class="desc">回车</span><span
+                    class="item">""</span><span
+                    class="desc">略过输入</span></p>
+
+            <p><span
+                    class="item">date/t </span><span
+                    class="desc"><i>#</i>只显示当前日期，不提示输入新日期</span></p>
+
+            <p><span
+                    class="item">time </span><span
+                    class="desc"><i>#</i>显示当前时间，并提示输入新时间，按</span><span
+                    class="item">""</span><span
+                    class="desc">回车</span><span
+                    class="item">""</span><span
+                    class="desc">略过输入</span></p>
+
+            <p><span
+                    class="item">time/t </span><span
+                    class="desc"><i>#</i>只显示当前时间，不提示输入新时间</span></p>
+
+            <p><span
+                    class="node">18 goto </span><span
+                    class="desc">和</span><span
+                    class="node"> :</span></p>
+
+            <p><span class="desc">跳转命令</span></p>
+
+            <p><span
+                    class="item">:label </span><span
+                    class="desc"><i>#</i>行首为</span><span
+                    class="item">:</span><span
+                    class="desc">表示该行是标签行，标签行不执行操作</span></p>
+
+            <p><span
+                    class="item">goto label </span><span
+                    class="desc"><i>#</i>跳转到指定的标签那一行</span></p>
+
+            <p><span
+                    class="node">19 find </span><span
+                    class="desc">(外部命令)</span></p>
+
+            <p><span class="desc">查找命令</span></p>
+
+            <p><span
+                    class="item">find ""abc"" c:"test.txt</span></p>
+
+            <p><span class="desc">在</span><span
+                    class="item"> c:"test.txt </span><span
+                    class="desc">文件里查找含</span><span
+                    class="item"> abc </span><span
+                    class="desc">字符串的行</span></p>
+
+            <p><span class="desc">如果找不到，将设</span><span
+                    class="item"> errorlevel </span><span
+                    class="desc">返回码为</span><span
+                    class="item">1</span></p>
+
+            <p><span
+                    class="item">find /i “abc” c:"test.txt</span></p>
+
+            <p><span class="desc">查找含</span><span
+                    class="item"> abc </span><span
+                    class="desc">的行，忽略大小写</span></p>
+
+            <p><span
+                    class="item">find /c ""abc"" c:"test.txt</span></p>
+
+            <p><span class="desc">显示含</span><span
+                    class="item"> abc </span><span
+                    class="desc">的行的行数</span></p>
+
+            <p><span
+                    class="node">20 more </span><span
+                    class="desc">(外部命令)</span></p>
+
+            <p><span class="desc">逐屏显示</span></p>
+
+            <p><span
+                    class="item">more c:"test.txt </span><span
+                    class="desc"><i>#</i>逐屏显示</span><span
+                    class="item"> c:"test.txt </span><span
+                    class="desc">的文件内容</span></p>
+
+            <p><span
+                    class="node">21 tree</span></p>
+
+            <p><span class="desc">显示目录结构</span>
+            </p>
+
+            <p><span
+                    class="item">tree d:" </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item">D</span><span
+                    class="desc">盘的文件目录结构</span></p>
+
+            <p><span
+                    class="node">22 &amp;</span></p>
+
+            <p><span class="desc">顺序执行多条命令，而不管命令是否执行成功</span>
+            </p>
+
+            <p><span
+                    class="node">23 &amp;&amp;</span></p>
+
+            <p><span class="desc">顺序执行多条命令，当碰到执行出错的命令后将不执行后面的命令</span>
+            </p>
+
+            <p><span
+                    class="item">find ""ok"" c:"test.txt &amp;&amp; echo </span><span
+                    class="desc">成功</span></p>
+
+            <p><span
+                    class="desc">如果找到了</span><span
+                    class="item">""ok""</span><span
+                    class="desc">字样，就显示</span><span
+                    class="item">""</span><span
+                    class="desc">成功</span><span
+                    class="item">""</span><span
+                    class="desc">，找不到就不显示</span></p>
+
+            <p><span
+                    class="node">24 ||</span></p>
+
+            <p><span class="desc">顺序执行多条命令，当碰到执行正确的命令后将不执行后面的命令</span>
+            </p>
+
+            <p><span
+                    class="item">find ""ok"" c:"test.txt || echo </span><span
+                    class="desc">不成功</span></p>
+
+            <p><span
+                    class="desc">如果找不到</span><span
+                    class="item">""ok""</span><span
+                    class="desc">字样，就显示</span><span
+                    class="item">""</span><span
+                    class="desc">不成功</span><span
+                    class="item">""</span><span
+                    class="desc">，找到了就不显示</span></p>
+
+            <p><span
+                    class="node">25 |</span></p>
+
+            <p><span class="desc">管道命令</span></p>
+
+            <p><span
+                    class="item">dir *.* /s/a | find /c "".exe""</span>
+            </p>
+
+            <p><span
+                    class="desc">管道命令表示先执行</span><span
+                    class="item"> dir </span><span
+                    class="desc">命令，对其输出的结果执行后面的</span><span
+                    class="item"> find </span><span
+                    class="desc">命令</span></p>
+
+            <p><span class="desc">该命令行结果：输出当前文件夹及所有子文件夹里的</span><span
+                    class="item">.exe</span><span
+                    class="desc">文件的个数</span></p>
+
+            <p><span
+                    class="item">type c:"test.txt|more</span></p>
+
+            <p><span class="desc">这个和</span><span
+                    class="item"> more c:"test.txt </span><span
+                    class="desc">的效果是一样的</span></p>
+
+            <p><span
+                    class="node">26 &gt; </span><span
+                    class="desc">和</span><span
+                    class="item"> &gt;&gt;</span></p>
+
+            <p><span class="desc">输出重定向命令</span>
+            </p>
+
+            <p><span
+                    class="item">&gt; </span><span
+                    class="desc">清除文件中原有的内容后再写入</span></p>
+
+            <p><span
+                    class="item">&gt;&gt; </span><span
+                    class="desc">追加内容到文件末尾，而不会清除原有的内容</span></p>
+
+            <p><span class="desc">主要将本来显示在屏幕上的内容输出到指定文件中</span>
+            </p>
+
+            <p><span class="desc">指定文件如果不存在，则自动生成该文件</span>
+            </p>
+
+            <p><span
+                    class="item">type c:"test.txt &gt;prn</span></p>
+
+            <p><span class="desc">屏幕上不显示文件内容，转向输出到打印机</span>
+            </p>
+
+            <p><span
+                    class="item">echo hello world&gt;con</span></p>
+
+            <p><span
+                    class="desc">在屏幕上显示</span><span
+                    class="item">hello world</span><span
+                    class="desc">，实际上所有输出都是默认</span><span
+                    class="item"> &gt;con </span><span
+                    class="desc">的</span></p>
+
+            <p><span
+                    class="item">copy c:"test.txt f: &gt;nul</span></p>
+
+            <p><span
+                    class="desc">拷贝文件，并且不显示</span><span
+                    class="item">""</span><span
+                    class="desc">文件复制成功</span><span
+                    class="item">""</span><span
+                    class="desc">的提示信息，但如果</span><span
+                    class="item">f</span><span
+                    class="desc">盘不存在，还是会显示出错信息</span></p>
+
+            <p><span
+                    class="item">copy c:"test.txt f: &gt;nul 2&gt;nul</span>
+            </p>
+
+            <p><span class="desc">不显示</span><span
+                    class="item">”</span><span
+                    class="desc">文件复制成功</span><span
+                    class="item">”</span><span
+                    class="desc">的提示信息，并且</span><span
+                    class="item">f</span><span
+                    class="desc">盘不存在的话，也不显示错误提示信息</span></p>
+
+            <p><span
+                    class="item">echo ^^W ^&gt; ^W&gt;c:"test.txt</span>
+            </p>
+
+            <p><span class="desc">生成的文件内容为</span><span
+                    class="item"> ^W &gt; W</span></p>
+
+            <p><span
+                    class="item">^ </span><span
+                    class="desc">和</span><span
+                    class="item"> &gt; </span><span
+                    class="desc">是控制命令，要把它们输出到文件，必须在前面加个</span><span
+                    class="item"> ^ </span><span
+                    class="desc">符号</span></p>
+
+            <p><span
+                    class="node">27 &lt;</span></p>
+
+            <p><span class="desc">从文件中获得输入信息，而不是从屏幕上</span>
+            </p>
+
+            <p><span
+                    class="desc">一般用于</span><span
+                    class="item"> date time label </span><span
+                    class="desc">等需要等待输入的命令</span></p>
+
+            <p><span
+                    class="item">@echo off</span></p>
+
+            <p><span
+                    class="item">echo 2005-05-01&gt;temp.txt</span></p>
+
+            <p><span
+                    class="item">date &lt;temp.txt</span></p>
+
+            <p><span
+                    class="item">del temp.txt</span></p>
+
+            <p><span class="desc">这样就可以不等待输入直接修改当前日期</span>
+            </p>
+
+            <p><span
+                    class="node">28 %0 %1 %2 %3 %4 %5 %6 %7 %8 %9 %*</span>
+            </p>
+
+            <p><span
+                    class="desc">命令行传递给批处理的参数</span></p>
+
+            <p><span
+                    class="item">%0 </span><span
+                    class="desc">批处理文件本身</span></p>
+
+            <p><span
+                    class="item">%1 </span><span
+                    class="desc">第一个参数</span></p>
+
+            <p><span
+                    class="item">%9 </span><span
+                    class="desc">第九个参数</span></p>
+
+            <p><span
+                    class="item">%* </span><span
+                    class="desc">从第一个参数开始的所有参数</span></p>计算参数个数：IF [%~5] == [] 参数个数小于五个。
+            <p><span
+                    class="item"></span></p>
+
+            <p><span class="desc">批参数</span><span
+                    class="item">(%n)</span><span
+                    class="desc">的替代已被增强。您可以使用以下语法</span><span
+                    class="item">:</span></p>
+
+            <p><span
+                    class="item"></span></p>
+
+            <p><span
+                    class="item"> %~1 - </span><span
+                    class="desc">删除引号</span><span
+                    class="item">("")</span><span
+                    class="desc">，扩充</span><span
+                    class="item"> %1</span></p>
+
+            <p><span
+                    class="item"> %~f1 - </span><span
+                    class="desc">将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到一个完全合格的路径名</span></p>
+
+            <p><span
+                    class="item"> %~d1 - </span><span
+                    class="desc">仅将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到一个驱动器号</span></p>
+
+            <p><span
+                    class="item"> %~p1 - </span><span
+                    class="desc">仅将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到一个路径</span></p>
+
+            <p><span
+                    class="item"> %~n1 - </span><span
+                    class="desc">仅将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到一个文件名</span></p>
+
+            <p><span
+                    class="item"> %~x1 - </span><span
+                    class="desc">仅将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到一个文件扩展名</span></p>
+
+            <p><span
+                    class="item"> %~s1 - </span><span
+                    class="desc">扩充的路径指含有短名</span></p>
+
+            <p><span
+                    class="item"> %~a1 - </span><span
+                    class="desc">将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到文件属性</span></p>
+
+            <p><span
+                    class="item"> %~t1 - </span><span
+                    class="desc">将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到文件的日期</span><span
+                    class="item">/</span><span
+                    class="desc">时间</span></p>
+
+            <p><span
+                    class="item"> %~z1 - </span><span
+                    class="desc">将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩充到文件的大小</span></p>
+
+            <p><span
+                    class="item"> %~$PATH : 1 - </span><span
+                    class="desc">查找列在</span><span
+                    class="item"> PATH </span><span
+                    class="desc">环境变量的目录，并将</span><span
+                    class="item"> %1</span></p>
+
+            <p><span
+                    class="item"> </span><span
+                    class="desc">扩充到找到的第一个完全合格的名称。如果环境</span></p>
+
+            <p><span
+                    class="item"> </span><span
+                    class="desc">变量名未被定义，或者没有找到文件，此组合键会</span></p>
+
+            <p><span
+                    class="item"> </span><span
+                    class="desc">扩充到空字符串</span></p>
+
+            <p><span
+                    class="item"></span></p>
+
+            <p><span
+                    class="desc">可以组合修定符来取得多重结果</span><span
+                    class="item">:</span></p>
+
+            <p><span
+                    class="item"></span></p>
+
+            <p><span
+                    class="item"> %~dp1 - </span><span
+                    class="desc">只将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩展到驱动器号和路径</span></p>
+
+            <p><span
+                    class="item"> %~nx1 - </span><span
+                    class="desc">只将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩展到文件名和扩展名</span></p>
+
+            <p><span
+                    class="item"> %~dp$PATH:1 - </span><span
+                    class="desc">在列在</span><span
+                    class="item"> PATH </span><span
+                    class="desc">环境变量中的目录里查找</span><span
+                    class="item"> %1</span><span
+                    class="desc">，</span></p>
+
+            <p><span
+                    class="item"> </span><span
+                    class="desc">并扩展到找到的第一个文件的驱动器号和路径。</span></p>
+
+            <p><span
+                    class="item"> %~ftza1 - </span><span
+                    class="desc">将</span><span
+                    class="item"> %1 </span><span
+                    class="desc">扩展到类似</span><span
+                    class="item"> DIR </span><span
+                    class="desc">的输出行。</span></p>
+
+            <p><span
+                    class="desc">可以参照</span><span
+                    class="item"> call/? </span><span
+                    class="desc">或</span><span
+                    class="item"> for/? </span><span
+                    class="desc">看出每个参数的含意</span></p>
+
+            <p><span
+                    class="item">echo load ""%%1"" ""%%2""&gt;c:"test.txt</span>
+            </p>
+
+            <p><span class="desc">生成的文件内容为</span><span
+                    class="item"> load ""%1"" ""%2""</span></p>
+
+            <p><span class="desc">批处理文件里，用这个格式把命令行参数输出到文件</span>
+            </p>
+
+            <p><span
+                    class="node">29 if</span></p>
+
+            <p><span class="desc">判断命令</span></p>
+
+            <p><span
+                    class="item">if ""%1""==""/a"" echo </span><span
+                    class="desc">第一个参数是</span><span
+                    class="item">/a</span></p>
+
+            <p><span
+                    class="item">if /i ""%1"" equ ""/a"" echo </span><span
+                    class="desc">第一个参数是</span><span
+                    class="item">/a</span></p>
+
+            <p><span
+                    class="item">/i </span><span
+                    class="desc">表示不区分大小写，</span><span
+                    class="item">equ </span><span
+                    class="desc">和</span><span
+                    class="item"> == </span><span
+                    class="desc">是一样的，其它运算符参见</span><span
+                    class="item"> if/?</span></p>
+
+            <p><span
+                    class="item">if exist c:"test.bat echo </span><span
+                    class="desc">存在</span><span
+                    class="item">c:"test.bat</span><span
+                    class="desc">文件</span></p>
+
+            <p><span
+                    class="item">if not exist c:"windows (</span></p>
+
+            <p><span
+                    class="item"> echo </span><span
+                    class="desc">不存在</span><span
+                    class="item">c:"windows</span><span
+                    class="desc">文件夹</span></p>
+
+            <p><span
+                    class="item"> )</span>
+            </p>
+
+            <p><span
+                    class="item">if exist c:"test.bat (</span></p>
+
+            <p><span
+                    class="item"> echo </span><span
+                    class="desc">存在</span><span
+                    class="item">c:"test.bat</span></p>
+
+            <p><span
+                    class="item"> ) else (</span>
+            </p>
+
+            <p><span
+                    class="item"> echo </span><span
+                    class="desc">不存在</span><span
+                    class="item">c:"test.bat</span></p>
+
+            <p><span
+                    class="item"> )</span>
+            </p>
+
+            <p><span
+                    class="node">30 setlocal </span><span
+                    class="desc">和</span><span
+                    class="item"> endlocal</span></p>
+
+            <p><span class="desc">设置</span><span
+                    class="item">”</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">”</span><span
+                    class="desc">和</span><span
+                    class="item">”</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">”</span></p>
+
+            <p><span
+                    class="item">SETLOCAL ENABLEEXTENSIONS </span><span
+                    class="desc"><i>#</i>启用</span><span
+                    class="item">""</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="item">SETLOCAL DISABLEEXTENSIONS </span><span
+                    class="desc"><i>#</i>停用</span><span
+                    class="item">""</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="item">SETLOCAL ENABLEDELAYEDEXPANSION </span><span
+                    class="desc"><i>#</i>启用</span><span
+                    class="item">""</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="item">SETLOCAL DISABLEDELAYEDEXPANSION </span><span
+                    class="desc"><i>#</i>停用</span><span
+                    class="item">""</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="item">ENDLOCAL </span><span
+                    class="desc"><i>#</i>恢复到使用</span><span
+                    class="item">SETLOCAL</span><span
+                    class="desc">语句以前的状态</span></p>
+
+            <p><span
+                    class="item">“</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">”</span><span
+                    class="desc">默认为启用</span></p>
+
+            <p><span
+                    class="item">“</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">”</span><span
+                    class="desc">默认为停用</span></p>
+
+            <p><span
+                    class="desc">批处理结束系统会自动恢复默认值</span></p>
+
+            <p><span
+                    class="desc">可以修改注册表以禁用</span><span
+                    class="item">""</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">""</span><span
+                    class="desc">，详见</span><span
+                    class="item"> cmd /? </span><span
+                    class="desc">。所以用到</span><span
+                    class="item">""</span><span
+                    class="desc">命令扩展名</span><span
+                    class="item">""</span><span
+                    class="desc">的程</span></p>
+
+            <p><span
+                    class="desc">序，建议在开头和结尾加上</span><span
+                    class="item"> SETLOCAL ENABLEEXTENSIONS </span><span
+                    class="desc">和</span><span
+                    class="item"> ENDLOCAL </span><span
+                    class="desc">语句，以确</span></p>
+
+            <p><span
+                    class="desc">保程序能在其它系统上正确运行</span></p>
+
+            <p><span
+                    class="item">""</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">""</span><span
+                    class="desc">主要用于</span><span
+                    class="item"> if </span><span
+                    class="desc">和</span><span
+                    class="item"> for </span><span
+                    class="desc">的符合语句，在</span><span
+                    class="item"> set </span><span
+                    class="desc">的说明里有其实用例程</span></p>
+
+            <p><span
+                    class="node">31 set</span></p>
+
+            <p><span class="desc">设置变量</span></p>
+
+            <p><span
+                    class="desc">引用变量可在变量名前后加</span><span
+                    class="item"> % </span><span
+                    class="desc">，即</span><span
+                    class="item"> %</span><span
+                    class="desc">变量名</span><span
+                    class="item">%</span></p>
+
+            <p><span
+                    class="item">set </span><span
+                    class="desc"><i>#</i>显示目前所有可用的变量，包括系统变量和自定义的变量</span></p>
+
+            <p><span
+                    class="item">echo %SystemDrive% </span><span
+                    class="desc"><i>#</i>显示系统盘盘符。系统变量可以直接引用</span></p>
+
+            <p><span
+                    class="item">set p </span><span
+                    class="desc"><i>#</i>显示所有以</span><span
+                    class="item">p</span><span
+                    class="desc">开头的变量，要是一个也没有就设</span><span
+                    class="item">errorlevel=1</span></p>
+
+            <p><span
+                    class="item">set p=aa1bb1aa2bb2 </span><span
+                    class="desc"><i>#</i>设置变量</span><span
+                    class="item">p</span><span
+                    class="desc">，并赋值为</span><span
+                    class="item"> = </span><span
+                    class="desc">后面的字符串，即</span><span
+                    class="item">aa1bb1aa2bb2</span></p>
+
+            <p><span
+                    class="item">echo %p% </span><span
+                    class="desc"><i>#</i>显示变量</span><span
+                    class="item">p</span><span
+                    class="desc">代表的字符串，即</span><span
+                    class="item">aa1bb1aa2bb2</span></p>
+
+            <p><span
+                    class="item">echo %p:~6% </span><span
+                    class="desc"><i>#</i>显示变量</span><span
+                    class="item">p</span><span
+                    class="desc">中第</span><span
+                    class="item">6</span><span
+                    class="desc">个字符以后的所有字符，即</span><span
+                    class="item">aa2bb2</span></p>
+
+            <p><span
+                    class="item">echo %p:~6,3% </span><span
+                    class="desc"><i>#</i>显示第</span><span
+                    class="item">6</span><span
+                    class="desc">个字符以后的</span><span
+                    class="item">3</span><span
+                    class="desc">个字符，即</span><span
+                    class="item">aa2</span></p>
+
+            <p><span
+                    class="item">echo %p:~0,3% </span><span
+                    class="desc"><i>#</i>显示前</span><span
+                    class="item">3</span><span
+                    class="desc">个字符，即</span><span
+                    class="item">aa1</span></p>
+
+            <p><span
+                    class="item">echo %p:~-2% </span><span
+                    class="desc"><i>#</i>显示最后面的</span><span
+                    class="item">2</span><span
+                    class="desc">个字符，即</span><span
+                    class="item">b2</span></p>
+
+            <p><span
+                    class="item">echo %p:~0,-2% </span><span
+                    class="desc"><i>#</i>显示除了最后</span><span
+                    class="item">2</span><span
+                    class="desc">个字符以外的其它字符，即</span><span
+                    class="item">aa1bb1aa2b</span></p>
+
+            <p><span
+                    class="item">echo %p:aa=c% </span><span
+                    class="desc"><i>#</i>用</span><span
+                    class="item">c</span><span
+                    class="desc">替换变量</span><span
+                    class="item">p</span><span
+                    class="desc">中所有的</span><span
+                    class="item">aa</span><span
+                    class="desc">，即显示</span><span
+                    class="item">c1bb1c2bb2</span></p>
+
+            <p><span
+                    class="item">echo %p:aa=% </span><span
+                    class="desc"><i>#</i>将变量</span><span
+                    class="item">p</span><span
+                    class="desc">中的所有</span><span
+                    class="item">aa</span><span
+                    class="desc">字符串置换为空，即显示</span><span
+                    class="item">1bb12bb2</span></p>
+
+            <p><span
+                    class="item">echo %p:*bb=c% </span><span
+                    class="desc"><i>#</i>第一个</span><span
+                    class="item">bb</span><span
+                    class="desc">及其之前的所有字符被替换为</span><span
+                    class="item">c</span><span
+                    class="desc">，即显示</span><span
+                    class="item">c1aa2bb2</span></p>
+
+            <p><span
+                    class="item">set p=%p:*bb=c% </span><span
+                    class="desc"><i>#</i>设置变量</span><span
+                    class="item">p</span><span
+                    class="desc">，赋值为</span><span
+                    class="item"> %p:*bb=c% </span><span
+                    class="desc">，即</span><span
+                    class="item">c1aa2bb2</span></p>
+
+            <p><span
+                    class="item">set /a p=39 </span><span
+                    class="desc"><i>#</i>设置</span><span
+                    class="item">p</span><span
+                    class="desc">为数值型变量，值为</span><span
+                    class="item">39</span></p>
+
+            <p><span
+                    class="item">set /a p=39/10 </span><span
+                    class="desc"><i>#</i>支持运算符，有小数时用去尾法，</span><span
+                    class="item">39/10=3.9</span><span
+                    class="desc">，去尾得</span><span
+                    class="item">3</span><span
+                    class="desc">，</span><span
+                    class="item">p=3</span></p>
+
+            <p><span
+                    class="item">set /a p=p/10 </span><span
+                    class="desc"><i>#</i>用</span><span
+                    class="item"> /a </span><span
+                    class="desc">参数时，在</span><span
+                    class="item"> = </span><span
+                    class="desc">后面的变量可以不加</span><span
+                    class="item">%</span><span
+                    class="desc">直接引用</span></p>
+
+            <p><span
+                    class="item">set /a p=”1&amp;0″ <i>#</i>”</span><span
+                    class="desc">与</span><span
+                    class="item">”</span><span
+                    class="desc">运算，要加引号。其它支持的运算符参见</span><span
+                    class="item">set/?</span></p>
+
+            <p><span
+                    class="item">set p= </span><span
+                    class="desc"><i>#</i>取消</span><span
+                    class="item">p</span><span
+                    class="desc">变量</span></p>
+
+            <p><span
+                    class="item">set /p p=</span><span
+                    class="desc">请输入</span></p>
+
+            <p><span
+                    class="desc">屏幕上显示</span><span
+                    class="item">”</span><span
+                    class="desc">请输入</span><span
+                    class="item">”</span><span
+                    class="desc">，并会将输入的字符串赋值给变量</span><span
+                    class="item">p</span></p>
+
+            <p><span
+                    class="desc">注意这条可以用来取代</span><span
+                    class="item"> choice </span><span
+                    class="desc">命令</span></p>
+
+            <p><span
+                    class="desc">注意变量在</span><span
+                    class="item"> if </span><span
+                    class="desc">和</span><span
+                    class="item"> for </span><span
+                    class="desc">的复合语句里是一次性全部替换的，如</span></p>
+
+            <p><span
+                    class="item">@echo off</span></p>
+
+            <p><span
+                    class="item">set p=aaa</span></p>
+
+            <p><span
+                    class="item">if %p%==aaa (</span></p>
+
+            <p><span
+                    class="item"> echo %p%</span>
+            </p>
+
+            <p><span
+                    class="item"> set p=bbb</span>
+            </p>
+
+            <p><span
+                    class="item"> echo %p%</span>
+            </p>
+
+            <p><span
+                    class="item"> )</span>
+            </p>
+
+            <p><span class="desc">结果将显示</span>
+            </p>
+
+            <p><span
+                    class="item">aaa</span></p>
+
+            <p><span
+                    class="item">aaa</span></p>
+
+            <p><span
+                    class="desc">因为在读取</span><span
+                    class="item"> if </span><span
+                    class="desc">语句时已经将所有</span><span
+                    class="item"> %p% </span><span
+                    class="desc">替换为</span><span
+                    class="item">aaa</span></p>
+
+            <p><span class="desc">这里的</span><span
+                    class="item">""</span><span
+                    class="desc">替换</span><span
+                    class="item">""</span><span
+                    class="desc">，在</span><span
+                    class="item"> /? </span><span
+                    class="desc">帮助里就是指</span><span
+                    class="item">""</span><span
+                    class="desc">扩充</span><span
+                    class="item">""</span><span
+                    class="desc">、</span><span
+                    class="item">""</span><span
+                    class="desc">环境变量扩充</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="desc">可以启用</span><span
+                    class="item">”</span><span
+                    class="desc">延缓环境变量扩充</span><span
+                    class="item">”</span><span
+                    class="desc">，用</span><span
+                    class="item"> ! </span><span
+                    class="desc">来引用变量，即</span><span
+                    class="item"> !</span><span
+                    class="desc">变量名</span><span
+                    class="item">!</span></p>
+
+            <p><span
+                    class="item">@echo off</span></p>
+
+            <p><span
+                    class="item">SETLOCAL ENABLEDELAYEDEXPANSION</span>
+            </p>
+
+            <p><span
+                    class="item">set p=aaa</span></p>
+
+            <p><span
+                    class="item">if %p%==aaa (</span></p>
+
+            <p><span
+                    class="item"> echo %p%</span>
+            </p>
+
+            <p><span
+                    class="item"> set p=bbb</span>
+            </p>
+
+            <p><span
+                    class="item"> echo !p!</span>
+            </p>
+
+            <p><span
+                    class="item"> )</span>
+            </p>
+
+            <p><span
+                    class="item">ENDLOCAL</span></p>
+
+            <p><span class="desc">结果将显示</span>
+            </p>
+
+            <p><span
+                    class="item">aaa</span></p>
+
+            <p><span
+                    class="item">bbb</span></p>
+
+            <p><span
+                    class="desc">还有几个动态变量，运行</span><span
+                    class="item"> set </span><span
+                    class="desc">看不到</span></p>
+
+            <p><span
+                    class="item">%CD% </span><span
+                    class="desc"><i>#</i>代表当前目录的字符串</span></p>
+
+            <p><span
+                    class="item">%DATE% </span><span
+                    class="desc"><i>#</i>当前日期</span></p>
+
+            <p><span
+                    class="item">%TIME% </span><span
+                    class="desc"><i>#</i>当前时间</span></p>
+
+            <p><span
+                    class="item">%RANDOM% </span><span
+                    class="desc"><i>#</i>随机整数，介于</span><span
+                    class="item">0~32767</span></p>
+
+            <p><span
+                    class="item">%ERRORLEVEL% </span><span
+                    class="desc"><i>#</i>当前</span><span
+                    class="item"> ERRORLEVEL </span><span
+                    class="desc">值</span></p>
+
+            <p><span
+                    class="item">%CMDEXTVERSION% </span><span
+                    class="desc"><i>#</i>当前命令处理器扩展名版本号</span></p>
+
+            <p><span
+                    class="item">%CMDCMDLINE% </span><span
+                    class="desc"><i>#</i>调用命令处理器的原始命令行</span></p>
+
+            <p><span class="desc">可以用</span><span
+                    class="item">echo</span><span
+                    class="desc">命令查看每个变量值，如</span><span
+                    class="item"> echo %time%</span></p>
+
+            <p><span class="desc">注意</span><span
+                    class="item"> %time% </span><span
+                    class="desc">精确到毫秒，在批处理需要延时处理时可以用到</span></p>
+
+            <p><span
+                    class="node">32 start</span></p>
+
+            <p><span class="desc">批处理中调用外部程序的命令，否则等外部程序完成后才继续执行剩下的指令</span>
+            </p>
+
+            <p><span
+                    class="node">33 call</span></p>
+
+            <p><span class="desc">批处理中调用另外一个批处理的命令，否则剩下的批处理指令将不会被执行</span>
+            </p>
+
+            <p><span
+                    class="desc">有时有的应用程序用</span><span
+                    class="item">start</span><span
+                    class="desc">调用出错的，也可以</span><span
+                    class="item">call</span><span
+                    class="desc">调用</span></p>
+
+            <p><span
+                    class="node">34 choice (</span><span
+                    class="desc">外部命令</span><span
+                    class="item">)</span></p>
+
+            <p><span class="desc">选择命令</span></p>
+
+            <p><span class="desc">让用户输入一个字符，从而选择运行不同的命令，返回码</span><span
+                    class="item">errorlevel</span><span
+                    class="desc">为</span><span
+                    class="item">1234……</span></p>
+
+            <p><span
+                    class="item">win98</span><span
+                    class="desc">里是</span><span
+                    class="item">choice.com</span></p>
+
+            <p><span
+                    class="item">win2000pro</span><span
+                    class="desc">里没有，可以从</span><span
+                    class="item">win98</span><span
+                    class="desc">里拷过来</span></p>
+
+            <p><span
+                    class="item">win2003</span><span
+                    class="desc">里是</span><span
+                    class="item">choice.exe</span></p>
+
+            <p><span
+                    class="item">choice /N /C y /T 5 /D y&gt;nul</span>
+            </p>
+
+            <p><span class="desc">延时</span><span
+                    class="item">5</span><span
+                    class="desc">秒</span></p>
+
+            <p><span
+                    class="node">35 assoc </span><span
+                    class="desc">和</span><span
+                    class="item"> ftype</span></p>
+
+            <p><span class="desc">文件关联</span></p>
+
+            <p><span
+                    class="item">assoc </span><span
+                    class="desc">设置</span><span
+                    class="item">'</span><span
+                    class="desc">文件扩展名</span><span
+                    class="item">'</span><span
+                    class="desc">关联，关联到</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span></p>
+
+            <p><span
+                    class="item">ftype </span><span
+                    class="desc">设置</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span><span
+                    class="desc">关联，关联到</span><span
+                    class="item">'</span><span
+                    class="desc">执行程序和参数</span><span
+                    class="item">'</span></p>
+
+            <p><span
+                    class="desc">当你双击一个</span><span
+                    class="item">.txt</span><span
+                    class="desc">文件时，</span><span
+                    class="item">windows</span><span
+                    class="desc">并不是根据</span><span
+                    class="item">.txt</span><span
+                    class="desc">直接判断用</span><span
+                    class="item"> notepad.exe </span><span
+                    class="desc">打开</span></p>
+
+            <p><span
+                    class="desc">而是先判断</span><span
+                    class="item">.txt</span><span
+                    class="desc">属于</span><span
+                    class="item"> txtfile '</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span></p>
+
+            <p><span class="desc">再调用</span><span
+                    class="item"> txtfile </span><span
+                    class="desc">关联的命令行</span><span
+                    class="item"> txtfile=%SystemRoot%"system32"NOTEPAD.EXE %1</span>
+            </p>
+
+            <p><span class="desc">可以在</span><span
+                    class="item">""</span><span
+                    class="desc">文件夹选项</span><span
+                    class="item">""</span><span
+                    class="desc">→</span><span
+                    class="item">""</span><span
+                    class="desc">文件类型</span><span
+                    class="item">""</span><span
+                    class="desc">里修改这</span><span
+                    class="item">2</span><span
+                    class="desc">种关联</span></p>
+
+            <p><span
+                    class="item">assoc </span><span
+                    class="desc"><i>#</i>显示所有</span><span
+                    class="item">'</span><span
+                    class="desc">文件扩展名</span><span
+                    class="item">'</span><span
+                    class="desc">关联</span></p>
+
+            <p><span
+                    class="item">assoc .txt </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item">.txt</span><span
+                    class="desc">代表的</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span><span
+                    class="desc">，结果显示</span><span
+                    class="item"> .txt=txtfile</span></p>
+
+            <p><span
+                    class="item">assoc .doc </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item">.doc</span><span
+                    class="desc">代表的</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span><span
+                    class="desc">，结果显示</span><span
+                    class="item"> .doc=Word.Document.8</span></p>
+
+            <p><span
+                    class="item">assoc .exe </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item">.exe</span><span
+                    class="desc">代表的</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span><span
+                    class="desc">，结果显示</span><span
+                    class="item"> .exe=exefile</span></p>
+
+            <p><span
+                    class="item">ftype </span><span
+                    class="desc"><i>#</i>显示所有</span><span
+                    class="item">'</span><span
+                    class="desc">文件类型</span><span
+                    class="item">'</span><span
+                    class="desc">关联</span></p>
+
+            <p><span
+                    class="item">ftype exefile </span><span
+                    class="desc"><i>#</i>显示</span><span
+                    class="item">exefile</span><span
+                    class="desc">类型关联的命令行，结果显示</span><span
+                    class="item"> exefile=""%1"" %* </span></p>
+
+            <p><span
+                    class="item">assoc .txt=Word.Document.8</span></p>
+
+            <p><span class="desc">设置</span><span
+                    class="item">.txt</span><span
+                    class="desc">为</span><span
+                    class="item">word</span><span
+                    class="desc">类型的文档，可以看到</span><span
+                    class="item">.txt</span><span
+                    class="desc">文件的图标都变了</span></p>
+
+            <p><span
+                    class="item">assoc .txt=txtfile</span></p>
+
+            <p><span class="desc">恢复</span><span
+                    class="item">.txt</span><span
+                    class="desc">的正确关联</span></p>
+
+            <p><span
+                    class="item"></span></p>
+
+            <p><span
+                    class="item">ftype exefile=""%1"" %*</span></p>
+
+            <p><span class="desc">恢复</span><span
+                    class="item"> exefile </span><span
+                    class="desc">的正确关联</span></p>
+
+            <p><span
+                    class="desc">如果该关联已经被破坏，可以运行</span><span
+                    class="item"> command.com </span><span
+                    class="desc">，再输入这条命令</span></p>
+
+            <p><span
+                    class="node">36 pushd </span><span
+                    class="desc">和</span><span
+                    class="item"> popd</span></p>
+
+            <p><span class="desc">切换当前目录</span>
+            </p>
+
+            <p><span
+                    class="item">@echo off</span></p>
+
+            <p><span
+                    class="item">c: &amp; cd" &amp; md mp3 </span><span
+                    class="desc"><i>#</i>在</span><span
+                    class="item"> C:" </span><span
+                    class="desc">建立</span><span
+                    class="item"> mp3 </span><span
+                    class="desc">文件夹</span></p>
+
+            <p><span
+                    class="item">md d:"mp4 </span><span
+                    class="desc"><i>#</i>在</span><span
+                    class="item"> D:" </span><span
+                    class="desc">建立</span><span
+                    class="item"> mp4 </span><span
+                    class="desc">文件夹</span></p>
+
+            <p><span
+                    class="item">cd /d d:"mp4 </span><span
+                    class="desc"><i>#</i>更改当前目录为</span><span
+                    class="item"> d:"mp4</span></p>
+
+            <p><span
+                    class="item">pushd c:"mp3 </span><span
+                    class="desc"><i>#</i>保存当前目录，并切换当前目录为</span><span
+                    class="item"> c:"mp3</span></p>
+
+            <p><span
+                    class="item">popd </span><span
+                    class="desc"><i>#</i>恢复当前目录为刚才保存的</span><span
+                    class="item"> d:"mp4</span></p>
+
+            <p><span
+                    class="node">37 for</span></p>
+
+            <p><span class="desc">循环命令</span></p>
+
+            <p><span
+                    class="desc">这个比较复杂，请对照</span><span
+                    class="item"> for/? </span><span
+                    class="desc">来看</span></p>
+
+            <p><span
+                    class="item">for %%i in (c: d: e: f:) do echo %%i</span>
+            </p>
+
+            <p><span class="desc">依次调用小括号里的每个字符串，执行</span><span
+                    class="item"> do </span><span
+                    class="desc">后面的命令</span></p>
+
+            <p><span class="desc">注意</span><span
+                    class="item">%%i</span><span
+                    class="desc">，在批处理中</span><span
+                    class="item"> for </span><span
+                    class="desc">语句调用参数用</span><span
+                    class="item">2</span><span
+                    class="desc">个</span><span
+                    class="item">%</span></p>
+
+            <p><span
+                    class="desc">默认的字符串分隔符是</span><span
+                    class="item">""</span><span
+                    class="desc">空格键</span><span
+                    class="item">""</span><span
+                    class="desc">，</span><span
+                    class="item">""Tab</span><span
+                    class="desc">键</span><span
+                    class="item">""</span><span
+                    class="desc">，</span><span
+                    class="item">""</span><span
+                    class="desc">回车键</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="item">for %%i in (*.txt) do find ""abc"" %%i</span>
+            </p>
+
+            <p><span
+                    class="desc">对当前目录里所有的</span><span
+                    class="item">txt</span><span
+                    class="desc">文件执行</span><span
+                    class="item"> find </span><span
+                    class="desc">命令</span></p>
+
+            <p><span
+                    class="item">for /r . %%i in (*.txt) do find ""abc"" %%i</span>
+            </p>
+
+            <p><span
+                    class="desc">在当前目录和子目录里所有的</span><span
+                    class="item">.txt</span><span
+                    class="desc">文件中搜索包含</span><span
+                    class="item"> abc </span><span
+                    class="desc">字符串的行</span></p>
+
+            <p><span
+                    class="item">for /r . %%i in (.) do echo %%~pni</span>
+            </p>
+
+            <p><span class="desc">显示当前目录名和所有子目录名，包括路径，不包括盘符</span>
+            </p>
+
+            <p><span
+                    class="item">for /r d:"mp3 %%i in (*.mp3) do echo %%i&gt;&gt;d:"mp3.txt</span>
+            </p>
+
+            <p><span class="desc">把</span><span
+                    class="item"> d:"mp3 </span><span
+                    class="desc">及其子目录里的</span><span
+                    class="item">mp3</span><span
+                    class="desc">文件的文件名都存到</span><span
+                    class="item"> d:"mp3.txt </span><span
+                    class="desc">里去</span></p>
+
+            <p><span
+                    class="item">for /l %%i in (2,1,8) do echo %%i</span>
+            </p>
+
+            <p><span class="desc">生成</span><span
+                    class="item">2345678</span><span
+                    class="desc">的一串数字，</span><span
+                    class="item">2</span><span
+                    class="desc">是数字序列的开头，</span><span
+                    class="item">8</span><span
+                    class="desc">是结尾，</span><span
+                    class="item">1</span><span
+                    class="desc">表示每次加</span><span
+                    class="item">1</span></p>
+
+            <p><span
+                    class="item">for /f %%i in ('set') do echo %%i</span>
+            </p>
+
+            <p><span class="desc">对</span><span
+                    class="item"> set </span><span
+                    class="desc">命令的输出结果循环调用，每行一个</span></p>
+
+            <p><span
+                    class="item">for /f ""eol=P"" %%i in ('set') do echo %%i</span>
+            </p>
+
+            <p><span class="desc">取</span><span
+                    class="item"> set </span><span
+                    class="desc">命令的输出结果，忽略以</span><span
+                    class="item"> P </span><span
+                    class="desc">开头的那几行</span></p>
+
+            <p><span
+                    class="item">for /f %%i in (d:"mp3.txt) do echo %%i</span>
+            </p>
+
+            <p><span class="desc">显示</span><span
+                    class="item"> d:"mp3.txt </span><span
+                    class="desc">里的每个文件名，每行一个，不支持带空格的名称</span></p>
+
+            <p><span
+                    class="item">for /f ""delims="" %%i in (d:"mp3.txt) do echo %%i</span>
+            </p>
+
+            <p><span class="desc">显示</span><span
+                    class="item"> d:"mp3.txt </span><span
+                    class="desc">里的每个文件名，每行一个，支持带空格的名称</span></p>
+
+            <p><span
+                    class="item">for /f ""skip=5 tokens=4"" %%a in ('dir') do echo %%a</span>
+            </p>
+
+            <p><span class="desc">对</span><span
+                    class="item"> dir </span><span
+                    class="desc">命令的结果，跳过前面</span><span
+                    class="item">5</span><span
+                    class="desc">行，余下的每行取第</span><span
+                    class="item">4</span><span
+                    class="desc">列</span></p>
+
+            <p><span
+                    class="desc">每列之间的分隔符为默认的</span><span
+                    class="item">""</span><span
+                    class="desc">空格</span><span
+                    class="item">""</span></p>
+
+            <p><span
+                    class="desc">可以注意到</span><span
+                    class="item"> dir </span><span
+                    class="desc">命令输出的前</span><span
+                    class="item">5</span><span
+                    class="desc">行是没有文件名的</span></p>
+
+            <p><span
+                    class="item">for /f ""tokens=1,2,3 delims=- "" %%a in ('date /t') do (</span>
+            </p>
+
+            <p><span
+                    class="item"> echo %%a</span>
+            </p>
+
+            <p><span
+                    class="item"> echo %%b</span>
+            </p>
+
+            <p><span
+                    class="item"> echo %%c</span>
+            </p>
+
+            <p><span
+                    class="item"> )</span>
+            </p>
+
+            <p><span class="desc">对</span><span
+                    class="item"> date /t </span><span
+                    class="desc">的输出结果，每行取</span><span
+                    class="item">1</span><span
+                    class="desc">、</span><span
+                    class="item">2</span><span
+                    class="desc">、</span><span
+                    class="item">3</span><span
+                    class="desc">列</span></p>
+
+            <p><span class="desc">第一列对应指定的</span><span
+                    class="item"> %%a </span><span
+                    class="desc">，后面的</span><span
+                    class="item"> %%b </span><span
+                    class="desc">和</span><span
+                    class="item"> %%c </span><span
+                    class="desc">是派生出来的，对应其它列</span></p>
+
+            <p><span
+                    class="desc">分隔符指定为</span><span
+                    class="item"> - </span><span
+                    class="desc">和</span><span
+                    class="item">""</span><span
+                    class="desc">空格</span><span
+                    class="item">""</span><span
+                    class="desc">，注意</span><span
+                    class="item"> delims=- </span><span
+                    class="desc">后面有个</span><span
+                    class="item">""</span><span
+                    class="desc">空格</span><span
+                    class="item">""</span></p>
+
+            <p><span class="desc">其中</span><span
+                    class="item"> tokens=1,2,3 </span><span
+                    class="desc">若用</span><span
+                    class="item"> tokens=1-3 </span><span
+                    class="desc">替换，效果是一样的</span></p>
+
+            <p><span
+                    class="item">for /f ""tokens=2* delims=- "" %%a in ('date /t') do echo %%b</span>
+            </p>
+
+            <p><span class="desc">取第</span><span
+                    class="item">2</span><span
+                    class="desc">列给</span><span
+                    class="item"> %%a </span><span
+                    class="desc">，其后的列都给</span><span
+                    class="item"> %%b</span></p>
+
+            <p><span
+                    class="node">32 subst (</span><span
+                    class="desc">外部命令</span><span
+                    class="item">)</span></p>
+
+            <p><span class="desc">映射磁盘。</span>
+            </p>
+
+            <p><span
+                    class="item">subst z: "server"d </span><span
+                    class="desc"><i>#</i>这样输入</span><span
+                    class="item">z:</span><span
+                    class="desc">就可以访问</span><span
+                    class="item">"server"d</span><span
+                    class="desc">了</span></p>
+
+            <p><span
+                    class="item">subst z: /d </span><span
+                    class="desc"><i>#</i>取消该映射</span></p>
+
+            <p><span
+                    class="item">subst </span><span
+                    class="desc"><i>#</i>显示目前所有的映时</span></p>
+
+            <p><span
+                    class="node">38 xcopy (</span><span
+                    class="desc">外部命令</span><span
+                    class="item">)</span></p>
+
+            <p><span class="desc">文件拷贝</span></p>
+
+            <p><span
+                    class="item">xcopy d:"mp3 e:"mp3 /s/e/i/y</span>
+            </p>
+
+            <p><span class="desc">复制</span><span
+                    class="item"> d:"mp3 </span><span
+                    class="desc">文件夹、所有子文件夹和文件到</span><span
+                    class="item"> e:" </span><span
+                    class="desc">，覆盖已有文件</span></p>
+
+            <p><span class="desc">加</span><span
+                    class="item"> /i </span><span
+                    class="desc">表示如果</span><span
+                    class="item"> e:" </span><span
+                    class="desc">没有</span><span
+                    class="item"> mp3 </span><span
+                    class="desc">文件夹就自动新建一个，否则会有询问</span></p>
+
+        </div>
+
+    </div>
+
+</div>
