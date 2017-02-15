@@ -1,0 +1,11 @@
+Blob用于处理buffer流;
+
+//将字符串转换成Blob对象
+var blob = new Blob(["中文test"],{type:"text/plain"}); //参数格式是固定的！！！
+
+//将Blob对象转换成字符串（Blob怎么直观的显示里面的内容呢？）
+var reader = new FileReader();
+reader.readAsText(blob,"utf8");	//如果是中文直接压制的，就用readAsText方法读取，如果通过后台传出的buffer呢？
+reader.onload = function(e){
+	console.log(reader.result);
+}
