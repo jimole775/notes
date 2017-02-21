@@ -1,0 +1,3 @@
+var str = "37" || ".3" || "3e7" || "0xff";
+var n = Number(str);
+if(!isNaN(n)){console.log("Êý×Ö")};
