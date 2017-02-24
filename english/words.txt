@@ -4,3 +4,4 @@ summary //n.概要，总结
 	//adj.概括的，总结的，立即的
 indication	//n.标示，象征
 composite	//n.混合物，adj.混合而成的
+util	//龙套
