@@ -10,3 +10,5 @@ term	//n.条款，术语，学期，期限；vt.把...称为，把...叫做
 generic term //通称 
 represent //vt.作为,代表
 stable	//稳定
+peach   //桃子
+pit	//核
