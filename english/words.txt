@@ -12,3 +12,7 @@ represent //vt.作为,代表
 stable	//稳定
 peach   //桃子
 pit	//核
+exception	//异常
+distance	//距离
+consummate 	//vt.完善
+prefect		//adj.完美的
