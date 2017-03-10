@@ -3,16 +3,22 @@ heap	//n.堆，堆积;
 summary //n.概要，总结
 	//adj.概括的，总结的，立即的
 indication	//n.标示，象征
-composite	//n.混合物，adj.混合而成的
+composite	//n.混合物
+		//adj.混合而成的
 util	//龙套
 generic	//adj.一般的; 类的
-term	//n.条款，术语，学期，期限；vt.把...称为，把...叫做
+term	//n.条款，术语，学期，期限；
+	//vt.把...称为，把...叫做
 generic term //通称 
 represent //vt.作为,代表
-stable	//稳定
-peach   //桃子
-pit	//核
-exception	//异常
-distance	//距离
+stable	//n.稳定
+peach   //n.桃子
+pit	//n.核
+exception	//adj.异常
+distance	//n.距离
+		//vt.与...保持距离,疏远
 consummate 	//vt.完善
 prefect		//adj.完美的
+shallow	//adj.肤浅的
+	//n.浅滩
+	//v.使变浅
