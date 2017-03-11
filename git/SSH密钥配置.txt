@@ -22,4 +22,4 @@ The key fingerprint is:
 4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。
 打开https://github.com/ ，登陆xuhaiyan825，然后添加ssh。
 
-5.测试：ssh git@github.com
+5.测试：ssh -T git@github.com
