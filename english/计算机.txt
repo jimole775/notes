@@ -9,3 +9,5 @@ algorithm : 算法，计算程序
 compute:計算
 
 delivered:(v)发动，发表，递送，交付
+
+enumerable:(adj)可枚举的

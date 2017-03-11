@@ -1,0 +1,11 @@
+CommonTool.prototype.string2xml = function (str) {
+		if (document.all) {//IEä¯ÀÀÆ÷
+			var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+			xmlDoc.async = false;
+			xmlDoc.loadXML(str);
+			return xmlDoc;
+		}
+		else {//·ÇIEä¯ÀÀÆ÷
+			return new DOMParser().parseFromString(str, "text/xml");
+		}
+	}
