@@ -1,0 +1,1 @@
+dos 下的npm init可以自动 配置packconfig.json

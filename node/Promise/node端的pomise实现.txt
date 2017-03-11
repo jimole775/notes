@@ -1,0 +1,37 @@
+
+var http = require("http");
+var fs = require("fs");
+var cheerio = require("cheerio");
+var promise = require("q");
+var pages = [];
+
+var getHtml = function(url){
+    var chrunks = [];
+    var nRead = 0;
+    var deferred = promise.defer();
+    http.get(url,function(res,err){
+        if (err) {
+            deferred.reject(err)
+        } else {
+            res.on("data", function (chrunk) {
+                chrunks.push(chrunk);
+                //console.log(chrunk);
+                nRead += chrunk.length;
+            });
+            res.on("end", function () {
+                pages.push(Buffer.concat(chrunks, nRead));
+                //console.log(pages.toString());
+                chrunks.length = 0;
+                nRead = 0;
+                deferred.resolve(pages);
+            });
+
+        }
+    });
+
+    return deferred.promise
+};
+
+getHtml("http://www.ivrfans.cn/meitun/list_57_2.html")
+    .then(console.log);
+

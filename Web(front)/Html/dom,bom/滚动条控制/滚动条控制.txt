@@ -1,0 +1,18 @@
+JQ滚动条滚动
+到【底部】可以使用$(selector).scrollTop($(selector)[0].scrollHeight - $(selector).height())达到效果
+到【顶部】可以使用$(selector).scrollTop(0)达到效果
+
+
+***如果一个元素内有内容，scrollHeight会根据内容的高度而改变，而height()就是固定的；
+
+或者使用锚链接达到效果：
+		<a href="#t1"></a>		//锚链接
+
+		<a name="t1"></a>		//链接目标
+
+
+js原生处理滚动条
+offsetTop   只读属性，但是无法进行设置操作
+offsetLeft  只读属性，但是无法进行设置操作
+scrollTop   可读写属性
+scrollLeft  可读写属性

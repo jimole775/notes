@@ -1,0 +1,8 @@
+说明：懒加载就是延迟加载或者判断某个条件之后再加载！
+
+//以下是img对象提供的方法和事件！
+img.complete 	//可以判断img标签是否已经加载（缓存）了图片
+
+img.onerror = function(){}	//加载错误后的事件！
+
+img.onload = function(){}	//加载完毕之后的事件

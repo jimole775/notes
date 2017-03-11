@@ -1,0 +1,16 @@
+再用简单的方法总结一下
+1、父controller，负责监听并广播
+//监听：若收到change，把值广播出去
+$scope.$on(“change",function (event, msg) {
+    $scope.$broadcast(“changeFromBody", msg);
+});
+
+2、子controller，负责把变量发给父controller
+//向父controller传值$scope.value
+ $scope.$emit(“change", $scope.value);
+
+3、子controller，负责监听父controller的广播，给变量赋新值
+//监听父controller的广播，得到changeFromBody广播时取$scope.value
+$scope.$on(“changeFromBody",function (event, msg) {
+    $scope.value = msg;
+});

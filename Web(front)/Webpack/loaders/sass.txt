@@ -1,0 +1,4 @@
+
+npm install sass-loader  node-sass //°²×°
+
+{test: /\.scss$/, loader: "style!css!sass"}   //ÅäÖÃ

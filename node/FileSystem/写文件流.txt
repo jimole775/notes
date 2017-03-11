@@ -1,0 +1,9 @@
+var ws = fs.createWriteStream(path);  //需要在流状态外面创建
+
+ws.write(chrunk,"utf-8");
+
+ws.end();//标记结束写文件
+
+ws.on("finish",function(){})//执行的前提就是end()之后
+
+ws.on("error",function(){})//执行的前提就是end()之后

@@ -1,0 +1,9 @@
+总结：
+安卓和苹果端的浏览器的区别：
+	两个浏览器给js提供的数据接口不同，
+	安卓是在浏览器的dom里面插入external对象，然后在此对象里面设置接口；
+	苹果是在浏览器是通过window.webkit下的messageHandlers对象来设置，再在接口里面接入一个方法postMessage来传参数
+	
+exp:
+（安卓） window.external.sendSomeThing(param1,param2);
+（苹果） window.webkit.messageHandlers.sendSomeThing.postMessage(param1,param2);
