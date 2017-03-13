@@ -1,9 +1,12 @@
 一 、设置Git的user name和email：
+
 $ git config --global user.name "xuhaiyan"
+
 $ git config --global user.email "haiyan.xu.vip@gmail.com"
 
 
 二、生成SSH密钥过程：
+
 1.查看是否已经有了ssh密钥：cd ~/.ssh
 如果没有密钥则不会有此文件夹，有则备份删除
 
@@ -22,4 +25,4 @@ The key fingerprint is:
 4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。
 打开https://github.com/ ，登陆xuhaiyan825，然后添加ssh。
 
-5.测试：ssh git@github.com
+5.测试：ssh -T git@github.com
