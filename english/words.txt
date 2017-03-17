@@ -25,3 +25,4 @@ shallow	//adj.肤浅的
 	//n.浅滩
 	//v.使变浅
 therefore	//adv.因此,所以
+hybrid	//adj.混合的
