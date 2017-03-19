@@ -1,0 +1,36 @@
+###缓存只针对http请求，一般只有服务端在判断路由的时候进行配置，前端不需要处理！！！
+
+1,设置缓存时间（ms）
+res.setHeader("Cache-Control","max-age=" + 1800);
+
+2,服务器验证请求的资源是否有更改过
+
+	//判断请求头，“if-none-match”属性会带上来Etag值，如果为undefined,就代表是第一次请求资源
+  if (!req.headers['if-none-match']) {	
+            res.setHeader('Cache-Control', "no-cache, max-age=" + 5);
+            res.setHeader('Content-Type', 'images/png');
+
+	    //Etag是根据实体内容生成一段hash字符串，标识资源的状态，由服务端产生。浏览器会将这串字符串传回服务器，验证资源是否已经修改
+	    //这里写死为ffff
+            res.setHeader('Etag', "ffff");
+            res.writeHead('200', "Not Modified");
+            res.end(file);
+        } else {
+
+		//如果没有更改过，确认使用缓存，就回一个304
+            if (req.headers['if-none-match'] === 'ffff') {
+                res.writeHead('304', "Not Modified");	
+                res.end();
+
+            } else {
+                res.setHeader('Cache-Control', "max-age=" + 5);	
+                res.setHeader('Content-Type', 'images/png');
+                res.setHeader('Etag', "ffff");	//并且设置Etag标识
+                res.writeHead('200', "Not Modified");
+                res.end(file);
+            }
+        }
+
+
+注意，我们讨论的所有关于缓存资源的问题，都仅仅针对GET请求。而对于POST, DELETE, PUT这类行为性操作通常不做任何缓存
+来自：http://www.cnblogs.com/dojo-lzz/p/5515839.html
