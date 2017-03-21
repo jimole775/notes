@@ -1,0 +1,5 @@
+对象属性的删除可以使用 delete 指令
+
+delte obj.name;
+
+删除变量 可以使用 obj = null;
