@@ -1,7 +1,0 @@
-四种方案：
-
-一：node-websocket-server
-
-//由于这个库的websocket不支持draf-10，而chrome 14+浏览器，只支持draft-10，所以已经弃用
-
-二：WebSocket-Node
