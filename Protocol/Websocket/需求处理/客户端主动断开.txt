@@ -1,0 +1,7 @@
+如果在浏览器的客户端，可以使用
+
+ws.close();
+
+如果在其他语言的客户端，应该就和服务端一样,构造一段Opcde为8的响应数据
+
+encodeDataFrame({FIN:1,Opcode:8,PayloadData:buf})

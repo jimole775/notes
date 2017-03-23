@@ -1,0 +1,9 @@
+var buf = new Buffer('\0\0服务端主动断开连接')；//前面两个字节的状态码位置留空
+
+buf.writeUInt16BE(1000,0)；//在头两字节写入状态码
+
+socket.write(encodeDataFrame({FIN:1,Opcode:8,PayloadData:buf}));
+
+#客户端会在onclose里面收到这份信息,
+#客户端在收到服务器的这个断连请求后应该调用close方法来关闭，
+#否则连接会先入停滞状态等待客户端响应。(造成异常连接的罪魁)
