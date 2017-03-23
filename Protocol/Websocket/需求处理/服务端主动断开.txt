@@ -7,3 +7,4 @@ socket.write(encodeDataFrame({FIN:1,Opcode:8,PayloadData:buf}));
 #客户端会在onclose里面收到这份信息,
 #客户端在收到服务器的这个断连请求后应该调用close方法来关闭，
 #否则连接会先入停滞状态等待客户端响应。(造成异常连接的罪魁)
+#当然在服务器接收到客户端的close的方法之后，应该用socket.end()方法来回应
