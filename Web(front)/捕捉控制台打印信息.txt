@@ -1,0 +1,59 @@
+ ============================================§捕捉控制台打印信息§==========================================
+    if (console) {
+        var _console = {
+            log: console.log
+        };
+        console.log = function () {
+            // 做自己的处理
+            win.regular.log.apply (this, Array.prototype.slice.call (arguments, 0));
+            // 调用原方法输出
+            _console.log.apply (this, Array.prototype.slice.call (arguments, 0));
+        };
+        // warn、debug、error同理
+    }
+
+  ============================================§捕捉window错误信息§==========================================
+    win.onerror = function(){
+        win.regular.log.apply (this, Array.prototype.slice.call (arguments, 0));
+	return false;				//false就会发送错误信息到控制台，true就阻止向控制台输出错误信息
+    };
+  ============================================§捕捉angular错误信息§==========================================
+
+   win.App.config(function ($provide) {			    //装饰器，最先执行，不会覆盖任何设置				
+        $provide.decorator("$exceptionHandler", ['$delegate', function($delegate) {     //$exceptionHandler"  错误异常处理器
+            return function (exception, cause) {
+                //Raygun.send(exception);                   //发送到Raygun在线BUG接收站
+                console.log(exception, cause);
+                $delegate(exception, cause);                //$delegate 是异常处理器的实体，我们会调用它来获得输出到控制台的原始行为.
+            }
+        }])
+    });
+
+
+
+  ============================================§输出实体§==========================================
+    win.regular.log = function () {
+        var msg = "";
+        if (arguments.length) {
+            var len = arguments.length;
+            var param = arguments[0];
+
+            //捕捉window错误，使用红色加重字体；
+            if(/error/ig.test(param)){
+                msg +="<p class='warn-text' style='font-weight: bold'>" + param + "</p>";
+            }else{
+                msg +="<p>" + param + "</p>";
+            }
+
+            //普通打印文本
+            var i = 1;
+            while (i < len) {
+                param = arguments[i++];
+                if(typeof param === "object"){
+                    msg += "<p>" + JSON.stringify(param) + "</p>";
+                }else{
+                    msg +="<p>" + param + "</p>";
+                }
+            }
+
+        }
