@@ -1,7 +1,0 @@
-ASCII：
-
-'abc'.split('').map( e => '0000000' + e.charCodeAt(0).toString( 2 ) ).map( e => e.substr( e.length-8 ) ).join(' ')
-
-UTF32:
-Array.from( '??咩??' ).map( e => '0000000000000000000000000000000' + e.charCodeAt(0).toString( 2 ) ).map( e => e.substr( e.length-32 ) ).join(' ')
-// Array.from 和 codePointAt 都需要瀏覽器支援，不支持的需用 shim 庫。
