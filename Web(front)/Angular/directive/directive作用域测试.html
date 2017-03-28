@@ -1,31 +1,31 @@
 
 <html>
 <script>
-// Ö÷Ä£¿é
+// ä¸»æ¨¡å—
 var myApp = angular.module("myApp", []);
 
-// Ìí¼Ó controller
+// æ·»åŠ  controller
 myApp.controller("myCtrl", function($scope) {
-    $scope.customerName = "ÆÏÌÑ³Ç¿Ø¼ş";
+    $scope.customerName = "è‘¡è„åŸæ§ä»¶";
     $scope.credit = 8800;
     $scope.saveChanges = function(source) {
-        alert("±£´æÁËÀ´×Ô" + source + "µÄ±ä¸ü");
+        alert("ä¿å­˜äº†æ¥è‡ª" + source + "çš„å˜æ›´");
     };
 });
 
-// Ìí¼Ó directive
+// æ·»åŠ  directive
 myApp.directive("myDir", function() {
   return {
     restrict: "E",
     scope: {
-      name: "@",   // name Öµ´«µİ £¨×Ö·û´®£¬µ¥Ïò°ó¶¨£©
-      amount: "=", // amount ÒıÓÃ´«µİ£¨Ë«Ïò°ó¶¨£©
-      save: "&"    // ±£´æ²Ù×÷
+      name: "@",   // name å€¼ä¼ é€’ ï¼ˆå­—ç¬¦ä¸²ï¼Œå•å‘ç»‘å®šï¼‰
+      amount: "=", // amount å¼•ç”¨ä¼ é€’ï¼ˆåŒå‘ç»‘å®šï¼‰
+      save: "&"    // ä¿å­˜æ“ä½œ
     },
     template: 
       "<div>" +
       "  {{name}}: <input ng-model='amount' />" +
-      "  <button ng-click='save()'>±£´æ</button>" +
+      "  <button ng-click='save()'>ä¿å­˜</button>" +
       "</div>",
     replace: true,
     transclude: false,
