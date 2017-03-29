@@ -1,0 +1,5 @@
+Array.from(ArrayLite).push();
+
+效果等同于
+
+Array.prototype.push.call(ArrayLite)
