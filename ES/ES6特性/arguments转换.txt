@@ -1,4 +1,0 @@
-let g = (...x) => {
-	console.log(x);
-	//x = arguments;
-}
