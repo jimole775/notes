@@ -1,0 +1,5 @@
+ req.on("data",function(data){
+    console.log(decodeURIComponent(data));
+  });
+
+//就是直接监听data事件，拿到的就是参数的值，如果是mac的机器，就必须使用decodeURIComponent转换，其他类型的机器无所谓，传过来的就是一个标准的url参数
