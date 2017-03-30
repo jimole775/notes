@@ -1,0 +1,2 @@
+http.createServer(req,res){}	//创建http服务
+http.get(url,option,cb){}	//get请求，一般蜘蛛程序常用	

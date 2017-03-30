@@ -26,3 +26,5 @@ shallow	//adj.肤浅的
 	//v.使变浅
 therefore	//adv.因此,所以
 hybrid	//adj.混合的
+cumulation	//n.累计，累加
+thumb	//n.缩略图

@@ -1,0 +1,15 @@
+如果rul后面没有任何东西，就是访问主页，直接返回主页的string
+
+if(req.url === "/"){
+		console.log("来自 ",req.headers.host," 的请求");
+		//初始化客户端；
+		this.fs.readFile(HOST_DIR + req.url + "index.html",function(err,chunk){
+
+			if(err){
+				//console.log(err);
+			}else{
+				res.write(chunk.toString());
+			}
+			res.end();
+		});
+	}
