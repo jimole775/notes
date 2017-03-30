@@ -1,0 +1,3 @@
+String.charAt(index)	//截取并返回指定的一个字符！
+String.charCodeAt(index)//截取并返回指定字符的ascii码！
+String.fromCharCode("str")//解ascii码
