@@ -1,0 +1,24 @@
+	var ajaxInstance = $.ajax({
+			type: "POST",
+			async: true,
+			timeout: 10000, //超时时间设置，单位毫秒
+			url: global.businessInfo.serverHost + "/CCDPWebServer/" + global.businessInfo.serverDst,
+			dataType: "xml",
+			data: pack,
+			complete: function (XMLHttpRequest, status) {
+				switch (status) {
+					case "success":
+						var xml = XMLHttpRequest.responseXML;
+						that.jsRecvServerData("success", that.analyzeXml(xml), callback);
+						break;
+					case "timeout":
+						ajaxInstance.abort();
+						that.jsRecvServerData("timeout", "服务器请求超时", callback);
+						break;
+					case "error":
+						that.jsRecvServerData("error", "服务器请求失败", callback);
+						console.log('http请求失败:', XMLHttpRequest);
+						break;
+				}
+			}
+		});
