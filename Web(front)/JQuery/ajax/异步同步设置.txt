@@ -1,0 +1,3 @@
+$.ajax({
+async:true/false	//trueÒì²½£¬falseÍ¬²½
+})
