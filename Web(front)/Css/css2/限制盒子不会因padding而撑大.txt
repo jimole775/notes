@@ -1,0 +1,6 @@
+.box{
+
+padding:4rem;
+
+box-sizing:border-box;
+}
