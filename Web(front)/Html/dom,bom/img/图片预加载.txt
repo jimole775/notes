@@ -1,0 +1,6 @@
+图片预加载使用的是
+
+var img = (new Image()).src = "";
+
+
+而不是 createElement().src=""

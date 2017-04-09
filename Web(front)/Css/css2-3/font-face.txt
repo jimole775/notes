@@ -1,5 +1,0 @@
-
-@font-face {
-    src: url(Beautiful-ES.ttf);  //添加字体文件
-    font-family: "Beautiful";    //定义字体名
-}
