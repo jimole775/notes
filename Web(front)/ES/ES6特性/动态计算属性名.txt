@@ -1,0 +1,9 @@
+const property = "name";
+const property2 = "age";
+let obj = {
+    [property]:"andy",
+    [property2]:18,
+    ["myson" + property]:"notborn"
+}
+
+***[]相当于一个运算符

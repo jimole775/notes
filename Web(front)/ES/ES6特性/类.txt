@@ -1,0 +1,2 @@
+¼Ì³Ð£º
+class Machine extends EventEmitter
