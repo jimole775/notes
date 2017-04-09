@@ -1,3 +1,0 @@
-direction: ltr; #文本左对其
-direction: rtl; #文本右对其
-outline:none; #取消焦点框
