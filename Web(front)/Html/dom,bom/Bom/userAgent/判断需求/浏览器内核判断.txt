@@ -1,0 +1,6 @@
+//判断是否IE内核
+if(browser.versions.trident){ alert("is IE"); }
+//判断是否webKit内核
+if(browser.versions.webKit){ alert("is webKit"); }
+//判断是否移动端
+if(browser.versions.mobile||browser.versions.android||browser.versions.ios){ alert("移动端"); }
