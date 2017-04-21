@@ -5,3 +5,19 @@ var [a,b] = ["a","b"];
 
 var [a,b] = {a:"a",b:"b"};
 //a = "a",b = "b";
+
+###解构别名：
+var {a:b} = {a:"b"}
+//b = "b"
+
+###解构时设置默认值
+var {b=1} = {a:"b"}
+//b = 1;
+
+
+使用场景：(可以让代码更加直观，不用再在回调里工作)
+var getstate = （）=> {return {error:false,status:true,data:""}}
+var {err,stste,data} = getstate();
+if(err)return;
+
+
