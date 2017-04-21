@@ -1,8 +1,8 @@
 一 、设置Git的user name和email：
 
-$ git config --global user.name "xuhaiyan"
+$ git config --global user.name xuhaiyan
 
-$ git config --global user.email "haiyan.xu.vip@gmail.com"
+$ git config --global user.email haiyan.xu.vip@gmail.com
 
 
 二、生成SSH密钥过程：
@@ -11,7 +11,7 @@ $ git config --global user.email "haiyan.xu.vip@gmail.com"
 如果没有密钥则不会有此文件夹，有则备份删除
 
 2.生成密钥：
-$ ssh-keygen -t rsa -C “[email]”
+$ ssh-keygen -t rsa 727346595@qq.com
 按3个回车，密码为空。
 Your identification has been saved in /home/tekkub/.ssh/id_rsa.
 Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.
