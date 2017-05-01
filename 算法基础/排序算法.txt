@@ -1,0 +1,103 @@
+//≈≈–ÚÀ„∑®
+window.onload = function(){
+    var array = [0,1,2,44,4,
+                324,5,65,6,6,
+                34,4,5,6,2,
+                43,5,6,62,43,
+                5,1,4,51,56,
+                76,7,7,2,1,
+                45,4,6,7,8];
+    //var array = [4,2,5,1,0,3];
+    array = sorting.shellSort(array);
+    alert(array);
+}
+ 
+var sorting = {
+    //¿˚”√sort∑Ω∑®Ω¯––≈≈–Ú
+    systemSort: function(arr){
+        return arr.sort(function(a,b){
+            return a-b;
+        });
+    },
+ 
+    //√∞≈›≈≈–Ú
+    bubbleSort: function(arr){
+        var len=arr.length, tmp;
+        for(var i=0;i<len-1;i++){
+            for(var j=0;j<len-1-i;j++){
+                if(arr[j]>arr[j+1]){
+                    tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
+        }
+        return arr;
+    },
+ 
+    //øÏÀŸ≈≈–Ú
+    quickSort: function(arr){
+        var low=0, high=arr.length-1;
+        sort(low,high);
+        function sort(low, high){
+            if(low<high){
+                var mid = (function(low, high){
+                    var tmp = arr[low];
+                    while(low<high){
+                        while(low<high&&arr[high]>=tmp){
+                            high--;
+                        }
+                        arr[low] = arr[high];
+                        while(low<high&&arr[low]<=tmp){
+                            low++;
+                        }
+                        arr[high] = arr[low];
+                    }
+                    arr[low] = tmp;
+                    return low;
+                })(low, high);
+                sort(low, mid-1);
+                sort(mid+1,high);
+            }
+        }
+        return arr;
+    },
+ 
+    //≤Â»Î≈≈–Ú
+    insertSort: function(arr){
+        var len = arr.length;
+        for(var i=1;i<len;i++){
+            var tmp = arr[i];
+            for(var j=i-1;j>=0;j--){
+                if(tmp<arr[j]){
+                    arr[j+1] = arr[j];
+                }else{
+                    arr[j+1] = tmp;
+                    break;
+                }
+            }
+        }
+        return arr;
+    },
+ 
+    //œ£∂˚≈≈–Ú
+    shellSort: function(arr){
+        console.log(arr);
+        var h = 1;
+        while(h<=arr.length/3){
+            h = h*3+1;  //O(n^(3/2))by Knuth,1973
+        }
+        for( ;h>=1;h=Math.floor(h/3)){
+            for(var k=0;k<h;k++){
+                for(var i=h+k;i<arr.length;i+=h){
+                    for(var j=i;j>=h&&arr[j]<arr[j-h];j-=h){
+                        var tmp = arr[j];
+                        arr[j] = arr[j-h];
+                        arr[j-h] = tmp;
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+}
