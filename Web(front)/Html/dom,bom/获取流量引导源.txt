@@ -1,0 +1,2 @@
+//可以通过以下命令进行获取
+document.referrer
