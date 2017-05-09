@@ -58,3 +58,5 @@ cumulation	//n.累计，累加
 
 thumb	//n.缩略图
 urgent	//adj.急迫的;催促的;极力主张的;
+strategy	//n.战略，策略
+recursive	//n.递归
