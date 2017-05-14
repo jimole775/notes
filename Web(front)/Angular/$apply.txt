@@ -1,0 +1,1 @@
+如果在controller里面一次dirty检查之中，有【异步】状态（setTimeout或者setinterval），就需要使用$apply进行监听，如果不想使用$scope.$apply，就可以使用$setTimeout和$setinterval
