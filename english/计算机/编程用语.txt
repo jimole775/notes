@@ -1,0 +1,42 @@
+dispatch : 派发
+
+trigger : 触发，扳机
+
+post : 快速
+
+algorithm : 算法，计算程序
+
+assets:资源，素材
+
+compute:計算
+
+delivered:（v）发动，发表，递送，交付
+
+enumerable:（adj）可枚举的
+
+iterator:迭代器
+
+generator:发生器，生产者，发电机
+
+customize:定制
+
+custiom:（n）常客，习惯;（adj）定制的
+
+exposes:（v）暴露，曝光
+
+recursive:（n）递归
+
+encrypt: (v) 加密
+
+decrypt: (v) 解密
+
+stable: (adj) 稳定
+的
+
+abstract: (adj) 抽象的，理论上的；（n）抽象概念；(vt) 提取，分离，概括
+
+exception: (adj) 异常
+
+
+hybrid: (adj) 混合的
+
