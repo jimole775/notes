@@ -1,0 +1,7 @@
+...其行为和new Array(); 差不多，
+...Array.of()主要弥补new Array()的缺陷就是，参数不同，导致的行为就有差异；
+---new Array();	//[]
+---new Array(3);	//[,,,]
+---new Array(3,4);	//[3,4]
+---Array.of(3);	//[3]
+---Array.of(3,4);	//[3,4]	
