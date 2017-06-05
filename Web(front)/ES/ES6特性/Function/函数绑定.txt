@@ -1,26 +1,26 @@
 ...在【ES5】当中，函数绑定相当于作用域绑定，使用call,apply,bind进行调用；
 ...在【ES7】中，可以使用（::）来代替；
 ...如果双冒号左边为空，右边为一个对象的方法，那么就默认将该方法绑到右边的对象上；
----var method = obj::obj.fn;
----var method = ::obj.fn;
+   var method = obj::obj.fn;
+   var method = ::obj.fn;
 
 ...由于双冒号运算符返回还是原对象，因此可以使用这个做【链式】写法；
----function Foo(){
----   this.bar = "lz",
----   this.fn = function(){
----      this.bar = "changed",
----      console.log(this.bar)
----   }
----   this.fn1 = function(){
----      this.fn();
----   }
----   this.fn2 = function(){
----      this.fn();
----   }
----}
----
----var foo = Foo();
----fn = foo.fn;
----fn1 = foo.fn1;
----fn2 = foo.fn2;
----fn()::fn1()::fn2();
+   function Foo(){
+      this.bar = "lz",
+      this.fn = function(){
+         this.bar = "changed",
+         console.log(this.bar)
+      }
+      this.fn1 = function(){
+         this.fn();
+      }
+      this.fn2 = function(){
+         this.fn();
+      }
+   }
+
+   var foo = Foo();
+   fn = foo.fn;
+   fn1 = foo.fn1;
+   fn2 = foo.fn2;
+   fn()::fn1()::fn2();

@@ -1,17 +1,17 @@
-...【书写格式】
----var f = v => v;
----var f = (x) => x;
----var f = (x,y) => x + y;
----var f = (x,y) => {x + y};
----var f = (x = 0,y = 0) => {x + y};
----var f = ({x = 0,y = 0}) => {x + y};
----var f = ([x = 0,y = 0]) => {x + y};
+--->【书写格式】
+    var f = v => v;
+    var f = (x) => x;
+    var f = (x,y) => x + y;
+    var f = (x,y) => {x + y};
+    var f = (x = 0,y = 0) => {x + y};
+    var f = ({x = 0,y = 0}) => {x + y};
+    var f = ([x = 0,y = 0]) => {x + y};
 
----var f = (...[x,y]) => {x + y};
----var f = (...values) => {let [x,y] = values; console.log(x+y)};
+    var f = (...[x,y]) => {x + y};
+    var f = (...values) => {let [x,y] = values; console.log(x+y)};
 
 
-...【与function关键字的区别】
+--->【与function关键字的区别】
 ...1, 函数体内的this对象就是定义时所在的对象，而不是使用时所在的对象。
 ...2, 不可以当作构造函数。
 ...3, 不存在arguments对象，可以使用rest参数代替。

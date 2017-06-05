@@ -1,0 +1,21 @@
+--->Symbol.hasInstance
+...这个属性用于【自拟定】类函数的instanceOf行为；
+
+   class MyClass{
+      static [Symbol.hasInstance](x){
+         return Array.isArray(x);
+      }
+   }
+   [] instanceOf MyClass;   //true;
+
+
+
+--->Symbol.iterator
+...这个属性用来调取数组的【Iterator接口】的！
+
+   var ary = [1,2,3];
+   ary[Symbol.iterator];    //function values(){[native code]};
+___这一步获取到一个计算当前对象的values的方法
+
+   ary[Symbol.iterator]();  //Array Iterator{}
+___调用方法之后，就得到了一个iterator接口对象，这个对象继承有一个【next方法】，用于截取数组的每一个值
