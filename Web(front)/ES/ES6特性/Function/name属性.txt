@@ -2,6 +2,3 @@
 ...在ES5/ES6下，匿名函数获取到的都是空字串；
 ...但是在ES6中，如果匿名函数被赋值给某个变量，那么它就能识别到正确的函数名
 ...而ES5没有做到这一步
----let foo = function(){console.log(arguments.callee.name)};
----foo();
----//foo
