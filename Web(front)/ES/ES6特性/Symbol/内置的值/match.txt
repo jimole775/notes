@@ -1,0 +1,11 @@
+...主要针对String的startsWith，endsWith，includes方法；
+...以上三个方法不能在第一个参数位放置正则表达式；
+...可以设置regexp的Symbol.match为false；
+...忽略掉检查机制；
+
+____________________
+   var reg = /foo/;
+   reg[Symbol.match] = false;
+   "/foo/".startsWith(reg);	//true
+   reg[Symbol.match] = true;
+   "/foo/".endsWith(reg);	//TypeError,First paramer can't be regexp expression
