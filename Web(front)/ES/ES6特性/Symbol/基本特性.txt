@@ -1,17 +1,26 @@
-...1，一般Symbol对象只是用来创建对象的属性名，每个Symbol()方法的返回值都是唯一的！
+...1，一般Symbol对象只是用来创建对象的属性名，每个Symbol()方法的返回值都是【唯一】的！
+
+_________________________
    var foo = Symbol('foo');	//参数"foo"只是当作一个标识符用，没有其他的作用
    var bar = Symbol('foo');	
    foo === bar;	//false;
 
 
-...2，用作参数名时，必须使用方括号
+
+...2，用作属性名时，必须使用【方括号】
+
+_________________________
    var foo = Symbol('foo');
    var bar = {
       [foo]:"hello",	
       [Symbol("foo")]:"hello ag"
    }
 
-...3，用Symbol生成的属性无法被普通的方法遍历出来（虽然它的enumerable是true），只能使用特定的两个方式来获取；
+
+
+...3，用Symbol生成的属性无法被普通的方法遍历出来（虽然它的enumerable是true），只能使用【特定】的两个方式来获取；
+
+___________________________________
    Object.getOwnPropertySymbols(foo);	//[Symbol("foo")];
 ___【第一种】只能获取Symbol属性
 
