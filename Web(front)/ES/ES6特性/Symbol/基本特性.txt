@@ -1,7 +1,7 @@
 ...1，一般Symbol对象只是用来创建对象的属性名，每个Symbol()方法的返回值都是【唯一】的！
 
 _________________________
-   var foo = Symbol('foo');	//参数"foo"只是当作一个标识符用，没有其他的作用
+varfoo = Symbol('foo');	//参数"foo"只是当作一个标识符用，没有其他的作用
    var bar = Symbol('foo');	
    foo === bar;	//false;
 
@@ -26,4 +26,3 @@ ___【第一种】只能获取Symbol属性
 
    Reflect.ownKeys(foo);	//[Symbol("foo"),"propety"];
 ___【第二种】可以遍历所有属性
-

@@ -1,7 +1,7 @@
 
 ==================>|_Symbol.iterator_|<==========================
 
-...这个值指向一个数组的values方法，用来调取数组的【Iterator接口】的！
+...这个值指向一个实例数组的内部实现（方法），用来调取数组的【Iterator接口】的！
 ____________________
    var ary = [1,2,3];
    ary[Symbol.iterator];    //function values(){[native code]};

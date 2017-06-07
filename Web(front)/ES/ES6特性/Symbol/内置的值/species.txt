@@ -11,4 +11,4 @@ var a = new Ary(1,2,3);
 var mapped = a.map(x => x*x);
 
 mapped instanceof Ary;	//false	(如果不加species语句，就直接等于true)
-mapped instanceof Array;	//true (最关键的，加不加species语句，都等于true)
+mapped instanceof Array;//true (加不加species语句，都等于true)
