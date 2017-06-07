@@ -1,0 +1,7 @@
+...Symbol.replace可以返回一个正则表达式的方法，
+...相当于把String的replace方法拿过来
+
+________________________
+   var rx = new RegExp("a","g");
+   var r = rx[Symbol.replace]("a","b");
+   r === "b";	
