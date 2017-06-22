@@ -1,0 +1,47 @@
+____________________________
+get(target,propKey,receiver)
+	
+//对一个属性进行调用时触发；
+___________________________________
+set(target,propKey,value,receiver)	
+
+//设置属性值的时候触发；
+
+___________________________________
+has(target,propKey)
+
+//使用in运算符的是触发
+
+___________________________________
+deleteProperty(target,propKey)
+
+//使用delete运算符的时候触发
+
+___________________________________
+enmuerate(target) ----【已经被废弃】
+
+//使用for in循环的时候触发
+
+___________________________________
+hasOwn(target,propKey)
+
+//使用hasOwnProperty的时候触发
+
+___________________________________
+
+ownKeys(target)
+
+//使用Object.getOwnPropertyNames, Object.getOwnPropertySymbols, Object.keys的时候触发
+
+___________________________________
+apply(target, object, args)
+
+//当函数被调用，或者aplly, call的时候触发
+
+___________________________________
+construct(target, args, proxy)
+
+//当被代理的对象被作为构造函数的时候触发
+
+
+...剩下的就是一些不常用的属性，或者方法，它们基本都和原对象的属性（或方法）同名，到时候用到了再查API吧
