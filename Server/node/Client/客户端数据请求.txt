@@ -3,9 +3,9 @@ let opt = {
     protocol: 'https:',
     port: 443,	//https的默认端口是443,http的默认端口是80
     host: "kyfw.12306.cn",
-    rejectUnauthorized: false,
+    rejectUnauthorized: false,//关闭【拒绝未注册登陆】
     family: '4',
-    method: "GET",
+    method: "GET",  //IPV4版本
     path: "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-05-10&leftTicketDTO.from_station=HFH&leftTicketDTO.to_station=CDW&purpose_codes=ADULT", //path就是完整的URL
     timeout: 5000
     //headers: {	//header需不需要都无所谓,具体可以根据目标网站的信息,进行模拟

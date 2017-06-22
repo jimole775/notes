@@ -1,0 +1,15 @@
+==================|_revocable_|====================
+...Proxy.revocable可以返回一个可取消的Proxy实例（实际作用，大概于创造一个一次性的proxy实例）
+
+______________________________
+   var {proxy,revok} = Proxy.revocable({},{set:function(){console.log("setted")}});
+
+   proxy.foo = "bar";	//"setted";
+
+   revok();	//取消proxy行为；
+
+   proxy.foo;	//Error;
+
+   proxy.foo = "baz"	//Error;
+ 
+   
