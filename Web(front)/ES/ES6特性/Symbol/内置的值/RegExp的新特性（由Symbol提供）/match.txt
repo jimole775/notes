@@ -2,8 +2,6 @@
 ...以上三个方法不能在第一个参数位放置正则表达式；
 ...可以设置regexp的Symbol.match为false；
 ...【忽略掉检查机制】；
-
-____________________
    var reg = /foo/;
    reg[Symbol.match] = false;
    "/foo/".startsWith(reg);	//true
@@ -12,8 +10,5 @@ ____________________
 
 
 ...当然还有就是和replace一样，可以通过调用reg的Symbol.match，让reg可以使用String的match方法
-
-_____________________
    var reg = /foo/;
-   reg[Symbol.match]("foobar);
-   //["foo", index: 0, input: "foobar"]
+   reg[Symbol.match]("foobar);   //["foo", index: 0, input: "foobar"]

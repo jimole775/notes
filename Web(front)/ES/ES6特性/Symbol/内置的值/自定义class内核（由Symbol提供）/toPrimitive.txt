@@ -1,28 +1,21 @@
 ...这个属性指向Object的一个内部实现；可以让对象在被【强制转换】时，可以【捕获过程】，并自定义套路；
-
-______________________
    var obj1 = {};
    + obj1; 	//NAN;
-   obj1 + "";	//
-"[object Object]"
-   `${obj1}`;	//
-"[object Object]"
+   obj1 + "";	//"[object Object]"
+   `${obj1}`;	//"[object Object]"
 
 ...正常情况下的运算结果
-
-
-______________________
    var obj2 = {
       [Symbol.toPrimitive]:function(hint){ 	//hint相当于转换的结果
          if(hint === "string"){
              return "hello"
          };
          if(hint === "number"){
-	     return 1;
+	        return 1;
          };
          return true;
-         };
-       };
+      };
+   };
 
    console.log(+obj2);		//1;
    console.log(obj2 + "");	//"true";

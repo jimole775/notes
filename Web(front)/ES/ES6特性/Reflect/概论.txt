@@ -13,17 +13,17 @@
       也就是说，在Proxy定义行为的时候，不需要从新编写元对象的原始行为，只要使用Reflect调用一下就OK了。
       __________________________________
       var proxy = new Proxy({},{
-	  set(target,key,value,receiver){
-		var success = Reflect.set(target, key, value, receiver);	
- 		if(success){
-		   return "property" + name + " on" + target + "set to " + value;	//成功之后给出提示
-		}
-		return success;
-	  },
-	  deleteProperty(target, key){
-		console.log("deleted");
-		Reflect.deleteProperty(target, key);	//执行删除指令
-	  }
+          set(target,key,value,receiver){
+             var success = Reflect.set(target, key, value, receiver);
+             if(success){
+                return "property" + name + " on" + target + "set to " + value;	//成功之后给出提示
+             }
+             return success;
+          },
+          deleteProperty(target, key){
+             console.log("deleted");
+             Reflect.deleteProperty(target, key);	//执行删除指令
+          }
       })
       
       proxy.foo = "bar";

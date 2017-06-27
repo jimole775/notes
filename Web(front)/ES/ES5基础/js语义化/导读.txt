@@ -1,16 +1,14 @@
-#所谓语义化，无外呼就是以命名规则做语义，让每一个（段）逻辑区域都有一个可读的title
-#要
+...所谓语义化，无外呼就是以命名规则做语义，让每一个（段）逻辑区域都有一个可读的title
 
 例如：
-
-isType()  封装代替 Object.prototype.toString.call(o) === '[object ' + type + ']' 的判断式
-isCss()	封装代替 /.*\.css(?=\?|$)/  的判断式
-register() 封装代替 repos["a"] = {name: "a",content: {}};
-Queue.splice(0, Queue.length) 代替 Queue.length = 0;
+    isType()  封装代替 Object.prototype.toString.call(o) === '[object ' + type + ']' 的判断式
+    isCss()	封装代替 /.*\.css(?=\?|$)/  的判断式
+    register() 封装代替 repos["a"] = {name: "a",content: {}};
+    Queue.splice(0, Queue.length) 代替 Queue.length = 0;
 
 小结：
 
-代码的优化，需要考虑的维度很多。但是代码的优化并不是减少代码量，有的时候我们需要增加代码来提高代码的可阅读性。
+...代码的优化，需要考虑的维度很多。但是代码的优化并不是减少代码量，有的时候我们需要增加代码来提高代码的可阅读性。
 
 1，正确标记变量
 2，封装某个动作
@@ -19,4 +17,4 @@ Queue.splice(0, Queue.length) 代替 Queue.length = 0;
 
 文章来自：http://www.barretlee.com/blog/2014/08/20/cb-javascript-semantization/
 
-###其实在所有大的框架的源码里面，都是这么个用法，也可以说是一种默认规则
+***其实在所有大的框架的源码里面，都是这么个用法，也可以说是一种默认规则
