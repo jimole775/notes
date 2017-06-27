@@ -2,5 +2,5 @@
 ...等效于 obj.constructor.prototype
 ...不过这个并不是ES6的标准，只不过大多数浏览器都支持这个属性（nodejs不会有这个属性），
 ...所以，最好使用【setPrototyteOf()】和【getPrototypeOf()】来代替__proto__
----var obj = {};
----Object.getPrototypeOf(obj);
+    var obj = {};
+    Object.getPrototypeOf(obj);

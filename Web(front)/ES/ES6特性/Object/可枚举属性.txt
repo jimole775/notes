@@ -1,6 +1,6 @@
 ...每个对象的【每一个属性】都有一个描述对象(Descriptor)
 ...用于控制该属性的行为。
----var obj = {foo:"123"};
----Object.getOwnPropertyDescriptor(obj,"foo");
----//{value:123, weitable:true, enumerable:true, configurable:true}
+    var obj = {foo:"123"};
+    Object.getOwnPropertyDescriptor(obj,"foo"); //{value:123, weitable:true, enumerable:true, configurable:true}
+
 ...enumerable确定属性的【可枚举】状态

@@ -3,13 +3,9 @@
 
 ______________________________
    var {proxy,revok} = Proxy.revocable({},{set:function(){console.log("setted")}});
-
    proxy.foo = "bar";	//"setted";
-
    revok();	//取消proxy行为；
-
    proxy.foo;	//Error;
-
    proxy.foo = "baz"	//Error;
  
    
