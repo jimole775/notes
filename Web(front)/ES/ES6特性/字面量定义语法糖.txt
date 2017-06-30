@@ -1,6 +1,0 @@
-var a = "a";
-var b = "b";
-var c = {a,b};	//{a:"a",b:"b"}
-
-
-var a = {b() => {return b}};

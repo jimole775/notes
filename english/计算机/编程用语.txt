@@ -40,3 +40,11 @@ exception: (adj) 异常
 
 hybrid: (adj) 混合的
 
+
+subset: (n) 子集
+
+determine: (vt) 决定，判定，限定，使决定。 （vi）终止，结束
+
+candidate: (n) 候选者
+
+increament: (v) 增长 （n）增量

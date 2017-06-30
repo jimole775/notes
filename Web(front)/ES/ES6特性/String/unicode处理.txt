@@ -1,31 +1,27 @@
-《长度超过2字节（32bits）的unicode的表达式》
+...长度超过2字节（32bits）的unicode的表达式
+    \u{20BB7}"
 
-___"\u{20BB7}"
-
-《codePointAt》
-《fromCodePoint》
+=========================|codePointAt|=========================
+=========================|fromCodePoint|=======================
 ...因为在js中无法普通String接口，无法处理长度超过2字节（32bits）的unicode字符，
 ...所以生产出codePointAt，fromCodePoint方法，
 ...这两个接口除了【能识别出长字符】，其他特性和charCodeAt,fromCharCode一样
+    \u{20BB7}".charCodeAt(0).toString(16) //0xD842
+    \u{20BB7}".charCodeAt(1).toString(16) //0xDFB7
 
-《例如》：
-___"\u{20BB7}".charCodeAt(0).toString(16) //0xD842
-___"\u{20BB7}".charCodeAt(1).toString(16) //0xDFB7
-......上面代码被解析成了2个字符；
-
-___"\u{20BB7}".codePointAt(0).toString(16)//【0x20BB7】
-___"\u{20BB7}".codePointAt(1).toString(16)//0xDFB7
-___"\u{20BB7}".length //2
-......上面代码一样被解析成了2个字符；
-......但是第一个的识别是正确的；
+...上面代码被解析成了2个字符；
+    \u{20BB7}".codePointAt(0).toString(16)//【0x20BB7】
+    \u{20BB7}".codePointAt(1).toString(16)//0xDFB7
+    \u{20BB7}".length //2
+...上面代码一样被解析成了2个字符；
+...但是第一个的识别是正确的；
 
 【注意】
 ...如果要正确处理“\u{20BB7}\u{97}”这样的字符组合；
 ...可以结合for of循环，就可以正确【跳过错误的长度】
-
-___var char = "\u{20BB7}\u{97}";
-___for (let ch of char){console.log(ch.codePointAt(0).toString(16))}
-___//20BB7
-___//97
+    ar char = "\u{20BB7}\u{97}";
+    or (let ch of char){console.log(ch.codePointAt(0).toString(16))}
+    /20BB7
+    /97
 
 
