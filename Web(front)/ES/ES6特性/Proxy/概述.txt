@@ -1,0 +1,30 @@
+...按照字面的理解，Proxy就是一个代理器，对一个对象进行代理，
+
+...操作特点和addeventlistener差不多，
+
+...proxy就是对一个对象的属性的添加，修改进行代理，
+
+...【注意】：
+...1.代理的对象都会视作【空对象】（即使里面有内容）；
+...2.代理对象的所有方法都会被【覆盖】，只执行自定义行为。（所以，相当于自己重新构造了一个对象，包括自己需要精准的抛出异常）
+
+__________________________________
+   var target = function(){console.log("hello world")};
+	
+   var handler = {
+        set:function(target,key,value,receiver){	//receiver会指向内部this对象，也就是说，如果第四个参数是一个对象的化，那么内部的this就不是target
+	        console.log("set")
+	    };
+        apply:function(target,object,args){
+            console.log("apply")
+        };
+        has:function(target,key){
+            return target[key];		//被代理之后的对象的 in 运算符只执行此函数
+        }
+   };
+
+   var fn = new Proxy(target,handler);
+   fn();	//apply
+   fn.foo = "bar";  //set	
+   target();	//hello world
+

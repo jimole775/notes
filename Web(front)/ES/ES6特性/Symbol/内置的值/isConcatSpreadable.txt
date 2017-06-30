@@ -1,9 +1,6 @@
 
-==================>|_Symbol.isConcatSpreadable_|<==========================
-
+==================|Symbol.isConcatSpreadable|==========================
 ...这个值用来决定数组在使用concat方法时是否可以被【扩展】（ES5中默认会扩展）；
-
-____________________________
    class Ary1 extends Array{
       get [Symbol.isConcatSpreadable](){
          return true;   //可扩展

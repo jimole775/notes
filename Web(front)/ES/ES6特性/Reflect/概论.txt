@@ -1,0 +1,30 @@
+...1, 将Object对象的一些明显属于【语言层面】的方法放到Reflect上。
+      现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。
+
+...2, 修改某些Object方法的返回结果，让其变得合理。
+      比如，Object.defineProperty(obj,name,desc)在无法定义属性时会抛出一个错误，
+      而Reflect.defineProperty(obj,name,desc)则会返回false;
+
+...3, 让Object的操作符都变成【函数行为】。
+      某些Object操作是命令式的，比如，in; delete;操作符，
+      而Reflect.has()和Reflect.deleteProperty()让他们变成了函数行为
+
+...4, Reflect的方法和【Proxy】的方法一一对应，
+      也就是说，在Proxy定义行为的时候，不需要从新编写元对象的原始行为，只要使用Reflect调用一下就OK了。
+      __________________________________
+      var proxy = new Proxy({},{
+          set(target,key,value,receiver){
+             var success = Reflect.set(target, key, value, receiver);
+             if(success){
+                return "property" + name + " on" + target + "set to " + value;	//成功之后给出提示
+             }
+             return success;
+          },
+          deleteProperty(target, key){
+             console.log("deleted");
+             Reflect.deleteProperty(target, key);	//执行删除指令
+          }
+      })
+      
+      proxy.foo = "bar";
+      delete proxy.foo;	
