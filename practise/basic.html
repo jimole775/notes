@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form id="form1" action="/upload">
+    <input id="files" type="file"/>
+    <input type="submit" onclick="upload()"/>
+</form>
+<script>
+
+    window.upload = function(){
+        var formData = new FormData();
+
+        // 建立一个upload表单项，值为上传的文件
+//        formData.append('upload', document.getElementById('files').files[0]);
+        // ajax 上传图片
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', "http://127.0.0.1:8080");
+        var reader = new FileReader();
+        reader.readAsArrayBuffer(document.getElementById('files').files[0]);
+        reader.onload = function(e){ // reader onload start
+            xhr.send(e.target.result);
+        };
+
+        // 定义上传完成后的回调函数
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log('上传成功');
+            } else {
+                console.log('出错了');
+            }
+        };
+    }
+</script>
+</body>
+</html>// 检查是否支持FormData
