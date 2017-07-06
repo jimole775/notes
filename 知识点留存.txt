@@ -41,3 +41,4 @@ fileReader.onload一直不执行，
 6，angular路由，(angular2，typescript)[暂时先放弃了，先react系吧]
 7，react,react-native,redux
 8，web视频编码，解码，流媒体
+9，REST接口（java?）
