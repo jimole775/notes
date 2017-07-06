@@ -28,7 +28,7 @@ function writeFile(file){
       
     // appendFile，如果文件不存在，会自动创建新文件  
     // 如果用writeFile，那么会删除旧文件，直接写新文件  
-    fs.appendFile(file, arr, function(err){  
+    fs.appendFile(path, arr, function(err){
         if(err)  
             console.log("fail " + err);  
         else  
