@@ -1,0 +1,12 @@
+...一样是非标准内容，和done()方法一样，不过这个和done()的区别在于：
+...done是用于异常捕捉，可执行，也可不执行；
+...而finally是用于结束语句的，一般都扔一个无论如何都必须执行的回调函数进去；
+...代码：
+______________________________
+    Promise.prototype.finally = function(callback){
+        let P = this.constructor;
+        return this.then(   //这里使用return是为了尾调用优化？？
+            value => P.resolve(callback()).then(() => value);
+            reason => P.reject(callback()).then(() => throw reason);
+        );
+    }
