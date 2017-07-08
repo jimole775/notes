@@ -1,0 +1,12 @@
+关于创建包；
+调用语法：
+var pag = require("./path/pagName");
+
+包的配置：
+package.json
+{
+    name:"pagName",
+    main:"index.js" //包的主入口，在主入口里面就是各种模块调用(module.exports导出，同样require引入)
+}
+
+
