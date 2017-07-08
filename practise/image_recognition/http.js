@@ -21,7 +21,6 @@ CreateHttp.prototype.run = function () {
         req.on("data", function (data) {
             picArray = picArray.concat([...data]);
             nChunk += data.length;
-            //console.log(data);
         });
         that.writeHead(req, res);
         that.response(req, res);
