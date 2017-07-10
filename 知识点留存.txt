@@ -42,3 +42,5 @@ fileReader.onload一直不执行，
 7，react,react-native,redux
 8，web视频编码，解码，流媒体
 9，REST接口（java?）
+
+10,node【koa和express中间件】【状态管理工具】
