@@ -27,6 +27,7 @@ function storingFile(buf, size, name) {
 
     bufPadding += buf.length;
     var type = name.split(".").pop();
+
     switch (type) {
         case "jpg":
         case "gif":
@@ -45,7 +46,6 @@ function storingFile(buf, size, name) {
         });
     }
 }
-
 
 function extractFile(fileName, callback) {
     var type = fileName.split(".").pop();
