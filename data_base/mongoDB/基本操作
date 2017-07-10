@@ -1,0 +1,11 @@
+...基础命令集：
+    use foo     //创建foo库,并调到当前库
+    db.fork1    //创建集合fork1
+    post = {"name":"andy"}
+    db.fork1.insert(post);   //插入一条数据
+    db.fork1.find();    //查询显示fork1下的所有数据
+    db.fork1.find({"name":"andy"});    //查询指定数据
+    db.fork1.findOne(); //只查询一条数据
+    db.fork1.update({"age":10},post)    //升级一条数据
+    db.fork1.remove({"age":10})    //删除一条指定数据
+    db.fork1.remove()    //删除fork1下的所有数据（书上说可以使用，实际操作不可行，估计是版本问题）
