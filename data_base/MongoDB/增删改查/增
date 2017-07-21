@@ -1,0 +1,10 @@
+Ôö£º
+db.foo.insert(tag);
+
+É¾£º
+db.foo.remove(tag);
+
+¸Ä£º
+db.foo.update(old,new,bolean);
+
+
