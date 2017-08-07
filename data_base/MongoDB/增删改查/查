@@ -32,4 +32,4 @@ db.foo.find({"$where":function(){
 db.foo.find({age:{"$gt":10,"$lt":20}}).limit(3);    //限定只返回前3个结果
 
 【游标】类型：
-...根据
+...??

@@ -1,7 +1,7 @@
 三角形：triangle
-正方形：
-长方形：
-多边形：
+正方形：square
+长方形：rectangle
+多边形：polygon
 菱形：
 扇形：
 圆形：

@@ -2,7 +2,7 @@
 arm
 
 blood
-blood vessel		//Ñª¹Ü
+blood vessel		//Ñª¹Ü 
 
 cheek
 
