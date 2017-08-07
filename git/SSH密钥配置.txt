@@ -3,7 +3,7 @@
 $ git config --global user.name xuhaiyan
 
 $ git config --global user.email haiyan.xu.vip@gmail.com
-
+   
 
 二、生成SSH密钥过程：
 

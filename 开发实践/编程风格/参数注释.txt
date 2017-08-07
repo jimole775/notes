@@ -1,6 +1,6 @@
 ÑùÀý£º
 
-  	* @param {String} id the error ID that maps to an ID on a web page.
+  	* @param {String} id the error ID that maps to an ID on a web page.  
      	* @param {String} message human readable error.
      	* @param {Error} [err] the original error, if there is one.
      	*

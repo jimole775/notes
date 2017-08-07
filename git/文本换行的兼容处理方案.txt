@@ -18,4 +18,4 @@ linux操作系统下的换行符为/n，而windows操作系统下的换行符则为/r/n，这导致在程序执
 
  
 
-（3）如果你是Windows程序员，且正在开发仅运行在Windows上的项目，可以设置false 取消此功能，不进行变换，也就是一直是CRLF。把回车符记录在库中：执行命令：git config --global core.autocrlf input
+（3）如果你是Windows程序员，且正在开发仅运行在Windows上的项目，可以设置false 取消此功能，不进行变换，也就是一直是CRLF。把回车符记录在库中：执行命令：git config --global core.autocrlf input  

@@ -10,7 +10,7 @@
     "key": "ANTISTEEL_CTYPE",
     "cartype": "DBTable/ATmatch/bmw/CAS4/keymatch"	//键名和键值完全扭头不对马嘴！
 }
-{
+{    
     "key": "CTYPE",
     "cartype": "banz"
 }
