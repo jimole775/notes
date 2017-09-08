@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    if(Worker){
+        var wk = new Worker("./worker.js");
+        wk.onmessage = function(event){
+            console.log(event.data);
+        };
+
+        wk.postMessage(["hello! dude!"]);
+    }
+
+</script>
+
+</body>
+</html>

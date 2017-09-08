@@ -1,0 +1,22 @@
+其实没什么好说的
+官网浏览了一遍，其实实现的东西都大同小易，只不过内部原理他们各自有各自的奇淫巧计，我等小辈现阶段也无需理会
+
+开篇样例：
+html
+    <div id="app">
+    <p>{{message}}</p>
+    <button v-on:click="sayHi"></button>
+    </div>
+
+js:
+    var component = new Vue({
+        el:"#app",
+        data:{
+            message:"look me!"
+        },
+        methods:{
+            sayHi:function(){
+                alert("hello!")
+            }
+        }
+    })
