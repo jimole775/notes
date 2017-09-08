@@ -1,0 +1,25 @@
+interface Usb{
+    float size = 3.2;
+    public void start();
+    public void stop();
+}
+
+interface Usb2{
+    float size = 1.6;
+    public void start();
+    public void stop();
+}
+
+class computer implements Usb,Usb2{
+    public void start(){
+        System.out.println("the usb bee working");
+    }
+    public void stop(){
+        System.out.println("the usb was stopped");
+    }
+}
+
+***注意***
+1, 接口之间可以互相继承
+2，一个类可以实现多个接口，实现之后必须把所有接口的方法都要实现，包括接口之间的继承
+3，接口可以有变量，但只支持静态的final类型，一声明就必须要初始化

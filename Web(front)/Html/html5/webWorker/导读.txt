@@ -1,0 +1,6 @@
+1, worker是浏览器提供的API
+2，在html环境中以对象实例的方式发起调用
+3，通过postMessage和onMessage实现数据交互，区别在于：
+    1）html环境中，必须是对象实例的一个成员方法(new Worker('./')).postMessage();
+    2）外部环境的js中，postMessage和onMessage都是全局方法
+4，外部环境的js没有window,document这些html提供的对象（因为其没有被嵌入HTML环境执行，最好的理解方式就是nodejs的单个文件也不存在html元素）

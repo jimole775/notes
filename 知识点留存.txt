@@ -44,3 +44,8 @@ fileReader.onload一直不执行，
 9，REST接口（java?）
 
 10,node【koa和express中间件】【状态管理工具】
+11, 聚类、分类等机器学习算法；
+
+12, hadoop、spark、kafka、rabbitMq、redis、zookeeper等基础设施的使用经验。
+
+13, graphQL,取代REST API
