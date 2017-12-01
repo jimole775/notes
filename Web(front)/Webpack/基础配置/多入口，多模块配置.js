@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-    entry: ["./index.js","./plugin.js"],    //多出口
+    entry: ["./index.js","./plugin.js"],    //多入口
     output: {
         path:"./",
         filename:"bundle.js"    //单一出口

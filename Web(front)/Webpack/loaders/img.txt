@@ -1,3 +1,0 @@
-npm loader url-loader file-loader --save-dev
-
-{test: /\.(jpg|png)$/, loader: "url?limit=8192"}

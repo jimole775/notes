@@ -2,4 +2,4 @@
 ...相当于把String的replace方法拿过来
    var rx = new RegExp("a","g");
    var r = rx[Symbol.replace]("a","b");
-   r === "b";	
+   r === "b";

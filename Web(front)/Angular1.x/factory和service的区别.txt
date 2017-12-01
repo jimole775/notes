@@ -1,0 +1,45 @@
+factory是一个函数，srivice是一个构造对象,
+factory会共用函数体，service每次都会创建新的实例
+
+factory 样例：
+
+App.factory("commonFun", function () {
+        var $scope = "";
+        return {
+            getScope: function (scope) {
+                $scope = scope;
+                return this;
+            },
+            safeApply: function (fn) {
+                var phase = $scope.$root.$$phase;
+                if (phase == '$apply' || phase == '$digest') {
+                    if (fn && (typeof(fn) === 'function')) {
+                        fn();
+                    }
+                } else {
+                    $scope.$apply(fn);
+                }
+            }
+})
+
+
+
+service 样例：
+
+App.service("commonFun", function () {
+        var $scope = "";
+        this.getScope = function (scope) {
+                $scope = scope;
+                return this;
+            };
+        this.safeApply = function (fn) {
+                var phase = $scope.$root.$$phase;
+                if (phase == '$apply' || phase == '$digest') {
+                    if (fn && (typeof(fn) === 'function')) {
+                        fn();
+                    }
+                } else {
+                    $scope.$apply(fn);
+                }
+            }
+})

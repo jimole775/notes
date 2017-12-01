@@ -1,0 +1,30 @@
+...resolve是用来配置模块的直接搜索路径的，
+...可以直接定义 路径别名 来代替 路径全称
+...也可以定义 模块别名 来代替 模块路径 + 模块名
+
+...| 样例：
+
+    resolve: {
+
+        //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
+        extensions: ['.js', '.json', '.scss'],
+
+        //模块别名定义，方便后续直接引用别名，无须多写长长的地址
+        alias: {
+            AppStore$ : 'js/stores/AppStores.js',    //加了【$】符精准匹配之后，可以直接 require('AppStore') 使用
+            stores : 'js/stores',   //如果没加 【$】符，就相当于把路径映射到我们 自定义的 变量上，使用的时候 require('stores/AppStore')
+        }
+    }
+
+...| 需要注意：
+
+     //在js的template模板里面，使用模块别名的时候需要加上波浪符 "~"，以告知编译器使用的是别名，而不是路径
+
+...| 样例：
+
+    css: background:url("~stores/images/btn.gif")
+
+    html tag: <img src="~stores/images/banner.png">
+
+API url：
+    http://www.css88.com/doc/webpack2/configuration/resolve/
