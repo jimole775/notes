@@ -11,7 +11,7 @@ module.exports = {
             {test: "/\.css$/", loader: "style!css!autoprefixer"},
 
             //exclude又代表什么？
-            {test: "/\.js$/", loader: "babel", exclude: "/node_modules/"},
+            {test: "/\.js$/", loader: "babel-loader", exclude: "/node_modules/"},
 
             //问号是咋回事？
             {test: "/\.scss$/", loader: "style!css!sass?sourceMap"},

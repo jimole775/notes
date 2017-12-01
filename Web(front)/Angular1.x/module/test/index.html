@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <script src="../../angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<div ng-controller="test" ng-bind="testName">
+
+</div>-->
+<dir1></dir1>
+<dir2></dir2>
+<script>
+    angular.module("components",[])/*
+            .controller("test", ["$scope",function ($scope) {
+                $scope.testName = "testCtrl"
+            }])*/
+            .directive("dir1", function () {
+                return {
+                    restrict: "EA",
+
+                    link: function ($scope) {
+                        $scope.name = "directive1"
+                    },
+                    template: "<div>{{name}}</div>"
+                }
+            })
+            .directive("dir2", function () {
+                return {
+                    restrict: "EA",
+                    link: function ($scope) {
+                        $scope.name = "directive2"
+                    },
+                    template: "<div>{{name}}</div>"
+                }
+            });
+    angular.module("myApp", ["components"]);
+//    angular.bootstrap();
+</script>
+</body>
+</html>
