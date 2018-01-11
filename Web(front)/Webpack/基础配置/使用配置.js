@@ -11,6 +11,7 @@
 module.exports = {
   entry: './main.js',		//一个bundle文件只有一个入口文件，如果引入其他文件，就使用require命令；当然，其他文件必须有导出端口，否则引用没有任何意义
   output:{
+	 publicPath:"",	//全部资源的加载都以这个设置为基础, 效果相当于：path.join(publicPath,yourDir)
      path:'./',
      filename:'bundle.js'
   }

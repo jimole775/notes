@@ -10,13 +10,6 @@ forEach;
 
 var show=!show;
 
-
-
-关于section的性质：
-就是直接的第二层元素，比position好用得多
-
-
-
 惰性载入：
 
 原函数--function createXHR(){

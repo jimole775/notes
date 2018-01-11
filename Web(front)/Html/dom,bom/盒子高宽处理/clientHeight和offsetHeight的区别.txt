@@ -1,5 +1,5 @@
-clientHieght: 是获取可用区域的高度，不包括border和滚动条；会根据浏览器显示窗口的大小变化；
-offsetHeight: 是框体自身的高度，包括border和滚动条；是固定值，在style或者stylesheet里面会有响应的值
+clientHeight: 是获取可用区域的高度，不包括border和滚动条；会根据浏览器显示窗口的大小变化(**如果盒子处于隐藏状态，返回结果为0**)；
+offsetHeight: 是框体自身的高度，包括border和滚动条；是固定值，在style或者stylesheet里面会有响应的值(**如果盒子处于隐藏状态，返回结果为0**)；
 
 scrollHeight: 
 
