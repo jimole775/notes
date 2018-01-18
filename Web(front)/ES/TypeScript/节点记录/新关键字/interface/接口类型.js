@@ -1,7 +1,7 @@
 /**
  * Created by Andy on 2017/8/25.
  */
-//function createSquareOrg(labelOpt:{label?:string}):any{ //��ʹ�ýӿ����͵�������Ҳ��������ʹ��
+//function createSquareOrg(labelOpt:{label?:string}):any{ //锟斤拷使锟矫接匡拷锟斤拷锟酵碉拷锟斤拷锟斤拷锟斤拷也锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷
 //
 //}
 function createSquare(labelOpt) {
@@ -22,4 +22,4 @@ var myArray = [1, 23, 4, 67, 8];
 myArray[0] = 2; //error
 myArray["foo"]; //error
 /***/
-//# sourceMappingURL=接口类型.js.map
+//# sourceMappingURL=鎺ュ彛绫诲瀷.js.map

@@ -1,7 +1,7 @@
  (function(){
 
         var special = jQuery.event.special,
-            handle = jQuery.event.handle ? jQuery.event.handle : jQuery.event.dispatch,//兼容1.9之后jQuery.event.handle为undefined的BUG
+            handle = jQuery.event.handle ? jQuery.event.handle : jQuery.event.dispatch,//鍏煎1.9涔嬪悗jQuery.event.handle涓簎ndefined鐨凚UG
             uid1 = 'D' + (+new Date()),
             uid2 = 'D' + (+new Date() + 1);
 

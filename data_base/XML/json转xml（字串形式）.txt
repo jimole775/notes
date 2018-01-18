@@ -1,5 +1,5 @@
 
-//还不清楚tab的用意，看使用的地方，只是简单的字串拼接，如果不需要用到，可以使用""代替
+//杩樹笉娓呮tab鐨勭敤鎰忥紝鐪嬩娇鐢ㄧ殑鍦版柟锛屽彧鏄畝鍗曠殑瀛椾覆鎷兼帴锛屽鏋滀笉闇�瑕佺敤鍒帮紝鍙互浣跨敤""浠ｆ浛
 function json2xml(o, tab) {
 		var toXml = function(v, name, ind) {
 			var xml = "";

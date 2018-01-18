@@ -1,28 +1,28 @@
-...1, ½«Object¶ÔÏóµÄÒ»Ğ©Ã÷ÏÔÊôÓÚ¡¾ÓïÑÔ²ãÃæ¡¿µÄ·½·¨·Åµ½ReflectÉÏ¡£
-      ÏÖ½×¶Î£¬Ä³Ğ©·½·¨Í¬Ê±ÔÚObjectºÍReflect¶ÔÏóÉÏ²¿Êğ£¬Î´À´µÄĞÂ·½·¨½«Ö»²¿ÊğÔÚReflect¶ÔÏóÉÏ¡£
+...1, å°†Objectå¯¹è±¡çš„ä¸€äº›æ˜æ˜¾å±äºã€è¯­è¨€å±‚é¢ã€‘çš„æ–¹æ³•æ”¾åˆ°Reflectä¸Šã€‚
+      ç°é˜¶æ®µï¼ŒæŸäº›æ–¹æ³•åŒæ—¶åœ¨Objectå’ŒReflectå¯¹è±¡ä¸Šéƒ¨ç½²ï¼Œæœªæ¥çš„æ–°æ–¹æ³•å°†åªéƒ¨ç½²åœ¨Reflectå¯¹è±¡ä¸Šã€‚
 
-...2, ĞŞ¸ÄÄ³Ğ©Object·½·¨µÄ·µ»Ø½á¹û£¬ÈÃÆä±äµÃºÏÀí¡£
-      ±ÈÈç£¬Object.defineProperty(obj,name,desc)ÔÚÎŞ·¨¶¨ÒåÊôĞÔÊ±»áÅ×³öÒ»¸ö´íÎó£¬
-      ¶øReflect.defineProperty(obj,name,desc)Ôò»á·µ»Øfalse;
+...2, ä¿®æ”¹æŸäº›Objectæ–¹æ³•çš„è¿”å›ç»“æœï¼Œè®©å…¶å˜å¾—åˆç†ã€‚
+      æ¯”å¦‚ï¼ŒObject.defineProperty(obj,name,desc)åœ¨æ— æ³•å®šä¹‰å±æ€§æ—¶ä¼šæŠ›å‡ºä¸€ä¸ªé”™è¯¯ï¼Œ
+      è€ŒReflect.defineProperty(obj,name,desc)åˆ™ä¼šè¿”å›false;
 
-...3, ÈÃObjectµÄ²Ù×÷·û¶¼±ä³É¡¾º¯ÊıĞĞÎª¡¿¡£
-      Ä³Ğ©Object²Ù×÷ÊÇÃüÁîÊ½µÄ£¬±ÈÈç£¬in; delete;²Ù×÷·û£¬
-      ¶øReflect.has()ºÍReflect.deleteProperty()ÈÃËûÃÇ±ä³ÉÁËº¯ÊıĞĞÎª
+...3, è®©Objectçš„æ“ä½œç¬¦éƒ½å˜æˆã€å‡½æ•°è¡Œä¸ºã€‘ã€‚
+      æŸäº›Objectæ“ä½œæ˜¯å‘½ä»¤å¼çš„ï¼Œæ¯”å¦‚ï¼Œin; delete;æ“ä½œç¬¦ï¼Œ
+      è€ŒReflect.has()å’ŒReflect.deleteProperty()è®©ä»–ä»¬å˜æˆäº†å‡½æ•°è¡Œä¸º
 
-...4, ReflectµÄ·½·¨ºÍ¡¾Proxy¡¿µÄ·½·¨Ò»Ò»¶ÔÓ¦£¬
-      Ò²¾ÍÊÇËµ£¬ÔÚProxy¶¨ÒåĞĞÎªµÄÊ±ºò£¬²»ĞèÒª´ÓĞÂ±àĞ´Ôª¶ÔÏóµÄÔ­Ê¼ĞĞÎª£¬Ö»ÒªÊ¹ÓÃReflectµ÷ÓÃÒ»ÏÂ¾ÍOKÁË¡£
+...4, Reflectçš„æ–¹æ³•å’Œã€Proxyã€‘çš„æ–¹æ³•ä¸€ä¸€å¯¹åº”ï¼Œ
+      ä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨Proxyå®šä¹‰è¡Œä¸ºçš„æ—¶å€™ï¼Œä¸éœ€è¦ä»æ–°ç¼–å†™å…ƒå¯¹è±¡çš„åŸå§‹è¡Œä¸ºï¼Œåªè¦ä½¿ç”¨Reflectè°ƒç”¨ä¸€ä¸‹å°±OKäº†ã€‚
       __________________________________
       var proxy = new Proxy({},{
           set(target,key,value,receiver){
              var success = Reflect.set(target, key, value, receiver);
              if(success){
-                return "property" + name + " on" + target + "set to " + value;	//³É¹¦Ö®ºó¸ø³öÌáÊ¾
+                return "property" + name + " on" + target + "set to " + value;	//æˆåŠŸä¹‹åç»™å‡ºæç¤º
              }
              return success;
           },
           deleteProperty(target, key){
              console.log("deleted");
-             Reflect.deleteProperty(target, key);	//Ö´ĞĞÉ¾³ıÖ¸Áî
+             Reflect.deleteProperty(target, key);	//æ‰§è¡Œåˆ é™¤æŒ‡ä»¤
           }
       })
       

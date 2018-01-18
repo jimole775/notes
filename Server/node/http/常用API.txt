@@ -1,2 +1,2 @@
-http.createServer(req,res){}	//´´½¨http·şÎñ
-http.get(url,option,cb){}	//getÇëÇó£¬Ò»°ãÖ©Öë³ÌĞò³£ÓÃ	
+http.createServer(req,res){}	//åˆ›å»ºhttpæœåŠ¡
+http.get(url,option,cb){}	//getè¯·æ±‚ï¼Œä¸€èˆ¬èœ˜è››ç¨‹åºå¸¸ç”¨	

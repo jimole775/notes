@@ -1,16 +1,16 @@
-...½Ù³Ö£º
+...åŠ«æŒï¼š
 ___var old = alert;
 ______window.alert = function(str){
 _________old(str);
-_________new Image().src = 'http://target.com/';	//Ê¹ÓÃimg¼ÓÔØÒ»¸öÄ¿±ê
+_________new Image().src = 'http://target.com/';	//ä½¿ç”¨imgåŠ è½½ä¸€ä¸ªç›®æ ‡
 ______}
 
 
-...·´½Ù³Ö£º
+...ååŠ«æŒï¼š
 ___function checkHook(fn){
 ________if(fn.toString().indexOf("[native code]") >= 0){
-_____________return "Ã»ÓĞ½Ù³Ö";
+_____________return "æ²¡æœ‰åŠ«æŒ";
 ________}else{
-_____________return "±»½Ù³ÖÁË";
+_____________return "è¢«åŠ«æŒäº†";
 ________}	
 ___}

@@ -1,4 +1,4 @@
 CRLF  === \r\n
 LF === \n
 
-ÔÚ¶ÔÎÄ±¾µÄ½âÎöÖÖ£¬³ýÁËIE Edgeä¯ÀÀÆ÷£¬ÆäËûµÄIEä¯ÀÀÆ÷¶¼Ê¹ÓÃCRLF»»ÐÐ·û£¨\r\n£©,¶øLF(\n)ÊÇÆäËûËùÓÐä¯ÀÀÆ÷µÄ»»ÐÐ·û£¬×¢ÒâÁ½ÕßµÄÇø±ð
+åœ¨å¯¹æ–‡æœ¬çš„è§£æžç§ï¼Œé™¤äº†IE Edgeæµè§ˆå™¨ï¼Œå…¶ä»–çš„IEæµè§ˆå™¨éƒ½ä½¿ç”¨CRLFæ¢è¡Œç¬¦ï¼ˆ\r\nï¼‰,è€ŒLF(\n)æ˜¯å…¶ä»–æ‰€æœ‰æµè§ˆå™¨çš„æ¢è¡Œç¬¦ï¼Œæ³¨æ„ä¸¤è€…çš„åŒºåˆ«

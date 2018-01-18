@@ -1,4 +1,4 @@
-...´´½¨×Ô¶¨ÒåµÄtoString½á¹û£»
+...åˆ›å»ºè‡ªå®šä¹‰çš„toStringç»“æœï¼›
    Object.prototype.toString.call('foo');     // "[object String]"
    Object.prototype.toString.call([1, 2]);    // "[object Array]"
    Object.prototype.toString.call(3);         // "[object Number]"
@@ -10,10 +10,10 @@
    Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
    Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 
-   class ValidatorClass {}	//×Ô¶¨ÒåÀàÄ¬ÈÏÊÇObject
+   class ValidatorClass {}	//è‡ªå®šä¹‰ç±»é»˜è®¤æ˜¯Object
    Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 
-...ÒÔÉÏ¶¼ÊÇÄÚºË±êÇ©£»ÏÂÃæ¾Í×Ô´´Ò»¸ö
+...ä»¥ä¸Šéƒ½æ˜¯å†…æ ¸æ ‡ç­¾ï¼›ä¸‹é¢å°±è‡ªåˆ›ä¸€ä¸ª
    class ValidatorClass{
       get [Symbol.toStringTag](){
          return "Validator";

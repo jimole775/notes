@@ -1,13 +1,13 @@
-RFC 5646 (BCP 47) �涨�����Ա�ǩ�ĸ�ʽ���£�
+RFC 5646 (BCP 47) 规定的语言标签的格式如下：
 language - script - region - variant - extension - privateuse
 
-��language��  : �������Դ��루�����ֶΣ�  -- ���纺�zh ��
-��script��    : �������Դ��루��ѡ�ֶΣ� -- ������庺�� ��zh-Hans�����庺�֣�zh-Hant��
-��region��    : ����������루��ѡ�ֶΣ� -- �����й���½�ļ������ģ�zh-Hans-CN��
-��variant��   : ���巽�ԣ�
-��extension�� : ������չ��
-��privateuse��: ����˽��Э�飻
+【language】  : 定义语言代码（必填字段）  -- 比如汉语：zh 。
+【script】    : 定义语言代码（可选字段） -- 比如简体汉字 ：zh-Hans，繁体汉字：zh-Hant。
+【region】    : 地理区域代码（可选字段） -- 比如中国大陆的简体中文：zh-Hans-CN。
+【variant】   : 定义方言；
+【extension】 : 额外扩展；
+【privateuse】: 用于私有协议；
 
-***����ֻ�� language �����Ǳ���ģ��������ֶ��ǿ�ѡ�ģ�����Ϊ�˱��ڱ�д���򣬽�����ƽӿ�ʱԼ�����Ա�ǩ�Ľṹ������ͳһʹ�� language-script-region ����ʽ�� zh-Hans-CN, zh-Hant-HK �ȵȣ���
+***其中只有 language 部分是必须的，其他部分都是可选的；不过为了便于编写程序，建议设计接口时约定语言标签的结构，比如统一使用 language-script-region 的形式（ zh-Hans-CN, zh-Hant-HK 等等）。
 	
-���Ա�ǩ�Ǵ�Сд�����еģ������չ��������� script ��������ĸ��д�� region ����ȫ����д�����ಿ��ȫ��Сд��
+语言标签是大小写不敏感的，但按照惯例，建议 script 部分首字母大写， region 部分全部大写，其余部分全部小写。

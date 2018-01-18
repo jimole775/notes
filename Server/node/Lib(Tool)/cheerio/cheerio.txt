@@ -1,7 +1,7 @@
-Ò»¸ö½âÎöHTMLµÄ¹¤¾ß°ü
+ä¸€ä¸ªè§£æžHTMLçš„å·¥å…·åŒ…
 
-½âÎö³öÀ´µÄdom¶ÔÏó¿ÉÒÔÊ¹ÓÃjq-liteµÄ·½Ê½È¥·ÃÎÊ£¡£¡
+è§£æžå‡ºæ¥çš„domå¯¹è±¡å¯ä»¥ä½¿ç”¨jq-liteçš„æ–¹å¼åŽ»è®¿é—®ï¼ï¼
 
-//³õÊ¼»¯¶ÔÏó
+//åˆå§‹åŒ–å¯¹è±¡
 var $ = cheerio.load(HTML);
 console.log($(".title").innerText)

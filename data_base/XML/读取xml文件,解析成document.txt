@@ -1,5 +1,5 @@
 /**
-* aXMLFileNameÊÇxmlÎÄ¼þÂ·¾¶Ãû
+* aXMLFileNameæ˜¯xmlæ–‡ä»¶è·¯å¾„å
 */
 function getXmlDoc(){
     try{

@@ -1,8 +1,8 @@
 
-peach: (n) МТЧУ
+peach: (n) жЎѓе­ђ
 
 
 
-pit: (n) єЛ
+pit: (n) ж ё
 
    

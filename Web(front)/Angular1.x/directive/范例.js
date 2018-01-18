@@ -1,23 +1,23 @@
-//·¶Àı£º
+//èŒƒä¾‹ï¼š
 myModule.directive('namespaceDirectiveName', function factory(injectables) {
 
     return {
 
-        restrict: String,   //Ö¸ÁîµÄÊ¹ÓÃ·½Ê½£¬°üÀ¨±êÇ©£¬ÊôĞÔ£¬Àà£¬×¢ÊÍ
-        priority: Number,   //Ö¸ÁîÖ´ĞĞµÄÓÅÏÈ¼¶
-        template: String,   //Ö¸ÁîÊ¹ÓÃµÄÄ£°å£¬ÓÃHTML×Ö·û´®µÄĞÎÊ½±íÊ¾
-        templateUrl: String,    //´ÓÖ¸¶¨µÄurlµØÖ·¼ÓÔØÄ£°å
-        replace: Boolean,   //ÊÇ·ñÓÃÄ£°åÌæ»»µ±Ç°ÔªËØ£¬ÈôÎªfalse£¬ÔòappendÔÚµ±Ç°ÔªËØÉÏ
-        transclude: Boolean,    //ÊÇ·ñ½«µ±Ç°ÔªËØµÄÄÚÈİ×ªÒÆµ½Ä£°åÖĞ
-        scope: [Boolean | Object],  //Ö¸¶¨Ö¸ÁîµÄ×÷ÓÃÓò
+        restrict: String,   //æŒ‡ä»¤çš„ä½¿ç”¨æ–¹å¼ï¼ŒåŒ…æ‹¬æ ‡ç­¾ï¼Œå±æ€§ï¼Œç±»ï¼Œæ³¨é‡Š
+        priority: Number,   //æŒ‡ä»¤æ‰§è¡Œçš„ä¼˜å…ˆçº§
+        template: String,   //æŒ‡ä»¤ä½¿ç”¨çš„æ¨¡æ¿ï¼Œç”¨HTMLå­—ç¬¦ä¸²çš„å½¢å¼è¡¨ç¤º
+        templateUrl: String,    //ä»æŒ‡å®šçš„urlåœ°å€åŠ è½½æ¨¡æ¿
+        replace: Boolean,   //æ˜¯å¦ç”¨æ¨¡æ¿æ›¿æ¢å½“å‰å…ƒç´ ï¼Œè‹¥ä¸ºfalseï¼Œåˆ™appendåœ¨å½“å‰å…ƒç´ ä¸Š
+        transclude: Boolean,    //æ˜¯å¦å°†å½“å‰å…ƒç´ çš„å†…å®¹è½¬ç§»åˆ°æ¨¡æ¿ä¸­
+        scope: [Boolean | Object],  //æŒ‡å®šæŒ‡ä»¤çš„ä½œç”¨åŸŸ
 
-        controller: function controllerConstructor($scope, $element, $attrs, $transclude) { //¶¨ÒåÓëÆäËûÖ¸Áî½øĞĞ½»»¥µÄ½Ó¿Úº¯Êı
+        controller: function controllerConstructor($scope, $element, $attrs, $transclude) { //å®šä¹‰ä¸å…¶ä»–æŒ‡ä»¤è¿›è¡Œäº¤äº’çš„æ¥å£å‡½æ•°
             //...
         },
 
-        require: String,    //ÒıÈëÆäËûµÄÄ£¿é»òÊı¾İ£¬Ò»°ã¶¼³¢ÊÔÒıÈëdirective»òÕßcontrollerÄ£¿éÃû(ÒıÈëºó¿ÉÒÔÖ±½Óµ÷ÓÃcontrollerÄÚ²¿µÄthis¶ÔÏó)
+        require: String,    //å¼•å…¥å…¶ä»–çš„æ¨¡å—æˆ–æ•°æ®ï¼Œä¸€èˆ¬éƒ½å°è¯•å¼•å…¥directiveæˆ–è€…controlleræ¨¡å—å(å¼•å…¥åå¯ä»¥ç›´æ¥è°ƒç”¨controllerå†…éƒ¨çš„thiså¯¹è±¡)
 
-        link: function postLink(scope, iElement, iAttrs) {  //ÒÔ±à³ÌµÄ·½Ê½²Ù×÷DOM£¬°üÀ¨Ìí¼Ó¼àÌıÆ÷µÈ£¨×¢ÒâºÍcontrollerµÄÇø±ğ£©
+        link: function postLink(scope, iElement, iAttrs) {  //ä»¥ç¼–ç¨‹çš„æ–¹å¼æ“ä½œDOMï¼ŒåŒ…æ‹¬æ·»åŠ ç›‘å¬å™¨ç­‰ï¼ˆæ³¨æ„å’Œcontrollerçš„åŒºåˆ«ï¼‰
 
                 scope.$evalAsync(function(){
                     // executes after compile/link
@@ -29,7 +29,7 @@ myModule.directive('namespaceDirectiveName', function factory(injectables) {
 
         },
 
-        compile: function compile(tElement, tAttrs, transclude) {   //±à³ÌµÄ·½Ê½ĞŞ¸ÄDOMÄ£°åµÄ¸±±¾£¬¿ÉÒÔ·µ»ØÁ´½Óº¯Êı
+        compile: function compile(tElement, tAttrs, transclude) {   //ç¼–ç¨‹çš„æ–¹å¼ä¿®æ”¹DOMæ¨¡æ¿çš„å‰¯æœ¬ï¼Œå¯ä»¥è¿”å›é“¾æ¥å‡½æ•°
 
             return {
 

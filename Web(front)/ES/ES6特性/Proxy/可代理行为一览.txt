@@ -1,30 +1,30 @@
 
-...¶ÔÒ»¸öÊôĞÔ½øĞĞµ÷ÓÃÊ±´¥·¢£»
+...å¯¹ä¸€ä¸ªå±æ€§è¿›è¡Œè°ƒç”¨æ—¶è§¦å‘ï¼›
    get(target,propKey,receiver)
 
-...ÉèÖÃÊôĞÔÖµµÄÊ±ºò´¥·¢£»
+...è®¾ç½®å±æ€§å€¼çš„æ—¶å€™è§¦å‘ï¼›
    set(target,propKey,value,receiver)
 
-...Ê¹ÓÃinÔËËã·ûµÄÊÇ´¥·¢
+...ä½¿ç”¨inè¿ç®—ç¬¦çš„æ˜¯è§¦å‘
    has(target,propKey)
 
-...Ê¹ÓÃdeleteÔËËã·ûµÄÊ±ºò´¥·¢
+...ä½¿ç”¨deleteè¿ç®—ç¬¦çš„æ—¶å€™è§¦å‘
    deleteProperty(target,propKey)
 
-...Ê¹ÓÃfor inÑ­»·µÄÊ±ºò´¥·¢
-   enmuerate(target) ----¡¾ÒÑ¾­±»·ÏÆú¡¿
+...ä½¿ç”¨for inå¾ªç¯çš„æ—¶å€™è§¦å‘
+   enmuerate(target) ----ã€å·²ç»è¢«åºŸå¼ƒã€‘
 
-...Ê¹ÓÃhasOwnPropertyµÄÊ±ºò´¥·¢
+...ä½¿ç”¨hasOwnPropertyçš„æ—¶å€™è§¦å‘
    hasOwn(target,propKey)
 
-...Ê¹ÓÃObject.getOwnPropertyNames, Object.getOwnPropertySymbols, Object.keysµÄÊ±ºò´¥·¢
+...ä½¿ç”¨Object.getOwnPropertyNames, Object.getOwnPropertySymbols, Object.keysçš„æ—¶å€™è§¦å‘
    ownKeys(target)
 
-...µ±º¯Êı±»µ÷ÓÃ£¬»òÕßaplly, callµÄÊ±ºò´¥·¢
+...å½“å‡½æ•°è¢«è°ƒç”¨ï¼Œæˆ–è€…aplly, callçš„æ—¶å€™è§¦å‘
    apply(target, object, args)
 
-...µ±±»´úÀíµÄ¶ÔÏó±»×÷Îª¹¹Ôìº¯ÊıµÄÊ±ºò´¥·¢
+...å½“è¢«ä»£ç†çš„å¯¹è±¡è¢«ä½œä¸ºæ„é€ å‡½æ•°çš„æ—¶å€™è§¦å‘
    construct(target, args, proxy)
 
 
-...Ê£ÏÂµÄ¾ÍÊÇÒ»Ğ©²»³£ÓÃµÄÊôĞÔ£¬»òÕß·½·¨£¬ËüÃÇ»ù±¾¶¼ºÍÔ­¶ÔÏóµÄÊôĞÔ£¨»ò·½·¨£©Í¬Ãû£¬µ½Ê±ºòÓÃµ½ÁËÔÙ²éAPI°É
+...å‰©ä¸‹çš„å°±æ˜¯ä¸€äº›ä¸å¸¸ç”¨çš„å±æ€§ï¼Œæˆ–è€…æ–¹æ³•ï¼Œå®ƒä»¬åŸºæœ¬éƒ½å’ŒåŸå¯¹è±¡çš„å±æ€§ï¼ˆæˆ–æ–¹æ³•ï¼‰åŒåï¼Œåˆ°æ—¶å€™ç”¨åˆ°äº†å†æŸ¥APIå§

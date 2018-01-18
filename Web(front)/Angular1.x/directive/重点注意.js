@@ -1,16 +1,16 @@
 /**
  * Created by Andy on 2017/11/12.
  */
-//×îÖØÒªµÄÒ»µã:::::directiveµÄÄ£°åÃûÔÚjsÖÐÊ¹ÓÃ "ÍÕ·å" ·¨µÄÊ±ºò,ÔÚhtmlÀïÃæÒ»¶¨ÒªÓÃ "-" ½øÐÐÆ¥Åä,
-//±ÈÈç:
+//æœ€é‡è¦çš„ä¸€ç‚¹:::::directiveçš„æ¨¡æ¿ååœ¨jsä¸­ä½¿ç”¨ "é©¼å³°" æ³•çš„æ—¶å€™,åœ¨htmlé‡Œé¢ä¸€å®šè¦ç”¨ "-" è¿›è¡ŒåŒ¹é…,
+//æ¯”å¦‚:
 
 angular.module("app",[]).directive("myHead",function(){});
 
 
-//ÄÇÃ´,ÔÚhtmlÀïÃæ±ØÐëÊÇÕâÑù
+//é‚£ä¹ˆ,åœ¨htmlé‡Œé¢å¿…é¡»æ˜¯è¿™æ ·
 
 String("<my-head></my-head>");
 
-//·ñÔò,¾Í²»ÔËÐÐ,Ò²²»±¨´í
+//å¦åˆ™,å°±ä¸è¿è¡Œ,ä¹Ÿä¸æŠ¥é”™
 
-//Õâ¾ÍÊÇÕÛÌÚÁË12¸öÐ¡Ê±½¹Í·ÀÃ¶îµÄºó¹û~~
+//è¿™å°±æ˜¯æŠ˜è…¾äº†12ä¸ªå°æ—¶ç„¦å¤´çƒ‚é¢çš„åŽæžœ~~

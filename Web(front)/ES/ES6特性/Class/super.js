@@ -1,12 +1,12 @@
-/**×÷ÓÃ£ºsuper¹Ø¼ü×ÖÓÃÓÚ·ÃÎÊ¸¸ÀàµÄprototype¶ÔÏó,Ò²¾ÍÊÇËµ£¬ËüÖ»ÓÃÔÚ¼Ì³Ğµ±ÖĞ£¬ÏÖ½×¶Î¿ÉÒÔÍêÈ«Àí½âÎªsuper¾ÍÊÇ¸¸ÀàµÄconstructor·½·¨*/
-/**Óï·¨£º*/
-/**     super([arguments]); ·ÃÎÊ²¢·µ»Ø¸¸ÀàµÄprototype¶ÔÏó£»*/
-/**     super.funcName([arguments]);   ·ÃÎÊ²¢·µ»Ø¾ßÌå·½·¨*/
+/**ä½œç”¨ï¼šsuperå…³é”®å­—ç”¨äºè®¿é—®çˆ¶ç±»çš„prototypeå¯¹è±¡,ä¹Ÿå°±æ˜¯è¯´ï¼Œå®ƒåªç”¨åœ¨ç»§æ‰¿å½“ä¸­ï¼Œç°é˜¶æ®µå¯ä»¥å®Œå…¨ç†è§£ä¸ºsuperå°±æ˜¯çˆ¶ç±»çš„constructoræ–¹æ³•*/
+/**è¯­æ³•ï¼š*/
+/**     super([arguments]); è®¿é—®å¹¶è¿”å›çˆ¶ç±»çš„prototypeå¯¹è±¡ï¼›*/
+/**     super.funcName([arguments]);   è®¿é—®å¹¶è¿”å›å…·ä½“æ–¹æ³•*/
 "use strict";
-//ÊµÏÖÒ»¸öArrayµÄ¸ÄÔì
+//å®ç°ä¸€ä¸ªArrayçš„æ”¹é€ 
 class MyArray extends Array{
     constructor(){
-        super(); //°Ñthis°ó¶¨µ½¸¸¶ÔÏó
+        super(); //æŠŠthisç»‘å®šåˆ°çˆ¶å¯¹è±¡
         console.log(new.target);
         this.history = [[]];
     }

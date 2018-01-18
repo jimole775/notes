@@ -1,5 +1,5 @@
-...Symbol.replace¿ÉÒÔ·µ»ØÒ»¸öÕıÔò±í´ïÊ½µÄ·½·¨£¬
-...Ïàµ±ÓÚ°ÑStringµÄreplace·½·¨ÄÃ¹ıÀ´
+...Symbol.replaceå¯ä»¥è¿”å›ä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼çš„æ–¹æ³•ï¼Œ
+...ç›¸å½“äºæŠŠStringçš„replaceæ–¹æ³•æ‹¿è¿‡æ¥
    var rx = new RegExp("a","g");
    var r = rx[Symbol.replace]("a","b");
    r === "b";

@@ -1,17 +1,17 @@
 const http = require("https");
 let opt = {
     protocol: 'https:',
-    port: 443,	//httpsµÄÄ¬ÈÏ¶Ë¿ÚÊÇ443,httpµÄÄ¬ÈÏ¶Ë¿ÚÊÇ80
+    port: 443,	//httpsçš„é»˜è®¤ç«¯å£æ˜¯443,httpçš„é»˜è®¤ç«¯å£æ˜¯80
     host: "kyfw.12306.cn",
-    rejectUnauthorized: false,//¹Ø±Õ¡¾¾Ü¾øÎ´×¢²áµÇÂ½¡¿
+    rejectUnauthorized: false,//å…³é—­ã€æ‹’ç»æœªæ³¨å†Œç™»é™†ã€‘
     family: '4',
-    method: "GET",  //IPV4°æ±¾
-    path: "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-05-10&leftTicketDTO.from_station=HFH&leftTicketDTO.to_station=CDW&purpose_codes=ADULT", //path¾ÍÊÇÍêÕûµÄURL
+    method: "GET",  //IPV4ç‰ˆæœ¬
+    path: "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-05-10&leftTicketDTO.from_station=HFH&leftTicketDTO.to_station=CDW&purpose_codes=ADULT", //pathå°±æ˜¯å®Œæ•´çš„URL
     timeout: 5000
 
-    /*ÓĞĞ©·şÎñÆ÷»á¸ù¾İheadersÀ´ÅĞ¶ÏÇëÇóĞĞÎª£¬À´¹æ±ÜÅÀ³æµÄ·ÃÎÊ£¬ÒÔ½ÚÊ¡´ø¿í
-      ÏÂÃæÊÇ´Óä¯ÀÀÆ÷ÉÏ²éÑ¯µÄÒ»¶Îheaders,
-      Ò»°ãÀ´Ëµ£¬Ö»ÓĞCookiesºÍUser-AgentĞèÒªÉèÖÃ£¬ÆäËûµÄ¸ù¾İÇé¿ö¶ø¶¨£¬Ò»°ãÊ¹ÓÃÄ¬ÈÏÖµ¾Í¿ÉÒÔ
+    /*æœ‰äº›æœåŠ¡å™¨ä¼šæ ¹æ®headersæ¥åˆ¤æ–­è¯·æ±‚è¡Œä¸ºï¼Œæ¥è§„é¿çˆ¬è™«çš„è®¿é—®ï¼Œä»¥èŠ‚çœå¸¦å®½
+      ä¸‹é¢æ˜¯ä»æµè§ˆå™¨ä¸ŠæŸ¥è¯¢çš„ä¸€æ®µheaders,
+      ä¸€èˆ¬æ¥è¯´ï¼Œåªæœ‰Cookieså’ŒUser-Agentéœ€è¦è®¾ç½®ï¼Œå…¶ä»–çš„æ ¹æ®æƒ…å†µè€Œå®šï¼Œä¸€èˆ¬ä½¿ç”¨é»˜è®¤å€¼å°±å¯ä»¥
     //headers: {
         //'Accept': '*/*',
         //'Accept-Encoding': 'gzip, deflate, sdch, br',
@@ -31,7 +31,7 @@ let opt = {
 
 var req = http.request(opt, function (res) {
     console.log(res);
-    res.setEncoding('utf8');  //Èç¹û²»ÉèÖÃ£¬ÏÂ±ßdataµÄchunk¾ÍÊÇÒ»¶Ñbuffer
+    res.setEncoding('utf8');  //å¦‚æœä¸è®¾ç½®ï¼Œä¸‹è¾¹dataçš„chunkå°±æ˜¯ä¸€å †buffer
     res.on('data', function (chunk) {
         console.log(chunk);
     });
@@ -41,4 +41,4 @@ req.on('error', function (e) {
     console.log(e);
 });
 
-req.end();//ÖØµã,Èç¹ûÇëÇóÃ»ÓĞÖ´ĞĞEND,¾Í»á±»µ±³ÉÎŞÏìÓ¦Á´½Ó,³öÏÖ¹ÒÆğµÄBUG
+req.end();//é‡ç‚¹,å¦‚æœè¯·æ±‚æ²¡æœ‰æ‰§è¡ŒEND,å°±ä¼šè¢«å½“æˆæ— å“åº”é“¾æ¥,å‡ºç°æŒ‚èµ·çš„BUG

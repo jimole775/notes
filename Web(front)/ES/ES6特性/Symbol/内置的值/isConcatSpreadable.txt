@@ -1,15 +1,15 @@
 
 ==================|Symbol.isConcatSpreadable|==========================
-...Õâ¸öÖµÓÃÀ´¾ö¶¨Êı×éÔÚÊ¹ÓÃconcat·½·¨Ê±ÊÇ·ñ¿ÉÒÔ±»¡¾À©Õ¹¡¿£¨ES5ÖĞÄ¬ÈÏ»áÀ©Õ¹£©£»
+...è¿™ä¸ªå€¼ç”¨æ¥å†³å®šæ•°ç»„åœ¨ä½¿ç”¨concatæ–¹æ³•æ—¶æ˜¯å¦å¯ä»¥è¢«ã€æ‰©å±•ã€‘ï¼ˆES5ä¸­é»˜è®¤ä¼šæ‰©å±•ï¼‰ï¼›
    class Ary1 extends Array{
       get [Symbol.isConcatSpreadable](){
-         return true;   //¿ÉÀ©Õ¹
+         return true;   //å¯æ‰©å±•
       }
    }
 
    class Ary2 extends Array{
       get [Symbol.isConcatSpreadable](){
-         return false;  //²»¿ÉÀ©Õ¹
+         return false;  //ä¸å¯æ‰©å±•
       }
    }
 

@@ -1,4 +1,0 @@
-START "" 1.exe :LOOP
-GOTO :LOOP
-
-***循环执行1.exe程序，:LOOP意义就是给第一行命令命名，然后使用GOTO可以运行指定的命令行

@@ -10,4 +10,4 @@ function Foz(pram:Foo){
     return pram;
 }
 
-Foz({bar:"Hello"} as Foo);  //Ê¹ÓÃÀàĞÍ¶ÏÑÔ¿ÉÒÔÌø¹ıÀàĞÍ¼ì²é
+Foz({bar:"Hello"} as Foo);  //ä½¿ç”¨ç±»å‹æ–­è¨€å¯ä»¥è·³è¿‡ç±»å‹æ£€æŸ¥

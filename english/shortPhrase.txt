@@ -1,7 +1,7 @@
-use it over and over again  	//Ò»±éÓÖÒ»±éµÄÊ¹ÓÃ
-intellectual property 		//ÖªÊ¶²úÈ¨
-a piece of cake             	//Ğ¡ÊÂÒ»×®£¬Ğ¡²ËÒ»µú
-poker face			//ÃæÎŞ±íÇé
-too young too naive		//Ì«ÉµÌ«ÌìÕæ
-treasure chest			//²Ø±¦Ïä
+use it over and over again  	//ä¸€éåˆä¸€éçš„ä½¿ç”¨
+intellectual property 		//çŸ¥è¯†äº§æƒ
+a piece of cake             	//å°äº‹ä¸€æ¡©ï¼Œå°èœä¸€ç¢Ÿ
+poker face			//é¢æ— è¡¨æƒ…
+too young too naive		//å¤ªå‚»å¤ªå¤©çœŸ
+treasure chest			//è—å®ç®±
 

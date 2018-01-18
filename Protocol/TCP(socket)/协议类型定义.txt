@@ -1,5 +1,5 @@
-��һ�֣�TLV��type length value������ͨ�ã�
-�ڶ��֣����ù̶����ȣ����Ȳ���ʱ���ո�
-�����֣����ý�����ʶ����
-�ο�CSDN��̳��http://bbs.csdn.net/topics/380167545?page=1
-***�ȵ���ʱ���ʱ����ʵ�����ַ�ʽ��ʹ�÷�����������ҪŪ���ճ���������ôʵ���ȣ�
+第一种：TLV（type length value）；（通用）
+第二种：采用固定长度，长度不足时填充空格；
+第三种：采用结束标识符；
+参考CSDN论坛：http://bbs.csdn.net/topics/380167545?page=1
+***等到有时间的时候再实践各种方式的使用方法！不过先要弄清楚粘包，拆包怎么实现先！

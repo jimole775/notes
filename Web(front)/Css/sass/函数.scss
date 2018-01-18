@@ -1,19 +1,19 @@
 $properties: (margin, padding);
 @mixin set-value($side, $value) {
   @each $prop in $properties {
-    //¶ÔÃ¿¸öÔÚ$propertiesÖĞµÄ$prop,¼´$propertiesÖĞµÄmargin¡¢padding
-    #{$prop}-#{$side}: $value; //$propÁ¬½Ó²ÎÊı$side£¬ÖµÎª²ÎÊı$value
+    //å¯¹æ¯ä¸ªåœ¨$propertiesä¸­çš„$prop,å³$propertiesä¸­çš„marginã€padding
+    #{$prop}-#{$side}: $value; //$propè¿æ¥å‚æ•°$sideï¼Œå€¼ä¸ºå‚æ•°$value
   }
 }
 
 .login-box {
-  @include set-value(top, 14px); //µ÷ÓÃ»ìºÏºê
+  @include set-value(top, 14px); //è°ƒç”¨æ··åˆå®
 }
 
 
 
 
-/**######×îºó×ª»»³öÀ´µÄ½á¹û#####*/
+/**######æœ€åè½¬æ¢å‡ºæ¥çš„ç»“æœ#####*/
 .login-box {
   margin-top: 14px;
   padding-top: 14px;

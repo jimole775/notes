@@ -1,33 +1,33 @@
-touches, targetTouches, changedTouches Çø±ğ
+touches, targetTouches, changedTouches åŒºåˆ«
 
 1. touches: A list of information for every finger currently touching the screen
 2. targetTouches: Like touches, but is filtered to only the information for finger touches that started out within the same node
-3. changedTouches: A list of information for every finger involved in the event (see below) To better understand what might be in these lists, let¡¯s go over some examples quickly
+3. changedTouches: A list of information for every finger involved in the event (see below) To better understand what might be in these lists, letâ€™s go over some examples quickly
 
 They vary in the following pattern:
 1. When I put a finger down, all three lists will have the same information. It will be in changedTouches because putting the finger down is what caused the event.
-¡¡¡¡µÚÒ»¸ùÊÖÖ¸´¥ÃşÆÁÄ»£¬Èı¸öÊÂ¼ş»ñÈ¡µÄÖµÏàÍ¬¡£
+ã€€ã€€ç¬¬ä¸€æ ¹æ‰‹æŒ‡è§¦æ‘¸å±å¹•ï¼Œä¸‰ä¸ªäº‹ä»¶è·å–çš„å€¼ç›¸åŒã€‚
 
 
-2. When I put a second finger down, touches will have two items, one for each finger. targetTouches will have two items only if the finger was placed in the same node as the first finger. changedTouches will have the information related to the second finger, because it¡¯s what caused the event
-¡¡¡¡µÚ¶ş¸ùÊÖÖ¸´¥ÃşÆÁÄ»£¬´ËÊ±touches»ñÈ¡Á½¸ö´¥ÃşµãµÄĞÅÏ¢¡£Èô´¥ÃşµãÔÚÍ¬Ò»¸ö¶ÔÏóÉÏ£¬targetTouchesÒ²»ñÈ¡Á½¸ö´¥ÃşµãµÄĞÅÏ¢¡£changedTouchesÖ»±£´æµÚ¶ş¸ö´¥ÃşµãµÄĞÅÏ¢¡£
+2. When I put a second finger down, touches will have two items, one for each finger. targetTouches will have two items only if the finger was placed in the same node as the first finger. changedTouches will have the information related to the second finger, because itâ€™s what caused the event
+ã€€ã€€ç¬¬äºŒæ ¹æ‰‹æŒ‡è§¦æ‘¸å±å¹•ï¼Œæ­¤æ—¶touchesè·å–ä¸¤ä¸ªè§¦æ‘¸ç‚¹çš„ä¿¡æ¯ã€‚è‹¥è§¦æ‘¸ç‚¹åœ¨åŒä¸€ä¸ªå¯¹è±¡ä¸Šï¼ŒtargetTouchesä¹Ÿè·å–ä¸¤ä¸ªè§¦æ‘¸ç‚¹çš„ä¿¡æ¯ã€‚changedTouchesåªä¿å­˜ç¬¬äºŒä¸ªè§¦æ‘¸ç‚¹çš„ä¿¡æ¯ã€‚
 
  
 
-3. If I put two fingers down at exactly the same time, it¡¯s possible to have two items in changedTouches, one for each finger
-¡¡¡¡ÈôÍ¬Ê±ÓÃÁ½¸ùÊÖÖ¸´¥ÃşÆÁÄ»£¬changedTouches ÓĞÁ½¸öÁĞ±í·Ö±ğ±íÊ¾Á½¸ö´¥ÃşµãµÄĞÅÏ¢¡£
+3. If I put two fingers down at exactly the same time, itâ€™s possible to have two items in changedTouches, one for each finger
+ã€€ã€€è‹¥åŒæ—¶ç”¨ä¸¤æ ¹æ‰‹æŒ‡è§¦æ‘¸å±å¹•ï¼ŒchangedTouches æœ‰ä¸¤ä¸ªåˆ—è¡¨åˆ†åˆ«è¡¨ç¤ºä¸¤ä¸ªè§¦æ‘¸ç‚¹çš„ä¿¡æ¯ã€‚
 
  
 
 4. If I move my fingers, the only list that will change is changedTouches and will contain information related to as many fingers as have moved (at least one)
-¡¡¡¡Èç¹ûÒÆ¶¯´¥Ãşµã£¬Ö»ÓĞ changedTouches »á¼ÇÂ¼Ã¿¸öÒÆ¶¯µÄ´¥ÃşµãĞÅÏ¢
+ã€€ã€€å¦‚æœç§»åŠ¨è§¦æ‘¸ç‚¹ï¼Œåªæœ‰ changedTouches ä¼šè®°å½•æ¯ä¸ªç§»åŠ¨çš„è§¦æ‘¸ç‚¹ä¿¡æ¯
 
  
 
-5. When I lift a finger, it will be removed from touches, targetTouches and will appear in changedTouches since it¡¯s what caused the event
-¡¡¡¡µ±Ò»¸ö´¥ÃşµãÀë¿ª£¬ËüµÄĞÅÏ¢ÁĞ±í½«´Ótouches£¬targetTouchesÒÆ³ı£¬µ«ÊÇchangedTouches»á±£´æ´Ë´¥ÃşµãĞÅÏ¢¡£
+5. When I lift a finger, it will be removed from touches, targetTouches and will appear in changedTouches since itâ€™s what caused the event
+ã€€ã€€å½“ä¸€ä¸ªè§¦æ‘¸ç‚¹ç¦»å¼€ï¼Œå®ƒçš„ä¿¡æ¯åˆ—è¡¨å°†ä»touchesï¼ŒtargetTouchesç§»é™¤ï¼Œä½†æ˜¯changedTouchesä¼šä¿å­˜æ­¤è§¦æ‘¸ç‚¹ä¿¡æ¯ã€‚
 
  
 
 6. Removing my last finger will leave touches and targetTouches empty, and changedTouches will contain information for the last finger
-¡¡¡¡×îºóÒ»¸ö´¥ÃşµãÀë¿ª£¬touches£¬targetTouches±ä³É¿ÕÖµ£¬¶ø changedTouches±£´æ×Å×îºóÒ»¸öÀë¿ªµÄ´¥ÃşµãĞÅÏ¢¡£
+ã€€ã€€æœ€åä¸€ä¸ªè§¦æ‘¸ç‚¹ç¦»å¼€ï¼Œtouchesï¼ŒtargetToucheså˜æˆç©ºå€¼ï¼Œè€Œ changedTouchesä¿å­˜ç€æœ€åä¸€ä¸ªç¦»å¼€çš„è§¦æ‘¸ç‚¹ä¿¡æ¯ã€‚

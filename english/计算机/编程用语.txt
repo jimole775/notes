@@ -1,50 +1,50 @@
-dispatch : ÅÉ·¢
+dispatch : æ´¾å‘
 
-trigger : ´¥·¢£¬°â»ú
+trigger : è§¦å‘ï¼Œæ‰³æœº
 
-post : ¿ìËÙ
+post : å¿«é€Ÿ
   
-algorithm : Ëã·¨£¬¼ÆËã³ÌĞò
+algorithm : ç®—æ³•ï¼Œè®¡ç®—ç¨‹åº
 
-assets:×ÊÔ´£¬ËØ²Ä
+assets:èµ„æºï¼Œç´ æ
 
-compute:Ó‹Ëã
+compute:è¨ˆç®—
 
-delivered:£¨v£©·¢¶¯£¬·¢±í£¬µİËÍ£¬½»¸¶
+delivered:ï¼ˆvï¼‰å‘åŠ¨ï¼Œå‘è¡¨ï¼Œé€’é€ï¼Œäº¤ä»˜
 
-enumerable:£¨adj£©¿ÉÃ¶¾ÙµÄ
+enumerable:ï¼ˆadjï¼‰å¯æšä¸¾çš„
 
-iterator:µü´úÆ÷
+iterator:è¿­ä»£å™¨
 
-generator:·¢ÉúÆ÷£¬Éú²úÕß£¬·¢µç»ú
+generator:å‘ç”Ÿå™¨ï¼Œç”Ÿäº§è€…ï¼Œå‘ç”µæœº
 
-customize:¶¨ÖÆ
+customize:å®šåˆ¶
 
-custiom:£¨n£©³£¿Í£¬Ï°¹ß;£¨adj£©¶¨ÖÆµÄ
+custiom:ï¼ˆnï¼‰å¸¸å®¢ï¼Œä¹ æƒ¯;ï¼ˆadjï¼‰å®šåˆ¶çš„
 
-exposes:£¨v£©±©Â¶£¬ÆØ¹â
+exposes:ï¼ˆvï¼‰æš´éœ²ï¼Œæ›å…‰
 
-recursive:£¨n£©µİ¹é
+recursive:ï¼ˆnï¼‰é€’å½’
 
-encrypt: (v) ¼ÓÃÜ
+encrypt: (v) åŠ å¯†
 
-decrypt: (v) ½âÃÜ
+decrypt: (v) è§£å¯†
 
-stable: (adj) ÎÈ¶¨µÄ
+stable: (adj) ç¨³å®šçš„
 
-abstract: (adj) ³éÏóµÄ£¬ÀíÂÛÉÏµÄ£»£¨n£©³éÏó¸ÅÄî£»(vt) ÌáÈ¡£¬·ÖÀë£¬¸ÅÀ¨
+abstract: (adj) æŠ½è±¡çš„ï¼Œç†è®ºä¸Šçš„ï¼›ï¼ˆnï¼‰æŠ½è±¡æ¦‚å¿µï¼›(vt) æå–ï¼Œåˆ†ç¦»ï¼Œæ¦‚æ‹¬
 
-exception: (adj) Òì³£
+exception: (adj) å¼‚å¸¸
 
 
-hybrid: (adj) »ìºÏµÄ
+hybrid: (adj) æ··åˆçš„
 
 scale
-subset: (n) ×Ó¼¯
+subset: (n) å­é›†
 
-determine: (vt) ¾ö¶¨£¬ÅĞ¶¨£¬ÏŞ¶¨£¬Ê¹¾ö¶¨¡£ £¨vi£©ÖÕÖ¹£¬½áÊø
+determine: (vt) å†³å®šï¼Œåˆ¤å®šï¼Œé™å®šï¼Œä½¿å†³å®šã€‚ ï¼ˆviï¼‰ç»ˆæ­¢ï¼Œç»“æŸ
 
-candidate: (n) ºòÑ¡Õß
+candidate: (n) å€™é€‰è€…
 
-increament: (v) Ôö³¤ £¨n£©ÔöÁ¿
+increament: (v) å¢é•¿ ï¼ˆnï¼‰å¢é‡
 

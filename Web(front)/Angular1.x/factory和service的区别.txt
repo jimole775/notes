@@ -1,7 +1,7 @@
-factoryÊÇÒ»¸öº¯Êı£¬sriviceÊÇÒ»¸ö¹¹Ôì¶ÔÏó,
-factory»á¹²ÓÃº¯ÊıÌå£¬serviceÃ¿´Î¶¼»á´´½¨ĞÂµÄÊµÀı
+factoryæ˜¯ä¸€ä¸ªå‡½æ•°ï¼Œsriviceæ˜¯ä¸€ä¸ªæ„é€ å¯¹è±¡,
+factoryä¼šå…±ç”¨å‡½æ•°ä½“ï¼Œserviceæ¯æ¬¡éƒ½ä¼šåˆ›å»ºæ–°çš„å®ä¾‹
 
-factory ÑùÀı£º
+factory æ ·ä¾‹ï¼š
 
 App.factory("commonFun", function () {
         var $scope = "";
@@ -24,7 +24,7 @@ App.factory("commonFun", function () {
 
 
 
-service ÑùÀı£º
+service æ ·ä¾‹ï¼š
 
 App.service("commonFun", function () {
         var $scope = "";

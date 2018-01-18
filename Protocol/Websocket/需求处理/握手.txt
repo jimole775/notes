@@ -1,23 +1,23 @@
-//¿Í»§¶ËÇëÇó
+//å®¢æˆ·ç«¯è¯·æ±‚
 var ws=new WebSocket("ws://127.0.0.1:8000/");
 ws.onopen=function(e){
-    console.log("ÎÕÊÖ³É¹¦");
+    console.log("æ¡æ‰‹æˆåŠŸ");
 };
 ws.onerror = function(e){
-    console.log("Á¬½ÓÊ§°Ü")
+    console.log("è¿æ¥å¤±è´¥")
 }
 
-//·şÎñ¶ËÓ¦´ğ
+//æœåŠ¡ç«¯åº”ç­”
 var crypto = require('crypto');
-var WS = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11';//ÃÜÔ¿¹Ì¶¨¼ÆËãÖµ
+var WS = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11';//å¯†é’¥å›ºå®šè®¡ç®—å€¼
 require('net').createServer(function(o){
     var key;
     o.on('data',function(e){
         if(!key){
-            //ÎÕÊÖ
-            key = e.toString().match(/Sec-WebSocket-Key: (.+)/)[1]; //»ñÈ¡¿Í»§¶ËÃÜÔ¿
-            key = crypto.createHash('sha1').update(key + WS).digest('base64');//ÖØĞÂ¼ÆËãÓ¦´ğÃÜÔ¿
-            o.write('HTTP/1.1 101 Switching Protocols\r\n');//101Îª³É¹¦×´Ì¬,101ÒÔÍâµÄ¶¼ÊÇÊ§°Ü×´Ì¬
+            //æ¡æ‰‹
+            key = e.toString().match(/Sec-WebSocket-Key: (.+)/)[1]; //è·å–å®¢æˆ·ç«¯å¯†é’¥
+            key = crypto.createHash('sha1').update(key + WS).digest('base64');//é‡æ–°è®¡ç®—åº”ç­”å¯†é’¥
+            o.write('HTTP/1.1 101 Switching Protocols\r\n');//101ä¸ºæˆåŠŸçŠ¶æ€,101ä»¥å¤–çš„éƒ½æ˜¯å¤±è´¥çŠ¶æ€
             o.write('Upgrade: websocket\r\n');
             o.write('Connection: Upgrade\r\n');
             o.write('Sec-WebSocket-Accept: ' + key + '\r\n');

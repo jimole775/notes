@@ -1,2 +1,2 @@
-$scopeֻ�洢webview���ݣ�������ֻ��var �ֲ�����
+$scope只存储webview数据；其他就只用var 局部变量
    

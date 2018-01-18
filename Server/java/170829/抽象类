@@ -1,9 +1,9 @@
-//µ±¸¸ÀàµÄÒ»Ð©·½·¨²»ÄÜÈ·¶¨Ê±£¬¿ÉÒÔÓÃabstract¹Ø¼ü×ÖÀ´ÐÞÊÎ¸Ã·½·¨£¨ÎÒÃÇ³ÆÖ®Îª³éÏó·½·¨£©£¬ÓÃabstractÀ´ÐÞÊÎ¸ÃÀà£¨Ôò³ÆÖ®Îª³éÏóÀà£©
+//å½“çˆ¶ç±»çš„ä¸€äº›æ–¹æ³•ä¸èƒ½ç¡®å®šæ—¶ï¼Œå¯ä»¥ç”¨abstractå…³é”®å­—æ¥ä¿®é¥°è¯¥æ–¹æ³•ï¼ˆæˆ‘ä»¬ç§°ä¹‹ä¸ºæŠ½è±¡æ–¹æ³•ï¼‰ï¼Œç”¨abstractæ¥ä¿®é¥°è¯¥ç±»ï¼ˆåˆ™ç§°ä¹‹ä¸ºæŠ½è±¡ç±»ï¼‰
 
 abstract class Animal{
     String name;
     int age;
-    abstract public void cry(); //Õâ¾ÍÊÇÒ»¸ö³éÏó·½·¨£¬²»¶¨Òå¾ßÌåÐÐÎª
+    abstract public void cry(); //è¿™å°±æ˜¯ä¸€ä¸ªæŠ½è±¡æ–¹æ³•ï¼Œä¸å®šä¹‰å…·ä½“è¡Œä¸º
 }
 
 class Cat extend Animal{
@@ -16,9 +16,9 @@ class Cat extend Animal{
 
 
 
-***×¢Òâµã***
-1, ³éÏóÀà²»¿ÉÒÔ±»ÊµÀý»¯£¬ÄÇÃ´³éÏóÀàÖ»ÊÇ×÷ÎªÒ»¸ö¡¾¹«¹²¸¸Àà¡¿Ê¹ÓÃ
-2£¬Èç¹ûÒ»¸öÀàÀïÃæ³öÏÖÒ»¸öabstract¹Ø¼ü×Ö£¬ÄÇÃ´Õâ¸öÀà±ØÐë±»±íÃ÷Îª³éÏóÀà
+***æ³¨æ„ç‚¹***
+1, æŠ½è±¡ç±»ä¸å¯ä»¥è¢«å®žä¾‹åŒ–ï¼Œé‚£ä¹ˆæŠ½è±¡ç±»åªæ˜¯ä½œä¸ºä¸€ä¸ªã€å…¬å…±çˆ¶ç±»ã€‘ä½¿ç”¨
+2ï¼Œå¦‚æžœä¸€ä¸ªç±»é‡Œé¢å‡ºçŽ°ä¸€ä¸ªabstractå…³é”®å­—ï¼Œé‚£ä¹ˆè¿™ä¸ªç±»å¿…é¡»è¢«è¡¨æ˜Žä¸ºæŠ½è±¡ç±»
 
 
 

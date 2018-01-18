@@ -1,3 +1,3 @@
-direction: ltr; #ÎÄ±¾×ó¶ÔÆä
-direction: rtl; #ÎÄ±¾ÓÒ¶ÔÆä
-outline:none; #È¡Ïû½¹µã¿ò
+direction: ltr; #æ–‡æœ¬å·¦å¯¹å…¶
+direction: rtl; #æ–‡æœ¬å³å¯¹å…¶
+outline:none; #å–æ¶ˆç„¦ç‚¹æ¡†

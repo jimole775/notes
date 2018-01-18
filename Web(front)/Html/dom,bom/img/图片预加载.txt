@@ -1,6 +1,6 @@
-Í¼Æ¬Ô¤¼ÓÔØÊ¹ÓÃµÄÊÇ
+å›¾ç‰‡é¢„åŠ è½½ä½¿ç”¨çš„æ˜¯
 
 var img = (new Image()).src = "";
 
 
-¶ø²»ÊÇ createElement().src=""
+è€Œä¸æ˜¯ createElement().src=""

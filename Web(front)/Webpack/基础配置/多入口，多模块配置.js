@@ -3,16 +3,16 @@
  */
 
 module.exports = {
-    entry: ["./index.js","./plugin.js"],    //¶àÈë¿Ú
+    entry: ["./index.js","./plugin.js"],    //å¤šå…¥å£
     output: {
         path:"./",
-        filename:"bundle.js"    //µ¥Ò»³ö¿Ú
+        filename:"bundle.js"    //å•ä¸€å‡ºå£
     }
 };
 
 module.exports = {
     entry: {
-        indexPro:"./index.js",  //¶àÈë¿Ú£¬Í¬Ê±¶à³ö¿Ú
+        indexPro:"./index.js",  //å¤šå…¥å£ï¼ŒåŒæ—¶å¤šå‡ºå£
         pluginPro:["./plugin.js","./plugin2.js"]
     },
     output: {

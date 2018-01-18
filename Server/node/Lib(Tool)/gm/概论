@@ -1,25 +1,25 @@
-ÓÃÀ´´¦ÀíÍ¼Æ¬µÄ,±È½ÏÇ¿´ó,¿´ÁËÒ»ÏÂAPIÎÄµµ,»ù±¾canvasÓĞµÄ¹¦ÄÜ¶¼¾ß±¸
+ç”¨æ¥å¤„ç†å›¾ç‰‡çš„,æ¯”è¾ƒå¼ºå¤§,çœ‹äº†ä¸€ä¸‹APIæ–‡æ¡£,åŸºæœ¬canvasæœ‰çš„åŠŸèƒ½éƒ½å…·å¤‡
 
-°²×°:
-ÖÚËùÖÜÖªNode.jsµÄ¸÷ÖÖÍ¼ĞÎ¿âÔÚwindows°²×°¶¼±È½ÏÂé·³£¬ÎŞÄÎÓÃµÄwindows¿ª·¢»ú£¬½«Õâ´Î²È¿Ó¼ÇÂ¼ÏÂÀ´.
-Ö÷ÒªÏë×Ô¼ºÊµÏÖnode.jsÉú³ÉÍ¼ĞÎÑéÖ¤ÂëºÍÔÚÍ¼Æ¬ÉÏÇ©ÃûÎÄ×Ö£¬Õâ¾ÍĞèÒªÓÃµ½Í¼ĞÎ¿â£¬×îÖÕÑ¡ĞÍgm¡£
-windowsÏÂĞèÒªÏÂÔØ°²×°  GraphicsMagick Í¬Ê±°²×° ImageMagick
-ÍøÉÏ´ó²¿·Ö½Ì³ÌËµµÄÊÇÖ»°²×°ÕâÁ½¸öµÄÆäÖĞÒ»¸ö¼´¿É£¬Êµ¼ÊÊÇÔÚwindowsÁ½¸ö¶¼Òª°²×°£¬ÕâÀïµÄ¿ÓÊÇ
-ImageMagick ÔÚwin7ÖĞÄ¿Ç°Ö»ÄÜ°²×°6.9°æ±¾£¬²ÅÄÜÕı³£Ê¹ÓÃjpeg¿â£¬
-·ñÔò»á±¨´íÎó£ºWrong JPEG VERSION: Library is 90, caller expects 80
-È»ºó£ºnpm install images
-ÇÒgm±ØĞëµ÷ÓÃimagemagickµÄ·½Ê½À´ÔËĞĞ£ºgm.subClass({imageMagick: true});
-×îÖÕ´úÂë£º
+å®‰è£…:
+ä¼—æ‰€å‘¨çŸ¥Node.jsçš„å„ç§å›¾å½¢åº“åœ¨windowså®‰è£…éƒ½æ¯”è¾ƒéº»çƒ¦ï¼Œæ— å¥ˆç”¨çš„windowså¼€å‘æœºï¼Œå°†è¿™æ¬¡è¸©å‘è®°å½•ä¸‹æ¥.
+ä¸»è¦æƒ³è‡ªå·±å®ç°node.jsç”Ÿæˆå›¾å½¢éªŒè¯ç å’Œåœ¨å›¾ç‰‡ä¸Šç­¾åæ–‡å­—ï¼Œè¿™å°±éœ€è¦ç”¨åˆ°å›¾å½¢åº“ï¼Œæœ€ç»ˆé€‰å‹gmã€‚
+windowsä¸‹éœ€è¦ä¸‹è½½å®‰è£…  GraphicsMagick åŒæ—¶å®‰è£… ImageMagick
+ç½‘ä¸Šå¤§éƒ¨åˆ†æ•™ç¨‹è¯´çš„æ˜¯åªå®‰è£…è¿™ä¸¤ä¸ªçš„å…¶ä¸­ä¸€ä¸ªå³å¯ï¼Œå®é™…æ˜¯åœ¨windowsä¸¤ä¸ªéƒ½è¦å®‰è£…ï¼Œè¿™é‡Œçš„å‘æ˜¯
+ImageMagick åœ¨win7ä¸­ç›®å‰åªèƒ½å®‰è£…6.9ç‰ˆæœ¬ï¼Œæ‰èƒ½æ­£å¸¸ä½¿ç”¨jpegåº“ï¼Œ
+å¦åˆ™ä¼šæŠ¥é”™è¯¯ï¼šWrong JPEG VERSION: Library is 90, caller expects 80
+ç„¶åï¼šnpm install images
+ä¸”gmå¿…é¡»è°ƒç”¨imagemagickçš„æ–¹å¼æ¥è¿è¡Œï¼šgm.subClass({imageMagick: true});
+æœ€ç»ˆä»£ç ï¼š
 var gm = require('gm');
 var imageMagick = gm.subClass({imageMagick: true});
-var _name = "ÈËÃñµÄ¸ÖÌú¾ü¶Ó";
+var _name = "äººæ°‘çš„é’¢é“å†›é˜Ÿ";
 imageMagick(300, 300, 'green')
     .font('b.ttf', 30)
-    .drawText(10, 150, 'ÑéÖ¤ÂëÎÄ×ÖÊÇÉñÃÉÈö¹¤')
+    .drawText(10, 150, 'éªŒè¯ç æ–‡å­—æ˜¯ç¥è’™æ’’å·¥')
     .write('aaa.jpg', function (err) {
         if (!err) {
             console.log('done');
         } else {
-            console.log(err.message || "³ö´íÁË£¡");
+            console.log(err.message || "å‡ºé”™äº†ï¼");
         }
     });

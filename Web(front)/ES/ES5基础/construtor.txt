@@ -1,6 +1,6 @@
-...���ж�����һ�����캯����ʵ����
+...所有对象都是一个构造函数的实例；
 
-...������д���ͱȽ�ֱ�ۣ�
+...像以下写法就比较直观：
 ___var ary = new Array();
 ___var obj = new Object();
 ___var str = new String();

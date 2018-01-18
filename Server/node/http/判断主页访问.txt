@@ -1,8 +1,8 @@
-Èç¹ûrulºóÃæÃ»ÓĞÈÎºÎ¶«Î÷£¬¾ÍÊÇ·ÃÎÊÖ÷Ò³£¬Ö±½Ó·µ»ØÖ÷Ò³µÄstring
+å¦‚æœrulåé¢æ²¡æœ‰ä»»ä½•ä¸œè¥¿ï¼Œå°±æ˜¯è®¿é—®ä¸»é¡µï¼Œç›´æ¥è¿”å›ä¸»é¡µçš„string
 
 if(req.url === "/"){
-		console.log("À´×Ô ",req.headers.host," µÄÇëÇó");
-		//³õÊ¼»¯¿Í»§¶Ë£»
+		console.log("æ¥è‡ª ",req.headers.host," çš„è¯·æ±‚");
+		//åˆå§‹åŒ–å®¢æˆ·ç«¯ï¼›
 		this.fs.readFile(HOST_DIR + req.url + "index.html",function(err,chunk){
 
 			if(err){

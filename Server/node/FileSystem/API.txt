@@ -1,7 +1,7 @@
-fs.mkdir()	//╢╢╫╗нд╪Ч╪п
-fs.mkdirSync()	//м╛╡╫╢╢╫╗нд╪Ч╪п
-fs.writeFile()	//п╢нд╪Ч
-fs.writeStream()//п╢нд╪ЧаВ
-fs.readFile()	//╤анд╪Ч
-fs.readStream()	//╤анд╪ЧаВ
-fs.readFileSync()//м╛╡╫╤ах║нд╪Чё╩
+fs.mkdir()	//Е┬⌡Е╩╨Ф√┤Д╩╤Е╓╧
+fs.mkdirSync()	//Е░▄Ф╜╔Е┬⌡Е╩╨Ф√┤Д╩╤Е╓╧
+fs.writeFile()	//Е├≥Ф√┤Д╩╤
+fs.writeStream()//Е├≥Ф√┤Д╩╤Ф╣│
+fs.readFile()	//Х╞╩Ф√┤Д╩╤
+fs.readStream()	//Х╞╩Ф√┤Д╩╤Ф╣│
+fs.readFileSync()//Е░▄Ф╜╔Х╞╩Е▐√Ф√┤Д╩╤О╪⌡

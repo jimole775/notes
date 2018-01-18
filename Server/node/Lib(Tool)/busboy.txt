@@ -1,9 +1,9 @@
-//node上传工具
+//node涓婁紶宸ュ叿
 
-//安装
+//瀹夎
 npm install -g busboy
 
-//样例
+//鏍蜂緥
 
 //var busboy = new Busboy({ headers: req.headers });
 		//

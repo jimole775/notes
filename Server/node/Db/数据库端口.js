@@ -1,17 +1,17 @@
 /**
- * js ²Ù×÷Êı¾İ¿âÀà
+ * js æ“ä½œæ•°æ®åº“ç±»
  *
- * @author Ğ¤Îä<phpxiaowu@gmail.com>
+ * @author è‚–æ­¦<phpxiaowu@gmail.com>
  */
 
 /**
- * 1¡¢Êı¾İ¿âÃû£¨mydb£©
+ * 1ã€æ•°æ®åº“åï¼ˆmydbï¼‰
 
- 2¡¢°æ±¾ºÅ£¨1.0£©
+ 2ã€ç‰ˆæœ¬å·ï¼ˆ1.0ï¼‰
 
- 3¡¢ÃèÊö£¨Test DB£©
+ 3ã€æè¿°ï¼ˆTest DBï¼‰
 
- 4¡¢Êı¾İ¿â´óĞ¡£¨2*1024*1024£©
+ 4ã€æ•°æ®åº“å¤§å°ï¼ˆ2*1024*1024ï¼‰
  */
 var DB = function (db_name, size) {
 	var _db = openDatabase (db_name, '1.0.0', '', size);
@@ -19,10 +19,10 @@ var DB = function (db_name, size) {
 	return {
 
 		/**
-		 * Ö´ĞĞsql£¬»Øµ÷·µ»ØÓ°ÏìÌõÊı
+		 * æ‰§è¡Œsqlï¼Œå›è°ƒè¿”å›å½±å“æ¡æ•°
 		 */
 		execute: function (sql, param, callback) {
-			//²ÎÊı´¦Àí
+			//å‚æ•°å¤„ç†
 			if (!param) {
 				param = [];
 			}
@@ -39,14 +39,14 @@ var DB = function (db_name, size) {
 		},
 
 		/**
-		 * Ö´ĞĞsql£¬»Øµ÷·µ»Øsql²éÑ¯¶ÔÏó
-		 * ²éÑ¯Ê±£¬ÓĞÊı¾İ·µ»ØÊı×é£¬ÎŞÊı¾İ·µ»Ø0
-		 * ÔöÉ¾¸ÄÊ±£º·µ»Øint£¬Ó°ÏìÌõÊı
+		 * æ‰§è¡Œsqlï¼Œå›è°ƒè¿”å›sqlæŸ¥è¯¢å¯¹è±¡
+		 * æŸ¥è¯¢æ—¶ï¼Œæœ‰æ•°æ®è¿”å›æ•°ç»„ï¼Œæ— æ•°æ®è¿”å›0
+		 * å¢åˆ æ”¹æ—¶ï¼šè¿”å›intï¼Œå½±å“æ¡æ•°
 		 * void query( string[, function])
 		 * void query( string[, array[, function]])
 		 */
 		query : function (sql, param, callback) {
-			//²ÎÊı´¦Àí
+			//å‚æ•°å¤„ç†
 			if (!param) {
 				param = [];
 			}
@@ -56,9 +56,9 @@ var DB = function (db_name, size) {
 			}
 
 			var self = this;
-			//Ö»ÓĞÒ»¸ö²ÎÊı
+			//åªæœ‰ä¸€ä¸ªå‚æ•°
 			_db.transaction (function (tx) {
-				//4¸ö²ÎÊı£ºsql£¬Ìæ»»sqlÖĞÎÊºÅµÄÊı×é£¬³É¹¦»Øµ÷£¬³ö´í»Øµ÷
+				//4ä¸ªå‚æ•°ï¼šsqlï¼Œæ›¿æ¢sqlä¸­é—®å·çš„æ•°ç»„ï¼ŒæˆåŠŸå›è°ƒï¼Œå‡ºé”™å›è°ƒ
 				tx.executeSql (sql, param, function (tx, result) {
 					if (typeof callback == 'function') {
 						callback (result);
@@ -67,7 +67,7 @@ var DB = function (db_name, size) {
 			})
 		},
 		/**
-		 * ²åÈë£¬»Øµ÷·µ»Ølast id
+		 * æ’å…¥ï¼Œå›è°ƒè¿”å›last id
 		 * void insert( string, object[, function])
 		 */
 		insert: function (table, data, callback) {
@@ -92,12 +92,12 @@ var DB = function (db_name, size) {
 			});
 		},
 		/**
-		 * ĞŞ¸Ä£¬»Øµ÷·µ»ØÓ°ÏìÌõÊı
+		 * ä¿®æ”¹ï¼Œå›è°ƒè¿”å›å½±å“æ¡æ•°
 		 * void update( string, object[, string[, function]])
 		 * void update( string, object[, string[, array[, function]]])
 		 */
 		update: function (table, data, where, param, callback) {
-			//²ÎÊı´¦Àí
+			//å‚æ•°å¤„ç†
 			if (!param) {
 				param = [];
 			}
@@ -123,12 +123,12 @@ var DB = function (db_name, size) {
 		},
 
 		/**
-		 * É¾³ı
+		 * åˆ é™¤
 		 * void toDelete( string, string[, function]])
 		 * void toDelete( string, string[, array[, function]])
 		 */
 		toDelete: function (table, where, param, callback) {
-			//²ÎÊı´¦Àí
+			//å‚æ•°å¤„ç†
 			if (!param) {
 				param = [];
 			}
@@ -146,12 +146,12 @@ var DB = function (db_name, size) {
 		},
 
 		/**
-		 * ²éÑ¯£¬»Øµ÷·µ»Ø½á¹û¼¯Êı×é
+		 * æŸ¥è¯¢ï¼Œå›è°ƒè¿”å›ç»“æœé›†æ•°ç»„
 		 * void fetch_all( string[, function] )
 		 * void fetch_all( string[, param[, function]] )
 		 */
 		fetchAll: function (sql, param, callback) {
-			//²ÎÊı´¦Àí
+			//å‚æ•°å¤„ç†
 			if (!param) {
 				param = [];
 			}
@@ -176,8 +176,8 @@ var DB = function (db_name, size) {
 		},
 
 		/**
-		 * ²éÑ¯±íµÄĞÅÏ¢
-		 * table_name: ±íÃû³Æ£¬Ö§³Ö % *£¬
+		 * æŸ¥è¯¢è¡¨çš„ä¿¡æ¯
+		 * table_name: è¡¨åç§°ï¼Œæ”¯æŒ % *ï¼Œ
 		 */
 		showTables: function (table_name, callback) {
 			this.fetchAll ("select * from sqlite_master where type='table' and name like ?", [table_name], callback);
@@ -185,7 +185,7 @@ var DB = function (db_name, size) {
 
 
 		/**
-		 * ×é×°²éÑ¯Ìõ¼ş
+		 * ç»„è£…æŸ¥è¯¢æ¡ä»¶
 		 */
 		mkWhere: function (data) {
 			var arr   = [];
@@ -201,7 +201,7 @@ var DB = function (db_name, size) {
 		},
 
 		/**
-		 * ´íÎó´¦Àí
+		 * é”™è¯¯å¤„ç†
 		 */
 		onfail: function (tx, e) {
 			console.log ('sql error: ' + e.message);
@@ -210,26 +210,26 @@ var DB = function (db_name, size) {
 };
 
 /* 
- //Ê¹ÓÃÊ¾Àı£º
- //1.»ñÈ¡db¶ÔÏó,Á¬½ÓÊı¾İ¿â test£¬·ÖÅä2M´óĞ¡
+ //ä½¿ç”¨ç¤ºä¾‹ï¼š
+ //1.è·å–dbå¯¹è±¡,è¿æ¥æ•°æ®åº“ testï¼Œåˆ†é…2Må¤§å°
  var db = new DB('test',1024*1024*2);
 
- //2.´´½¨±í
+ //2.åˆ›å»ºè¡¨
  d.query("CREATE TABLE ids (id integer primary key autoincrement , ctime integer)");
 
- //3.²é¿´ÒÑ¾­´´½¨µÄ±í£¬Ö§³Ö±íÃûÍ¨Åä·ûËÑË÷¡£Èç£º"%"²éÑ¯ËùÓĞ±í£¬"user_%"²éÑ¯"user_"¿ªÍ·µÄ±í
+ //3.æŸ¥çœ‹å·²ç»åˆ›å»ºçš„è¡¨ï¼Œæ”¯æŒè¡¨åé€šé…ç¬¦æœç´¢ã€‚å¦‚ï¼š"%"æŸ¥è¯¢æ‰€æœ‰è¡¨ï¼Œ"user_%"æŸ¥è¯¢"user_"å¼€å¤´çš„è¡¨
  db.showTables("%",function(ret){console.log(ret)})
 
- //4.²éÑ¯±íÀïÊı¾İ
+ //4.æŸ¥è¯¢è¡¨é‡Œæ•°æ®
  db.fetchAll('select * from ids',function(ret){console.log(ret)});
 
- //5.ĞŞ¸Ä
+ //5.ä¿®æ”¹
  db.update('ids',{ctime:123},"id=?",[1],function(ret){console.log(ret)});
 
- //6.É¾³ı
+ //6.åˆ é™¤
  db.toDelete('ids',"id=?",[1],function(ret){console.log(ret)});
 
- //7.ÆäËü£¬ÈçÉ¾±í
+ //7.å…¶å®ƒï¼Œå¦‚åˆ è¡¨
  db.query('drop table ids');
 
  */  

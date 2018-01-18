@@ -1,18 +1,18 @@
-<a href="javascript:location.reload();">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:history.go(0);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location=location;">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location=location.href;">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location.replace(location);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location.replace(location.href);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location.assign(location);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:location.assign(location.href);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<!--// ÒÔÏÂÖ»Ö§³Öie -->
-<a href="javascript:document.URL=location.href;">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:navigate(location);">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<a href="javascript:document.execCommand('Refresh');">µã»÷ÖØÐÂÔØÈëÒ³Ãæ</a>
-<!--// ÒÔÉÏÖ»Ö§³Öie -->
+<a href="javascript:location.reload();">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:history.go(0);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location=location;">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location=location.href;">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location.replace(location);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location.replace(location.href);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location.assign(location);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:location.assign(location.href);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<!--// ä»¥ä¸‹åªæ”¯æŒie -->
+<a href="javascript:document.URL=location.href;">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:navigate(location);">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<a href="javascript:document.execCommand('Refresh');">ç‚¹å‡»é‡æ–°è½½å…¥é¡µé¢</a>
+<!--// ä»¥ä¸Šåªæ”¯æŒie -->
 
 
-ÆäÊµÒ²¾ÍÊÇ¶ÔurlµÄ´¦Àí
+å…¶å®žä¹Ÿå°±æ˜¯å¯¹urlçš„å¤„ç†
 
-location.href = location.hrefÒ²¿ÉÒÔÊµÏÖË¢ÐÂ
+location.href = location.hrefä¹Ÿå¯ä»¥å®žçŽ°åˆ·æ–°

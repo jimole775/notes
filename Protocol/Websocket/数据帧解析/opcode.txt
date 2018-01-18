@@ -1,8 +1,8 @@
-//�൱��http��statuscode,�������opcode�����Զ��巢��!
+//相当于http的statuscode,不过这个opcode可以自定义发送!
 
-0: ����֡
-1: �ı�֡
-2: ������֡
-8: ����֡
-9: ping֡
-10:pong֡
+0: 继续帧
+1: 文本帧
+2: 二进制帧
+8: 结束帧
+9: ping帧
+10:pong帧

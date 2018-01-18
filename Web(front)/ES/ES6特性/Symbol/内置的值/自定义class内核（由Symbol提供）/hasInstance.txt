@@ -1,5 +1,5 @@
 ==================|Symbol.hasInstance|==========================
-...Õâ¸öÖµÓÃÓÚ¡¾×ÔÄâ¶¨¡¿Ààº¯ÊıµÄinstanceOfĞĞÎª£»
+...è¿™ä¸ªå€¼ç”¨äºã€è‡ªæ‹Ÿå®šã€‘ç±»å‡½æ•°çš„instanceOfè¡Œä¸ºï¼›
    class MyClass{
       static [Symbol.hasInstance](x){
          return Array.isArray(x);

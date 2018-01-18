@@ -1,14 +1,14 @@
 $(function(){
-    function offset(ele){//¼ÆËãÈÎÒâDOMÔªËØ¾àÀëÎÄµµµÄ×ó»òÉÏµÄ¾ø¶ÔÆ«ÒÆ
+    function offset(ele){//è®¡ç®—ä»»æ„DOMå…ƒç´ è·ç¦»æ–‡æ¡£çš„å·¦æˆ–ä¸Šçš„ç»å¯¹åç§»
         var l=ele.offsetLeft;
         var t=ele.offsetTop;
         var p=ele.offsetParent;
         while(p){
             if(window.navigator.userAgent.indexOf("MSIE 8")>-1){
-                l+=p.offsetLeft;//¼ÓÉÏÉÏÒ»¼¶µÄ±ß¿ò
+                l+=p.offsetLeft;//åŠ ä¸Šä¸Šä¸€çº§çš„è¾¹æ¡†
                 t+=p.offsetTop;
             }else{
-                l+=p.offsetLeft+p.clientLeft;//¼ÓÉÏÉÏÒ»¼¶µÄ±ß¿ò
+                l+=p.offsetLeft+p.clientLeft;//åŠ ä¸Šä¸Šä¸€çº§çš„è¾¹æ¡†
                 t+=p.offsetTop+p.clientTop;
             }
             p=p.offsetParent;
@@ -19,9 +19,9 @@ $(function(){
     var p= 0,t=0;
     $(window).scroll(function(){
         p=$(this).scrollTop();
-        if(t<p){//ÏòÏÂ
+        if(t<p){//å‘ä¸‹
             $(".rongNav").removeClass("showNav");
-        }else{//ÏòÉÏ
+        }else{//å‘ä¸Š
             if(p<=930){
                 $(".rongNav").removeClass("showNav");
             }else{

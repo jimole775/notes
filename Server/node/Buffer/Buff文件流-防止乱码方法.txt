@@ -23,4 +23,4 @@ readStream.on('end', function () {
 });
 
 
-//ÒÔÉÏ·½·¨±»¼¯³ÉÔÚÔ´·½·¨ Buffer.concat(Ary,bufferlength)
+//ä»¥ä¸Šæ–¹æ³•è¢«é›†æˆåœ¨æºæ–¹æ³• Buffer.concat(Ary,bufferlength)

@@ -1,1 +1,1 @@
-Èç¹ûÔÚcontrollerÀïÃæÒ»´Îdirty¼ì²éÖ®ÖĞ£¬ÓĞ¡¾Òì²½¡¿×´Ì¬£¨setTimeout»òÕßsetinterval£©£¬¾ÍĞèÒªÊ¹ÓÃ$apply½øĞĞ¼àÌı£¬Èç¹û²»ÏëÊ¹ÓÃ$scope.$apply£¬¾Í¿ÉÒÔÊ¹ÓÃ$setTimeoutºÍ$setinterval
+å¦‚æœåœ¨controlleré‡Œé¢ä¸€æ¬¡dirtyæ£€æŸ¥ä¹‹ä¸­ï¼Œæœ‰ã€å¼‚æ­¥ã€‘çŠ¶æ€ï¼ˆsetTimeoutæˆ–è€…setintervalï¼‰ï¼Œå°±éœ€è¦ä½¿ç”¨$applyè¿›è¡Œç›‘å¬ï¼Œå¦‚æœä¸æƒ³ä½¿ç”¨$scope.$applyï¼Œå°±å¯ä»¥ä½¿ç”¨$setTimeoutå’Œ$setinterval

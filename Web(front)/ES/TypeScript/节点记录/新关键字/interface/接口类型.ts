@@ -4,10 +4,10 @@
 
 interface LabelledValue {
     label:string;
-    width?:number;  /**¿ÉÑ¡ÊôĞÔ*/
+    width?:number;  /**å¯é€‰å±æ€§*/
 }
 
-//function createSquareOrg(labelOpt:{label?:string}):any{ //²»Ê¹ÓÃ½Ó¿ÚÀàĞÍµÄÇé¿öÏÂÒ²¿ÉÒÔÕâÑùÊ¹ÓÃ
+//function createSquareOrg(labelOpt:{label?:string}):any{ //ä¸ä½¿ç”¨æ¥å£ç±»å‹çš„æƒ…å†µä¸‹ä¹Ÿå¯ä»¥è¿™æ ·ä½¿ç”¨
 //
 //}
 
@@ -18,9 +18,9 @@ function createSquare(labelOpt:LabelledValue):any{
 createSquare({label:"div"});
 
 
-/**Ö»¶ÁÊôĞÔ*/
+/**åªè¯»å±æ€§*/
 interface Point {
-    //readonly  x: number;   //¹ÙÍøÊÇÄÇÃ´Ğ´µÄ£¬²»ÖªµÀÎªÊ²Ã´±à¼­Æ÷²»Ö§³Ö£¬µ«ÊÇ±àÒë³öÀ´ÓÖÊÇÃ»ÎÊÌâµÄ
+    //readonly  x: number;   //å®˜ç½‘æ˜¯é‚£ä¹ˆå†™çš„ï¼Œä¸çŸ¥é“ä¸ºä»€ä¹ˆç¼–è¾‘å™¨ä¸æ”¯æŒï¼Œä½†æ˜¯ç¼–è¯‘å‡ºæ¥åˆæ˜¯æ²¡é—®é¢˜çš„
     //readonly  y: number;
     x:number;
     y:number;
@@ -37,18 +37,18 @@ let ary : ReadonlyArray<number>= [1,2.3,4];
 ary[0] = 2;
 
 
-/**º¯Êı½Ó¿Ú*/
+/**å‡½æ•°æ¥å£*/
 interface Func{
     (foo:string,bar:string):boolean;
 }
 
 let mySearch:Func;
-mySearch = function(foz,baz){ //ÕâÀï²»Ò»¶¨ĞèÒª²ÎÊıÃûÏàÍ¬,¶øÇÒÒ²²»ĞèÒªÔÙ¹æ¶¨ÀàĞÍ
+mySearch = function(foz,baz){ //è¿™é‡Œä¸ä¸€å®šéœ€è¦å‚æ•°åç›¸åŒ,è€Œä¸”ä¹Ÿä¸éœ€è¦å†è§„å®šç±»å‹
     return true;
 };
 
-/**¿ÉË÷ÒıµÄ½Ó¿Ú*/
-//´´½¨Ò»¸öÖ»¶ÁÊı×é£¬¹æ¶¨ÏÂ±êÊÇÊı×ÖÀàĞÍ£»
+/**å¯ç´¢å¼•çš„æ¥å£*/
+//åˆ›å»ºä¸€ä¸ªåªè¯»æ•°ç»„ï¼Œè§„å®šä¸‹æ ‡æ˜¯æ•°å­—ç±»å‹ï¼›
 interface ReadOnlyArray{
     //readonly [index:number]:string;
     [index:number]:string;

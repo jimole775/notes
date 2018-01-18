@@ -1,6 +1,6 @@
-...Ã¿¸ö¶ÔÏóµÄ¡¾Ã¿Ò»¸öÊôĞÔ¡¿¶¼ÓĞÒ»¸öÃèÊö¶ÔÏó(Descriptor)
-...ÓÃÓÚ¿ØÖÆ¸ÃÊôĞÔµÄĞĞÎª¡£
+...æ¯ä¸ªå¯¹è±¡çš„ã€æ¯ä¸€ä¸ªå±æ€§ã€‘éƒ½æœ‰ä¸€ä¸ªæè¿°å¯¹è±¡(Descriptor)
+...ç”¨äºæ§åˆ¶è¯¥å±æ€§çš„è¡Œä¸ºã€‚
     var obj = {foo:"123"};
     Object.getOwnPropertyDescriptor(obj,"foo"); //{value:123, weitable:true, enumerable:true, configurable:true}
 
-...enumerableÈ·¶¨ÊôĞÔµÄ¡¾¿ÉÃ¶¾Ù¡¿×´Ì¬
+...enumerableç¡®å®šå±æ€§çš„ã€å¯æšä¸¾ã€‘çŠ¶æ€

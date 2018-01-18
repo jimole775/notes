@@ -2,7 +2,7 @@
 arm
 
 blood
-blood vessel		//Ñª¹Ü 
+blood vessel		//è¡€ç®¡ 
 
 cheek
 
@@ -24,7 +24,7 @@ leg
 mouth
 
 nose
-nail		//Ö¸¼×£¬Öº¼×
+nail		//æŒ‡ç”²ï¼Œè¶¾ç”²
 
 tongue
 toe
@@ -35,32 +35,32 @@ tooth
 
 
 skin
-villus		//ÈŞÃ«
+villus		//ç»’æ¯›
 
 
 
 
 
-ĞÄ		//heart
-¸Î		//hepar
-Æ¢		//spleen
-·Î		//lungs
-Éö		//kidney
-Î¸		//stomach
+å¿ƒ		//heart
+è‚		//hepar
+è„¾		//spleen
+è‚º		//lungs
+è‚¾		//kidney
+èƒƒ		//stomach
 
 
-ĞØ		//chest
-Èé·¿		//bosom
-¸¹		//abdomen
-Ñü		//waist
-¶Ç		//belly
-Æ¨¹É		//bottom
-¸ØÃÅ		//anus
+èƒ¸		//chest
+ä¹³æˆ¿		//bosom
+è…¹		//abdomen
+è…°		//waist
+è‚š		//belly
+å±è‚¡		//bottom
+è‚›é—¨		//anus
 
 
-Ã¼Ã«		//eyebrow	
-ºú×Ó		//mustache
-ÏÂ°Í		//chin
-ÏÂò¢		//jaw
-È§¹Ç		//cheekbone||marlar
-Í«¿×		//pupilla
+çœ‰æ¯›		//eyebrow	
+èƒ¡å­		//mustache
+ä¸‹å·´		//chin
+ä¸‹é¢Œ		//jaw
+é¢§éª¨		//cheekbone||marlar
+ç³å­”		//pupilla

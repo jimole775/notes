@@ -1,9 +1,9 @@
 var isIE = (navigator.appName == "Microsoft Internet Explorer");
-//ÅÐ¶ÏIEÔ¶Ô¶²»Ö¹ÉÏÃæÒ»ÖÖ·½·¨,¿ÉÒÔÊ¹ÓÃIE¸ü¶àÌØÓÐµÄ¶«Î÷,Èç:window.ActiveXObject,document.allµÈ,ÕâÐ©¶¼ÊôÓÚ¶ÔÏó/ÌØÕ÷¼ì²â·¨ÁË!Í¨³£ÒªÔÚ²»Í¬µÄä¯ÀÀÆ÷ÉÏÐ´²»Í¬µÄÑùÊ½(ÒòÎªIEÑùÊ½½âÎöÒ²¸÷ÓÐ²»Í¬),ÄÇ¾ÍµÃÅÐ¶Ï°æ±¾ÁË.¿ÉÒÔÕâÑù×ö
-//¼ì²âä¯ÀÀÆ÷¼°Æä°æ±¾µÄ´úÂë
+//åˆ¤æ–­IEè¿œè¿œä¸æ­¢ä¸Šé¢ä¸€ç§æ–¹æ³•,å¯ä»¥ä½¿ç”¨IEæ›´å¤šç‰¹æœ‰çš„ä¸œè¥¿,å¦‚:window.ActiveXObject,document.allç­‰,è¿™äº›éƒ½å±žäºŽå¯¹è±¡/ç‰¹å¾æ£€æµ‹æ³•äº†!é€šå¸¸è¦åœ¨ä¸åŒçš„æµè§ˆå™¨ä¸Šå†™ä¸åŒçš„æ ·å¼(å› ä¸ºIEæ ·å¼è§£æžä¹Ÿå„æœ‰ä¸åŒ),é‚£å°±å¾—åˆ¤æ–­ç‰ˆæœ¬äº†.å¯ä»¥è¿™æ ·åš
+//æ£€æµ‹æµè§ˆå™¨åŠå…¶ç‰ˆæœ¬çš„ä»£ç 
 
 
-//ÎÄÕÂÀ´×Ô codego.net  Çë¿´Ô´´úÂë:
+//æ–‡ç« æ¥è‡ª codego.net  è¯·çœ‹æºä»£ç :
 function getBrowser() {
     var browser = {
             msie: false, firefox: false, opera: false, safari: false,
@@ -23,52 +23,52 @@ function getBrowser() {
 }
 
 
-//¶ÔÏó/ÌØÕ÷¼ì²â·¨
-//user-agent×Ö·û´®Ìá¹©ÁË¹ØÓÚWebä¯ÀÀÆ÷µÄ´óÁ¿ÐÅÏ¢,--codego.net--£¬°üÀ¨ä¯ÀÀÆ÷µÄÃû³ÆºÍ°æ±¾¡£
-//¸Ã·½·¨ÊÇÒ»ÖÖÅÐ¶Ïä¯ÀÀÆ÷ÄÜÁ¦£¨¶ø·Çä¯ÀÀÆ÷µÄÈ·ÇÐÐÍºÅ£©µÄÍ¨ÓÃ·½·¨¡£´ó²¿·ÖJS×¨¼ÒÈÏÎªÕâ¸ö·½·¨×îºÏÊÊ£¬ÒòÎªËûÃÇÈÏÎª°´ÕÕ¸Ã·½·¨Ëù±àÐ´µÄ½Å±¾ÊÇ¾­µÃÆðÎ´À´¿¼ÑéµÄ¡£
-//»ñÈ¡IEä¯ÀÀÆ÷µÄ°æ±¾ºÅ
-//·µ»ØÊýÖµ£¬ÏÔÊ¾IEµÄÖ÷°æ±¾ºÅ
+//å¯¹è±¡/ç‰¹å¾æ£€æµ‹æ³•
+//user-agentå­—ç¬¦ä¸²æä¾›äº†å…³äºŽWebæµè§ˆå™¨çš„å¤§é‡ä¿¡æ¯,--codego.net--ï¼ŒåŒ…æ‹¬æµè§ˆå™¨çš„åç§°å’Œç‰ˆæœ¬ã€‚
+//è¯¥æ–¹æ³•æ˜¯ä¸€ç§åˆ¤æ–­æµè§ˆå™¨èƒ½åŠ›ï¼ˆè€Œéžæµè§ˆå™¨çš„ç¡®åˆ‡åž‹å·ï¼‰çš„é€šç”¨æ–¹æ³•ã€‚å¤§éƒ¨åˆ†JSä¸“å®¶è®¤ä¸ºè¿™ä¸ªæ–¹æ³•æœ€åˆé€‚ï¼Œå› ä¸ºä»–ä»¬è®¤ä¸ºæŒ‰ç…§è¯¥æ–¹æ³•æ‰€ç¼–å†™çš„è„šæœ¬æ˜¯ç»å¾—èµ·æœªæ¥è€ƒéªŒçš„ã€‚
+//èŽ·å–IEæµè§ˆå™¨çš„ç‰ˆæœ¬å·
+//è¿”å›žæ•°å€¼ï¼Œæ˜¾ç¤ºIEçš„ä¸»ç‰ˆæœ¬å·
 function getIEVer1() {
-    var ua = navigator.userAgent; //»ñÈ¡ÓÃ»§¶ËÐÅÏ¢
-    var b = ua.indexOf("MSIE "); //¼ì²âÌØÊâ×Ö·û´®"MSIE "µÄÎ»ÖÃ
+    var ua = navigator.userAgent; //èŽ·å–ç”¨æˆ·ç«¯ä¿¡æ¯
+    var b = ua.indexOf("MSIE "); //æ£€æµ‹ç‰¹æ®Šå­—ç¬¦ä¸²"MSIE "çš„ä½ç½®
     if (b < 0) {
         return 0;
     }
-    return parseFloat(ua.substring(b + 5, ua.indexOf(";", b))); //½ØÈ¡°æ±¾ºÅ×Ö·û´®£¬²¢×ª»»ÎªÊýÖµ
+    return parseFloat(ua.substring(b + 5, ua.indexOf(";", b))); //æˆªå–ç‰ˆæœ¬å·å­—ç¬¦ä¸²ï¼Œå¹¶è½¬æ¢ä¸ºæ•°å€¼
 }
 
-console.log(getIEVer1()); //·µ»ØÊýÖµ8(ÎÒµÄIE8)
-//Èç¹û¸ü¹Ø×¢ä¯ÀÀÆ÷µÄÄÜÁ¦¶ø²»ÔÚºõËüÊµ¼ÊµÄÉí·Ý£¬¾Í¿ÉÒÔÊ¹ÓÃÕâÖÖ·½·¨¡£
-var ua = navigator.userAgent.toLowerCase(); //»ñÈ¡ÓÃ»§¶ËÐÅÏ¢
+console.log(getIEVer1()); //è¿”å›žæ•°å€¼8(æˆ‘çš„IE8)
+//å¦‚æžœæ›´å…³æ³¨æµè§ˆå™¨çš„èƒ½åŠ›è€Œä¸åœ¨ä¹Žå®ƒå®žé™…çš„èº«ä»½ï¼Œå°±å¯ä»¥ä½¿ç”¨è¿™ç§æ–¹æ³•ã€‚
+var ua = navigator.userAgent.toLowerCase(); //èŽ·å–ç”¨æˆ·ç«¯ä¿¡æ¯
 var info = {
-    ie: /msie/.test(ua) && !/opera/.test(ua), //Æ¥ÅäIEä¯ÀÀÆ÷
-    op: /opera/.test(ua), //Æ¥ÅäOperaä¯ÀÀÆ÷
-    sa: /version.*safari/.test(ua), //Æ¥ÅäSafariä¯ÀÀÆ÷
-    ch: /chrome/.test(ua), //Æ¥ÅäChromeä¯ÀÀÆ÷
-    ff: /gecko/.test(ua) && !/webkit/.test(ua) //Æ¥ÅäFirefoxä¯ÀÀÆ÷
+    ie: /msie/.test(ua) && !/opera/.test(ua), //åŒ¹é…IEæµè§ˆå™¨
+    op: /opera/.test(ua), //åŒ¹é…Operaæµè§ˆå™¨
+    sa: /version.*safari/.test(ua), //åŒ¹é…Safariæµè§ˆå™¨
+    ch: /chrome/.test(ua), //åŒ¹é…Chromeæµè§ˆå™¨
+    ff: /gecko/.test(ua) && !/webkit/.test(ua) //åŒ¹é…Firefoxæµè§ˆå™¨
 };
-(info.ie) && console.log("IEä¯ÀÀÆ÷");
-(info.op) && console.log("Operaä¯ÀÀÆ÷");
-(info.sa) && console.log("Safariä¯ÀÀÆ÷");
-(info.ff) && console.log("Firefoxä¯ÀÀÆ÷");
-(info.ch) && console.log("Chromeä¯ÀÀÆ÷");
-//Í¨³£ÎÒÃÇ×öµÃ×î¶àµÄ,¾ÍÊÇÅÐ¶ÏÊÇ·ñÊÇIEÁË,ÆäËü¼¸ÖÖä¯ÀÀÆ÷Ò»°ã¶¼»á·ûºÏ±ê×¼.ÓÐÐ©¿Í»§Ö»ÐèÒª·ûºÏIEºÍFF¾ÍÒÑ¾­Âú×ãÁË.ÄÇÃ´ÎÒÃÇ¿ÉÒÔÕâÑù×ö:
+(info.ie) && console.log("IEæµè§ˆå™¨");
+(info.op) && console.log("Operaæµè§ˆå™¨");
+(info.sa) && console.log("Safariæµè§ˆå™¨");
+(info.ff) && console.log("Firefoxæµè§ˆå™¨");
+(info.ch) && console.log("Chromeæµè§ˆå™¨");
+//é€šå¸¸æˆ‘ä»¬åšå¾—æœ€å¤šçš„,å°±æ˜¯åˆ¤æ–­æ˜¯å¦æ˜¯IEäº†,å…¶å®ƒå‡ ç§æµè§ˆå™¨ä¸€èˆ¬éƒ½ä¼šç¬¦åˆæ ‡å‡†.æœ‰äº›å®¢æˆ·åªéœ€è¦ç¬¦åˆIEå’ŒFFå°±å·²ç»æ»¡è¶³äº†.é‚£ä¹ˆæˆ‘ä»¬å¯ä»¥è¿™æ ·åš:
 
 
-//user-agent×Ö·û´®¼ì²â·¨
+//user-agentå­—ç¬¦ä¸²æ£€æµ‹æ³•
 
-//»ñÈ¡IEä¯ÀÀÆ÷µÄ°æ±¾ºÅ
-//·µ»ØÊýÖµ£¬ÏÔÊ¾IEµÄÖ÷°æ±¾ºÅ
+//èŽ·å–IEæµè§ˆå™¨çš„ç‰ˆæœ¬å·
+//è¿”å›žæ•°å€¼ï¼Œæ˜¾ç¤ºIEçš„ä¸»ç‰ˆæœ¬å·
 function getIEVer2() {
-    var ua = navigator.userAgent; //»ñÈ¡ÓÃ»§¶ËÐÅÏ¢
-    var b = ua.indexOf("MSIE "); //¼ì²âÌØÊâ×Ö·û´®"MSIE "µÄÎ»ÖÃ
+    var ua = navigator.userAgent; //èŽ·å–ç”¨æˆ·ç«¯ä¿¡æ¯
+    var b = ua.indexOf("MSIE "); //æ£€æµ‹ç‰¹æ®Šå­—ç¬¦ä¸²"MSIE "çš„ä½ç½®
     if (b < 0) {
         return 0;
     }
-    return parseFloat(ua.substring(b + 5, ua.indexOf(";", b))); //½ØÈ¡°æ±¾ºÅ×Ö·û´®£¬²¢×ª»»ÎªÊýÖµ
+    return parseFloat(ua.substring(b + 5, ua.indexOf(";", b))); //æˆªå–ç‰ˆæœ¬å·å­—ç¬¦ä¸²ï¼Œå¹¶è½¬æ¢ä¸ºæ•°å€¼
 }
-console.log(getIEVer2()); //·µ»ØÊýÖµ7 ¼ì²â²Ù×÷ÏµÍ³:
-var isWin = (navigator.userAgent.indexOf("Win") != -1); //Èç¹ûÊÇWindowsÏµÍ³£¬Ôò·µ»Øtrue
-var isMac = (navigator.userAgent.indexOf("Mac") != -1); //Èç¹ûÊÇMacintoshÏµÍ³£¬Ôò·µ»Øtrue
-var isUnix = (navigator.userAgent.indexOf("X11") != -1); //Èç¹ûÊÇUnixÏµÍ³£¬Ôò·µ»Øtrue
-var isLinux = (navigator.userAgent.indexOf("Linux") != -1); //Èç¹ûÊÇLinuxÏµÍ³£¬Ôò·µ»Øtrue ÎÄÕÂ´ó²¿·ÖÄÚÈÝÀ´×ÔÓÚ¡¶JavascriptÕ÷Í¾¡·
+console.log(getIEVer2()); //è¿”å›žæ•°å€¼7 æ£€æµ‹æ“ä½œç³»ç»Ÿ:
+var isWin = (navigator.userAgent.indexOf("Win") != -1); //å¦‚æžœæ˜¯Windowsç³»ç»Ÿï¼Œåˆ™è¿”å›žtrue
+var isMac = (navigator.userAgent.indexOf("Mac") != -1); //å¦‚æžœæ˜¯Macintoshç³»ç»Ÿï¼Œåˆ™è¿”å›žtrue
+var isUnix = (navigator.userAgent.indexOf("X11") != -1); //å¦‚æžœæ˜¯Unixç³»ç»Ÿï¼Œåˆ™è¿”å›žtrue
+var isLinux = (navigator.userAgent.indexOf("Linux") != -1); //å¦‚æžœæ˜¯Linuxç³»ç»Ÿï¼Œåˆ™è¿”å›žtrue æ–‡ç« å¤§éƒ¨åˆ†å†…å®¹æ¥è‡ªäºŽã€ŠJavascriptå¾é€”ã€‹

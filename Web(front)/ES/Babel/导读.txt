@@ -1,10 +1,10 @@
 
-=========================¡ì°²×°¡ì=========================
-...¿ÉÒÔ°²×° babel-loader
+=========================Â§å®‰è£…Â§=========================
+...å¯ä»¥å®‰è£… babel-loader
     npm install babel-loader babel-preset-es2015 --save-dev
-    npm install --save babel-polyfill  //µÍ°æ±¾ä¯ÀÀÆ÷¼æÈİ¹¤¾ß,°üÀ¨·­ÒëProxy¶ÔÏó£¬Symbol¶ÔÏóµÈ£¬µÍ¼¶ä¯ÀÀÆ÷Ã»ÓĞµÄ¶ÔÏó
+    npm install --save babel-polyfill  //ä½ç‰ˆæœ¬æµè§ˆå™¨å…¼å®¹å·¥å…·,åŒ…æ‹¬ç¿»è¯‘Proxyå¯¹è±¡ï¼ŒSymbolå¯¹è±¡ç­‰ï¼Œä½çº§æµè§ˆå™¨æ²¡æœ‰çš„å¯¹è±¡
 
-...babel-loader babel-core ÊôÓÚwebpackµÄ¼ÓÔØÆ÷²å¼ş£»
-...babel-preset-es2015 ÊôÓÚbabel6·­Òë²å¼ş£»£¨¿Éµ¥¶À°²×°£¬ÊÖ¶¯·­Òë:babel es6.js --watch --out-file es5.js£©
-...babel-polyfill ÊôÓÚ°æ±¾¼æÈİ²å¼ş£»
+...babel-loader babel-core å±äºwebpackçš„åŠ è½½å™¨æ’ä»¶ï¼›
+...babel-preset-es2015 å±äºbabel6ç¿»è¯‘æ’ä»¶ï¼›ï¼ˆå¯å•ç‹¬å®‰è£…ï¼Œæ‰‹åŠ¨ç¿»è¯‘:babel es6.js --watch --out-file es5.jsï¼‰
+...babel-polyfill å±äºç‰ˆæœ¬å…¼å®¹æ’ä»¶ï¼›
 

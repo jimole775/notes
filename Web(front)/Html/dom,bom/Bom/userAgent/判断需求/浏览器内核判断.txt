@@ -1,6 +1,6 @@
-//ÅĞ¶ÏÊÇ·ñIEÄÚºË
+//åˆ¤æ–­æ˜¯å¦IEå†…æ ¸
 if(browser.versions.trident){ alert("is IE"); }
-//ÅĞ¶ÏÊÇ·ñwebKitÄÚºË
+//åˆ¤æ–­æ˜¯å¦webKitå†…æ ¸
 if(browser.versions.webKit){ alert("is webKit"); }
-//ÅĞ¶ÏÊÇ·ñÒÆ¶¯¶Ë
-if(browser.versions.mobile||browser.versions.android||browser.versions.ios){ alert("ÒÆ¶¯¶Ë"); }
+//åˆ¤æ–­æ˜¯å¦ç§»åŠ¨ç«¯
+if(browser.versions.mobile||browser.versions.android||browser.versions.ios){ alert("ç§»åŠ¨ç«¯"); }

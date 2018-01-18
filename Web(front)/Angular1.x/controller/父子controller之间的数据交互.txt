@@ -1,14 +1,14 @@
-...ÔÙÓÃ¼òµ¥µÄ·½·¨×Ü½áÒ»ÏÂ
+...å†ç”¨ç®€å•çš„æ–¹æ³•æ€»ç»“ä¸€ä¸‹
 
-...| 1¡¢¸¸controller£¬¸ºÔð¼àÌý²¢¹ã²¥
-> $scope.$on(¡°change",function (event, msg) {
->    $scope.$broadcast(¡°changeFromBody", msg);  //¼àÌý£ºÈôÊÕµ½change£¬°ÑÖµ¹ã²¥³öÈ¥
+...| 1ã€çˆ¶controllerï¼Œè´Ÿè´£ç›‘å¬å¹¶å¹¿æ’­
+> $scope.$on(â€œchange",function (event, msg) {
+>    $scope.$broadcast(â€œchangeFromBody", msg);  //ç›‘å¬ï¼šè‹¥æ”¶åˆ°changeï¼ŒæŠŠå€¼å¹¿æ’­å‡ºåŽ»
 > });
 
-...| 2¡¢×Ócontroller£¬¸ºÔð°Ñ±äÁ¿·¢¸ø¸¸controller
-> $scope.$emit(¡°change", $scope.value);  //Ïò¸¸controller´«Öµ$scope.value
+...| 2ã€å­controllerï¼Œè´Ÿè´£æŠŠå˜é‡å‘ç»™çˆ¶controller
+> $scope.$emit(â€œchange", $scope.value);  //å‘çˆ¶controllerä¼ å€¼$scope.value
 
-...| 3¡¢×Ócontroller£¬¸ºÔð¼àÌý¸¸controllerµÄ¹ã²¥£¬¸ø±äÁ¿¸³ÐÂÖµ
-> $scope.$on(¡°changeFromBody",function (event, msg) {
->     $scope.value = msg;   //¼àÌý¸¸controllerµÄ¹ã²¥£¬µÃµ½changeFromBody¹ã²¥Ê±È¡$scope.value
+...| 3ã€å­controllerï¼Œè´Ÿè´£ç›‘å¬çˆ¶controllerçš„å¹¿æ’­ï¼Œç»™å˜é‡èµ‹æ–°å€¼
+> $scope.$on(â€œchangeFromBody",function (event, msg) {
+>     $scope.value = msg;   //ç›‘å¬çˆ¶controllerçš„å¹¿æ’­ï¼Œå¾—åˆ°changeFromBodyå¹¿æ’­æ—¶å–$scope.value
 > });

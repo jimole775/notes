@@ -1,11 +1,11 @@
-BlobÓÃÓÚ´¦ÀíbufferÁ÷;
+Blobç”¨äºå¤„ç†bufferæµ;
 
-//½«×Ö·û´®×ª»»³ÉBlob¶ÔÏó
-var blob = new Blob(["ÖĞÎÄtest"],{type:"text/plain"}); //²ÎÊı¸ñÊ½ÊÇ¹Ì¶¨µÄ£¡£¡£¡
+//å°†å­—ç¬¦ä¸²è½¬æ¢æˆBlobå¯¹è±¡
+var blob = new Blob(["ä¸­æ–‡test"],{type:"text/plain"}); //å‚æ•°æ ¼å¼æ˜¯å›ºå®šçš„ï¼ï¼ï¼
 
-//½«Blob¶ÔÏó×ª»»³É×Ö·û´®£¨BlobÔõÃ´Ö±¹ÛµÄÏÔÊ¾ÀïÃæµÄÄÚÈİÄØ£¿£©
+//å°†Blobå¯¹è±¡è½¬æ¢æˆå­—ç¬¦ä¸²ï¼ˆBlobæ€ä¹ˆç›´è§‚çš„æ˜¾ç¤ºé‡Œé¢çš„å†…å®¹å‘¢ï¼Ÿï¼‰
 var reader = new FileReader();
-reader.readAsText(blob,"utf8");	//Èç¹ûÊÇÖĞÎÄÖ±½ÓÑ¹ÖÆµÄ£¬¾ÍÓÃreadAsText·½·¨¶ÁÈ¡£¬Èç¹ûÍ¨¹ıºóÌ¨´«³öµÄbufferÄØ£¿
+reader.readAsText(blob,"utf8");	//å¦‚æœæ˜¯ä¸­æ–‡ç›´æ¥å‹åˆ¶çš„ï¼Œå°±ç”¨readAsTextæ–¹æ³•è¯»å–ï¼Œå¦‚æœé€šè¿‡åå°ä¼ å‡ºçš„bufferå‘¢ï¼Ÿ
 reader.onload = function(e){
 	console.log(reader.result);
 }

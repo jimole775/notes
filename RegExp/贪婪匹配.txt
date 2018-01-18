@@ -1,2 +1,2 @@
-var re1 = /.*bbb/g;//Ì°À·
-var re2 = /.*?bbb/g;//¶èÐÔ
+var re1 = /.*bbb/g;//è´ªå©ª
+var re2 = /.*?bbb/g;//æƒ°æ€§

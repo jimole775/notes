@@ -1,14 +1,14 @@
-...| ËµÃ÷:
-...ÓÃÓÚ½âÎöES6Óï·¨
+...| è¯´æ˜:
+...ç”¨äºè§£æES6è¯­æ³•
 
-...| °²×°:
+...| å®‰è£…:
 npm install babel-loader babel-core babel-preset-es2015 --save-dev
 
-...| ÅäÖÃ:
+...| é…ç½®:
     module: {
          loaders: [{
              test: /\.js$/,
              loaders: ['babel-loader?presets[]=es2015'],
-             exclude: [/node_modules/,/plugins/]     //´ò°üµÄÊ±ºòÌŞ³ıÕâ¸öÎÄ¼ş¼ĞÏÂÃæµÄÄÚÈİ
+             exclude: [/node_modules/,/plugins/]     //æ‰“åŒ…çš„æ—¶å€™å‰”é™¤è¿™ä¸ªæ–‡ä»¶å¤¹ä¸‹é¢çš„å†…å®¹
          }]
     }

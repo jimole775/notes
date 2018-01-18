@@ -1,33 +1,33 @@
 
-==============================================>prototype.jsÔ´Âë
+==============================================>prototype.jsæºç 
 var fireEvent = function(element,event){
  if (document.createEventObject){
-  // IEä¯ÀÀÆ÷Ö§³ÖfireEvent·½·¨
+  // IEæµè§ˆå™¨æ”¯æŒfireEventæ–¹æ³•
   var evt = document.createEventObject();
   return element.fireEvent('on'+event,evt)
  }
  else{
-  // ÆäËû±ê×¼ä¯ÀÀÆ÷Ê¹ÓÃdispatchEvent·½·¨
+  // å…¶ä»–æ ‡å‡†æµè§ˆå™¨ä½¿ç”¨dispatchEventæ–¹æ³•
   var evt = document.createEvent( 'HTMLEvents' );
-  // initEvent½ÓÊÜ3¸ö²ÎÊı£º
-  // ÊÂ¼şÀàĞÍ£¬ÊÇ·ñÃ°Åİ£¬ÊÇ·ñ×èÖ¹ä¯ÀÀÆ÷µÄÄ¬ÈÏĞĞÎª
+  // initEventæ¥å—3ä¸ªå‚æ•°ï¼š
+  // äº‹ä»¶ç±»å‹ï¼Œæ˜¯å¦å†’æ³¡ï¼Œæ˜¯å¦é˜»æ­¢æµè§ˆå™¨çš„é»˜è®¤è¡Œä¸º
   evt.initEvent(event, true, true);  
   return !element.dispatchEvent(evt);
  }
 };
 
-==============================================>jquery.jsÔ´Âë
+==============================================>jquery.jsæºç 
 
 /**
- * ÊÂ¼ş´¥·¢Æ÷
- * @param { Object } DOMÔªËØ
- * @param { String / Object } ÊÂ¼şÀàĞÍ / event¶ÔÏó
- * @param { Array }  ´«µİ¸øÊÂ¼ş´¦Àíº¯ÊıµÄ¸½¼Ó²ÎÊı
- * @param { Boolean } ÊÇ·ñÃ°Åİ
+ * äº‹ä»¶è§¦å‘å™¨
+ * @param { Object } DOMå…ƒç´ 
+ * @param { String / Object } äº‹ä»¶ç±»å‹ / eventå¯¹è±¡
+ * @param { Array }  ä¼ é€’ç»™äº‹ä»¶å¤„ç†å‡½æ•°çš„é™„åŠ å‚æ•°
+ * @param { Boolean } æ˜¯å¦å†’æ³¡
  */
 trigger : function( elem, event, data, isStopPropagation ){
  var type = event.type || event,
-  // Ã°ÅİµÄ¸¸ÔªËØ£¬Ò»Ö±µ½document¡¢window
+  // å†’æ³¡çš„çˆ¶å…ƒç´ ï¼Œä¸€ç›´åˆ°documentã€window
   parent = elem.parentNode || 
    elem.ownerDocument || 
    elem === elem.ownerDocument && win,
@@ -38,7 +38,7 @@ trigger : function( elem, event, data, isStopPropagation ){
 
  data = data && isArray( data ) ? data : [];
 
- // ´´½¨×Ô¶¨ÒåµÄevent¶ÔÏó  
+ // åˆ›å»ºè‡ªå®šä¹‰çš„eventå¯¹è±¡  
  event = typeof event === 'object' ? 
   event : {
    type : type,
@@ -53,7 +53,7 @@ trigger : function( elem, event, data, isStopPropagation ){
  if( eventHandler ){
   eventHandler.call( elem, data );
  }
- // µİ¹éµ÷ÓÃ×ÔÉíÀ´Ä£ÄâÃ°Åİ
+ // é€’å½’è°ƒç”¨è‡ªèº«æ¥æ¨¡æ‹Ÿå†’æ³¡
  if( parent && !isStopPropagation ){
   data.shift();
   this.trigger( parent, event, data );

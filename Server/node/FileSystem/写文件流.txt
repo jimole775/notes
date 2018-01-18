@@ -1,9 +1,9 @@
-var ws = fs.createWriteStream(path);  //ĞèÒªÔÚÁ÷×´Ì¬ÍâÃæ´´½¨
+var ws = fs.createWriteStream(path);  //éœ€è¦åœ¨æµçŠ¶æ€å¤–é¢åˆ›å»º
 
 ws.write(chunk,"utf-8");
 
-ws.end();//±ê¼Ç½áÊøĞ´ÎÄ¼ş
+ws.end();//æ ‡è®°ç»“æŸå†™æ–‡ä»¶
 
-ws.on("finish",function(){})//Ö´ĞĞµÄÇ°Ìá¾ÍÊÇend()Ö®ºó
+ws.on("finish",function(){})//æ‰§è¡Œçš„å‰æå°±æ˜¯end()ä¹‹å
 
-ws.on("error",function(){})//Ö´ĞĞµÄÇ°Ìá¾ÍÊÇend()Ö®ºó
+ws.on("error",function(){})//æ‰§è¡Œçš„å‰æå°±æ˜¯end()ä¹‹å

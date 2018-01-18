@@ -1,18 +1,18 @@
-...¡¾Ä¬ÈÏ»ñÈ¡Í¬ÃûµÄ¼üÖµ¡¿
+...ã€é»˜è®¤èŽ·å–åŒåçš„é”®å€¼ã€‘
     var foo = "name";
     var bar = {foo};
     console.log(bar);   //{foo:"name"}
 
-...¡¾¼òÐ´³ÉÔ±º¯Êý¡¿
+...ã€ç®€å†™æˆå‘˜å‡½æ•°ã€‘
     var foo = {
        bar(){console.log("hello!")}
     }
     foo.bar();
 
-...¡¾ÊôÐÔÃû±í´ïÊ½¡¿
+...ã€å±žæ€§åè¡¨è¾¾å¼ã€‘
     var prop = "name";
     var foo = {
        [prop]:"",
-       ["foo"+"bar"]:"goods"	//ÔÚ×ÖÃæÁ¿µÄ×´Ì¬ÏÂ¶¯Ì¬´´½¨¼üÃû
-       ["foo baz"](){}		//º¯ÊýÒ²¿ÉÒÔ
+       ["foo"+"bar"]:"goods"	//åœ¨å­—é¢é‡çš„çŠ¶æ€ä¸‹åŠ¨æ€åˆ›å»ºé”®å
+       ["foo baz"](){}		//å‡½æ•°ä¹Ÿå¯ä»¥
     }

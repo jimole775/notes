@@ -1,8 +1,8 @@
-...¹«¹²Ä£¿éÌáÈ¡Æ÷
-...¾ÍÊÇ´Ó´ò°ü³öÀ´µÄËùÓĞÄ£¿éÖĞ£¬Ñ¡ÖĞÒ»¸ö»òÕß¼¸¸öÕûºÏ³ÉÒ»¸ö¹«¹²Ä£¿é
-...µ«ÊÇÃ¿´Îwebpack¶¼»áÖØĞÂ·­ÒëºÍ´ò°ü
+...å…¬å…±æ¨¡å—æå–å™¨
+...å°±æ˜¯ä»æ‰“åŒ…å‡ºæ¥çš„æ‰€æœ‰æ¨¡å—ä¸­ï¼Œé€‰ä¸­ä¸€ä¸ªæˆ–è€…å‡ ä¸ªæ•´åˆæˆä¸€ä¸ªå…¬å…±æ¨¡å—
+...ä½†æ˜¯æ¯æ¬¡webpackéƒ½ä¼šé‡æ–°ç¿»è¯‘å’Œæ‰“åŒ…
 
-...| ÑùÀı£º
+...| æ ·ä¾‹ï¼š
 
     var webpack = require("webpack");
     var commonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
@@ -20,23 +20,23 @@
         },
         plugins: [
 
-            //ÕâÀïÓĞËÄÖÖ·½·¨¿ÉÒÔÌáÈ¡¹«¹²Ä£¿é¡«
-            //¡¾first¡¿:    Ä¬ÈÏ»á°ÑËùÓĞÈë¿Ú½ÚµãµÄ¹«¹²´úÂëÌáÈ¡³öÀ´,Éú³ÉÒ»¸öcommon.js
+            //è¿™é‡Œæœ‰å››ç§æ–¹æ³•å¯ä»¥æå–å…¬å…±æ¨¡å—ï½
+            //ã€firstã€‘:    é»˜è®¤ä¼šæŠŠæ‰€æœ‰å…¥å£èŠ‚ç‚¹çš„å…¬å…±ä»£ç æå–å‡ºæ¥,ç”Ÿæˆä¸€ä¸ªcommon.js
             new CommonsChunkPlugin("commonJs.js");
 
-            //¡¾second¡¿:   ÏÂÃæÖ»ÌáÈ¡Á½¸öÄ£¿é
+            //ã€secondã€‘:   ä¸‹é¢åªæå–ä¸¤ä¸ªæ¨¡å—
             new CommonsChunkPlugin("admin-commons.js", ["ap1", "ap2"]),
 
-            //¡¾third¡¿£º    ÁîÒ»ÖÖÓï·¨£¬ĞèÒª·µ»ØÒ»¸ö¶ÔÏó
+            //ã€thirdã€‘ï¼š    ä»¤ä¸€ç§è¯­æ³•ï¼Œéœ€è¦è¿”å›ä¸€ä¸ªå¯¹è±¡
             new commonsChunkPlugin({
-                name:'common', // ×¢Òâ²»Òª.jsºó×º
+                name:'common', // æ³¨æ„ä¸è¦.jsåç¼€
                 chunks:['ap1','ap2']
             }),
 
-            //¡¾forth¡¿:    chunksÒ²¿ÉÒÔÊ¹ÓÃº¯ÊıĞÎÊ½
+            //ã€forthã€‘:    chunksä¹Ÿå¯ä»¥ä½¿ç”¨å‡½æ•°å½¢å¼
             new commonsChunkPlugin({
                 name:"common",
-                minChunks: function (module, count) {  //¾ßÌåĞèÒª²é¿´¹Ù·½ÎÄµµ£¬minChunksÖ¸ÏòÄÄÀï
+                minChunks: function (module, count) {  //å…·ä½“éœ€è¦æŸ¥çœ‹å®˜æ–¹æ–‡æ¡£ï¼ŒminChunksæŒ‡å‘å“ªé‡Œ
                     return module.resource && module.resource.indexOf(path.resolve(__dirname, 'src')) === - 1;
                 }
             })

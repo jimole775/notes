@@ -1,4 +1,4 @@
-在浏览器端输出一个xml类型的数据：
+鍦ㄦ祻瑙堝櫒绔緭鍑轰竴涓獂ml绫诲瀷鐨勬暟鎹細
 function stringToXML(xmlData) {
    if (window.ActiveXObject) {
       //for IE
@@ -10,7 +10,7 @@ function stringToXML(xmlData) {
    else if (document.implementation && document.implementation.createDocument) {
       //for Mozila
       parser=new DOMParser();
-      xmlDoc=parser.parseFromString(xmlData,"text/xml"); //当然"text/html"，就是创建一个html类型
+      xmlDoc=parser.parseFromString(xmlData,"text/xml"); //褰撶劧"text/html"锛屽氨鏄垱寤轰竴涓猦tml绫诲瀷
       return xmlDoc;
    }
 }

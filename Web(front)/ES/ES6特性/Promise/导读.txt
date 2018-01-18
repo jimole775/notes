@@ -1,5 +1,5 @@
-...Òì²½×ªÍ¬²½ÊéĞ´·½°¸£»
-...promiseÖ´ĞĞµÄ¹ı³ÌÖĞÓĞ3¸ö×´Ì¬£ºpending£¬resolved£¬rejected¡£Ò»µ©µÃµ½£¨resolved/rejected£©£¬¾Í²»¿ÉÔÙ´Î±ä¸ü£¬Ò²²»¿ÉÈ¡Ïû.
+...å¼‚æ­¥è½¬åŒæ­¥ä¹¦å†™æ–¹æ¡ˆï¼›
+...promiseæ‰§è¡Œçš„è¿‡ç¨‹ä¸­æœ‰3ä¸ªçŠ¶æ€ï¼špendingï¼Œresolvedï¼Œrejectedã€‚ä¸€æ—¦å¾—åˆ°ï¼ˆresolved/rejectedï¼‰ï¼Œå°±ä¸å¯å†æ¬¡å˜æ›´ï¼Œä¹Ÿä¸å¯å–æ¶ˆ.
 ______________________________________________
     var promise = new Promise(function(resolved,rejected){});
         promise     //Promise{<pending>}
