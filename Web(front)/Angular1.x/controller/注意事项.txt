@@ -1,1 +1,1 @@
-...当controller模块的加载是从外部文件操作的,angular是无法识别的??
+...褰揷ontroller妯″潡鐨勫姞杞芥槸浠庡閮ㄦ枃浠舵搷浣滅殑,angular鏄棤娉曡瘑鍒殑??

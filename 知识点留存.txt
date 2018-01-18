@@ -1,10 +1,10 @@
 =====================================================================================================
-1,Í¨¹ı¶ş½øÖÆÁ÷ÅĞ¶ÏÕÕÆ¬ÊÇ·ñµßµ¹£¿
-#3Â¥£¬¹À¼ÆËûÊÇÏë»ñÈ¡Í¼Æ¬ÊÇ·ñµßµ¹µÄĞÅÏ¢£¬ÒòÎªÊÖ»ú¶ËÅÄÕÕ³¤µßµ¹90¶È£¬ËùÒÔĞèÒª»ñÈ¡2½øÖÆ£¬ÓÃÒÔÅĞ¶Ïµßµ¹µÄÖµ£¬ÔÙÓÃcanvas½øĞĞÍ¼Æ¬Ğı×ª±äÕıµÄ²Ù×÷£¬
+1,é€šè¿‡äºŒè¿›åˆ¶æµåˆ¤æ–­ç…§ç‰‡æ˜¯å¦é¢ å€’ï¼Ÿ
+#3æ¥¼ï¼Œä¼°è®¡ä»–æ˜¯æƒ³è·å–å›¾ç‰‡æ˜¯å¦é¢ å€’çš„ä¿¡æ¯ï¼Œå› ä¸ºæ‰‹æœºç«¯æ‹ç…§é•¿é¢ å€’90åº¦ï¼Œæ‰€ä»¥éœ€è¦è·å–2è¿›åˆ¶ï¼Œç”¨ä»¥åˆ¤æ–­é¢ å€’çš„å€¼ï¼Œå†ç”¨canvasè¿›è¡Œå›¾ç‰‡æ—‹è½¬å˜æ­£çš„æ“ä½œï¼Œ
 
-ÎÒÒ²Óöµ½£¬ÔÚÒ»Ğ©ÊÖ»úÉÏblobµÄimageÊı¾İÍ¨¹ıfileReaderµÄreadAsArrayBuffer¶ÁÈ¡ºó£¬²»Ö´ĞĞfileReader.onloadÊÂ¼ş
+æˆ‘ä¹Ÿé‡åˆ°ï¼Œåœ¨ä¸€äº›æ‰‹æœºä¸Šblobçš„imageæ•°æ®é€šè¿‡fileReaderçš„readAsArrayBufferè¯»å–åï¼Œä¸æ‰§è¡ŒfileReader.onloadäº‹ä»¶
 
-Ò²ÊÇÓÃÏÂ±ßµÄ·½·¨
+ä¹Ÿæ˜¯ç”¨ä¸‹è¾¹çš„æ–¹æ³•
 fileReader.onload = function (e) {
                     alert("onload");
                     //setTimeout(function(){handleBinaryFile(e.target.result);},5000);
@@ -15,7 +15,7 @@ fileReader.onload = function (e) {
                     try{
                         fileReader.readAsArrayBuffer(blob);
                     }catch(e){
-                        alert("¶ÁÈ¡Óöµ½´íÎó"+e);
+                        alert("è¯»å–é‡åˆ°é”™è¯¯"+e);
                     }});
 function objectURLToBlob(url, callback) {
         var http = new XMLHttpRequest();
@@ -29,23 +29,23 @@ function objectURLToBlob(url, callback) {
         http.send();
     }
 
-fileReader.onloadÒ»Ö±²»Ö´ĞĞ£¬
+fileReader.onloadä¸€ç›´ä¸æ‰§è¡Œï¼Œ
 
 =====================================================================================================
 
-1, º¯Êı¶àÌ¬???,
-2, Ôª±à³Ì???
-3, Éè¼ÆÄ£Ê½
-4, ³ÖĞø¼¯³É
-5£¬Ãô½İ±à³Ì
-6£¬angularÂ·ÓÉ£¬(angular2£¬typescript)[ÔİÊ±ÏÈ·ÅÆúÁË£¬ÏÈreactÏµ°É]
-7£¬react,react-native,redux
-8£¬webÊÓÆµ±àÂë£¬½âÂë£¬Á÷Ã½Ìå
-9£¬REST½Ó¿Ú£¨java?£©
+1, å‡½æ•°å¤šæ€???,
+2, å…ƒç¼–ç¨‹???
+3, è®¾è®¡æ¨¡å¼
+4, æŒç»­é›†æˆ
+5ï¼Œæ•æ·ç¼–ç¨‹
+6ï¼Œangularè·¯ç”±ï¼Œ(angular2ï¼Œtypescript)[æš‚æ—¶å…ˆæ”¾å¼ƒäº†ï¼Œå…ˆreactç³»å§]
+7ï¼Œreact,react-native,redux
+8ï¼Œwebè§†é¢‘ç¼–ç ï¼Œè§£ç ï¼Œæµåª’ä½“
+9ï¼ŒRESTæ¥å£ï¼ˆjava?ï¼‰
 
-10,node¡¾koaºÍexpressÖĞ¼ä¼ş¡¿¡¾×´Ì¬¹ÜÀí¹¤¾ß¡¿
-11, ¾ÛÀà¡¢·ÖÀàµÈ»úÆ÷Ñ§Ï°Ëã·¨£»
+10,nodeã€koaå’Œexpressä¸­é—´ä»¶ã€‘ã€çŠ¶æ€ç®¡ç†å·¥å…·ã€‘
+11, èšç±»ã€åˆ†ç±»ç­‰æœºå™¨å­¦ä¹ ç®—æ³•ï¼›
 
-12, hadoop¡¢spark¡¢kafka¡¢rabbitMq¡¢redis¡¢zookeeperµÈ»ù´¡ÉèÊ©µÄÊ¹ÓÃ¾­Ñé¡£
+12, hadoopã€sparkã€kafkaã€rabbitMqã€redisã€zookeeperç­‰åŸºç¡€è®¾æ–½çš„ä½¿ç”¨ç»éªŒã€‚
 
-13, graphQL,È¡´úREST API
+13, graphQL,å–ä»£REST API

@@ -11,7 +11,7 @@ var titleList = [];
 var zipList = [];
 var imgURLList = [];
 
-//Á÷³ÌMAP
+//æµç¨‹MAP
 analyzeHtml(homePageURL)
     .then(getTitleList,console.error)
     .then(getZipList,console.error);
@@ -30,7 +30,7 @@ function getZipList(data){
         while(len--){
             analyzeHtml(homePageURL + titleList[len])
                 .then(getPageTurnList,console.error)
-                .then(getZip,console.error); //»ñÈ¡µ±Ç°Ò³µÄzip£¬µ¼º½ÁĞ±íÃ»ÓĞµ±Ç°Ò³ÃæµÄurl£¬ËùÒÔĞèÒªÊÖ¶¯ÔÙµ÷Ò»´Î
+                .then(getZip,console.error); //è·å–å½“å‰é¡µçš„zipï¼Œå¯¼èˆªåˆ—è¡¨æ²¡æœ‰å½“å‰é¡µé¢çš„urlï¼Œæ‰€ä»¥éœ€è¦æ‰‹åŠ¨å†è°ƒä¸€æ¬¡
         }
 }
 

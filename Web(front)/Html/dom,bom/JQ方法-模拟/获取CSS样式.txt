@@ -1,4 +1,4 @@
-//element:ÐèÒªÉèÖÃÑùÊ½µÄÄ¿±êÔªËØ;name:ÑùÊ½ÊôÐÔ;
+//element:éœ€è¦è®¾ç½®æ ·å¼çš„ç›®æ ‡å…ƒç´ ;name:æ ·å¼å±žæ€§;
 function getStyle(element, name) {
                 var computedStyle;
                 try {

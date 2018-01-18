@@ -1,4 +1,4 @@
-function greeter(person:string){    //×Ö´®ĞÎÊ½
+function greeter(person:string){    //å­—ä¸²å½¢å¼
     return "Hello " + person;
 }
 
@@ -12,19 +12,19 @@ interface Person {
     lastName:string;
 }
 
-function greeter2(person:Person){   //¶ÔÏóĞÎÊ½,ÊôÓÚ½Ó¿ÚÀàĞÍ
+function greeter2(person:Person){   //å¯¹è±¡å½¢å¼,å±äºæ¥å£ç±»å‹
     return "Hello " + person.firstName + "." + person.lastName;
 }
 
 var user2 = {firstName:"Andy",lastName:"Rong"};
 
-//console.log(greeter2(user2));   //ÕâÀïuser2·¢Éú±¨´í£¬Ö¤Ã÷jsÔÚÕâÒ»²¿·Ö²»ÊÇË³ĞòÖ´ĞĞµÄ£¡classĞŞÊÎ·û»áÓĞÌáÇ°Á¿£¿
+//console.log(greeter2(user2));   //è¿™é‡Œuser2å‘ç”ŸæŠ¥é”™ï¼Œè¯æ˜jsåœ¨è¿™ä¸€éƒ¨åˆ†ä¸æ˜¯é¡ºåºæ‰§è¡Œçš„ï¼classä¿®é¥°ç¬¦ä¼šæœ‰æå‰é‡ï¼Ÿ
 
 
 class Person{
     //static count = 100;
     public fullName:string;
-    constructor (public firstName:string, public middleInitial:string, public lastName:string){ //ÕâÀïµÄpublicµÈÍ¬ÓÚÖ±½Ó´´½¨ÁË³ÉÔ±±äÁ¿
+    constructor (public firstName:string, public middleInitial:string, public lastName:string){ //è¿™é‡Œçš„publicç­‰åŒäºç›´æ¥åˆ›å»ºäº†æˆå‘˜å˜é‡
         this.fullName = firstName + middleInitial + lastName;
     }
 }
@@ -33,5 +33,5 @@ var user3 = new Person("John","Snow","Rong");
 
 console.log(greeter2(user3));
 
-//×îºó×Ü½áÒ»ÏÂ¹ØÓÚÀàĞÍ×¢½âµÄËùÓĞÖ§³ÖÀàĞÍ£º
-//·Ö±ğÓĞ£º string, number, boolean, [class|object], Array<number|string|class|object>
+//æœ€åæ€»ç»“ä¸€ä¸‹å…³äºç±»å‹æ³¨è§£çš„æ‰€æœ‰æ”¯æŒç±»å‹ï¼š
+//åˆ†åˆ«æœ‰ï¼š string, number, boolean, [class|object], Array<number|string|class|object>

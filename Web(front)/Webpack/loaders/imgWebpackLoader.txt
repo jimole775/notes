@@ -4,15 +4,15 @@ $ npm install url-loader file-loader --save-dev
         loaders: [{
             test:/\.(jpg|png)$/,
             loader:"url-loader?limit=8192",
-            exclude: [/node_modules/,/plugins/]     //´ò°üµÄÊ±ºòÌŞ³ıÕâ¸öÎÄ¼ş¼ĞÏÂÃæµÄÄÚÈİ
+            exclude: [/node_modules/,/plugins/]     //æ‰“åŒ…çš„æ—¶å€™å‰”é™¤è¿™ä¸ªæ–‡ä»¶å¤¹ä¸‹é¢çš„å†…å®¹
         }]
     }
 
 ===============================================================<-
-ÒÔÉÏ¼ÓÔØÆ÷ÒÑ¾­×ö¹Å
-ÇëÓÃĞÂµÄÍ¼Æ¬¼ÓÔØÆ÷ image-webpack-loader ´úÌæ
+ä»¥ä¸ŠåŠ è½½å™¨å·²ç»åšå¤
+è¯·ç”¨æ–°çš„å›¾ç‰‡åŠ è½½å™¨ image-webpack-loader ä»£æ›¿
 
-ÑùÀı:(webpack v2)
+æ ·ä¾‹:(webpack v2)
 
     {
            test: /\.(jpe?g|png|gif|svg)$/i,

@@ -1,51 +1,51 @@
- ============================================¡ì²¶×½¿ØÖÆÌ¨´òÓ¡ĞÅÏ¢¡ì==========================================
+ ============================================Â§æ•æ‰æ§åˆ¶å°æ‰“å°ä¿¡æ¯Â§==========================================
     if (console) {
         var _console = {
             log: console.log
         };
         console.log = function () {
-            // ×ö×Ô¼ºµÄ´¦Àí
+            // åšè‡ªå·±çš„å¤„ç†
             win.regular.log.apply (this, Array.prototype.slice.call (arguments, 0));
-            // µ÷ÓÃÔ­·½·¨Êä³ö
+            // è°ƒç”¨åŸæ–¹æ³•è¾“å‡º
             _console.log.apply (this, Array.prototype.slice.call (arguments, 0));
         };
-        // warn¡¢debug¡¢errorÍ¬Àí
+        // warnã€debugã€erroråŒç†
     }
 
-  ============================================¡ì²¶×½window´íÎóĞÅÏ¢¡ì==========================================
+  ============================================Â§æ•æ‰windowé”™è¯¯ä¿¡æ¯Â§==========================================
     win.onerror = function(){
         win.regular.log.apply (this, Array.prototype.slice.call (arguments, 0));
-	return false;				//false¾Í»á·¢ËÍ´íÎóĞÅÏ¢µ½¿ØÖÆÌ¨£¬true¾Í×èÖ¹Ïò¿ØÖÆÌ¨Êä³ö´íÎóĞÅÏ¢
+	return false;				//falseå°±ä¼šå‘é€é”™è¯¯ä¿¡æ¯åˆ°æ§åˆ¶å°ï¼Œtrueå°±é˜»æ­¢å‘æ§åˆ¶å°è¾“å‡ºé”™è¯¯ä¿¡æ¯
     };
-  ============================================¡ì²¶×½angular´íÎóĞÅÏ¢¡ì==========================================
+  ============================================Â§æ•æ‰angularé”™è¯¯ä¿¡æ¯Â§==========================================
 
-   win.App.config(function ($provide) {			    //×°ÊÎÆ÷£¬×îÏÈÖ´ĞĞ£¬²»»á¸²¸ÇÈÎºÎÉèÖÃ				
-        $provide.decorator("$exceptionHandler", ['$delegate', function($delegate) {     //$exceptionHandler"  ´íÎóÒì³£´¦ÀíÆ÷
+   win.App.config(function ($provide) {			    //è£…é¥°å™¨ï¼Œæœ€å…ˆæ‰§è¡Œï¼Œä¸ä¼šè¦†ç›–ä»»ä½•è®¾ç½®				
+        $provide.decorator("$exceptionHandler", ['$delegate', function($delegate) {     //$exceptionHandler"  é”™è¯¯å¼‚å¸¸å¤„ç†å™¨
             return function (exception, cause) {
-                //Raygun.send(exception);                   //·¢ËÍµ½RaygunÔÚÏßBUG½ÓÊÕÕ¾
+                //Raygun.send(exception);                   //å‘é€åˆ°Raygunåœ¨çº¿BUGæ¥æ”¶ç«™
                 console.log(exception, cause);
-                $delegate(exception, cause);                //$delegate ÊÇÒì³£´¦ÀíÆ÷µÄÊµÌå£¬ÎÒÃÇ»áµ÷ÓÃËüÀ´»ñµÃÊä³öµ½¿ØÖÆÌ¨µÄÔ­Ê¼ĞĞÎª.
+                $delegate(exception, cause);                //$delegate æ˜¯å¼‚å¸¸å¤„ç†å™¨çš„å®ä½“ï¼Œæˆ‘ä»¬ä¼šè°ƒç”¨å®ƒæ¥è·å¾—è¾“å‡ºåˆ°æ§åˆ¶å°çš„åŸå§‹è¡Œä¸º.
             }
         }])
     });
 
 
 
-  ============================================¡ìÊä³öÊµÌå¡ì==========================================
+  ============================================Â§è¾“å‡ºå®ä½“Â§==========================================
     win.regular.log = function () {
         var msg = "";
         if (arguments.length) {
             var len = arguments.length;
             var param = arguments[0];
 
-            //²¶×½window´íÎó£¬Ê¹ÓÃºìÉ«¼ÓÖØ×ÖÌå£»
+            //æ•æ‰windowé”™è¯¯ï¼Œä½¿ç”¨çº¢è‰²åŠ é‡å­—ä½“ï¼›
             if(/error/ig.test(param)){
                 msg +="<p class='warn-text' style='font-weight: bold'>" + param + "</p>";
             }else{
                 msg +="<p>" + param + "</p>";
             }
 
-            //ÆÕÍ¨´òÓ¡ÎÄ±¾
+            //æ™®é€šæ‰“å°æ–‡æœ¬
             var i = 1;
             while (i < len) {
                 param = arguments[i++];

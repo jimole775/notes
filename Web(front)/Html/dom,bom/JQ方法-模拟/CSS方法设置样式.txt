@@ -1,4 +1,4 @@
-    //模拟JQ  css方法
+    //妯℃嫙JQ  css鏂规硶
     function  css(elment, obj) {
         for (var prop in obj) {
             if (obj.hasOwnProperty(prop)) {

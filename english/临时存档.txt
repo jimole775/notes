@@ -1,54 +1,54 @@
-heap	//n.¶Ñ£¬¶Ñ»ı; 
+heap	//n.å †ï¼Œå †ç§¯; 
 	
-	//vt.ÈÓ³ÉÒ»¶Ñ£¬¹àÂú£¬´óÁ¿»òÉİ³ŞµÄÔùÓè
+	//vt.æ‰”æˆä¸€å †ï¼ŒçŒæ»¡ï¼Œå¤§é‡æˆ–å¥¢ä¾ˆçš„èµ äºˆ
 
-summary //n.¸ÅÒª£¬×Ü½á
+summary //n.æ¦‚è¦ï¼Œæ€»ç»“
 	
-	//adj.¸ÅÀ¨µÄ£¬×Ü½áµÄ£¬Á¢¼´µÄ
+	//adj.æ¦‚æ‹¬çš„ï¼Œæ€»ç»“çš„ï¼Œç«‹å³çš„
 
-indication	//n.±êÊ¾£¬ÏóÕ÷
+indication	//n.æ ‡ç¤ºï¼Œè±¡å¾
 
-composite	//n.»ìºÏÎï
+composite	//n.æ··åˆç‰©
 		
-		//adj.»ìºÏ¶ø³ÉµÄ
+		//adj.æ··åˆè€Œæˆçš„
 
-util	//ÁúÌ×
+util	//é¾™å¥—
 
-generic	//adj.Ò»°ãµÄ; ÀàµÄ
+generic	//adj.ä¸€èˆ¬çš„; ç±»çš„
 
-term	//n.Ìõ¿î£¬ÊõÓï£¬Ñ§ÆÚ£¬ÆÚÏŞ£»
+term	//n.æ¡æ¬¾ï¼Œæœ¯è¯­ï¼Œå­¦æœŸï¼ŒæœŸé™ï¼›
 	
-	//vt.°Ñ...³ÆÎª£¬°Ñ...½Ğ×ö
+	//vt.æŠŠ...ç§°ä¸ºï¼ŒæŠŠ...å«åš
 
-generic term 	//Í¨³Æ 
+generic term 	//é€šç§° 
 
-represent	//vt.×÷Îª,´ú±í
+represent	//vt.ä½œä¸º,ä»£è¡¨
 
 
-distance	//n.¾àÀë
+distance	//n.è·ç¦»
 		
-		//vt.Óë...±£³Ö¾àÀë,ÊèÔ¶
+		//vt.ä¸...ä¿æŒè·ç¦»,ç–è¿œ
 
-consummate	//vt.ÍêÉÆ
+consummate	//vt.å®Œå–„
 
-prefect	//adj.ÍêÃÀµÄ
+prefect	//adj.å®Œç¾çš„
 
-shallow	//adj.·ôÇ³µÄ
+shallow	//adj.è‚¤æµ…çš„
 	
-	//n.Ç³Ì²
+	//n.æµ…æ»©
 	
-	//v.Ê¹±äÇ³
+	//v.ä½¿å˜æµ…
 
-therefore	//adv.Òò´Ë,ËùÒÔ
+therefore	//adv.å› æ­¤,æ‰€ä»¥
 
-cumulation	//n.ÀÛ¼Æ£¬ÀÛ¼Ó
+cumulation	//n.ç´¯è®¡ï¼Œç´¯åŠ 
 
-thumb	//n.ËõÂÔÍ¼
-urgent	//adj.¼±ÆÈµÄ;´ß´ÙµÄ;¼«Á¦Ö÷ÕÅµÄ;
-strategy	//n.Õ½ÂÔ£¬²ßÂÔ
-recommended 	//vt/vi. ÍÆ¼ö
+thumb	//n.ç¼©ç•¥å›¾
+urgent	//adj.æ€¥è¿«çš„;å‚¬ä¿ƒçš„;æåŠ›ä¸»å¼ çš„;
+strategy	//n.æˆ˜ç•¥ï¼Œç­–ç•¥
+recommended 	//vt/vi. æ¨è
 
-venture	//Ã°ÏÕĞĞ¶¯£¬Ã°½ø
+venture	//å†’é™©è¡ŒåŠ¨ï¼Œå†’è¿›
 
 
 

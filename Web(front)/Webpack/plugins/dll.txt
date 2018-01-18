@@ -1,7 +1,7 @@
-...Ò»°ãdll°üÖ»ÊÊºÏ²»ĞèÒªĞŞ¸ÄµÄµÚÈı·½¿â£¬Èç¹ûÊÇ×ÔĞ´µÄ¿â£¬ĞèÒª¾­³£ĞŞ¸ÄµÄ»°£¬ÍÆ¼öÊ¹ÓÃcommons-chunk-plugin²å¼ş
-...ÕâÖÖ×ö·¨ÀàËÆÓÚwindowsÏµÍ³µÄdll¶¯Ì¬Á´¿â£»
+...ä¸€èˆ¬dllåŒ…åªé€‚åˆä¸éœ€è¦ä¿®æ”¹çš„ç¬¬ä¸‰æ–¹åº“ï¼Œå¦‚æœæ˜¯è‡ªå†™çš„åº“ï¼Œéœ€è¦ç»å¸¸ä¿®æ”¹çš„è¯ï¼Œæ¨èä½¿ç”¨commons-chunk-pluginæ’ä»¶
+...è¿™ç§åšæ³•ç±»ä¼¼äºwindowsç³»ç»Ÿçš„dllåŠ¨æ€é“¾åº“ï¼›
 
-...| Ê×ÏÈĞèÒª´ò°üÒ»¸ödllµÄ¶¯Ì¬¿âÎÄ¼ş£»
+...| é¦–å…ˆéœ€è¦æ‰“åŒ…ä¸€ä¸ªdllçš„åŠ¨æ€åº“æ–‡ä»¶ï¼›
 
     const webpack = require('webpack');
 
@@ -9,14 +9,14 @@
         'iscroll',
         'json2',
         'lazyload'
-        // ...ÆäËü¿â,ÕâĞ©¿â±ØĞëÔÚpackage.jsonÀïÃæÓĞÒÀÀµÉèÖÃ
+        // ...å…¶å®ƒåº“,è¿™äº›åº“å¿…é¡»åœ¨package.jsoné‡Œé¢æœ‰ä¾èµ–è®¾ç½®
     ];
 
     module.exports = {
         output: {
             path: __dirname + "/lib",
             filename: '[name].js',
-            library: '[name]'   //dll¿âµÄÃû³Æ£¬ÔÚÊä³öµÄÎÄ¼ş"vendor.js"ÀïÃæ¿ÉÒÔ²é¿´
+            library: '[name]'   //dllåº“çš„åç§°ï¼Œåœ¨è¾“å‡ºçš„æ–‡ä»¶"vendor.js"é‡Œé¢å¯ä»¥æŸ¥çœ‹
         },
         entry: {
             vendor: vendors
@@ -24,16 +24,16 @@
         plugins: [
             new webpack.DllPlugin({
                 path: 'manifest.json',
-                name: '[name]', //ÔÚÕâÀïÏàµ±ÓëÒªÒıÓÃdll¿â£¬ËùÒÔÃû³Æ±ØĞëºÍ¶¨ÒåµÄ¿âÃûÒ»ÖÂ£¨ÏÖÔÚ¶¨ÒåµÄdll¿âÃû½Ğ×ö 'vendor'£©
+                name: '[name]', //åœ¨è¿™é‡Œç›¸å½“ä¸è¦å¼•ç”¨dllåº“ï¼Œæ‰€ä»¥åç§°å¿…é¡»å’Œå®šä¹‰çš„åº“åä¸€è‡´ï¼ˆç°åœ¨å®šä¹‰çš„dllåº“åå«åš 'vendor'ï¼‰
                 context:  __dirname
             })
         ]
     };
 
-...Ê¹ÓÃwebpackÃüÁî½øĞĞ´ò°ü£»
+...ä½¿ç”¨webpackå‘½ä»¤è¿›è¡Œæ‰“åŒ…ï¼›
 $   webpack --progress --colors --config ./webpack.dll.config.js
 
-...ÎªÁË±ãÓÚÊ¹ÓÃ£¬¿ÉÒÔĞ´½ønpm script£»
+...ä¸ºäº†ä¾¿äºä½¿ç”¨ï¼Œå¯ä»¥å†™è¿›npm scriptï¼›
     scripts:{
         "dll": "webpack --progress --colors --config ./webpack.dll.config.js"
     }
@@ -41,10 +41,10 @@ $   webpack --progress --colors --config ./webpack.dll.config.js
 $   npm run dll
 
 
-...| Æä´Î£¬ÔÙµ½webpackÅäÖÃÊ±¿Ì£»
+...| å…¶æ¬¡ï¼Œå†åˆ°webpacké…ç½®æ—¶åˆ»ï¼›
 
     new webpack.DllReferencePlugin({
-      context: dirVars.staticRootDir, // Ö¸¶¨Ò»¸öÂ·¾¶×÷ÎªÉÏÏÂÎÄ»·¾³£¬ĞèÒªÓëDllPluginµÄcontext²ÎÊı±£³ÖÒ»ÖÂ£¬½¨ÒéÍ³Ò»ÉèÖÃÎªÏîÄ¿¸ùÄ¿Â¼
-      manifest: require('../../manifest.json'), // Ö¸¶¨manifest.json
-      name: 'dll',  // µ±Ç°DllµÄËùÓĞÄÚÈİ¶¼»á´æ·ÅÔÚÕâ¸ö²ÎÊıÖ¸¶¨±äÁ¿ÃûµÄÒ»¸öÈ«¾Ö±äÁ¿ÏÂ£¬×¢ÒâÓëDllPluginµÄname²ÎÊı±£³ÖÒ»ÖÂ
+      context: dirVars.staticRootDir, // æŒ‡å®šä¸€ä¸ªè·¯å¾„ä½œä¸ºä¸Šä¸‹æ–‡ç¯å¢ƒï¼Œéœ€è¦ä¸DllPluginçš„contextå‚æ•°ä¿æŒä¸€è‡´ï¼Œå»ºè®®ç»Ÿä¸€è®¾ç½®ä¸ºé¡¹ç›®æ ¹ç›®å½•
+      manifest: require('../../manifest.json'), // æŒ‡å®šmanifest.json
+      name: 'dll',  // å½“å‰Dllçš„æ‰€æœ‰å†…å®¹éƒ½ä¼šå­˜æ”¾åœ¨è¿™ä¸ªå‚æ•°æŒ‡å®šå˜é‡åçš„ä¸€ä¸ªå…¨å±€å˜é‡ä¸‹ï¼Œæ³¨æ„ä¸DllPluginçš„nameå‚æ•°ä¿æŒä¸€è‡´
     });

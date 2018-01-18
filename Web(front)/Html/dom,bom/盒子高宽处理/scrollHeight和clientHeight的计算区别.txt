@@ -1,3 +1,3 @@
-scrollHeight就是求父框内 子框的自身高度，但是这个值会受到 子框内的top值的影响
+scrollHeight灏辨槸姹傜埗妗嗗唴 瀛愭鐨勮嚜韬珮搴︼紝浣嗘槸杩欎釜鍊间細鍙楀埌 瀛愭鍐呯殑top鍊肩殑褰卞搷
 
-clientHeight就是求本身的高度，和父框子框无关
+clientHeight灏辨槸姹傛湰韬殑楂樺害锛屽拰鐖舵瀛愭鏃犲叧

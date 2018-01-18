@@ -1,8 +1,8 @@
-BlobÊÇÒ»´ó¿é¶ş½øÖÆÊı¾İ£¨Buffer£©£¬ÆÕÍ¨´òÓ¡Ö»ÏÔÊ¾Ò»¸ölengthÊôĞÔºÍÒ»¸ötypeÊôĞÔ£»
-ÒªÏë¶ÁÈ¡ÀïÃæµÄÄÚÈİ£¬±ØĞë½áºÏä¯ÀÀÆ÷µÄFileReader¶ÔÏó£»
-ÑùÀı£º
+Blobæ˜¯ä¸€å¤§å—äºŒè¿›åˆ¶æ•°æ®ï¼ˆBufferï¼‰ï¼Œæ™®é€šæ‰“å°åªæ˜¾ç¤ºä¸€ä¸ªlengthå±æ€§å’Œä¸€ä¸ªtypeå±æ€§ï¼›
+è¦æƒ³è¯»å–é‡Œé¢çš„å†…å®¹ï¼Œå¿…é¡»ç»“åˆæµè§ˆå™¨çš„FileReaderå¯¹è±¡ï¼›
+æ ·ä¾‹ï¼š
 
-var blob = new Blob("ÄãºÃ",{type:"text/plain"});
+var blob = new Blob("ä½ å¥½",{type:"text/plain"});
 var reader = new FileReader();
 reader.readAsText(blob);
 reader.onloadend = function(){

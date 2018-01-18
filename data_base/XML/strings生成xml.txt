@@ -1,11 +1,11 @@
 CommonTool.prototype.string2xml = function (str) {
-		if (document.all) {//IEä¯ÀÀÆ÷
+		if (document.all) {//IEæµè§ˆå™¨
 			var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
 			xmlDoc.async = false;
 			xmlDoc.loadXML(str);
 			return xmlDoc;
 		}
-		else {//·ÇIEä¯ÀÀÆ÷
+		else {//éIEæµè§ˆå™¨
 			return new DOMParser().parseFromString(str, "text/xml");
 		}
 	}

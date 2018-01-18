@@ -1,194 +1,194 @@
-³£ÓÃµÄcssÃüÃû¹æÔò
+å¸¸ç”¨çš„csså‘½åè§„åˆ™
 
-Í·£ºheader
+å¤´ï¼šheader
 
-ÄÚÈİ£ºcontent/container
+å†…å®¹ï¼šcontent/container
 
-Î²£ºfooter
+å°¾ï¼šfooter
 
-µ¼º½£ºnav
+å¯¼èˆªï¼šnav
 
-²àÀ¸£ºsidebar
+ä¾§æ ï¼šsidebar
 
-À¸Ä¿£ºcolumn
+æ ç›®ï¼šcolumn
 
-Ò³ÃæÍâÎ§¿ØÖÆÕûÌå²¼¾Ö¿í¶È£ºwrapper
+é¡µé¢å¤–å›´æ§åˆ¶æ•´ä½“å¸ƒå±€å®½åº¦ï¼šwrapper
 
-×óÓÒÖĞ£ºleft right center
+å·¦å³ä¸­ï¼šleft right center
 
-µÇÂ¼Ìõ£ºloginbar
+ç™»å½•æ¡ï¼šloginbar
 
-±êÖ¾£ºlogo
+æ ‡å¿—ï¼šlogo
 
-¹ã¸æ£ºbanner
+å¹¿å‘Šï¼šbanner
 
-Ò³ÃæÖ÷Ìå£ºmain
+é¡µé¢ä¸»ä½“ï¼šmain
 
-ÈÈµã£ºhot
+çƒ­ç‚¹ï¼šhot
 
-ĞÂÎÅ£ºnews
+æ–°é—»ï¼šnews
 
-ÏÂÔØ£ºdownload
+ä¸‹è½½ï¼šdownload
 
-×Óµ¼º½£ºsubnav
+å­å¯¼èˆªï¼šsubnav
 
-²Ëµ¥£ºmenu
+èœå•ï¼šmenu
 
-×Ó²Ëµ¥£ºsubmenu
+å­èœå•ï¼šsubmenu
 
-ËÑË÷£ºsearch
+æœç´¢ï¼šsearch
 
-ÓÑÇéÁ´½Ó£ºfriendlink
+å‹æƒ…é“¾æ¥ï¼šfriendlink
 
-Ò³½Å£ºfooter
+é¡µè„šï¼šfooter
 
-°æÈ¨£ºcopyright
+ç‰ˆæƒï¼šcopyright
 
-¹ö¶¯£ºscroll
+æ»šåŠ¨ï¼šscroll
 
-ÄÚÈİ£ºcontent
+å†…å®¹ï¼šcontent
 
-±êÇ©Ò³£ºtab
+æ ‡ç­¾é¡µï¼štab
 
-ÎÄÕÂÁĞ±í£ºlist
+æ–‡ç« åˆ—è¡¨ï¼šlist
 
-ÌáÊ¾ĞÅÏ¢£ºmsg
+æç¤ºä¿¡æ¯ï¼šmsg
 
-Ğ¡¼¼ÇÉ£ºtips
+å°æŠ€å·§ï¼štips
 
-À¸Ä¿±êÌâ£ºtitle
+æ ç›®æ ‡é¢˜ï¼štitle
 
-¼ÓÈë£ºjoinus
+åŠ å…¥ï¼šjoinus
 
-Ö¸ÄÏ£ºguild
+æŒ‡å—ï¼šguild
 
-·şÎñ£ºservice
+æœåŠ¡ï¼šservice
 
-×¢²á£ºregsiter
+æ³¨å†Œï¼šregsiter
 
-×´Ì¬£ºstatus
+çŠ¶æ€ï¼šstatus
 
-Í¶Æ±£ºvote
+æŠ•ç¥¨ï¼švote
 
-ºÏ×÷»ï°é£ºpartner
+åˆä½œä¼™ä¼´ï¼špartner
 
-(¶ş)×¢ÊÍµÄĞ´·¨:
+(äºŒ)æ³¨é‡Šçš„å†™æ³•:
 
 /* Footer */
 
-ÄÚÈİÇø
+å†…å®¹åŒº
 
 /* End Footer */
 
-(Èı)idµÄÃüÃû:
+(ä¸‰)idçš„å‘½å:
 
-(1)Ò³Ãæ½á¹¹
+(1)é¡µé¢ç»“æ„
 
-ÈİÆ÷: container
+å®¹å™¨: container
 
-Ò³Í·£ºheader
+é¡µå¤´ï¼šheader
 
-ÄÚÈİ£ºcontent/container
+å†…å®¹ï¼šcontent/container
 
-Ò³ÃæÖ÷Ìå£ºmain
+é¡µé¢ä¸»ä½“ï¼šmain
 
-Ò³Î²£ºfooter
+é¡µå°¾ï¼šfooter
 
-µ¼º½£ºnav
+å¯¼èˆªï¼šnav
 
-²àÀ¸£ºsidebar
+ä¾§æ ï¼šsidebar
 
-À¸Ä¿£ºcolumn
+æ ç›®ï¼šcolumn
 
-Ò³ÃæÍâÎ§¿ØÖÆÕûÌå²¼¾Ö¿í¶È£ºwrapper
+é¡µé¢å¤–å›´æ§åˆ¶æ•´ä½“å¸ƒå±€å®½åº¦ï¼šwrapper
 
-×óÓÒÖĞ£ºleft right center
+å·¦å³ä¸­ï¼šleft right center
 
-(2)µ¼º½
+(2)å¯¼èˆª
 
-µ¼º½£ºnav
+å¯¼èˆªï¼šnav
 
-Ö÷µ¼º½£ºmainbav
+ä¸»å¯¼èˆªï¼šmainbav
 
-×Óµ¼º½£ºsubnav
+å­å¯¼èˆªï¼šsubnav
 
-¶¥µ¼º½£ºtopnav
+é¡¶å¯¼èˆªï¼štopnav
 
-±ßµ¼º½£ºsidebar
+è¾¹å¯¼èˆªï¼šsidebar
 
-×óµ¼º½£ºleftsidebar
+å·¦å¯¼èˆªï¼šleftsidebar
 
-ÓÒµ¼º½£ºrightsidebar
+å³å¯¼èˆªï¼šrightsidebar
 
-²Ëµ¥£ºmenu
+èœå•ï¼šmenu
 
-×Ó²Ëµ¥£ºsubmenu
+å­èœå•ï¼šsubmenu
 
-±êÌâ: title
+æ ‡é¢˜: title
 
-ÕªÒª: summary
+æ‘˜è¦: summary
 
-(3)¹¦ÄÜ
+(3)åŠŸèƒ½
 
-±êÖ¾£ºlogo
+æ ‡å¿—ï¼šlogo
 
-¹ã¸æ£ºbanner
+å¹¿å‘Šï¼šbanner
 
-µÇÂ½£ºlogin
+ç™»é™†ï¼šlogin
 
-µÇÂ¼Ìõ£ºloginbar
+ç™»å½•æ¡ï¼šloginbar
 
-×¢²á£ºregsiter
+æ³¨å†Œï¼šregsiter
 
-ËÑË÷£ºsearch
+æœç´¢ï¼šsearch
 
-¹¦ÄÜÇø£ºshop
+åŠŸèƒ½åŒºï¼šshop
 
-±êÌâ£ºtitle
+æ ‡é¢˜ï¼štitle
 
-¼ÓÈë£ºjoinus
+åŠ å…¥ï¼šjoinus
 
-×´Ì¬£ºstatus
+çŠ¶æ€ï¼šstatus
 
-°´Å¥£ºbtn
+æŒ‰é’®ï¼šbtn
 
-¹ö¶¯£ºscroll
+æ»šåŠ¨ï¼šscroll
 
-±êÇ©Ò³£ºtab
+æ ‡ç­¾é¡µï¼štab
 
-ÎÄÕÂÁĞ±í£ºlist
+æ–‡ç« åˆ—è¡¨ï¼šlist
 
-ÌáÊ¾ĞÅÏ¢£ºmsg
+æç¤ºä¿¡æ¯ï¼šmsg
 
-µ±Ç°µÄ: current
+å½“å‰çš„: current
 
-Ğ¡¼¼ÇÉ£ºtips
+å°æŠ€å·§ï¼štips
 
-Í¼±ê: icon
+å›¾æ ‡: icon
 
-×¢ÊÍ£ºnote
+æ³¨é‡Šï¼šnote
 
-Ö¸ÄÏ£ºguild
+æŒ‡å—ï¼šguild
 
-·şÎñ£ºservice
+æœåŠ¡ï¼šservice
 
-ÈÈµã£ºhot
+çƒ­ç‚¹ï¼šhot
 
-ĞÂÎÅ£ºnews
+æ–°é—»ï¼šnews
 
-ÏÂÔØ£ºdownload
+ä¸‹è½½ï¼šdownload
 
-Í¶Æ±£ºvote
+æŠ•ç¥¨ï¼švote
 
-ºÏ×÷»ï°é£ºpartner
+åˆä½œä¼™ä¼´ï¼špartner
 
-ÓÑÇéÁ´½Ó£ºlink
+å‹æƒ…é“¾æ¥ï¼šlink
 
-°æÈ¨£ºcopyright
+ç‰ˆæƒï¼šcopyright
 
-(ËÄ)classµÄÃüÃû:
+(å››)classçš„å‘½å:
 
-(1)ÑÕÉ«:Ê¹ÓÃÑÕÉ«µÄÃû³Æ»òÕß16½øÖÆ´úÂë,Èç
+(1)é¢œè‰²:ä½¿ç”¨é¢œè‰²çš„åç§°æˆ–è€…16è¿›åˆ¶ä»£ç ,å¦‚
 
 .red { color: red; }
 
@@ -196,51 +196,51 @@
 
 .ff8600 { color: #ff8600; }
 
-£¨2£©×ÖÌå´óĞ¡,Ö±½ÓÊ¹ÓÃ¡±font+×ÖÌå´óĞ¡¡±×÷ÎªÃû³Æ,Èç
+ï¼ˆ2ï¼‰å­—ä½“å¤§å°,ç›´æ¥ä½¿ç”¨â€font+å­—ä½“å¤§å°â€ä½œä¸ºåç§°,å¦‚
 
 .font12px { font-size: 12px; }
 
 .font9pt {font-size: 9pt; }
 
-(3)¶ÔÆëÑùÊ½,Ê¹ÓÃ¶ÔÆëÄ¿±êµÄÓ¢ÎÄÃû³Æ,Èç
+(3)å¯¹é½æ ·å¼,ä½¿ç”¨å¯¹é½ç›®æ ‡çš„è‹±æ–‡åç§°,å¦‚
 
 .left { float:left; }
 
 .bottom { float:bottom; }
 
-(4)±êÌâÀ¸ÑùÊ½,Ê¹ÓÃ¡±Àà±ğ+¹¦ÄÜ¡±µÄ·½Ê½ÃüÃû,Èç
+(4)æ ‡é¢˜æ æ ·å¼,ä½¿ç”¨â€ç±»åˆ«+åŠŸèƒ½â€çš„æ–¹å¼å‘½å,å¦‚
 
 .barnews { }
 
 .barproduct { }
 
-×¢ÒâÊÂÏî::
+æ³¨æ„äº‹é¡¹::
 
-1.Ò»ÂÉĞ¡Ğ´;
+1.ä¸€å¾‹å°å†™;
 
-2.¾¡Á¿ÓÃÓ¢ÎÄ;
+2.å°½é‡ç”¨è‹±æ–‡;
 
-3.²»¼ÓÖĞ¸ÜºÍÏÂ»®Ïß;
+3.ä¸åŠ ä¸­æ å’Œä¸‹åˆ’çº¿;
 
-4.¾¡Á¿²»ËõĞ´£¬³ı·ÇÒ»¿´¾ÍÃ÷°×µÄµ¥´Ê.
+4.å°½é‡ä¸ç¼©å†™ï¼Œé™¤éä¸€çœ‹å°±æ˜ç™½çš„å•è¯.
 
-Ö÷ÒªµÄ master.css
+ä¸»è¦çš„ master.css
 
-Ä£¿é module.css
+æ¨¡å— module.css
 
-»ù±¾¹²ÓÃ base.css
+åŸºæœ¬å…±ç”¨ base.css
 
-²¼¾Ö£¬°æÃæ layout.css
+å¸ƒå±€ï¼Œç‰ˆé¢ layout.css
 
-Ö÷Ìâ themes.css
+ä¸»é¢˜ themes.css
 
-×¨À¸ columns.css
+ä¸“æ  columns.css
 
-ÎÄ×Ö font.css
+æ–‡å­— font.css
 
-±íµ¥ forms.css
+è¡¨å• forms.css
 
-²¹¶¡ mend.css
+è¡¥ä¸ mend.css
 
-´òÓ¡ print.css
+æ‰“å° print.css
 

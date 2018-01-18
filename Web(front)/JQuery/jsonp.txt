@@ -1,4 +1,4 @@
-//ËäÈ»jq°ÑjsonpµÄÇëÇóÒ²·â×°½øÁËajax£¬µ«²¢·ÇÊÇjsonp = ajax    
+//è™½ç„¶jqæŠŠjsonpçš„è¯·æ±‚ä¹Ÿå°è£…è¿›äº†ajaxï¼Œä½†å¹¶éæ˜¯jsonp = ajax    
 
 jQuery(document).ready(function(){
         $.ajax({
@@ -6,10 +6,10 @@ jQuery(document).ready(function(){
              async: false,
              url: "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998",
              dataType: "jsonp",
-             jsonp: "callback",//´«µİ¸øÇëÇó´¦Àí³ÌĞò»òÒ³ÃæµÄ£¬ÓÃÒÔ»ñµÃjsonp»Øµ÷º¯ÊıÃûµÄ²ÎÊıÃû(Ò»°ãÄ¬ÈÏÎª:callback)
-             jsonpCallback:"flightHandler",//×Ô¶¨ÒåµÄjsonp»Øµ÷º¯ÊıÃû³Æ£¬Ä¬ÈÏÎªjQuery×Ô¶¯Éú³ÉµÄËæ»úº¯ÊıÃû£¬Ò²¿ÉÒÔĞ´"?"£¬jQuery»á×Ô¶¯ÎªÄã´¦ÀíÊı¾İ
+             jsonp: "callback",//ä¼ é€’ç»™è¯·æ±‚å¤„ç†ç¨‹åºæˆ–é¡µé¢çš„ï¼Œç”¨ä»¥è·å¾—jsonpå›è°ƒå‡½æ•°åçš„å‚æ•°å(ä¸€èˆ¬é»˜è®¤ä¸º:callback)
+             jsonpCallback:"flightHandler",//è‡ªå®šä¹‰çš„jsonpå›è°ƒå‡½æ•°åç§°ï¼Œé»˜è®¤ä¸ºjQueryè‡ªåŠ¨ç”Ÿæˆçš„éšæœºå‡½æ•°åï¼Œä¹Ÿå¯ä»¥å†™"?"ï¼ŒjQueryä¼šè‡ªåŠ¨ä¸ºä½ å¤„ç†æ•°æ®
              success: function(json){
-                 alert('Äú²éÑ¯µ½º½°àĞÅÏ¢£ºÆ±¼Û£º ' + json.price + ' Ôª£¬ÓàÆ±£º ' + json.tickets + ' ÕÅ¡£');
+                 alert('æ‚¨æŸ¥è¯¢åˆ°èˆªç­ä¿¡æ¯ï¼šç¥¨ä»·ï¼š ' + json.price + ' å…ƒï¼Œä½™ç¥¨ï¼š ' + json.tickets + ' å¼ ã€‚');
              },
              error: function(){
                  alert('fail');

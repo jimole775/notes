@@ -1,2 +1,2 @@
-...ºÍmatch,search,replaceÒ»Ñù£»
+...å’Œmatch,search,replaceä¸€æ ·ï¼›
    /-/[Symbol.split]("a-b-c");	//[a,b,c]

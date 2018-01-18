@@ -1,4 +1,4 @@
-//ÅÅĞòËã·¨
+//æ’åºç®—æ³•
 window.onload = function(){
     var array = [0,1,2,44,4,
                 324,5,65,6,6,
@@ -13,14 +13,14 @@ window.onload = function(){
 }
  
 var sorting = {
-    //ÀûÓÃsort·½·¨½øĞĞÅÅĞò
+    //åˆ©ç”¨sortæ–¹æ³•è¿›è¡Œæ’åº
     systemSort: function(arr){
         return arr.sort(function(a,b){
             return a-b;
         });
     },
  
-    //Ã°ÅİÅÅĞò
+    //å†’æ³¡æ’åº
     bubbleSort: function(arr){
         var len=arr.length, tmp;
         for(var i=0;i<len-1;i++){
@@ -35,7 +35,7 @@ var sorting = {
         return arr;
     },
  
-    //¿ìËÙÅÅĞò
+    //å¿«é€Ÿæ’åº
     quickSort: function(arr){
         var low=0, high=arr.length-1;
         sort(low,high);
@@ -63,7 +63,7 @@ var sorting = {
         return arr;
     },
  
-    //²åÈëÅÅĞò
+    //æ’å…¥æ’åº
     insertSort: function(arr){
         var len = arr.length;
         for(var i=1;i<len;i++){
@@ -80,7 +80,7 @@ var sorting = {
         return arr;
     },
  
-    //Ï£¶ûÅÅĞò
+    //å¸Œå°”æ’åº
     shellSort: function(arr){
         console.log(arr);
         var h = 1;

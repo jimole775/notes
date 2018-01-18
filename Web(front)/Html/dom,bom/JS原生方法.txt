@@ -6,13 +6,13 @@ forEach;
 
 
 
-¹ØÓÚÖØ¸´µã»÷-ÏÔÊ¾-Òş²Ø·½·¨£º
+å…³äºé‡å¤ç‚¹å‡»-æ˜¾ç¤º-éšè—æ–¹æ³•ï¼š
 
 var show=!show;
 
-¶èĞÔÔØÈë£º
+æƒ°æ€§è½½å…¥ï¼š
 
-Ô­º¯Êı--function createXHR(){
+åŸå‡½æ•°--function createXHR(){
 		if (typeof XMLHttpRequest != "undefined"){
 			return new XMLHttpRequest();
 			
@@ -43,7 +43,7 @@ throw new Error("No XHR object available.");
 
 }
 
-¶èĞÔ°ü×°--
+æƒ°æ€§åŒ…è£…--
 
 function createXHR(){
 if (typeof XMLHttpRequest != "undefined"){
@@ -80,7 +80,7 @@ return creatXHR();
 }
 
 
-¶èĞÔ°ü×°2--
+æƒ°æ€§åŒ…è£…2--
 
 var createXHR = (function(){
 if (typeof XMLHttpRequest != "undefined"){

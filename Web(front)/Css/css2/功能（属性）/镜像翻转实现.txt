@@ -1,4 +1,4 @@
-/*水平翻转*/
+/*姘村钩缈昏浆*/
 .flipx {
     -moz-transform:scaleX(-1);
     -webkit-transform:scaleX(-1);
@@ -8,7 +8,7 @@
     filter:FlipH;
 }
 
-/*垂直翻转*/
+/*鍨傜洿缈昏浆*/
 .flipy {
     -moz-transform:scaleY(-1);
     -webkit-transform:scaleY(-1);
@@ -19,10 +19,10 @@
 }
 
 
-//如果是webkit内核浏览器，chrome或者safari
+//濡傛灉鏄痺ebkit鍐呮牳娴忚鍣紝chrome鎴栬�卻afari
 
-/*水平翻转*/
+/*姘村钩缈昏浆*/
 .flipx { transform: rotateY(180deg); }
 
-/*垂直翻转*/
+/*鍨傜洿缈昏浆*/
 .flipy { transform: rotateX(180deg); }

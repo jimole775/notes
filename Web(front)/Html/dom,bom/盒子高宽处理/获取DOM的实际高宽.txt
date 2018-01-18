@@ -1,17 +1,17 @@
-网页可见区域宽： document.body.clientWidth 
-网页可见区域高： document.body.clientHeight 
-网页可见区域宽： document.body.offsetWidth (包括边线的宽) 
-网页可见区域高： document.body.offsetHeight (包括边线的高) 
-网页正文全文宽： document.body.scrollWidth 
-网页正文全文高： document.body.scrollHeight 
-网页被卷去的高： document.body.scrollTop 
-网页被卷去的左： document.body.scrollLeft 
-网页正文部分上： window.screenTop 
-网页正文部分左： window.screenLeft 
-屏幕分辨率的高： window.screen.height 
-屏幕分辨率的宽： window.screen.width 
-屏幕可用工作区高度： window.screen.availHeight 
-屏幕可用工作区宽度： window.screen.availWidth 
+缃戦〉鍙鍖哄煙瀹斤細 document.body.clientWidth 
+缃戦〉鍙鍖哄煙楂橈細 document.body.clientHeight 
+缃戦〉鍙鍖哄煙瀹斤細 document.body.offsetWidth (鍖呮嫭杈圭嚎鐨勫) 
+缃戦〉鍙鍖哄煙楂橈細 document.body.offsetHeight (鍖呮嫭杈圭嚎鐨勯珮) 
+缃戦〉姝ｆ枃鍏ㄦ枃瀹斤細 document.body.scrollWidth 
+缃戦〉姝ｆ枃鍏ㄦ枃楂橈細 document.body.scrollHeight 
+缃戦〉琚嵎鍘荤殑楂橈細 document.body.scrollTop 
+缃戦〉琚嵎鍘荤殑宸︼細 document.body.scrollLeft 
+缃戦〉姝ｆ枃閮ㄥ垎涓婏細 window.screenTop 
+缃戦〉姝ｆ枃閮ㄥ垎宸︼細 window.screenLeft 
+灞忓箷鍒嗚鲸鐜囩殑楂橈細 window.screen.height 
+灞忓箷鍒嗚鲸鐜囩殑瀹斤細 window.screen.width 
+灞忓箷鍙敤宸ヤ綔鍖洪珮搴︼細 window.screen.availHeight 
+灞忓箷鍙敤宸ヤ綔鍖哄搴︼細 window.screen.availWidth 
 
 
 

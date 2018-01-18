@@ -2,19 +2,19 @@
  * Created by Andy on 2017/8/26.
  */
 
-/**������ɬ�Ĵʻ�*/
-//���ͱ�����<T>����Ȼ��������������T�ַ���Ҳ�������κ������Ϸ��ַ��� ��һ���any���Ͳ�࣬����ʹ��any��ʱ��ᶪʧ�̳е���Ϣ��
-//Ԫ�����ͣ�ָһ�������Ԫ�ص����ͣ�ԭ�������Ǹ�Ԫ��������T�����飬������Ԫ��������T�����顣��
-//����ǩ����������
+/**几个生涩的词汇*/
+//类型变量：<T>（当然包括但不局限于T字符，也可以是任何其他合法字符） ，一般和any类型差不多，但是使用any的时候会丢失继承的信息；
+//元素类型：指一个数组的元素的类型，原话“它是个元素类型是T的数组，并返回元素类型是T的数组。”
+//调用签名：？？？
 
-/**���ͽӿ�*/
-interface Foo<T> {  //������͵�ֵֻҪ��ֵ��һ�Σ�����ĳ�Ա�Ϳ���ֱ�Ӽ̳���ͬ��ֵ
-    bar:T;  //��������ͺ������һ��
-    baz:(x:any, y:any) => any;  //����ڲ������͵�ʱ��ʹ��any���ڷ���ֵ����Ͳ���̳в����ڵ����Ͷ���
+/**泛型接口*/
+interface Foo<T> {  //这个泛型的值只要赋值过一次，下面的成员就可以直接继承相同的值
+    bar:T;  //这里的类型和上面的一样
+    baz:(x:any, y:any) => any;  //如果在参数类型的时候使用any，在返回值那里就不会继承参数内的类型定义
 }
 
 
-/**������ͷ��ͽӿڲ��*/
+/**泛型类和泛型接口差不多*/
 class GenericNumber<T> {
     zeroValue: T;
     add: (x: T, y: T) => T;
@@ -24,9 +24,9 @@ let myGenericNumber = new GenericNumber<number>();
 myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) { return x + y; };
 
-/**����Լ��*/
+/**泛型约束*/
 
-//��ʼ����Ĭ�ϲ������κη��������ԣ������ڱ����ʱ�����ʾ����
+//初始泛型默认不包含任何方法和属性，所以在编译的时候会提示错误
 function loggingIdentity<T>(arg: T): T {
     //console.log(arg.length);  // Error: T doesn't have .length
     return arg;

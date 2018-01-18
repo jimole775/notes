@@ -1,11 +1,11 @@
 	var ajaxInstance = $.ajax({
 			type: "POST",
-			timeout: 10000, //³¬Ê±Ê±¼äÉèÖÃ£¬µ¥Î»ºÁÃë
+			timeout: 10000, //è¶…æ—¶æ—¶é—´è®¾ç½®ï¼Œå•ä½æ¯«ç§’
 			complete: function (XMLHttpRequest, status) {
 				switch (status) {
 					case "timeout":
-						ajaxInstance.abort();	//³¬Ê±Ö®ºó±ØĞëabortµ±Ç°ÇëÇó
-						that.jsRecvServerData("timeout", "·şÎñÆ÷ÇëÇó³¬Ê±", callback);
+						ajaxInstance.abort();	//è¶…æ—¶ä¹‹åå¿…é¡»abortå½“å‰è¯·æ±‚
+						that.jsRecvServerData("timeout", "æœåŠ¡å™¨è¯·æ±‚è¶…æ—¶", callback);
 						break;
 				}
 			}

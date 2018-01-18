@@ -1,49 +1,49 @@
-#¿çÓò¾ÍÊÇAÏµÍ³µÄ¿Í»§¶ËĞèÒª»ñÈ¡BÏµÍ³·şÎñÆ÷µÄÊı¾İ£¨Á½¸öÏµÍ³·Ö±ğ¹Ò¿¿Á½¸öÖ÷ÓòÃû£©£»
-#²úÉúµÄ¿çÓòÎÊÌâ¾ÍÊÇÊ¹ÓÃajax»ñÈ¡¿çÓòµÄ×ÊÔ´Ê±£¬²»±»ÔÊĞí£¡
+#è·¨åŸŸå°±æ˜¯Aç³»ç»Ÿçš„å®¢æˆ·ç«¯éœ€è¦è·å–Bç³»ç»ŸæœåŠ¡å™¨çš„æ•°æ®ï¼ˆä¸¤ä¸ªç³»ç»Ÿåˆ†åˆ«æŒ‚é ä¸¤ä¸ªä¸»åŸŸåï¼‰ï¼›
+#äº§ç”Ÿçš„è·¨åŸŸé—®é¢˜å°±æ˜¯ä½¿ç”¨ajaxè·å–è·¨åŸŸçš„èµ„æºæ—¶ï¼Œä¸è¢«å…è®¸ï¼
 
-#Ô­ÉúµÄ´¦Àí·½Ê½¾ÍÊÇ£¬ÈÃ·şÎñÆ÷Éú³ÉÒ»¸öjsÎÄ¼ş£¬È»ºó¿Í»§¶ËÊ¹ÓÃscript±êÇ©µÄsrcµ÷ÓÃÕâ¸öjsÎÄ¼ş£¡£¡
-#¾ÍÏàµ±ÓÚ <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>£¬Õâ¾ÍÊÇÒ»¸ö¿çÓòĞĞÎª£¡£¡
-#htmlÀïÃæËùÓĞ´øsrcÊôĞÔµÄ¶¼ÊÇ¿ÉÒÔ¿çÓòµÄ±êÇ©£¡
+#åŸç”Ÿçš„å¤„ç†æ–¹å¼å°±æ˜¯ï¼Œè®©æœåŠ¡å™¨ç”Ÿæˆä¸€ä¸ªjsæ–‡ä»¶ï¼Œç„¶åå®¢æˆ·ç«¯ä½¿ç”¨scriptæ ‡ç­¾çš„srcè°ƒç”¨è¿™ä¸ªjsæ–‡ä»¶ï¼ï¼
+#å°±ç›¸å½“äº <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>ï¼Œè¿™å°±æ˜¯ä¸€ä¸ªè·¨åŸŸè¡Œä¸ºï¼ï¼
+#htmlé‡Œé¢æ‰€æœ‰å¸¦srcå±æ€§çš„éƒ½æ˜¯å¯ä»¥è·¨åŸŸçš„æ ‡ç­¾ï¼
 
 exp:
-------¿Í»§¶Ë
+------å®¢æˆ·ç«¯
     <script type="text/javascript">
     var localHandler = function(data){
-        alert('ÎÒÊÇ±¾µØº¯Êı£¬¿ÉÒÔ±»¿çÓòµÄremote.jsÎÄ¼şµ÷ÓÃ£¬Ô¶³Ìjs´øÀ´µÄÊı¾İÊÇ£º' + data.result);
+        alert('æˆ‘æ˜¯æœ¬åœ°å‡½æ•°ï¼Œå¯ä»¥è¢«è·¨åŸŸçš„remote.jsæ–‡ä»¶è°ƒç”¨ï¼Œè¿œç¨‹jså¸¦æ¥çš„æ•°æ®æ˜¯ï¼š' + data.result);
     };
     </script>
     <script type="text/javascript" src="http://remoteserver.com/remote.js"></script>
 
-------·şÎñ¶Ëremote.jsµÄÄÚÈİ
-    localHandler({"result":"ÎÒÊÇÔ¶³Ìjs´øÀ´µÄÊı¾İ"});
+------æœåŠ¡ç«¯remote.jsçš„å†…å®¹
+    localHandler({"result":"æˆ‘æ˜¯è¿œç¨‹jså¸¦æ¥çš„æ•°æ®"});
 
 
 
-###½øÒ»²½ÓÅ»¯²½Öè£»
+###è¿›ä¸€æ­¥ä¼˜åŒ–æ­¥éª¤ï¼›
 
-------¿Í»§¶Ë
+------å®¢æˆ·ç«¯
     <script type="text/javascript">
-    // µÃµ½º½°àĞÅÏ¢²éÑ¯½á¹ûºóµÄ»Øµ÷º¯Êı
+    // å¾—åˆ°èˆªç­ä¿¡æ¯æŸ¥è¯¢ç»“æœåçš„å›è°ƒå‡½æ•°
     var flightHandler = function(data){
-        alert('Äã²éÑ¯µÄº½°à½á¹ûÊÇ£ºÆ±¼Û ' + data.price + ' Ôª£¬' + 'ÓàÆ± ' + data.tickets + ' ÕÅ¡£');
+        alert('ä½ æŸ¥è¯¢çš„èˆªç­ç»“æœæ˜¯ï¼šç¥¨ä»· ' + data.price + ' å…ƒï¼Œ' + 'ä½™ç¥¨ ' + data.tickets + ' å¼ ã€‚');
     };
-    // Ìá¹©jsonp·şÎñµÄurlµØÖ·£¨²»¹ÜÊÇÊ²Ã´ÀàĞÍµÄµØÖ·£¬×îÖÕÉú³ÉµÄ·µ»ØÖµ¶¼ÊÇÒ»¶Îjavascript´úÂë£©
+    // æä¾›jsonpæœåŠ¡çš„urlåœ°å€ï¼ˆä¸ç®¡æ˜¯ä»€ä¹ˆç±»å‹çš„åœ°å€ï¼Œæœ€ç»ˆç”Ÿæˆçš„è¿”å›å€¼éƒ½æ˜¯ä¸€æ®µjavascriptä»£ç ï¼‰
     var url = "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&callback=flightHandler";
-    // ´´½¨script±êÇ©£¬ÉèÖÃÆäÊôĞÔ
+    // åˆ›å»ºscriptæ ‡ç­¾ï¼Œè®¾ç½®å…¶å±æ€§
     var script = document.createElement('script');
     script.setAttribute('src', url);
-    // °Ñscript±êÇ©¼ÓÈëhead£¬´ËÊ±µ÷ÓÃ¿ªÊ¼
+    // æŠŠscriptæ ‡ç­¾åŠ å…¥headï¼Œæ­¤æ—¶è°ƒç”¨å¼€å§‹
     document.getElementsByTagName('head')[0].appendChild(script);
     </script>
 
-------·şÎñ¶Ë»á·µ»ØÒÔÏÂÄÚÈİ£¨ÒÔ×Ö´®Æ´½ÓµÄĞÎÊ½£©
-    //Âß¼­´óÖÂÎª£ºÍ¨¹ı½âÎöurl»ñÈ¡²ÎÊıºÍcallbackº¯ÊıµÄÃû×Ö£¬°ÑĞèÒª·µ»ØµÄÊı¾İ×é³ÉÀàËÆÏÂÃæÒ»¶ÎÄÚÈİ£¡
+------æœåŠ¡ç«¯ä¼šè¿”å›ä»¥ä¸‹å†…å®¹ï¼ˆä»¥å­—ä¸²æ‹¼æ¥çš„å½¢å¼ï¼‰
+    //é€»è¾‘å¤§è‡´ä¸ºï¼šé€šè¿‡è§£æurlè·å–å‚æ•°å’Œcallbackå‡½æ•°çš„åå­—ï¼ŒæŠŠéœ€è¦è¿”å›çš„æ•°æ®ç»„æˆç±»ä¼¼ä¸‹é¢ä¸€æ®µå†…å®¹ï¼
     flightHandler({
     "code": "CA1998",
     "price": 1780,
     "tickets": 5
     });
-    //½è¼øÒ»¶ÎnodeµÄ´¦ÀíÊµÀı£º
+    //å€Ÿé‰´ä¸€æ®µnodeçš„å¤„ç†å®ä¾‹ï¼š
 	var http = require("http")  
 	var Url = require("url")  
   
@@ -56,7 +56,7 @@ exp:
     		res.end();  
 	}).listen(3000)  
   
-	//½âÎöurl  
+	//è§£æurl  
 	function parseUrl(url){  
     		var obj = {};  
     		var urls = url.split("&");  
@@ -68,8 +68,8 @@ exp:
 	}  	
 
 
-#######Ê¹ÓÃjqµÄ·â×°£º
--------¿Í»§¶Ë
+#######ä½¿ç”¨jqçš„å°è£…ï¼š
+-------å®¢æˆ·ç«¯
        <script type="text/javascript">
      jQuery(document).ready(function(){
         $.ajax({
@@ -77,10 +77,10 @@ exp:
              async: false,
              url: "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998",
              dataType: "jsonp",
-             jsonp: "callback",//´«µİ¸øÇëÇó´¦Àí³ÌĞò»òÒ³ÃæµÄ£¬ÓÃÒÔ»ñµÃjsonp»Øµ÷º¯ÊıÃûµÄ²ÎÊıÃû(Ò»°ãÄ¬ÈÏÎª:callback)
-             jsonpCallback:"flightHandler",//×Ô¶¨ÒåµÄjsonp»Øµ÷º¯ÊıÃû³Æ£¬Ä¬ÈÏÎªjQuery×Ô¶¯Éú³ÉµÄËæ»úº¯ÊıÃû£¬Ò²¿ÉÒÔĞ´"?"£¬jQuery»á×Ô¶¯ÎªÄã´¦ÀíÊı¾İ
+             jsonp: "callback",//ä¼ é€’ç»™è¯·æ±‚å¤„ç†ç¨‹åºæˆ–é¡µé¢çš„ï¼Œç”¨ä»¥è·å¾—jsonpå›è°ƒå‡½æ•°åçš„å‚æ•°å(ä¸€èˆ¬é»˜è®¤ä¸º:callback)
+             jsonpCallback:"flightHandler",//è‡ªå®šä¹‰çš„jsonpå›è°ƒå‡½æ•°åç§°ï¼Œé»˜è®¤ä¸ºjQueryè‡ªåŠ¨ç”Ÿæˆçš„éšæœºå‡½æ•°åï¼Œä¹Ÿå¯ä»¥å†™"?"ï¼ŒjQueryä¼šè‡ªåŠ¨ä¸ºä½ å¤„ç†æ•°æ®
              success: function(json){
-                 alert('Äú²éÑ¯µ½º½°àĞÅÏ¢£ºÆ±¼Û£º ' + json.price + ' Ôª£¬ÓàÆ±£º ' + json.tickets + ' ÕÅ¡£');
+                 alert('æ‚¨æŸ¥è¯¢åˆ°èˆªç­ä¿¡æ¯ï¼šç¥¨ä»·ï¼š ' + json.price + ' å…ƒï¼Œä½™ç¥¨ï¼š ' + json.tickets + ' å¼ ã€‚');
              },
              error: function(){
                  alert('fail');
@@ -91,15 +91,15 @@ exp:
 
 
 
-JSONPÊÇ¿çÓòÇëÇóµÄÒ»ÖÖ·½Ê½£¬»¹ÓĞÆäËûµÄ·½Ê½£º
-·şÎñÆ÷ÉèÖÃÇëÇóÍ·
-//ÔÊĞíµÄÓò
+JSONPæ˜¯è·¨åŸŸè¯·æ±‚çš„ä¸€ç§æ–¹å¼ï¼Œè¿˜æœ‰å…¶ä»–çš„æ–¹å¼ï¼š
+æœåŠ¡å™¨è®¾ç½®è¯·æ±‚å¤´
+//å…è®¸çš„åŸŸ
 res.setHeader("Access-Control-Allow-Origin","*");	
 
-//ÔÊĞíµÄheaderÀàĞÍ
+//å…è®¸çš„headerç±»å‹
 res.setHeader("Access-Control-Allow-Headers", "Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild");
 
-//ÔÊĞíµÄMethodsÀàĞÍ
+//å…è®¸çš„Methodsç±»å‹
 res.setHeader("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
 
-Èç¹ûÊÇiframeµÄ¿çÓò£¬¿ÉÒÔÍ¨¹ıĞŞ¸Älocation.domainÎªÍ¬Ò»¸öÓòÃû£¨ÀıÈç£ºbaidu.com£©À´¹æ±Ü¿çÓòÎÊÌâ£¡   	
+å¦‚æœæ˜¯iframeçš„è·¨åŸŸï¼Œå¯ä»¥é€šè¿‡ä¿®æ”¹location.domainä¸ºåŒä¸€ä¸ªåŸŸåï¼ˆä¾‹å¦‚ï¼šbaidu.comï¼‰æ¥è§„é¿è·¨åŸŸé—®é¢˜ï¼   	

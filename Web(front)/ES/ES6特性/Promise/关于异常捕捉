@@ -1,10 +1,10 @@
-...һ������£�
-...promise�ṩ�ˡ����֡���׽�쳣�ķ�����
+...一般情况下，
+...promise提供了【两种】捕捉异常的方法：
 __________
-    promise.then(function(resolved){},function(rejected){});    //��һ��
-    promise.then().catch(function(err){}); //�ڶ���
+    promise.then(function(resolved){},function(rejected){});    //第一种
+    promise.then().catch(function(err){}); //第二种
 
-...catch��rejected�����Բ�׽�쳣������rejected�����ȼ����쳣�ĸߣ�
-...Ҳ����˵��������е��У�����rejected�������쳣�������Ե�����������쳣�ǳ�����rejected֮ǰ����֮��
+...catch和rejected都可以捕捉异常，但是rejected的优先级比异常的高，
+...也就是说，如果运行当中，出现rejected，其他异常将被忽略掉，不管这个异常是出现在rejected之前还是之后
 
-...����һ�㣬���ǣ���������쳣֮������쳣�ͻ�ֱ����Ѱ��׽�����м�Ĵ�ִ�г��򶼻ᱻ���ԣ�����Ҳ����쳣��׽������������ͻ�ֹͣ���С�
+...还有一点，就是，程序出现异常之后，这个异常就会直接搜寻捕捉程序，中间的待执行程序都会被忽略，如果找不到异常捕捉程序，整个程序就会停止运行。

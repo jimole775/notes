@@ -23,7 +23,7 @@ req.on('data' , function(chunk){
                 path = './databox/'+filename;
                 ws = fs.createWriteStream(path);
 
-            }else if(i==chunk.length-2){    //说明到了数据尾部的\r\n
+            }else if(i==chunk.length-2){    //璇存槑鍒颁簡鏁版嵁灏鹃儴鐨刓r\n
                 end = rems[rems.length-2];
                 break;
             }
@@ -41,7 +41,7 @@ req.on('data' , function(chunk){
 
 req.on("end",function(){
     ws.end();
-    console.log("保存"+filename+"成功");
+    console.log("淇濆瓨"+filename+"鎴愬姛");
     res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8'});
     res.end('<div id="path">'+path+'</div>');
 });

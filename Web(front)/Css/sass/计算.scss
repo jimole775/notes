@@ -1,4 +1,4 @@
-//¼Ó£¬¼õ
+//åŠ ï¼Œå‡
 $left:10px;
 $right:10px;
 .class{
@@ -6,14 +6,14 @@ $right:10px;
   right: $left - $right;
 }
 
-//³Ë£¬³ı
+//ä¹˜ï¼Œé™¤
 .class{
   left: 10px + 10px;
-  right: $left * $right;  //´íÎó
-  _right: $left * 2; //ÕıÈ·
+  right: $left * $right;  //é”™è¯¯
+  _right: $left * 2; //æ­£ç¡®
 }
 
-//±í´ïÊ½Æ´½Ó
+//è¡¨è¾¾å¼æ‹¼æ¥
 $int:10;
 .class{
   left: #{$int}px;

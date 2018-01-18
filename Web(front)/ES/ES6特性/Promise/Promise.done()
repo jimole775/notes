@@ -1,9 +1,9 @@
-...²»ÊôÓÚ±ê×¼ÄÚÈÝ£¬Ò»°ãÓÉ×Ô¼º´´½¨£¬ËãÊÇÓïÒå»¯µÄÒ»ÖÖ±íÏÖ
-...´úÂë£º
+...ä¸å±žäºŽæ ‡å‡†å†…å®¹ï¼Œä¸€èˆ¬ç”±è‡ªå·±åˆ›å»ºï¼Œç®—æ˜¯è¯­ä¹‰åŒ–çš„ä¸€ç§è¡¨çŽ°
+...ä»£ç ï¼š
 _____________________
     Promise.prototype.done = function(onFulfilled,onRejected){
         this.then(onFulfilled,onRejected)
         .catch(function(reason){
-            setTimeout(() => console.log(reason),0);    //Å×³öÒ»¸öÈ«¾Ö´íÎó
+            setTimeout(() => console.log(reason),0);    //æŠ›å‡ºä¸€ä¸ªå…¨å±€é”™è¯¯
         })
     }

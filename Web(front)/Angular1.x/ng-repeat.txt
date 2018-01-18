@@ -1,6 +1,6 @@
-track by $index  //¹ıÂËµông-repeatÖĞµÄÖØ¸´Ïî
+track by $index  //è¿‡æ»¤æ‰ng-repeatä¸­çš„é‡å¤é¡¹
 
-orderBy:user.idnex //ÉıĞò
-orderBy:user.idnex:'desc' //ÉıĞò
+orderBy:user.idnex //å‡åº
+orderBy:user.idnex:'desc' //å‡åº
 
-×¢ÒâÇ°Ìá£ºtrack by ºÍ orderBy ²»ÄÜ¹²ÓÃÓÚÒ»¸öÖ¸Áî
+æ³¨æ„å‰æï¼štrack by å’Œ orderBy ä¸èƒ½å…±ç”¨äºä¸€ä¸ªæŒ‡ä»¤

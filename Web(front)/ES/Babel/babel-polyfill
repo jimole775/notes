@@ -1,26 +1,26 @@
-...ÓÉÓÚbabelÄ¬ÈÏÖ»×ª»»³£¼ûµÄÓï·¨£¨ÌÇ£©£¬¶ø¶ÔÓÚÐÂµÄAPI¶¼Ä¬ÈÏ²»´¦ÀíµÄ£¬
-...±ÈÈç£ºProxy, Generator, Map, Set, Iterator, Reflect, Symbol, PromiseµÈÈ«¾Ö¶ÔÏó
-...¾ÙÀýÀ´Ëµ£¬ES6ÔÚArray¶ÔÏóÉÏÐÂÔöÁËArray.from·½·¨¡£Babel¾Í²»»á×ªÂëÕâ¸ö·½·¨¡£
-...Èç¹ûÏëÈÃÕâ¸ö·½·¨ÔËÐÐ£¬±ØÐëÊ¹ÓÃbabel-polyfill£¬Îªµ±Ç°»·¾³Ìá¹©Ò»¸öµæÆ¬¡£
+...ç”±äºŽbabelé»˜è®¤åªè½¬æ¢å¸¸è§çš„è¯­æ³•ï¼ˆç³–ï¼‰ï¼Œè€Œå¯¹äºŽæ–°çš„APIéƒ½é»˜è®¤ä¸å¤„ç†çš„ï¼Œ
+...æ¯”å¦‚ï¼šProxy, Generator, Map, Set, Iterator, Reflect, Symbol, Promiseç­‰å…¨å±€å¯¹è±¡
+...ä¸¾ä¾‹æ¥è¯´ï¼ŒES6åœ¨Arrayå¯¹è±¡ä¸Šæ–°å¢žäº†Array.fromæ–¹æ³•ã€‚Babelå°±ä¸ä¼šè½¬ç è¿™ä¸ªæ–¹æ³•ã€‚
+...å¦‚æžœæƒ³è®©è¿™ä¸ªæ–¹æ³•è¿è¡Œï¼Œå¿…é¡»ä½¿ç”¨babel-polyfillï¼Œä¸ºå½“å‰çŽ¯å¢ƒæä¾›ä¸€ä¸ªåž«ç‰‡ã€‚
 
-...| °²×°£º
+...| å®‰è£…ï¼š
 $ npm install --save babel-polyfill
 
-...| Ê¹ÓÃ£º
+...| ä½¿ç”¨ï¼š
 > require("babel-polyfill");
 > console.log(Proxy);
 
 _________________________
-*×Ü½á£º
-    ÒÔÉÏÊÇÖ±½Ó°²×°£¬²¢ÇÒ°ÑpolyFillÖ±½ÓºÏ²¢µ½ÏîÄ¿ÀïÃæµÄÊ¹ÓÃ·½·¨£»Èç¹ûÊÇÊ¹ÓÃwebpackÀ´´ò°üµÄ»°
-    ÐèÒªÕâÑù£º
+*æ€»ç»“ï¼š
+    ä»¥ä¸Šæ˜¯ç›´æŽ¥å®‰è£…ï¼Œå¹¶ä¸”æŠŠpolyFillç›´æŽ¥åˆå¹¶åˆ°é¡¹ç›®é‡Œé¢çš„ä½¿ç”¨æ–¹æ³•ï¼›å¦‚æžœæ˜¯ä½¿ç”¨webpackæ¥æ‰“åŒ…çš„è¯
+    éœ€è¦è¿™æ ·ï¼š
         $ npm install --save-dev babel-polyfill
-    È»ºóÔÚwebpack.config.jsÀïÃæÅäÖÃÒ»ÏÂ£º
+    ç„¶åŽåœ¨webpack.config.jsé‡Œé¢é…ç½®ä¸€ä¸‹ï¼š
         {
             entry:["babel-ployfill","src/index.js"]
             output:...
             ...
         }
-    Ò²¾ÍÊÇËµ£¬babel-polyfillÐèÒªµ±³ÉÒ»¸öjsÒýÇæµÄ²¹¶¡Ê¹ÓÃ£¬Èç¹ûä¯ÀÀÆ÷²»Ö§³ÖÐÂµÄAPI£¬¾Í´ÓÏîÄ¿×Ô´øµÄbabel-polyfillÀïÃæ¶ÁÈ¡¡£
+    ä¹Ÿå°±æ˜¯è¯´ï¼Œbabel-polyfilléœ€è¦å½“æˆä¸€ä¸ªjså¼•æ“Žçš„è¡¥ä¸ä½¿ç”¨ï¼Œå¦‚æžœæµè§ˆå™¨ä¸æ”¯æŒæ–°çš„APIï¼Œå°±ä»Žé¡¹ç›®è‡ªå¸¦çš„babel-polyfillé‡Œé¢è¯»å–ã€‚
 
 

@@ -1,7 +1,7 @@
-...ÔÚwebpackÖĞ£¬×îÖ÷ÒªµÄ¾ÍÊÇÅäÖÃºÃ¼ÓÔØÆ÷babel-loader£»
-...»¹ÓĞ¾ÍÊÇÈ·¶¨ESµÄ°æ±¾£¬ÔÚoptionsÏîÀïÃæ½øĞĞÉèÖÃ
+...åœ¨webpackä¸­ï¼Œæœ€ä¸»è¦çš„å°±æ˜¯é…ç½®å¥½åŠ è½½å™¨babel-loaderï¼›
+...è¿˜æœ‰å°±æ˜¯ç¡®å®šESçš„ç‰ˆæœ¬ï¼Œåœ¨optionsé¡¹é‡Œé¢è¿›è¡Œè®¾ç½®
 
-...| ÑùÀı£º
+...| æ ·ä¾‹ï¼š
 
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
@@ -17,14 +17,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
 
-                //´ò°ü³ıÕâ¸öÎÄ¼şÖ®ÍâµÄÎÄ¼ş
+                //æ‰“åŒ…é™¤è¿™ä¸ªæ–‡ä»¶ä¹‹å¤–çš„æ–‡ä»¶
                 exclude: path.resolve(__dirname,"./node_modules"),
 
-                //´ò°ü°üÀ¨µÄÎÄ¼ş
+                //æ‰“åŒ…åŒ…æ‹¬çš„æ–‡ä»¶
                 include: path.resolve(__dirname, "./src"),
                 options: {
 
-                    //°´ÕÕÄ¿Ç°µÄÇé¿ö£¬Ò»°ãÏÈÊ¹ÓÃES2015
+                    //æŒ‰ç…§ç›®å‰çš„æƒ…å†µï¼Œä¸€èˆ¬å…ˆä½¿ç”¨ES2015
                     'presets': ['latest']
                 }
             }
@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
 
-        //×Ô¶¯Éú³Éindex.htmlÎÄ¼ş
+        //è‡ªåŠ¨ç”Ÿæˆindex.htmlæ–‡ä»¶
         new htmlWebpackPlugin({
             filename: 'index.html',
             template: "index.html"

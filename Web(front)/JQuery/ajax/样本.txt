@@ -1,7 +1,7 @@
 	var ajaxInstance = $.ajax({
 			type: "POST",
 			async: true,
-			timeout: 10000, //³¬Ê±Ê±¼äÉèÖÃ£¬µ¥Î»ºÁÃë
+			timeout: 10000, //è¶…æ—¶æ—¶é—´è®¾ç½®ï¼Œå•ä½æ¯«ç§’
 			url: global.businessInfo.serverHost + "/CCDPWebServer/" + global.businessInfo.serverDst,
 			dataType: "xml",
 			data: pack,
@@ -13,11 +13,11 @@
 						break;
 					case "timeout":
 						ajaxInstance.abort();
-						that.jsRecvServerData("timeout", "·şÎñÆ÷ÇëÇó³¬Ê±", callback);
+						that.jsRecvServerData("timeout", "æœåŠ¡å™¨è¯·æ±‚è¶…æ—¶", callback);
 						break;
 					case "error":
-						that.jsRecvServerData("error", "·şÎñÆ÷ÇëÇóÊ§°Ü", callback);
-						console.log('httpÇëÇóÊ§°Ü:', XMLHttpRequest);
+						that.jsRecvServerData("error", "æœåŠ¡å™¨è¯·æ±‚å¤±è´¥", callback);
+						console.log('httpè¯·æ±‚å¤±è´¥:', XMLHttpRequest);
 						break;
 				}
 			}

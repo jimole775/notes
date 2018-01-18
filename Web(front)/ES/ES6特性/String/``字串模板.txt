@@ -1,10 +1,10 @@
   let a = "a",b = "b";
   consoel.log(`new a is ${a},new b is ${b}`);
 
-//Èç¹ûĞèÒªÌí¼Ó×ªÒå·û£»
+//å¦‚æœéœ€è¦æ·»åŠ è½¬ä¹‰ç¬¦ï¼›
   `new a is ${a} "\n" new b is`
 
-//»»ĞĞ
+//æ¢è¡Œ
   `new line
    new line`
 

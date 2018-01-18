@@ -1,28 +1,28 @@
-Ò» ¡¢ÉèÖÃGitµÄuser nameºÍemail£º
+ä¸€ ã€è®¾ç½®Gitçš„user nameå’Œemailï¼š
 
 $ git config --global user.name xuhaiyan
 
 $ git config --global user.email haiyan.xu.vip@gmail.com
    
 
-¶ş¡¢Éú³ÉSSHÃÜÔ¿¹ı³Ì£º
+äºŒã€ç”ŸæˆSSHå¯†é’¥è¿‡ç¨‹ï¼š
 
-1.²é¿´ÊÇ·ñÒÑ¾­ÓĞÁËsshÃÜÔ¿£ºcd ~/.ssh
-Èç¹ûÃ»ÓĞÃÜÔ¿Ôò²»»áÓĞ´ËÎÄ¼ş¼Ğ£¬ÓĞÔò±¸·İÉ¾³ı
+1.æŸ¥çœ‹æ˜¯å¦å·²ç»æœ‰äº†sshå¯†é’¥ï¼šcd ~/.ssh
+å¦‚æœæ²¡æœ‰å¯†é’¥åˆ™ä¸ä¼šæœ‰æ­¤æ–‡ä»¶å¤¹ï¼Œæœ‰åˆ™å¤‡ä»½åˆ é™¤
 
-2.Éú³ÉÃÜÔ¿£º
+2.ç”Ÿæˆå¯†é’¥ï¼š
 $ ssh-keygen -t rsa 727346595@qq.com
-°´3¸ö»Ø³µ£¬ÃÜÂëÎª¿Õ¡£
+æŒ‰3ä¸ªå›è½¦ï¼Œå¯†ç ä¸ºç©ºã€‚
 Your identification has been saved in /home/tekkub/.ssh/id_rsa.
 Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.
 The key fingerprint is:
-¡­¡­¡­¡­¡­¡­
-×îºóµÃµ½ÁËÁ½¸öÎÄ¼ş£ºid_rsaºÍid_rsa.pub
+â€¦â€¦â€¦â€¦â€¦â€¦
+æœ€åå¾—åˆ°äº†ä¸¤ä¸ªæ–‡ä»¶ï¼šid_rsaå’Œid_rsa.pub
 
-3.Ìí¼ÓÃÜÔ¿µ½ssh£ºssh-add ÎÄ¼şÃû
-ĞèÒªÖ®Ç°ÊäÈëµÄÃÜÂë¡£
+3.æ·»åŠ å¯†é’¥åˆ°sshï¼šssh-add æ–‡ä»¶å
+éœ€è¦ä¹‹å‰è¾“å…¥çš„å¯†ç ã€‚
 
-4.ÔÚgithubÉÏÌí¼ÓsshÃÜÔ¿£¬ÕâÒªÌí¼ÓµÄÊÇ¡°id_rsa.pub¡±ÀïÃæµÄ¹«Ô¿¡£
-´ò¿ªhttps://github.com/ £¬µÇÂ½xuhaiyan825£¬È»ºóÌí¼Óssh¡£
+4.åœ¨githubä¸Šæ·»åŠ sshå¯†é’¥ï¼Œè¿™è¦æ·»åŠ çš„æ˜¯â€œid_rsa.pubâ€é‡Œé¢çš„å…¬é’¥ã€‚
+æ‰“å¼€https://github.com/ ï¼Œç™»é™†xuhaiyan825ï¼Œç„¶åæ·»åŠ sshã€‚
 
-5.²âÊÔ£ºssh -T git@github.com
+5.æµ‹è¯•ï¼šssh -T git@github.com

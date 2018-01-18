@@ -1,9 +1,9 @@
-$ npm install sass-loader node-sass //ÒòÎªsass-loaderÒÀÀµÓÚnode-sass£¬ËùÒÔ»¹Òª°²×°node-sass
+$ npm install sass-loader node-sass //å› ä¸ºsass-loaderä¾èµ–äºnode-sassï¼Œæ‰€ä»¥è¿˜è¦å®‰è£…node-sass
 
     module: {
         loaders: [{
             test:/\.scss$/,
             loader:"style-loader!css-loader!sass-loader",
-            exclude: [/node_modules/,/plugins/]     //´ò°üµÄÊ±ºòÌŞ³ıÕâ¸öÎÄ¼ş¼ĞÏÂÃæµÄÄÚÈİ
+            exclude: [/node_modules/,/plugins/]     //æ‰“åŒ…çš„æ—¶å€™å‰”é™¤è¿™ä¸ªæ–‡ä»¶å¤¹ä¸‹é¢çš„å†…å®¹
         }]
     }

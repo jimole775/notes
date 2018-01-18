@@ -1,22 +1,22 @@
 
 
-...| ËùÓĞÅäÖÃÏî£º
+...| æ‰€æœ‰é…ç½®é¡¹ï¼š
 
-    title: ÓÃÀ´Éú³ÉÒ³ÃæµÄ title ÔªËØ£¬»á±»templateµÄtitle¸²¸Ç
-    filename: Êä³öµÄ HTML ÎÄ¼şÃû£¬Ä¬ÈÏÊÇ index.html, Ò²¿ÉÒÔÖ±½ÓÅäÖÃ´øÓĞ×ÓÄ¿Â¼¡£
-    template: Ä£°åÎÄ¼şÂ·¾¶£¬Ö§³Ö¼ÓÔØÆ÷£¬±ÈÈç html!./index.html
-    inject: true | 'head' | 'body' | false  ,×¢ÈëËùÓĞµÄ×ÊÔ´µ½ÌØ¶¨µÄ template »òÕß templateContent ÖĞ£¬Èç¹ûÉèÖÃÎª true »òÕß body£¬ËùÓĞµÄ javascript ×ÊÔ´½«±»·ÅÖÃµ½ body ÔªËØµÄµ×²¿£¬'head' ½«·ÅÖÃµ½ head ÔªËØÖĞ¡£
-    favicon: Ìí¼Ó favicon£¬×Ô¶¯¼ÓÔØµ½HTMLÖĞ¡£
-    minify: {} | false , ´«µİ html-minifier Ñ¡Ïî¸ø minify Êä³ö
-    hash: true | false, Èç¹ûÎª true, ½«Ìí¼ÓÒ»¸öÎ¨Ò»µÄ webpack ±àÒë hash µ½ËùÓĞ°üº¬µÄ½Å±¾ºÍ CSS ÎÄ¼ş£¬¶ÔÓÚ½â³ı cache ºÜÓĞÓÃ¡£
-    cache: true | false£¬Èç¹ûÎª true, ÕâÊÇÄ¬ÈÏÖµ£¬½ö½öÔÚÎÄ¼şĞŞ¸ÄÖ®ºó²Å»á·¢²¼ÎÄ¼ş¡£
-    showErrors: true | false, Èç¹ûÎª true, ÕâÊÇÄ¬ÈÏÖµ£¬´íÎóĞÅÏ¢»áĞ´Èëµ½ HTML Ò³ÃæÖĞ
-    chunks: ÔÊĞíÖ»Ìí¼ÓÄ³Ğ©¿é (±ÈÈç£¬½ö½ö unit test ¿é)
-    chunksSortMode: ÔÊĞí¿ØÖÆ¿éÔÚÌí¼Óµ½Ò³ÃæÖ®Ç°µÄÅÅĞò·½Ê½£¬Ö§³ÖµÄÖµ£º'none' | 'default' | {function}-default:'auto'
-    excludeChunks: ÔÊĞíÌø¹ıÄ³Ğ©¿é£¬(±ÈÈç£¬Ìø¹ıµ¥Ôª²âÊÔµÄ¿é)
+    title: ç”¨æ¥ç”Ÿæˆé¡µé¢çš„ title å…ƒç´ ï¼Œä¼šè¢«templateçš„titleè¦†ç›–
+    filename: è¾“å‡ºçš„ HTML æ–‡ä»¶åï¼Œé»˜è®¤æ˜¯ index.html, ä¹Ÿå¯ä»¥ç›´æ¥é…ç½®å¸¦æœ‰å­ç›®å½•ã€‚
+    template: æ¨¡æ¿æ–‡ä»¶è·¯å¾„ï¼Œæ”¯æŒåŠ è½½å™¨ï¼Œæ¯”å¦‚ html!./index.html
+    inject: true | 'head' | 'body' | false  ,æ³¨å…¥æ‰€æœ‰çš„èµ„æºåˆ°ç‰¹å®šçš„ template æˆ–è€… templateContent ä¸­ï¼Œå¦‚æœè®¾ç½®ä¸º true æˆ–è€… bodyï¼Œæ‰€æœ‰çš„ javascript èµ„æºå°†è¢«æ”¾ç½®åˆ° body å…ƒç´ çš„åº•éƒ¨ï¼Œ'head' å°†æ”¾ç½®åˆ° head å…ƒç´ ä¸­ã€‚
+    favicon: æ·»åŠ  faviconï¼Œè‡ªåŠ¨åŠ è½½åˆ°HTMLä¸­ã€‚
+    minify: {} | false , ä¼ é€’ html-minifier é€‰é¡¹ç»™ minify è¾“å‡º
+    hash: true | false, å¦‚æœä¸º true, å°†æ·»åŠ ä¸€ä¸ªå”¯ä¸€çš„ webpack ç¼–è¯‘ hash åˆ°æ‰€æœ‰åŒ…å«çš„è„šæœ¬å’Œ CSS æ–‡ä»¶ï¼Œå¯¹äºè§£é™¤ cache å¾ˆæœ‰ç”¨ã€‚
+    cache: true | falseï¼Œå¦‚æœä¸º true, è¿™æ˜¯é»˜è®¤å€¼ï¼Œä»…ä»…åœ¨æ–‡ä»¶ä¿®æ”¹ä¹‹åæ‰ä¼šå‘å¸ƒæ–‡ä»¶ã€‚
+    showErrors: true | false, å¦‚æœä¸º true, è¿™æ˜¯é»˜è®¤å€¼ï¼Œé”™è¯¯ä¿¡æ¯ä¼šå†™å…¥åˆ° HTML é¡µé¢ä¸­
+    chunks: å…è®¸åªæ·»åŠ æŸäº›å— (æ¯”å¦‚ï¼Œä»…ä»… unit test å—)
+    chunksSortMode: å…è®¸æ§åˆ¶å—åœ¨æ·»åŠ åˆ°é¡µé¢ä¹‹å‰çš„æ’åºæ–¹å¼ï¼Œæ”¯æŒçš„å€¼ï¼š'none' | 'default' | {function}-default:'auto'
+    excludeChunks: å…è®¸è·³è¿‡æŸäº›å—ï¼Œ(æ¯”å¦‚ï¼Œè·³è¿‡å•å…ƒæµ‹è¯•çš„å—)
 
 
-...| ¼ÓÔØ²å¼şÑùÀı:
+...| åŠ è½½æ’ä»¶æ ·ä¾‹:
 
     plugins: [
       new HtmlWebpackPlugin({

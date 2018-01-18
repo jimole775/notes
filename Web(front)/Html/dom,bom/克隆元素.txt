@@ -1,3 +1,3 @@
 var clone = document.getElementsById("id").cloneNode();
 
-//ÎÒ¼áĞÅ£¬ÔÚĞÔÄÜÉÏ£¬clone·½·¨±ÈcreateElementÒª¸ß³öĞí¶à
+//æˆ‘åšä¿¡ï¼Œåœ¨æ€§èƒ½ä¸Šï¼Œcloneæ–¹æ³•æ¯”createElementè¦é«˜å‡ºè®¸å¤š

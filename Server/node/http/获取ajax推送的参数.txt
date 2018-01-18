@@ -2,4 +2,4 @@
     console.log(decodeURIComponent(data));
   });
 
-//就是直接监听data事件，拿到的就是参数的值，如果是mac的机器，就必须使用decodeURIComponent转换，其他类型的机器无所谓，传过来的就是一个标准的url参数
+//灏辨槸鐩存帴鐩戝惉data浜嬩欢锛屾嬁鍒扮殑灏辨槸鍙傛暟鐨勫�硷紝濡傛灉鏄痬ac鐨勬満鍣紝灏卞繀椤讳娇鐢╠ecodeURIComponent杞崲锛屽叾浠栫被鍨嬬殑鏈哄櫒鏃犳墍璋擄紝浼犺繃鏉ョ殑灏辨槸涓�涓爣鍑嗙殑url鍙傛暟

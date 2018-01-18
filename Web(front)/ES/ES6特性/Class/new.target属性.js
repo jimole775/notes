@@ -7,10 +7,10 @@ class Animal {
     }
 }
 class Cat extends Animal {
-    //static self = new.target; //¾²Ì¬ÊôĞÔÊôÓÚES7ÌØĞÔ
+    //static self = new.target; //é™æ€å±æ€§å±äºES7ç‰¹æ€§
     constructor(a,b){
-        super(a,b); //³Ğ½Ó¸¸ÀàµÄconstructor
-        let self = new.target;  //»ñÈ¡×ÓÀà¶ÔÏó±¾Éí
+        super(a,b); //æ‰¿æ¥çˆ¶ç±»çš„constructor
+        let self = new.target;  //è·å–å­ç±»å¯¹è±¡æœ¬èº«
         console.log("say something");
     }
 }

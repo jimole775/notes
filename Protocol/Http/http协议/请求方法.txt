@@ -1,33 +1,33 @@
--- �������ͷ�д��� X-HTTP-Method-Override ������д��� _method��ӵ�и���Ȩ�أ�����ֵΪ GET, POST, PUT, DELETE, PATCH, OPTION, HEAD ֮һ����������Ӧ������ʽ���д���
+-- 如果请求头中存在 X-HTTP-Method-Override 或参数中存在 _method（拥有更高权重），且值为 GET, POST, PUT, DELETE, PATCH, OPTION, HEAD 之一，则视作相应的请求方式进行处理
 
--- GET, DELETE, HEAD �������������Ϊ��׼�� GET ���Ĳ������� url?a=1&b=2
+-- GET, DELETE, HEAD 方法，参数风格为标准的 GET 风格的参数，如 url?a=1&b=2
 
--- POST, PUT, PATCH, OPTION ����
-   Ĭ�����������ʵ��ᱻ������׼ json �ַ������д�������Ȼ�������Ƽ�����ͷ��Ϣ�� Content-Type Ϊ application/json
-   ��һЩ����ӿ��У������ĵ���˵�������������� Content-Type Ϊ application/x-www-form-urlencoded ���� multipart/form-data ����ʱ����ʵ��ᱻ������׼ POST ���Ĳ������д���
+-- POST, PUT, PATCH, OPTION 方法
+   默认情况下请求实体会被视作标准 json 字符串进行处理，当然，依旧推荐设置头信息的 Content-Type 为 application/json
+   在一些特殊接口中（会在文档中说明），可能允许 Content-Type 为 application/x-www-form-urlencoded 或者 multipart/form-data ，此时请求实体会被视作标准 POST 风格的参数进行处理
 
-�����ڷ��������˵������
+【关于方法语义的说明】：
 
-OPTIONS -- ���ڻ�ȡ��Դ֧�ֵ����� HTTP ����
+OPTIONS -- 用于获取资源支持的所有 HTTP 方法
 
-HEAD    -- ����ֻ��ȡ����ĳ����Դ���ص�ͷ��Ϣ
+HEAD    -- 用于只获取请求某个资源返回的头信息
 
-GET     -- ���ڴӷ�������ȡĳ����Դ����Ϣ
-           �������󷵻�״̬�� 200 OK
-           ����������Ҫ���ر��������Դ��ϸ��Ϣ
+GET     -- 用于从服务器获取某个资源的信息
+           完成请求后返回状态码 200 OK
+           完成请求后需要返回被请求的资源详细信息
 
-POST    -- ���ڴ�������Դ
-           ������ɺ󷵻�״̬�� 201 Created
-	   ����������Ҫ���ر���������Դ��ϸ��Ϣ
+POST    -- 用于创建新资源
+           创建完成后返回状态码 201 Created
+	   完成请求后需要返回被创建的资源详细信息
 
-PUT     -- �����������滻��Դ���ߴ���ָ�����ݵ���Դ�����紴�� id Ϊ 123 ��ĳ����Դ
-	   ����Ǵ�������Դ���򷵻� 201 Created
-	   ������滻����Դ���򷵻� 200 OK
-	   ����������Ҫ���ر��޸ĵ���Դ��ϸ��Ϣ
+PUT     -- 用于完整的替换资源或者创建指定身份的资源，比如创建 id 为 123 的某个资源
+	   如果是创建了资源，则返回 201 Created
+	   如果是替换了资源，则返回 200 OK
+	   完成请求后需要返回被修改的资源详细信息
 
-PATCH   -- ���ھֲ�������Դ
-	   �������󷵻�״̬�� 200 OK
-	   ����������Ҫ���ر��޸ĵ���Դ��ϸ��Ϣ
+PATCH   -- 用于局部更新资源
+	   完成请求后返回状态码 200 OK
+	   完成请求后需要返回被修改的资源详细信息
 
-DELETE  -- ����ɾ��ĳ����Դ
-	   �������󷵻�״̬�� 204 No Content
+DELETE  -- 用于删除某个资源
+	   完成请求后返回状态码 204 No Content

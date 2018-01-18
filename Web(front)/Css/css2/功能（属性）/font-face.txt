@@ -1,5 +1,5 @@
 
 @font-face {
-    src: url(Beautiful-ES.ttf);  //Ìí¼Ó×ÖÌåÎÄ¼ş
-    font-family: "Beautiful";    //¶¨Òå×ÖÌåÃû
+    src: url(Beautiful-ES.ttf);  //æ·»åŠ å­—ä½“æ–‡ä»¶
+    font-family: "Beautiful";    //å®šä¹‰å­—ä½“å
 }

@@ -2,35 +2,35 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>XMLHttpRequestÉÏ´«ÎÄ¼ş½ø¶ÈÊµÏÖ</title>
+    <title>XMLHttpRequestä¸Šä¼ æ–‡ä»¶è¿›åº¦å®ç°</title>
     <script type="text/javascript">
         var xhr;
         var ot;//
         var oloaded;
-        //ÉÏ´«ÎÄ¼ş·½·¨
+        //ä¸Šä¼ æ–‡ä»¶æ–¹æ³•
         function UpladFile() {
-            var fileObj = document.getElementById("file").files[0]; // js »ñÈ¡ÎÄ¼ş¶ÔÏó
-            var url = "http://localhost:8000/"; // ½ÓÊÕÉÏ´«ÎÄ¼şµÄºóÌ¨µØÖ·
+            var fileObj = document.getElementById("file").files[0]; // js è·å–æ–‡ä»¶å¯¹è±¡
+            var url = "http://localhost:8000/"; // æ¥æ”¶ä¸Šä¼ æ–‡ä»¶çš„åå°åœ°å€
 
-            var form = new FormData(); // FormData ¶ÔÏó
-            form.append("userfile", fileObj); // ÎÄ¼ş¶ÔÏó
-            xhr = new XMLHttpRequest();  // XMLHttpRequest ¶ÔÏó
-            xhr.open("POST", url, true); //post·½Ê½£¬urlÎª·şÎñÆ÷ÇëÇóµØÖ·£¬true ¸Ã²ÎÊı¹æ¶¨ÇëÇóÊÇ·ñÒì²½´¦Àí¡£
-            xhr.onload = uploadComplete; //ÇëÇóÍê³É
-            xhr.onerror =  uploadFailed; //ÇëÇóÊ§°Ü
-            xhr.upload.onprogress = progressFunction;//¡¾ÉÏ´«½ø¶Èµ÷ÓÃ·½·¨ÊµÏÖ¡¿
-            xhr.upload.onloadstart = function(){//ÉÏ´«¿ªÊ¼Ö´ĞĞ·½·¨
-                ot = new Date().getTime();   //ÉèÖÃÉÏ´«¿ªÊ¼Ê±¼ä
-                oloaded = 0;//ÉèÖÃÉÏ´«¿ªÊ¼Ê±£¬ÒÔÉÏ´«µÄÎÄ¼ş´óĞ¡Îª0
+            var form = new FormData(); // FormData å¯¹è±¡
+            form.append("userfile", fileObj); // æ–‡ä»¶å¯¹è±¡
+            xhr = new XMLHttpRequest();  // XMLHttpRequest å¯¹è±¡
+            xhr.open("POST", url, true); //postæ–¹å¼ï¼Œurlä¸ºæœåŠ¡å™¨è¯·æ±‚åœ°å€ï¼Œtrue è¯¥å‚æ•°è§„å®šè¯·æ±‚æ˜¯å¦å¼‚æ­¥å¤„ç†ã€‚
+            xhr.onload = uploadComplete; //è¯·æ±‚å®Œæˆ
+            xhr.onerror =  uploadFailed; //è¯·æ±‚å¤±è´¥
+            xhr.upload.onprogress = progressFunction;//ã€ä¸Šä¼ è¿›åº¦è°ƒç”¨æ–¹æ³•å®ç°ã€‘
+            xhr.upload.onloadstart = function(){//ä¸Šä¼ å¼€å§‹æ‰§è¡Œæ–¹æ³•
+                ot = new Date().getTime();   //è®¾ç½®ä¸Šä¼ å¼€å§‹æ—¶é—´
+                oloaded = 0;//è®¾ç½®ä¸Šä¼ å¼€å§‹æ—¶ï¼Œä»¥ä¸Šä¼ çš„æ–‡ä»¶å¤§å°ä¸º0
             };
-            xhr.send(form); //¿ªÊ¼ÉÏ´«£¬·¢ËÍformÊı¾İ
+            xhr.send(form); //å¼€å§‹ä¸Šä¼ ï¼Œå‘é€formæ•°æ®
         }
-        //ÉÏ´«½ø¶ÈÊµÏÖ·½·¨£¬ÉÏ´«¹ı³ÌÖĞ»áÆµ·±µ÷ÓÃ¸Ã·½·¨
+        //ä¸Šä¼ è¿›åº¦å®ç°æ–¹æ³•ï¼Œä¸Šä¼ è¿‡ç¨‹ä¸­ä¼šé¢‘ç¹è°ƒç”¨è¯¥æ–¹æ³•
         function progressFunction(evt) {
 
             var progressBar = document.getElementById("progressBar");
             var percentageDiv = document.getElementById("percentage");
-            // event.totalÊÇĞèÒª´«ÊäµÄ×Ü×Ö½Ú£¬event.loadedÊÇÒÑ¾­´«ÊäµÄ×Ö½Ú¡£Èç¹ûevent.lengthComputable²»ÎªÕæ£¬Ôòevent.totalµÈÓÚ0
+            // event.totalæ˜¯éœ€è¦ä¼ è¾“çš„æ€»å­—èŠ‚ï¼Œevent.loadedæ˜¯å·²ç»ä¼ è¾“çš„å­—èŠ‚ã€‚å¦‚æœevent.lengthComputableä¸ä¸ºçœŸï¼Œåˆ™event.totalç­‰äº0
             if (evt.lengthComputable) {//
                 progressBar.max = evt.total;
                 progressBar.value = evt.loaded;
@@ -38,17 +38,17 @@
             }
 
             var time = document.getElementById("time");
-            var nt = new Date().getTime();//»ñÈ¡µ±Ç°Ê±¼ä
-            var pertime = (nt-ot)/1000; //¼ÆËã³öÉÏ´Îµ÷ÓÃ¸Ã·½·¨Ê±µ½ÏÖÔÚµÄÊ±¼ä²î£¬µ¥Î»Îªs
-            ot = new Date().getTime(); //ÖØĞÂ¸³ÖµÊ±¼ä£¬ÓÃÓÚÏÂ´Î¼ÆËã
+            var nt = new Date().getTime();//è·å–å½“å‰æ—¶é—´
+            var pertime = (nt-ot)/1000; //è®¡ç®—å‡ºä¸Šæ¬¡è°ƒç”¨è¯¥æ–¹æ³•æ—¶åˆ°ç°åœ¨çš„æ—¶é—´å·®ï¼Œå•ä½ä¸ºs
+            ot = new Date().getTime(); //é‡æ–°èµ‹å€¼æ—¶é—´ï¼Œç”¨äºä¸‹æ¬¡è®¡ç®—
 
-            var perload = evt.loaded - oloaded; //¼ÆËã¸Ã·Ö¶ÎÉÏ´«µÄÎÄ¼ş´óĞ¡£¬µ¥Î»b       
-            oloaded = evt.loaded;//ÖØĞÂ¸³ÖµÒÑÉÏ´«ÎÄ¼ş´óĞ¡£¬ÓÃÒÔÏÂ´Î¼ÆËã
+            var perload = evt.loaded - oloaded; //è®¡ç®—è¯¥åˆ†æ®µä¸Šä¼ çš„æ–‡ä»¶å¤§å°ï¼Œå•ä½b       
+            oloaded = evt.loaded;//é‡æ–°èµ‹å€¼å·²ä¸Šä¼ æ–‡ä»¶å¤§å°ï¼Œç”¨ä»¥ä¸‹æ¬¡è®¡ç®—
 
-            //ÉÏ´«ËÙ¶È¼ÆËã
-            var speed = perload/pertime;//µ¥Î»b/s
+            //ä¸Šä¼ é€Ÿåº¦è®¡ç®—
+            var speed = perload/pertime;//å•ä½b/s
             var bspeed = speed;
-            var units = 'b/s';//µ¥Î»Ãû³Æ
+            var units = 'b/s';//å•ä½åç§°
             if(speed/1024>1){
                 speed = speed/1024;
                 units = 'k/s';
@@ -58,22 +58,22 @@
                 units = 'M/s';
             }
             speed = speed.toFixed(1);
-            //Ê£ÓàÊ±¼ä
+            //å‰©ä½™æ—¶é—´
             var resttime = ((evt.total-evt.loaded)/bspeed).toFixed(1);
-            time.innerHTML = '£¬ËÙ¶È£º'+speed+units+'£¬Ê£ÓàÊ±¼ä£º'+resttime+'s';
-            if(bspeed==0) time.innerHTML = 'ÉÏ´«ÒÑÈ¡Ïû';
+            time.innerHTML = 'ï¼Œé€Ÿåº¦ï¼š'+speed+units+'ï¼Œå‰©ä½™æ—¶é—´ï¼š'+resttime+'s';
+            if(bspeed==0) time.innerHTML = 'ä¸Šä¼ å·²å–æ¶ˆ';
         }
-        //ÉÏ´«³É¹¦ÏìÓ¦
+        //ä¸Šä¼ æˆåŠŸå“åº”
         function uploadComplete(evt) {
-            //·şÎñ¶Ï½ÓÊÕÍêÎÄ¼ş·µ»ØµÄ½á¹û
+            //æœåŠ¡æ–­æ¥æ”¶å®Œæ–‡ä»¶è¿”å›çš„ç»“æœ
             //    alert(evt.target.responseText);
-            alert("ÉÏ´«³É¹¦£¡");
+            alert("ä¸Šä¼ æˆåŠŸï¼");
         }
-        //ÉÏ´«Ê§°Ü
+        //ä¸Šä¼ å¤±è´¥
         function uploadFailed(evt) {
-            alert("ÉÏ´«Ê§°Ü£¡");
+            alert("ä¸Šä¼ å¤±è´¥ï¼");
         }
-        //È¡ÏûÉÏ´«
+        //å–æ¶ˆä¸Šä¼ 
         function cancleUploadFile(){
             xhr.abort();
         }
@@ -84,7 +84,7 @@
 <span id="percentage"></span><span id="time"></span>
 <br /><br />
 <input type="file" id="file" name="myfile" />
-<input type="button" onclick="UpladFile()" value="ÉÏ´«" />
-<input type="button" onclick="cancleUploadFile()" value="È¡Ïû" />
+<input type="button" onclick="UpladFile()" value="ä¸Šä¼ " />
+<input type="button" onclick="cancleUploadFile()" value="å–æ¶ˆ" />
 </body>
 </html>

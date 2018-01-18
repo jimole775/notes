@@ -1,9 +1,9 @@
-FIN      (1bit) ±íÊ¾ĞÅÏ¢µÄ×îºóÒ»Ö¡£¬flag£¬Ò²¾ÍÊÇ±ê¼Ç·û
-RSV 1-3  (3bit) each ÒÔºó±¸ÓÃµÄ Ä¬ÈÏ¶¼Îª 0
-Opcode   (4bit) Ö¡ÀàĞÍ£¬ÉÔºóÏ¸Ëµ
-Mask     (1bit) ÑÚÂë£¬ÊÇ·ñ¼ÓÃÜÊı¾İ£¬Ä¬ÈÏ±ØĞëÖÃÎª1 £¨ÕâÀïºÜµ°ÌÛ£©
-Payload  (7bit) Êı¾İµÄ³¤¶È
-Masking-key      (1 or 4 bit) ÑÚÂë
-Payload data     (x + y) bytes Êı¾İ
-Extension data   (x bytes)  À©Õ¹Êı¾İ
-Application data (y bytes)  ³ÌĞòÊı¾İ
+FIN      (1bit) è¡¨ç¤ºä¿¡æ¯çš„æœ€åä¸€å¸§ï¼Œflagï¼Œä¹Ÿå°±æ˜¯æ ‡è®°ç¬¦
+RSV 1-3  (3bit) each ä»¥åå¤‡ç”¨çš„ é»˜è®¤éƒ½ä¸º 0
+Opcode   (4bit) å¸§ç±»å‹ï¼Œç¨åç»†è¯´
+Mask     (1bit) æ©ç ï¼Œæ˜¯å¦åŠ å¯†æ•°æ®ï¼Œé»˜è®¤å¿…é¡»ç½®ä¸º1 ï¼ˆè¿™é‡Œå¾ˆè›‹ç–¼ï¼‰
+Payload  (7bit) æ•°æ®çš„é•¿åº¦
+Masking-key      (1 or 4 bit) æ©ç 
+Payload data     (x + y) bytes æ•°æ®
+Extension data   (x bytes)  æ‰©å±•æ•°æ®
+Application data (y bytes)  ç¨‹åºæ•°æ®

@@ -1,28 +1,28 @@
-...¸ùÄ¿Â¼ÏÂµÄÅäÖÃÎÄ¼ş£¬Ê¹ÓÃbabelµÄµÚÒ»²½£»
+...æ ¹ç›®å½•ä¸‹çš„é…ç½®æ–‡ä»¶ï¼Œä½¿ç”¨babelçš„ç¬¬ä¸€æ­¥ï¼›
 
 
-...| Ä¬ÈÏ¸ñÊ½£º
+...| é»˜è®¤æ ¼å¼ï¼š
 {
-  "presets": [],    //×ªÂë¹æÔò
-  "ignore":[],  //ºöÂÔ×ªÂëÎÄ¼ş
+  "presets": [],    //è½¬ç è§„åˆ™
+  "ignore":[],  //å¿½ç•¥è½¬ç æ–‡ä»¶
   "plugins": []
 }
 
-...| "presets" ×Ö¶ÎµÄ¹æ¶¨µÄËùÓĞ×ªÂë¹æÔò£º
+...| "presets" å­—æ®µçš„è§„å®šçš„æ‰€æœ‰è½¬ç è§„åˆ™ï¼š
 
-# ES2015×ªÂë¹æÔò
+# ES2015è½¬ç è§„åˆ™
 $ npm install --save-dev babel-preset-es2015
 
-# react×ªÂë¹æÔò
+# reactè½¬ç è§„åˆ™
 $ npm install --save-dev babel-preset-react
 
-# ES7²»Í¬½×¶ÎÓï·¨Ìá°¸µÄ×ªÂë¹æÔò£¨¹²ÓĞ4¸ö½×¶Î£©£¬Ñ¡×°Ò»¸ö
+# ES7ä¸åŒé˜¶æ®µè¯­æ³•ææ¡ˆçš„è½¬ç è§„åˆ™ï¼ˆå…±æœ‰4ä¸ªé˜¶æ®µï¼‰ï¼Œé€‰è£…ä¸€ä¸ª
 $ npm install --save-dev babel-preset-stage-0
 $ npm install --save-dev babel-preset-stage-1
 $ npm install --save-dev babel-preset-stage-2
 $ npm install --save-dev babel-preset-stage-3
 
-...| ×îºóµÄÅäÖÃ¸ñÊ½ÈçÏÂ£º
+...| æœ€åçš„é…ç½®æ ¼å¼å¦‚ä¸‹ï¼š
 {
     "presets": [
       "es2015",

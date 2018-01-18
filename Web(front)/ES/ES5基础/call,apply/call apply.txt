@@ -1,7 +1,7 @@
-ÔİÊ±ÖªµÀÁ½ÖÖ»úÖÆ£º
-1£¬Ê¹Ä³¸ö¶ÔÏó»ñµÃÆä²»¾ß±¸µÄ·½·¨£º
-	Array.prototype.slice.call(arguments,index);	//arguments¶ÔÏó²»ÊÇÕı³£µÄÊı×éÔªËØ£¬ÕâÖÖÓÃ·¨¾ÍÊÇÊ¹arguments»ñµÃslice·½·¨
-2£¬¶ÔÏóÃ°³ä£º
+æš‚æ—¶çŸ¥é“ä¸¤ç§æœºåˆ¶ï¼š
+1ï¼Œä½¿æŸä¸ªå¯¹è±¡è·å¾—å…¶ä¸å…·å¤‡çš„æ–¹æ³•ï¼š
+	Array.prototype.slice.call(arguments,index);	//argumentså¯¹è±¡ä¸æ˜¯æ­£å¸¸çš„æ•°ç»„å…ƒç´ ï¼Œè¿™ç§ç”¨æ³•å°±æ˜¯ä½¿argumentsè·å¾—sliceæ–¹æ³•
+2ï¼Œå¯¹è±¡å†’å……ï¼š
 	var old = console;
 	console.log = (function(old){
 		return function(){

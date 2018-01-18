@@ -1,11 +1,11 @@
 
-//·½·¨1 -- ÉèÖÃCSSÊôĞÔ£»
+//æ–¹æ³•1 -- è®¾ç½®CSSå±æ€§ï¼›
 .event-disable{
     pointer-events: none;
 }
 
 
-//·½·¨2 -- É¾³ıÔªËØ¼àÌıÊÂ¼ş£¬È»ºóÔÙ°ó¶¨»ØÀ´
+//æ–¹æ³•2 -- åˆ é™¤å…ƒç´ ç›‘å¬äº‹ä»¶ï¼Œç„¶åå†ç»‘å®šå›æ¥
 
 
 		(function (element1) {
@@ -16,19 +16,19 @@
 				else {
 					RMTClickEvent.extendButton ();
 				}
-				var selfFn = arguments.callee;			//Ôİ´æeventÊÂ¼ş£»
+				var selfFn = arguments.callee;			//æš‚å­˜eventäº‹ä»¶ï¼›
 
-				removeHandler(element, "click", selfFn);    	//·ÀÖ¹ÓÃ»§¶à´Îµã»÷£¬ÏÈÇå³ıµã»÷ÊÂ¼ş
+				removeHandler(element, "click", selfFn);    	//é˜²æ­¢ç”¨æˆ·å¤šæ¬¡ç‚¹å‡»ï¼Œå…ˆæ¸…é™¤ç‚¹å‡»äº‹ä»¶
 
 				setTimeout(function(){
-					addHandler(element, "click", selfFn);   //500MSÖ®ºóÔÙ´Î°ó¶¨µã»÷ÊÂ¼ş
+					addHandler(element, "click", selfFn);   //500MSä¹‹åå†æ¬¡ç»‘å®šç‚¹å‡»äº‹ä»¶
 				},500);
 			});
 
 		}) (button1);
 
 
-		//¼æÈİ PC¶ËÊó±êÊÂ¼ş ºÍ ÊÖ»ú¶Ë´¥ÆÁÊÂ¼ş£»
+		//å…¼å®¹ PCç«¯é¼ æ ‡äº‹ä»¶ å’Œ æ‰‹æœºç«¯è§¦å±äº‹ä»¶ï¼›
 		function addHandler (element, type, handler) {
 			if (element.addEventListener) {
 				element.addEventListener (type, handler, false);
@@ -41,7 +41,7 @@
 			}
 		}
 
-		//¼æÈİ PC¶ËÊó±êÊÂ¼ş ºÍ ÊÖ»ú¶Ë´¥ÆÁÊÂ¼ş£»
+		//å…¼å®¹ PCç«¯é¼ æ ‡äº‹ä»¶ å’Œ æ‰‹æœºç«¯è§¦å±äº‹ä»¶ï¼›
 		function removeHandler (element, type, handler) {
 			if (element.removeEventListener) {
 				element.removeEventListener (type, handler, false);

@@ -1,9 +1,9 @@
-Á½ÖÖ·½·¨
+ä¸¤ç§æ–¹æ³•
 
-1¡¢ÔÚÄãµÄinputËùÊôµÄform±íµ¥reset()¾Í¿ÉÒÔÁË£¡
+1ã€åœ¨ä½ çš„inputæ‰€å±çš„formè¡¨å•reset()å°±å¯ä»¥äº†ï¼
 
 $(#avatorForm)[0].reset();
 
-2¡¢ÉèÖÃÄãµÄinput file valueÖµÎª¿Õ
+2ã€è®¾ç½®ä½ çš„input file valueå€¼ä¸ºç©º
 
 $('.inputImage').val('');

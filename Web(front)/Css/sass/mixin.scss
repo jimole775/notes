@@ -1,15 +1,15 @@
-/*¶¨Òå*/
+/*å®šä¹‰*/
 @mixin left{
   float:left;
   margin-left:10px;	
 }
 
-/*µ÷ÓÃ*/
+/*è°ƒç”¨*/
 div{
   @include left;
 }
 
-/****¿ÉÉèÖÃ²ÎÊı*/
+/****å¯è®¾ç½®å‚æ•°*/
 
 @mixin right($size){
   width:$size;

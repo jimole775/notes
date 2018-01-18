@@ -1,7 +1,7 @@
 var chunks = [];
 var size = 0;
 req.on('data' , function(chunk){
-    chunks.push(chunk);			//Êı¾İÉÏ´«ÓĞÊ±ºò»á±»·Ö¸ô³É¿é
+    chunks.push(chunk);			//æ•°æ®ä¸Šä¼ æœ‰æ—¶å€™ä¼šè¢«åˆ†éš”æˆå—
     size+=chunk.length;
 });
 
@@ -15,25 +15,25 @@ req.on("end",function(){
 
     var rems = [];
 
-    //¸ù¾İ\r\n·ÖÀëÊı¾İºÍ±¨Í·
+    //æ ¹æ®\r\nåˆ†ç¦»æ•°æ®å’ŒæŠ¥å¤´
     for(var i=0;i<buffer.length;i++){
         var v = buffer[i];
         var v2 = buffer[i+1];
-        if(v==13 && v2==10){	//13ºÍ10´ú±í\R\N
+        if(v==13 && v2==10){	//13å’Œ10ä»£è¡¨\R\N
             rems.push(i);
         }
     }
 
-    //Í¼Æ¬ĞÅÏ¢
+    //å›¾ç‰‡ä¿¡æ¯
     var picmsg_1 = buffer.slice(rems[0]+2,rems[1]).toString();
     var filename = picmsg_1.match(/filename=".*"/g)[0].split('"')[1];
 
-    //Í¼Æ¬Êı¾İ
+    //å›¾ç‰‡æ•°æ®
     var nbuf = buffer.slice(rems[3]+2,rems[rems.length-2]);
 
     var path = './databox/'+filename;
     fs.writeFileSync(path , nbuf);
-    console.log("±£´æ"+filename+"³É¹¦");
+    console.log("ä¿å­˜"+filename+"æˆåŠŸ");
 
     res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8'});
     res.end('<div id="path">'+path+'</div>');

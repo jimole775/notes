@@ -1,9 +1,9 @@
-×Ü½á£º
-°²×¿ºÍÆ»¹û¶ËµÄä¯ÀÀÆ÷µÄÇø±ğ£º
-	Á½¸öä¯ÀÀÆ÷¸øjsÌá¹©µÄÊı¾İ½Ó¿Ú²»Í¬£¬
-	°²×¿ÊÇÔÚä¯ÀÀÆ÷µÄdomÀïÃæ²åÈëexternal¶ÔÏó£¬È»ºóÔÚ´Ë¶ÔÏóÀïÃæÉèÖÃ½Ó¿Ú£»
-	Æ»¹ûÊÇÔÚä¯ÀÀÆ÷ÊÇÍ¨¹ıwindow.webkitÏÂµÄmessageHandlers¶ÔÏóÀ´ÉèÖÃ£¬ÔÙÔÚ½Ó¿ÚÀïÃæ½ÓÈëÒ»¸ö·½·¨postMessageÀ´´«²ÎÊı
+æ€»ç»“ï¼š
+å®‰å“å’Œè‹¹æœç«¯çš„æµè§ˆå™¨çš„åŒºåˆ«ï¼š
+	ä¸¤ä¸ªæµè§ˆå™¨ç»™jsæä¾›çš„æ•°æ®æ¥å£ä¸åŒï¼Œ
+	å®‰å“æ˜¯åœ¨æµè§ˆå™¨çš„domé‡Œé¢æ’å…¥externalå¯¹è±¡ï¼Œç„¶ååœ¨æ­¤å¯¹è±¡é‡Œé¢è®¾ç½®æ¥å£ï¼›
+	è‹¹æœæ˜¯åœ¨æµè§ˆå™¨æ˜¯é€šè¿‡window.webkitä¸‹çš„messageHandlerså¯¹è±¡æ¥è®¾ç½®ï¼Œå†åœ¨æ¥å£é‡Œé¢æ¥å…¥ä¸€ä¸ªæ–¹æ³•postMessageæ¥ä¼ å‚æ•°
 	
 exp:
-£¨°²×¿£© window.external.sendSomeThing(param1,param2);
-£¨Æ»¹û£© window.webkit.messageHandlers.sendSomeThing.postMessage(param1,param2);
+ï¼ˆå®‰å“ï¼‰ window.external.sendSomeThing(param1,param2);
+ï¼ˆè‹¹æœï¼‰ window.webkit.messageHandlers.sendSomeThing.postMessage(param1,param2);

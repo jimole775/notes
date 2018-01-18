@@ -1,15 +1,15 @@
-...babel-coreÌá¹©ÁËÒ»Ğ©API¸øÓ¦ÓÃÄÚ²¿µ÷ÓÃ£»
+...babel-coreæä¾›äº†ä¸€äº›APIç»™åº”ç”¨å†…éƒ¨è°ƒç”¨ï¼›
 
-...| °²×°£º
+...| å®‰è£…ï¼š
 $ npm install --save babel-core
 
-...Æä×÷ÓÃÏàµ±ÓÚ¸øJS¶¯Ì¬µÄ×ªÂë£¬²»¹ı¸ù¾İ×ª»»³öÀ´µÄ½á¹ûÊÇ¸öjson£¬codeµÄÄÚÈİ¸ñÊ½ÊÇ¸ö×Ö·û´®À´¿´
-...Ç°¶ËµÄÊ¹ÓÃ³¡¾°¾ÍÏàµ±µÄÉÙÁË£¬£¨ÖÆ×÷Ò»¸öÔÚÏßµÄES°æ±¾×ªÂë¹¤¾ß£¿£©
-...ÔÚnodeÀïÃæµÄÓÃ´¦Ó¦¸Ã±È½Ï´ó
-...°üÀ¨:
+...å…¶ä½œç”¨ç›¸å½“äºç»™JSåŠ¨æ€çš„è½¬ç ï¼Œä¸è¿‡æ ¹æ®è½¬æ¢å‡ºæ¥çš„ç»“æœæ˜¯ä¸ªjsonï¼Œcodeçš„å†…å®¹æ ¼å¼æ˜¯ä¸ªå­—ç¬¦ä¸²æ¥çœ‹
+...å‰ç«¯çš„ä½¿ç”¨åœºæ™¯å°±ç›¸å½“çš„å°‘äº†ï¼Œï¼ˆåˆ¶ä½œä¸€ä¸ªåœ¨çº¿çš„ESç‰ˆæœ¬è½¬ç å·¥å…·ï¼Ÿï¼‰
+...åœ¨nodeé‡Œé¢çš„ç”¨å¤„åº”è¯¥æ¯”è¾ƒå¤§
+...åŒ…æ‹¬:
 
 ...| babel.transform
-> var babel = require("babel-core");    //Èç¹ûÊÇhtml£¬¿ÉÒÔÖ±½ÓÓÃscript±êÇ©ÒıÈë£¬×öÈ«¾Ö¶ÔÏóÊ¹ÓÃ
+> var babel = require("babel-core");    //å¦‚æœæ˜¯htmlï¼Œå¯ä»¥ç›´æ¥ç”¨scriptæ ‡ç­¾å¼•å…¥ï¼Œåšå…¨å±€å¯¹è±¡ä½¿ç”¨
 > var code = "let foo = 'bar'";
 > var option = {presets:["es2015"]};
 > var result = babel.transform(code,option).code;
@@ -17,10 +17,10 @@ $ npm install --save babel-core
 > //"use strict";
 > //var foo = "bar";
 
-...| babel.transformFile    //¸ù¾İÕâ·ÖAPIµÄĞÔÖÊ£¬Ö»ÄÜÔÚnode»·¾³ÖÖÊ¹ÓÃÁË
+...| babel.transformFile    //æ ¹æ®è¿™åˆ†APIçš„æ€§è´¨ï¼Œåªèƒ½åœ¨nodeç¯å¢ƒç§ä½¿ç”¨äº†
 > var option = {presets:["es2015"]};
 > babel.transformFile(__dirname + "/file.js",option,(err,result) => {console.log(result)});
 > //"use strict";
 > //var foo = ".....
 
-...| babel.transformFileSync    //ºÍÉÏÃæµÄ¸ñÊ½²î²»¶à
+...| babel.transformFileSync    //å’Œä¸Šé¢çš„æ ¼å¼å·®ä¸å¤š

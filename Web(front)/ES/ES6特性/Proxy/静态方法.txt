@@ -1,10 +1,10 @@
 ==================|_revocable_|====================
-...Proxy.revocable¿ÉÒÔ·µ»ØÒ»¸ö¿ÉÈ¡ÏûµÄProxyÊµÀı£¨Êµ¼Ê×÷ÓÃ£¬´ó¸ÅÓÚ´´ÔìÒ»¸öÒ»´ÎĞÔµÄproxyÊµÀı£©
+...Proxy.revocableå¯ä»¥è¿”å›ä¸€ä¸ªå¯å–æ¶ˆçš„Proxyå®ä¾‹ï¼ˆå®é™…ä½œç”¨ï¼Œå¤§æ¦‚äºåˆ›é€ ä¸€ä¸ªä¸€æ¬¡æ€§çš„proxyå®ä¾‹ï¼‰
 
 ______________________________
    var {proxy,revok} = Proxy.revocable({},{set:function(){console.log("setted")}});
    proxy.foo = "bar";	//"setted";
-   revok();	//È¡ÏûproxyĞĞÎª£»
+   revok();	//å–æ¶ˆproxyè¡Œä¸ºï¼›
    proxy.foo;	//Error;
    proxy.foo = "baz"	//Error;
  

@@ -12,36 +12,36 @@ ReportReason:function(){};
 
 SubmitFillReport:function(){};
 
-ng-show:ture||false;    //Ê¹ÓÃshowÖ»ÊÇÏÔÊ¾ºÍÒş²Ø
+ng-show:ture||false;    //ä½¿ç”¨showåªæ˜¯æ˜¾ç¤ºå’Œéšè—
 
-ng-if:;			//Ê¹ÓÃIF¾ÍÊÇ²»äÖÈ¾Ìõ¼ş²»Æ¥Åä¾Í²»äÖÈ¾DOMÔªËØ£¬£¨Óëng-showÏà±È£©£¬µ±È»£¬ÔÚÆµ·±ÏÔÊ¾-Òş²ØµÄ²Ù×÷Çé¿öÏÂ£¬Ê¹ÓÃshowµÄĞ§ÂÊÏÔÈ»ÊÇ¸ßµÄ£¬ÒòÎªÕâÑù¿ÉÒÔ±ÜÃâÆµ·±äÖÈ¾
+ng-if:;			//ä½¿ç”¨IFå°±æ˜¯ä¸æ¸²æŸ“æ¡ä»¶ä¸åŒ¹é…å°±ä¸æ¸²æŸ“DOMå…ƒç´ ï¼Œï¼ˆä¸ng-showç›¸æ¯”ï¼‰ï¼Œå½“ç„¶ï¼Œåœ¨é¢‘ç¹æ˜¾ç¤º-éšè—çš„æ“ä½œæƒ…å†µä¸‹ï¼Œä½¿ç”¨showçš„æ•ˆç‡æ˜¾ç„¶æ˜¯é«˜çš„ï¼Œå› ä¸ºè¿™æ ·å¯ä»¥é¿å…é¢‘ç¹æ¸²æŸ“
 
 
 
-$scope.$apply();	//ÖØĞÂÖ´ĞĞÒ»´Î$distry().
-angular.bootStrap();	//Æô¶¯£¬Ò»°ãÓÃÒ»¸öÑÓÊ±ÈÃangularÆô¶¯£¬500MS¾Í¿ÉÒÔ£»
+$scope.$apply();	//é‡æ–°æ‰§è¡Œä¸€æ¬¡$distry().
+angular.bootStrap();	//å¯åŠ¨ï¼Œä¸€èˆ¬ç”¨ä¸€ä¸ªå»¶æ—¶è®©angularå¯åŠ¨ï¼Œ500MSå°±å¯ä»¥ï¼›
 
 angular.module();
 
 
-<ion-refresher pulling-text="Å¬Á¦¼ÓÔØÖĞ..." on-refresh="doRefresh()">
-</ion-refresher> 	//HTMLÊÂ¼ş£¬Ë¢ĞÂÊ±µ÷ÓÃdoRefresh()·½·¨
+<ion-refresher pulling-text="åŠªåŠ›åŠ è½½ä¸­..." on-refresh="doRefresh()">
+</ion-refresher> 	//HTMLäº‹ä»¶ï¼Œåˆ·æ–°æ—¶è°ƒç”¨doRefresh()æ–¹æ³•
 
-$.getJSON·½·¨»ñÈ¡¿çÓòÊı¾İ£¨jqurey£© ÀıÈç£º$.getJSON£¨http://example.com/data.php?callback=dosomething,function(){}£©
-·ñÔò¿ÉÒÔÍ¨¹ıÊÖ¶¯¼ÓÔØ<script>http://example.com/data.php?callback=dosomething</script>±êÇ©À´ÒıÈëÍâ²¿JSONÊı¾İ£»
+$.getJSONæ–¹æ³•è·å–è·¨åŸŸæ•°æ®ï¼ˆjqureyï¼‰ ä¾‹å¦‚ï¼š$.getJSONï¼ˆhttp://example.com/data.php?callback=dosomething,function(){}ï¼‰
+å¦åˆ™å¯ä»¥é€šè¿‡æ‰‹åŠ¨åŠ è½½<script>http://example.com/data.php?callback=dosomething</script>æ ‡ç­¾æ¥å¼•å…¥å¤–éƒ¨JSONæ•°æ®ï¼›
 
 
 
 $scope.$on()
 angular.run();
-xxx.open();	//Òª¼üÈëÄ£°åÃûºÍ¿ØÖÆÆ÷ Èç£º ngDialog.open({template: 'Dialog.html', controller: 'AssistanceExpertListCtrl'})
-xxx.close();	//Ö±½Ó¹Ø±ÕHTMLÒ³Ãæ Èç£ºngDialog.close('Dialog.html');
-$broadcast();		//ÏòÏÂ´«²¥ÊÂ¼ş ÀıÈç£º$scope.$broadcast('scroll.refreshComplete');    scroll.refreshCompleteÊÇionic-angular.jsµÄÒ»¸ö×¢Èëº¯Êı
-$emit();		//ÏòÉÏ´«²¥ÊÂ¼ş
-$broadcast()ºÍ$emit()Á½¸öÊÂ¼şÒªÓÃ$onÀ´¼àÌı
+xxx.open();	//è¦é”®å…¥æ¨¡æ¿åå’Œæ§åˆ¶å™¨ å¦‚ï¼š ngDialog.open({template: 'Dialog.html', controller: 'AssistanceExpertListCtrl'})
+xxx.close();	//ç›´æ¥å…³é—­HTMLé¡µé¢ å¦‚ï¼šngDialog.close('Dialog.html');
+$broadcast();		//å‘ä¸‹ä¼ æ’­äº‹ä»¶ ä¾‹å¦‚ï¼š$scope.$broadcast('scroll.refreshComplete');    scroll.refreshCompleteæ˜¯ionic-angular.jsçš„ä¸€ä¸ªæ³¨å…¥å‡½æ•°
+$emit();		//å‘ä¸Šä¼ æ’­äº‹ä»¶
+$broadcast()å’Œ$emit()ä¸¤ä¸ªäº‹ä»¶è¦ç”¨$onæ¥ç›‘å¬
 
 
-ng-repeat	//ÔÚ´¦Àí2500¸öÒÔÉÏµÄË«ÏòÊı¾İ°ó¶¨Ê±ËÙ¶È»á±äÂı
+ng-repeat	//åœ¨å¤„ç†2500ä¸ªä»¥ä¸Šçš„åŒå‘æ•°æ®ç»‘å®šæ—¶é€Ÿåº¦ä¼šå˜æ…¢
 
 
 $state.go();
@@ -51,9 +51,9 @@ $state.go();
 $ionicPopup.show().then();
 
 
-¹ØÓÚURLµÄÕÆÎÕ£»ÁËµÃÍøÕ¾±¾µØ»·¾³µÄÊ±ºòÁ¬½ÓÌø×ª¶¼²»³É¹¦£¬¹ÒÍâÍø·şÎñÆ÷µÄÊ±ºò¾Í¿ÉÒÔ¡£
-¹ØÓÚ¿çÓò»ñÈ¡Êı¾İ
-JS¿É²»¿ÉÒÔÊä³ö/ÔØÈëTXT£¬»òÕßXMLÎÄ¼ş
+å…³äºURLçš„æŒæ¡ï¼›äº†å¾—ç½‘ç«™æœ¬åœ°ç¯å¢ƒçš„æ—¶å€™è¿æ¥è·³è½¬éƒ½ä¸æˆåŠŸï¼ŒæŒ‚å¤–ç½‘æœåŠ¡å™¨çš„æ—¶å€™å°±å¯ä»¥ã€‚
+å…³äºè·¨åŸŸè·å–æ•°æ®
+JSå¯ä¸å¯ä»¥è¾“å‡º/è½½å…¥TXTï¼Œæˆ–è€…XMLæ–‡ä»¶
 
 
 .run(['$rootScope',
@@ -67,13 +67,13 @@ JS¿É²»¿ÉÒÔÊä³ö/ÔØÈëTXT£¬»òÕßXMLÎÄ¼ş
 
 
 
-.config(['Constants', 'XMPPServiceProvider', function (Constants, XMPPServiceProvider) {   	//¿ÉÒÔÅĞ¶Ï³É£¬Èç¹û´æÔÚ'Constants', 'XMPPServiceProvider'ÕâÁ½¸ö·şÎñ£¬¾ÍÖ´ĞĞºóÃæµÄº¯Êı
+.config(['Constants', 'XMPPServiceProvider', function (Constants, XMPPServiceProvider) {   	//å¯ä»¥åˆ¤æ–­æˆï¼Œå¦‚æœå­˜åœ¨'Constants', 'XMPPServiceProvider'è¿™ä¸¤ä¸ªæœåŠ¡ï¼Œå°±æ‰§è¡Œåé¢çš„å‡½æ•°
         XMPPServiceProvider.supporter(Constants.XMPPSupporter.JS);
     }])
 
 
 
- // ¼àÌıµÈ´ı¶ÓÁĞÍÆËÍ
+ // ç›‘å¬ç­‰å¾…é˜Ÿåˆ—æ¨é€
         $rootScope.$on(Constants.events.pushPrefix + Constants.CMD.pushWaitingAndConsultingList, function (event, status, result) {
             $rootScope.$apply(function () {
                 WaitingAndConsultingListManager.refresh(result.msgs[0].value);
@@ -92,24 +92,24 @@ JS¿É²»¿ÉÒÔÊä³ö/ÔØÈëTXT£¬»òÕßXMLÎÄ¼ş
 
 
 
-ÍÆËÍ¼¼Êõ³£³£ÓÃÓÚÏûÏ¢µÄ¶©ÔÄ¡£¿Í»§¶Ë¡°¶©ÔÄ¡±·şÎñÆ÷Ìá¹©µÄ¶àÖÖĞÅÏ¢¡°ÆµµÀ¡±£»Ò»µ©ÓĞĞÂµÄĞÅÏ¢¿ÉÓÃ£¬·şÎñÆ÷½«´ËÏûÏ¢ÍÆËÍµ½¿Í»§¶ËÉÏ¡£
+æ¨é€æŠ€æœ¯å¸¸å¸¸ç”¨äºæ¶ˆæ¯çš„è®¢é˜…ã€‚å®¢æˆ·ç«¯â€œè®¢é˜…â€æœåŠ¡å™¨æä¾›çš„å¤šç§ä¿¡æ¯â€œé¢‘é“â€ï¼›ä¸€æ—¦æœ‰æ–°çš„ä¿¡æ¯å¯ç”¨ï¼ŒæœåŠ¡å™¨å°†æ­¤æ¶ˆæ¯æ¨é€åˆ°å®¢æˆ·ç«¯ä¸Šã€‚
 
 
-¶ÔÓÚAngular.jsÏÖÔÚÒªÇø·ÖµÄ¾ÍÊÇÄÚÖÃÖ¸ÁîºÍ×Ô¶¨Òåº¯Êı
+å¯¹äºAngular.jsç°åœ¨è¦åŒºåˆ†çš„å°±æ˜¯å†…ç½®æŒ‡ä»¤å’Œè‡ªå®šä¹‰å‡½æ•°
 
 
-_.reduceÖ»Ïà¶ÔÓÚ¶ÔÏó£¬¶øÇÒÖ»±éÀúÖµ
+_.reduceåªç›¸å¯¹äºå¯¹è±¡ï¼Œè€Œä¸”åªéå†å€¼
 
 
  trigger();
 
 
-µ±ÎÒÓĞÒ»¸öº¯Êı³é³öcontrollerÖ®ºóÓÖÏëµ÷ÓÃcontrollerÏÂµÄ±äÁ¿£¬ÈçºÎ´¦Àí 	//Ê¹ÓÃfactory·½·¨¶¨Òå¹«¹²Àà
+å½“æˆ‘æœ‰ä¸€ä¸ªå‡½æ•°æŠ½å‡ºcontrollerä¹‹ååˆæƒ³è°ƒç”¨controllerä¸‹çš„å˜é‡ï¼Œå¦‚ä½•å¤„ç† 	//ä½¿ç”¨factoryæ–¹æ³•å®šä¹‰å…¬å…±ç±»
 
 
-$watch ÊôÓÚcontrollerÄÚ²¿×ÔÔËĞĞº¯Êı£»
+$watch å±äºcontrollerå†…éƒ¨è‡ªè¿è¡Œå‡½æ•°ï¼›
 
 var watch = $scope.$watch();
-watch();      	//»ØÊÕ¼àÌıÊÂ¼ş
+watch();      	//å›æ”¶ç›‘å¬äº‹ä»¶
 
 

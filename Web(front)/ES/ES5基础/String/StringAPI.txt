@@ -1,3 +1,3 @@
-    String.charAt(index)	//½ØÈ¡²¢·µ»ØÖ¸¶¨µÄÒ»¸ö×Ö·û£¡
-    String.charCodeAt(index)//½ØÈ¡²¢·µ»ØÖ¸¶¨×Ö·ûµÄasciiÂë£¡
-    String.fromCharCode("str")//½âasciiÂë
+    String.charAt(index)	//æˆªå–å¹¶è¿”å›æŒ‡å®šçš„ä¸€ä¸ªå­—ç¬¦ï¼
+    String.charCodeAt(index)//æˆªå–å¹¶è¿”å›æŒ‡å®šå­—ç¬¦çš„asciiç ï¼
+    String.fromCharCode("str")//è§£asciiç 

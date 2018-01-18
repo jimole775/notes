@@ -1,11 +1,11 @@
 
-Andr¶ËµÄtouchÊÂ¼ş£º
+Andrç«¯çš„touchäº‹ä»¶ï¼š
 
-Ö±½ÓÊ¹ÓÃevent.clientXÊÇ²»Æğ×÷ÓÃµÄ£¬ÒªÊ¹ÓÃevent.changedTouches[0].clientX,
+ç›´æ¥ä½¿ç”¨event.clientXæ˜¯ä¸èµ·ä½œç”¨çš„ï¼Œè¦ä½¿ç”¨event.changedTouches[0].clientX,
 
-Èç¹ûÊÇjqueryµÄevent¶ÔÏó£¬Ê¹ÓÃevent.originalEvent.changedTouches[0].clientX
+å¦‚æœæ˜¯jqueryçš„eventå¯¹è±¡ï¼Œä½¿ç”¨event.originalEvent.changedTouches[0].clientX
 
-PC¶ËµÄmouseÊÂ¼ş£º
+PCç«¯çš„mouseäº‹ä»¶ï¼š
 
 clientX/clientY:
-	Êó±êÔÚÒ³ÃæÉÏ¿ÉÊÓÇøÓòµÄÎ»ÖÃ,´Óä¯ÀÀÆ÷¿ÉÊÓÇøÓò×óÉÏ½Ç¿ªÊ¼,¼´ÊÇÒÔä¯ÀÀÆ÷»¬¶¯Ìõ´Ë¿ÌµÄ»¬¶¯µ½µÄÎ»ÖÃÎª²Î¿¼µã,Ëæ»¬¶¯ÌõÒÆ¶¯ ¶ø±ä»¯.
+	é¼ æ ‡åœ¨é¡µé¢ä¸Šå¯è§†åŒºåŸŸçš„ä½ç½®,ä»æµè§ˆå™¨å¯è§†åŒºåŸŸå·¦ä¸Šè§’å¼€å§‹,å³æ˜¯ä»¥æµè§ˆå™¨æ»‘åŠ¨æ¡æ­¤åˆ»çš„æ»‘åŠ¨åˆ°çš„ä½ç½®ä¸ºå‚è€ƒç‚¹,éšæ»‘åŠ¨æ¡ç§»åŠ¨ è€Œå˜åŒ–.

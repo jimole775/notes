@@ -1,7 +1,7 @@
-...Ö÷ÒªÕë¶ÔStringµÄstartsWith£¬endsWith£¬includes·½·¨£»
-...ÒÔÉÏÈı¸ö·½·¨²»ÄÜÔÚµÚÒ»¸ö²ÎÊıÎ»·ÅÖÃÕıÔò±í´ïÊ½£»
-...¿ÉÒÔÉèÖÃregexpµÄSymbol.matchÎªfalse£»
-...¡¾ºöÂÔµô¼ì²é»úÖÆ¡¿£»
+...ä¸»è¦é’ˆå¯¹Stringçš„startsWithï¼ŒendsWithï¼Œincludesæ–¹æ³•ï¼›
+...ä»¥ä¸Šä¸‰ä¸ªæ–¹æ³•ä¸èƒ½åœ¨ç¬¬ä¸€ä¸ªå‚æ•°ä½æ”¾ç½®æ­£åˆ™è¡¨è¾¾å¼ï¼›
+...å¯ä»¥è®¾ç½®regexpçš„Symbol.matchä¸ºfalseï¼›
+...ã€å¿½ç•¥æ‰æ£€æŸ¥æœºåˆ¶ã€‘ï¼›
    var reg = /foo/;
    reg[Symbol.match] = false;
    "/foo/".startsWith(reg);	//true
@@ -9,6 +9,6 @@
    "/foo/".endsWith(reg);	//TypeError,First paramer can't be regexp expression
 
 
-...µ±È»»¹ÓĞ¾ÍÊÇºÍreplaceÒ»Ñù£¬¿ÉÒÔÍ¨¹ıµ÷ÓÃregµÄSymbol.match£¬ÈÃreg¿ÉÒÔÊ¹ÓÃStringµÄmatch·½·¨
+...å½“ç„¶è¿˜æœ‰å°±æ˜¯å’Œreplaceä¸€æ ·ï¼Œå¯ä»¥é€šè¿‡è°ƒç”¨regçš„Symbol.matchï¼Œè®©regå¯ä»¥ä½¿ç”¨Stringçš„matchæ–¹æ³•
    var reg = /foo/;
    reg[Symbol.match]("foobar);   //["foo", index: 0, input: "foobar"]

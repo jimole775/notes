@@ -1,17 +1,17 @@
-...1£¬Ò»°ãSymbol¶ÔÏóÖ»ÊÇÓÃÀ´´´½¨¶ÔÏóµÄÊôÐÔÃû£¬Ã¿¸öSymbol()·½·¨µÄ·µ»ØÖµ¶¼ÊÇ¡¾Î¨Ò»¡¿µÄ£¡
-   var¡¡foo = Symbol('foo');	//²ÎÊý"foo"Ö»ÊÇµ±×÷Ò»¸ö±êÊ¶·ûÓÃ£¬Ã»ÓÐÆäËûµÄ×÷ÓÃ
+...1ï¼Œä¸€èˆ¬Symbolå¯¹è±¡åªæ˜¯ç”¨æ¥åˆ›å»ºå¯¹è±¡çš„å±žæ€§åï¼Œæ¯ä¸ªSymbol()æ–¹æ³•çš„è¿”å›žå€¼éƒ½æ˜¯ã€å”¯ä¸€ã€‘çš„ï¼
+   varã€€foo = Symbol('foo');	//å‚æ•°"foo"åªæ˜¯å½“ä½œä¸€ä¸ªæ ‡è¯†ç¬¦ç”¨ï¼Œæ²¡æœ‰å…¶ä»–çš„ä½œç”¨
    var bar = Symbol('foo');
    foo === bar;	//false;
 
-...2£¬ÓÃ×÷ÊôÐÔÃûÊ±£¬±ØÐëÊ¹ÓÃ¡¾·½À¨ºÅ¡¿
+...2ï¼Œç”¨ä½œå±žæ€§åæ—¶ï¼Œå¿…é¡»ä½¿ç”¨ã€æ–¹æ‹¬å·ã€‘
    var foo = Symbol('foo');
    var bar = {
       [foo]:"hello",
       [Symbol("foo")]:"hello ag"
    }
 
-...3£¬ÓÃSymbolÉú³ÉµÄÊôÐÔÎÞ·¨±»ÆÕÍ¨µÄ·½·¨±éÀú³öÀ´£¨ËäÈ»ËüµÄenumerableÊÇtrue£©£¬Ö»ÄÜÊ¹ÓÃ¡¾ÌØ¶¨¡¿µÄÁ½¸ö·½Ê½À´»ñÈ¡£»
+...3ï¼Œç”¨Symbolç”Ÿæˆçš„å±žæ€§æ— æ³•è¢«æ™®é€šçš„æ–¹æ³•éåŽ†å‡ºæ¥ï¼ˆè™½ç„¶å®ƒçš„enumerableæ˜¯trueï¼‰ï¼Œåªèƒ½ä½¿ç”¨ã€ç‰¹å®šã€‘çš„ä¸¤ä¸ªæ–¹å¼æ¥èŽ·å–ï¼›
     Object.getOwnPropertySymbols(foo);	//[Symbol("foo")];
-...¡¾µÚÒ»ÖÖ¡¿Ö»ÄÜ»ñÈ¡SymbolÊôÐÔ
+...ã€ç¬¬ä¸€ç§ã€‘åªèƒ½èŽ·å–Symbolå±žæ€§
     Reflect.ownKeys(foo);	//[Symbol("foo"),"propety"];
-...¡¾µÚ¶þÖÖ¡¿¿ÉÒÔ±éÀúËùÓÐÊôÐÔ
+...ã€ç¬¬äºŒç§ã€‘å¯ä»¥éåŽ†æ‰€æœ‰å±žæ€§

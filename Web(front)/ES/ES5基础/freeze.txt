@@ -1,7 +1,7 @@
-¿´ÁËä¯ÀÀÆ÷Ö§³ÖÇé¿ö,ÆäÊµºÍhtml5²î²»¶àµÄ!!!
+çœ‹äº†æµè§ˆå™¨æ”¯æŒæƒ…å†µ,å…¶å®žå’Œhtml5å·®ä¸å¤šçš„!!!
 Object.freeze(obj);
-Ö»ÄÜ¶³½á×Ó²ãÊôÐÔºÍ·½·¨,Ëï²ãÔªËØ²»ÊÜÓ°Ïì
-Èç¹ûÒª¶³½áÕû¸ö¶ÔÏó,¾ÍÐèÒªÖð¸ö±éÀú,Öð¸ö¶³½áÁË(Ê¹ÓÃµÝ¹é)
+åªèƒ½å†»ç»“å­å±‚å±žæ€§å’Œæ–¹æ³•,å­™å±‚å…ƒç´ ä¸å—å½±å“
+å¦‚æžœè¦å†»ç»“æ•´ä¸ªå¯¹è±¡,å°±éœ€è¦é€ä¸ªéåŽ†,é€ä¸ªå†»ç»“äº†(ä½¿ç”¨é€’å½’)
 // To do so, we use this function.
 function deepFreeze(obj) {
 

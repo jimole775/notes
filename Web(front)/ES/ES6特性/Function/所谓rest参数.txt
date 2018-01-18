@@ -1,12 +1,12 @@
-...rest²ÎÊýÆäÊµ¾ÍÊÇÊ¹ÓÃÔËËã·û¡¾...¡¿¶ÔÐÎ²Î½øÐÐÔ¤Éè£»
+...restå‚æ•°å…¶å®žå°±æ˜¯ä½¿ç”¨è¿ç®—ç¬¦ã€...ã€‘å¯¹å½¢å‚è¿›è¡Œé¢„è®¾ï¼›
     function foo(...values){
     	console.log(values);
     }
     foo(1,2,3);
     //[1,2,3]
 
-...µ«ÊÇÐèÒª¡¾×¢Òâ¡¿Ò»µã,rest²ÎÊýÖ»ÄÜ·ÅÔÚÄ©Î²£¬
-...Èç¹ûrest²ÎÊýºóÃæ»¹¶¨ÒåÓÐ²ÎÊý£¬
-...ÄÇÃ´»á³öÏÖ±¨´í£¬²»»áºöÂÔ
+...ä½†æ˜¯éœ€è¦ã€æ³¨æ„ã€‘ä¸€ç‚¹,restå‚æ•°åªèƒ½æ”¾åœ¨æœ«å°¾ï¼Œ
+...å¦‚æžœrestå‚æ•°åŽé¢è¿˜å®šä¹‰æœ‰å‚æ•°ï¼Œ
+...é‚£ä¹ˆä¼šå‡ºçŽ°æŠ¥é”™ï¼Œä¸ä¼šå¿½ç•¥
     function foo(first,...sec,thr){}
     //err

@@ -1,6 +1,6 @@
 
 WebSocket.prototype.readyState:
-0        CONNECTING      а╛╫сипн╢╫╗а╒
-1        OPEN            WebSocket╣да╢╫сря╬╜╫╗а╒
-2        CLOSING         а╛╫суЩтз╧ь╠у
-3        CLOSED          а╛╫сря╬╜╧ь╠у╩Р╡╩©исц
+0        CONNECTING      Х©·Ф▌╔Е╟ Ф°╙Е╩╨Г╚▀
+1        OPEN            WebSocketГ └И⌠╬Ф▌╔Е╥╡Г╩▐Е╩╨Г╚▀
+2        CLOSING         Х©·Ф▌╔Ф╜ёЕ°╗Е┘ЁИ≈╜
+3        CLOSED          Х©·Ф▌╔Е╥╡Г╩▐Е┘ЁИ≈╜Ф┬√Д╦█Е▐╞Г■╗

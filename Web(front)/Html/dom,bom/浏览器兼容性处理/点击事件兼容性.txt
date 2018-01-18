@@ -1,13 +1,13 @@
 
-//ÄÜ¹ıÂË³öÊÂ¼şÃ°ÅİÊ±µÄËùÓĞÔªËØ£¬£¨ PC¶Ëchromeä¯ÀÀÆ÷ £©ÓĞpathÊôĞÔ£»
+//èƒ½è¿‡æ»¤å‡ºäº‹ä»¶å†’æ³¡æ—¶çš„æ‰€æœ‰å…ƒç´ ï¼Œï¼ˆ PCç«¯chromeæµè§ˆå™¨ ï¼‰æœ‰pathå±æ€§ï¼›
 document.addEventListener("click",function(e){var len=e.path.length;var i = 0;var tag;while(i<len){tag=e.path[i];if(tag.onclick || $(tag).attr("ng-click")){console.log(tag);break;}i++}})
 
 
-//jq ºÍ jsµã»÷ÊÂ¼şµÄÊôĞÔµÄÇø±ğ £¨ ·ÇIEä¯ÀÀÆ÷ £©£»
-addEventListener    	-- currentTarget Îªundefined; target Îªµã»÷µÄÔªËØ£¬ 
-$.on()     		-- currentTarget Îª¼àÌıÔªËØ±¾Éí£»targetÎªµã»÷µÄÔªËØ
+//jq å’Œ jsç‚¹å‡»äº‹ä»¶çš„å±æ€§çš„åŒºåˆ« ï¼ˆ éIEæµè§ˆå™¨ ï¼‰ï¼›
+addEventListener    	-- currentTarget ä¸ºundefined; target ä¸ºç‚¹å‡»çš„å…ƒç´ ï¼Œ 
+$.on()     		-- currentTarget ä¸ºç›‘å¬å…ƒç´ æœ¬èº«ï¼›targetä¸ºç‚¹å‡»çš„å…ƒç´ 
 
 
-// *-- IE --* µÄµã»÷ÊÂ¼ş( PC¶ËIE9²âÊÔ ),Õû¸öÊä³ö¶¼¿ÉÒÔ×ª»»³ÉJSON£»
-$.on   		-- target »ñÈ¡µÄÊÇ {} ¿Õ¶ÔÏó,currentTarget »ñÈ¡µÄÊÇ {} ¿Õ¶ÔÏó	
-attachEvent 	-- Õû¸öµã»÷¶ÔÏó¶¼Îª¿Õ£»
+// *-- IE --* çš„ç‚¹å‡»äº‹ä»¶( PCç«¯IE9æµ‹è¯• ),æ•´ä¸ªè¾“å‡ºéƒ½å¯ä»¥è½¬æ¢æˆJSONï¼›
+$.on   		-- target è·å–çš„æ˜¯ {} ç©ºå¯¹è±¡,currentTarget è·å–çš„æ˜¯ {} ç©ºå¯¹è±¡	
+attachEvent 	-- æ•´ä¸ªç‚¹å‡»å¯¹è±¡éƒ½ä¸ºç©ºï¼›

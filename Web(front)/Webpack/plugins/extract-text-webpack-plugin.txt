@@ -1,17 +1,17 @@
-...ÓĞÊ±ºò¿ÉÄÜÏ£ÍûÏîÄ¿µÄÑùÊ½ÄÜ²»Òª±»´ò°üµ½½Å±¾ÖĞ£¬
-...¶øÊÇ¶ÀÁ¢³öÀ´×÷Îª.css£¬È»ºóÔÚÒ³ÃæÖĞÒÔ<link>±êÇ©ÒıÈë¡£
-...ÕâÊ±ºòÎÒÃÇĞèÒª extract-text-webpack-plugin À´°ïÃ¦£º
-...×îÖØÒªµÄÒ»µã»¹ÊÇ: Èç¹ûÊ¹ÓÃsass¶¨Òå@mixin»ìºÏÆ÷Ö®ÀàµÄ¹«¹²·½·¨,²»Ô¤ÏÈ¼ÓÔØµÄ»°,»á³öÏÖundefined,¸ù±¾ÎŞ·¨Ê¹ÓÃ
+...æœ‰æ—¶å€™å¯èƒ½å¸Œæœ›é¡¹ç›®çš„æ ·å¼èƒ½ä¸è¦è¢«æ‰“åŒ…åˆ°è„šæœ¬ä¸­ï¼Œ
+...è€Œæ˜¯ç‹¬ç«‹å‡ºæ¥ä½œä¸º.cssï¼Œç„¶ååœ¨é¡µé¢ä¸­ä»¥<link>æ ‡ç­¾å¼•å…¥ã€‚
+...è¿™æ—¶å€™æˆ‘ä»¬éœ€è¦ extract-text-webpack-plugin æ¥å¸®å¿™ï¼š
+...æœ€é‡è¦çš„ä¸€ç‚¹è¿˜æ˜¯: å¦‚æœä½¿ç”¨sasså®šä¹‰@mixinæ··åˆå™¨ä¹‹ç±»çš„å…¬å…±æ–¹æ³•,ä¸é¢„å…ˆåŠ è½½çš„è¯,ä¼šå‡ºç°undefined,æ ¹æœ¬æ— æ³•ä½¿ç”¨
 
 
-...| °²×°£º(°æ±¾"1"ºÍ°æ±¾"2,3"µÄÅäÖÃÓĞÇø±ğ,Çë×¢ÒâÇø·Ö,°æ±¾´íÎó,µ÷ÓÃÊ§°Ü»á±¨´í - "window is not defined")
+...| å®‰è£…ï¼š(ç‰ˆæœ¬"1"å’Œç‰ˆæœ¬"2,3"çš„é…ç½®æœ‰åŒºåˆ«,è¯·æ³¨æ„åŒºåˆ†,ç‰ˆæœ¬é”™è¯¯,è°ƒç”¨å¤±è´¥ä¼šæŠ¥é”™ - "window is not defined")
 
 $ npm install --save-dev extract-text-webpack-plugin@1.0.1
 $ npm install --save-dev extract-text-webpack-plugin@2.1.2
 $ npm install --save-dev extract-text-webpack-plugin
 
 
-...| ¡¾v1.0.1¡¿µÄÅäÖÃ£º
+...| ã€v1.0.1ã€‘çš„é…ç½®ï¼š
 
      var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -19,7 +19,7 @@ $ npm install --save-dev extract-text-webpack-plugin
          loaders:[
          {
              test:"\.(css|scss)",
-             loader:ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  //×¢ÒâÕâÀïµÄ²ÎÊıÅäÖÃ,Èç¹ûÅäÖÃ´íÎó»á±¨ "window is not defined"
+             loader:ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  //æ³¨æ„è¿™é‡Œçš„å‚æ•°é…ç½®,å¦‚æœé…ç½®é”™è¯¯ä¼šæŠ¥ "window is not defined"
          }
          ]
          plugins:[
@@ -28,7 +28,7 @@ $ npm install --save-dev extract-text-webpack-plugin
      }
 
 
-...| ¡¾v2ÒÔÉÏ¡¿µÄÅäÖÃ:
+...| ã€v2ä»¥ä¸Šã€‘çš„é…ç½®:
 
     module:{
          loaders:[

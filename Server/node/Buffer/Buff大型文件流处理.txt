@@ -10,20 +10,20 @@ req.on('data' , function(chunk){
     var rems = [];
 
     for(var i=0;i<chunk.length;i++){
-        if(chunk[i]==13 && chunk[i+1]==10){ //13ºÍ10´ú±í\r \n£¬Í¼Æ¬ÎÄ¼þÁ÷ÓÐÍ·ºÍ½Å£¬Í¨¹ý\r\n±ê¼Ç·Ö¸î
+        if(chunk[i]==13 && chunk[i+1]==10){ //13å’Œ10ä»£è¡¨\r \nï¼Œå›¾ç‰‡æ–‡ä»¶æµæœ‰å¤´å’Œè„šï¼Œé€šè¿‡\r\næ ‡è®°åˆ†å‰²
             num++;
             rems.push(i);
 
             if(num==4){
-                start = i+2;//Ã¿1byte½âÎöÒ»´Î
+                start = i+2;//æ¯1byteè§£æžä¸€æ¬¡
                 isStart = true;
 
                 var str = (new Buffer(imgsays)).toString();
                 filename = str.match(/filename=".*"/g)[0].split('"')[1];
                 path = './databox/'+filename;
-                ws = fs.createWriteStream(path);//Ê¹ÓÃÎÄ¼þÁ÷¹¤¾ß
+                ws = fs.createWriteStream(path);//ä½¿ç”¨æ–‡ä»¶æµå·¥å…·
 
-            }else if(i==chunk.length-2){    //ËµÃ÷µ½ÁËÊý¾ÝÎ²²¿µÄ\r\n
+            }else if(i==chunk.length-2){    //è¯´æ˜Žåˆ°äº†æ•°æ®å°¾éƒ¨çš„\r\n
                 end = rems[rems.length-2];
                 break;
             }

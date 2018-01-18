@@ -1,10 +1,10 @@
-...�ڡ�ES5�����У��������൱��������󶨣�ʹ��call,apply,bind���е��ã�
-...�ڡ�ES7���У�����ʹ�ã�::�������棻
-...���˫ð�����Ϊ�գ��ұ�Ϊһ������ķ�������ô��Ĭ�Ͻ��÷������ұߵĶ����ϣ�
+...在【ES5】当中，函数绑定相当于作用域绑定，使用call,apply,bind进行调用；
+...在【ES7】中，可以使用（::）来代替；
+...如果双冒号左边为空，右边为一个对象的方法，那么就默认将该方法绑到右边的对象上；
    var method = obj::obj.fn;
    var method = ::obj.fn;
 
-...����˫ð����������ػ���ԭ������˿���ʹ�����������ʽ��д����
+...由于双冒号运算符返回还是原对象，因此可以使用这个做【链式】写法；
    function Foo(){
       this.bar = "lz",
       this.fn = function(){

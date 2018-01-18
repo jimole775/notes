@@ -1,25 +1,25 @@
-providerÊÇÒ»¸ö·şÎñ´´½¨Æ÷£¬´´½¨µÄ·şÎñ¿ÉÒÔÔÚconfigÀïÃæÊ¹ÓÃ£¬Óï·¨ÀàËÆfactory,µ«±ØĞëÔÚ·µ»ØµÄ¶ÔÏóÀïÉèÖÃ $get·½·¨£»
-ÓĞÁ½ÖÖ·½Ê½£º
+provideræ˜¯ä¸€ä¸ªæœåŠ¡åˆ›å»ºå™¨ï¼Œåˆ›å»ºçš„æœåŠ¡å¯ä»¥åœ¨configé‡Œé¢ä½¿ç”¨ï¼Œè¯­æ³•ç±»ä¼¼factory,ä½†å¿…é¡»åœ¨è¿”å›çš„å¯¹è±¡é‡Œè®¾ç½® $getæ–¹æ³•ï¼›
+æœ‰ä¸¤ç§æ–¹å¼ï¼š
 
  app.provider("movie",function(){
 	return{
 	setVersion:function(){ console.log("is OK!") }
 
-	$get:function(){}	//±ØÒªÉèÖÃ£¬¾ßÌåºÍÉÏÃæ¶¨Òåº¯ÊıµÄ½»»¥Âß¼­Òª¶ÁÔ´Âë
+	$get:function(){}	//å¿…è¦è®¾ç½®ï¼Œå…·ä½“å’Œä¸Šé¢å®šä¹‰å‡½æ•°çš„äº¤äº’é€»è¾‘è¦è¯»æºç 
 	
 	}
 
  });
 
- app.config(function(movieProvider){	//×¢Òâ×¢Èë·½·¨µÄ²ÎÊıÃû
+ app.config(function(movieProvider){	//æ³¨æ„æ³¨å…¥æ–¹æ³•çš„å‚æ•°å
 	movieProvider.serVersion();
  });
 
  app.controller("serVersion",function(serVersion){})
 
 
-***********configÀïÃæµÄ$provide¾ÍÊÇproviderµÄÒ»¸öº¯Êı·â×°£º(constant,value,service,factory,decorator)
-	   µÈĞ§ÓÚ= app.provder("$provide",function(){
+***********configé‡Œé¢çš„$provideå°±æ˜¯providerçš„ä¸€ä¸ªå‡½æ•°å°è£…ï¼š(constant,value,service,factory,decorator)
+	   ç­‰æ•ˆäº= app.provder("$provide",function(){
 		        return{
 	                   constant:function(){ console.log("is OK!") ,
 					   value:function(){ console.log("is OK!") ,
@@ -27,7 +27,7 @@ providerÊÇÒ»¸ö·şÎñ´´½¨Æ÷£¬´´½¨µÄ·şÎñ¿ÉÒÔÔÚconfigÀïÃæÊ¹ÓÃ£¬Óï·¨ÀàËÆfactory,µ«±ØĞë
 					   factory:function(){ console.log("is OK!") ,
 					   decorator:function(){ console.log("is OK!") ,
 
-					   $get:function(){}	//±ØÒªÉèÖÃ£¬¾ßÌåºÍÉÏÃæ¶¨Òåº¯ÊıµÄ½»»¥Âß¼­Òª¶ÁÔ´Âë
+					   $get:function(){}	//å¿…è¦è®¾ç½®ï¼Œå…·ä½“å’Œä¸Šé¢å®šä¹‰å‡½æ•°çš„äº¤äº’é€»è¾‘è¦è¯»æºç 
 				}
 			}
 

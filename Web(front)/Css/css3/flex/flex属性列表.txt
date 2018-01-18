@@ -1,21 +1,21 @@
 display: flex | inline-flex;
 display: -webkit-flex | -webkit-inline-flex;
 
-***ÉèÎªFlex²¼¾ÖÒÔºó£¬×ÓÔªËØµÄfloat¡¢clearºÍvertical-alignÊôĞÔ½«Ê§Ğ§¡£
+***è®¾ä¸ºFlexå¸ƒå±€ä»¥åï¼Œå­å…ƒç´ çš„floatã€clearå’Œvertical-alignå±æ€§å°†å¤±æ•ˆã€‚
 
 
-ÈİÆ÷ÊôĞÔ£º
-***|flex-direction¡¾·½Ïò¡¿
-***|flex-wrap¡¾»»ĞĞ¡¿
-***|flex-flow¡¾¼òĞ´¡¿
-***|justify-content¡¾Ö÷Öá¶ÔÆë¡¿
-***|align-items¡¾½»²æÖá¶ÔÆë¡¿
-***|align-content¡¾¶àÖá¶ÔÆë¡¿
+å®¹å™¨å±æ€§ï¼š
+***|flex-directionã€æ–¹å‘ã€‘
+***|flex-wrapã€æ¢è¡Œã€‘
+***|flex-flowã€ç®€å†™ã€‘
+***|justify-contentã€ä¸»è½´å¯¹é½ã€‘
+***|align-itemsã€äº¤å‰è½´å¯¹é½ã€‘
+***|align-contentã€å¤šè½´å¯¹é½ã€‘
 
-¿éÊôĞÔ£º
-***|order¡¾ÅÅÁĞ¡¿
-***|flex-grow¡¾·Å´ó¡¿
-***|flex-shrink¡¾ËõĞ¡¡¿
-***|flex-basis¡¾¹Ì¶¨´óĞ¡¡¿
-***|flex¡¾¼òĞ´¡¿
-***|align-self¡¾µ¥¶ÀÑùÊ½¡¿
+å—å±æ€§ï¼š
+***|orderã€æ’åˆ—ã€‘
+***|flex-growã€æ”¾å¤§ã€‘
+***|flex-shrinkã€ç¼©å°ã€‘
+***|flex-basisã€å›ºå®šå¤§å°ã€‘
+***|flexã€ç®€å†™ã€‘
+***|align-selfã€å•ç‹¬æ ·å¼ã€‘

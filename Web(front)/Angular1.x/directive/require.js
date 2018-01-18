@@ -2,8 +2,8 @@
  * Created by Andy on 2017/11/12.
  */
 
-/**ÏÖ½×¶Î²âÊÔ,Ö»ÓĞ¡¾¸¸×Ó¼¶¡¿µÄdirective²Å»áÊ¹Õâ¸örequireÊôĞÔÉúĞ§,
- Èç¹ûĞèÒªÔÚÍ¬¼¶Ê¹ÓÃµÄ»°,ĞèÒª½èÖú¡¾$scopeProvider¡¿×¢Èë~*/
+/**ç°é˜¶æ®µæµ‹è¯•,åªæœ‰ã€çˆ¶å­çº§ã€‘çš„directiveæ‰ä¼šä½¿è¿™ä¸ªrequireå±æ€§ç”Ÿæ•ˆ,
+ å¦‚æœéœ€è¦åœ¨åŒçº§ä½¿ç”¨çš„è¯,éœ€è¦å€ŸåŠ©ã€$scopeProviderã€‘æ³¨å…¥~*/
 
 //html:
 String(
@@ -27,8 +27,8 @@ angular.module("app", [])
     }).directive("son", function () {
         return {
             require:"^father",
-            //require:"son",    //Èç¹ûrequireµÄÊÇson£¬¾ÍÏàµ±ÓÚ°Ñµ±Ç°µÄctrlµ¼Èëµ½LINKÖĞ
-            link:function(A,B,C,D){ //±ØĞëÊÇÔÚµÚËÄ¸ö²ÎÊı´«Èë
+            //require:"son",    //å¦‚æœrequireçš„æ˜¯sonï¼Œå°±ç›¸å½“äºæŠŠå½“å‰çš„ctrlå¯¼å…¥åˆ°LINKä¸­
+            link:function(A,B,C,D){ //å¿…é¡»æ˜¯åœ¨ç¬¬å››ä¸ªå‚æ•°ä¼ å…¥
                 console.log("what is required:",D);
             }
         }
@@ -36,5 +36,5 @@ angular.module("app", [])
 );
 
 
-/**ÒÔÉÏ¾ÍÄÇÃ´¼òµ¥¾ÍÖ´ĞĞÁË~~*/
+/**ä»¥ä¸Šå°±é‚£ä¹ˆç®€å•å°±æ‰§è¡Œäº†~~*/
 

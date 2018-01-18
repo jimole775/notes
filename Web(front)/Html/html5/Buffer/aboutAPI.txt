@@ -7,4 +7,4 @@ Uint32Array;
 ArrayBuffer(length)
 SourceBuffer()
 AudioBuffer()
-具体查看MDN官网
+鍏蜂綋鏌ョ湅MDN瀹樼綉

@@ -1,18 +1,18 @@
-====================���ļ���/�����========================
+====================§文件编/解码§========================
 
-����Node.js��֧�����±��룺utf8, ucs2, ascii, binary, base64, hex������֧������GBK��GB2312֮��ı��룬
+由于Node.js仅支持如下编码：utf8, ucs2, ascii, binary, base64, hex，并不支持中文GBK或GB2312之类的编码，
 
-������Ҫ��дGBK��GB2312��ʽ���ļ����������ݣ�����Ҫ�ö����ģ�飺iconv-lite
+因此如果要读写GBK或GB2312格式的文件的中文内容，必须要用额外的模块：iconv-lite
 
 
 
-1����װģ�飺npm install iconv-lite
+1、安装模块：npm install iconv-lite
 
-2����ʾ���룬������Ĵ��븴�Ƶ�һ���ļ��У�������ch.js(ע��:js�ļ����뱣��Ϊutf8�����ʽ)��
+2、演示代码，把下面的代码复制到一个文件中，假设是ch.js(注意:js文件必须保存为utf8编码格式)：
 
-// ����File System��дģ��  
+// 加载File System读写模块  
 var fs = require('fs');  
-// ���ر���ת��ģ��  
+// 加载编码转换模块  
 var iconv = require('iconv-lite');   
   
 var file = "c:\\a.txt";  
@@ -20,31 +20,31 @@ writeFile(file);
 readFile(file);  
   
 function writeFile(file){  
-    // �����õ�����  
-    var str = "\r\n����һ����Hello myself!";  
-    // ������ת�����ֽ�����  
+    // 测试用的中文  
+    var str = "\r\n我是一个人Hello myself!";  
+    // 把中文转换成字节数组  
     var arr = iconv.encode(str, 'gbk');  
     console.log(arr);  
       
-    // appendFile������ļ������ڣ����Զ��������ļ�  
-    // �����writeFile����ô��ɾ�����ļ���ֱ��д���ļ�  
+    // appendFile，如果文件不存在，会自动创建新文件  
+    // 如果用writeFile，那么会删除旧文件，直接写新文件  
     fs.appendFile(path, arr, function(err){
         if(err)  
             console.log("fail " + err);  
         else  
-            console.log("д���ļ�ok");  
+            console.log("写入文件ok");  
     });  
 }  
   
 function readFile(file){  
     fs.readFile(file, function(err, data){  
         if(err)  
-            console.log("��ȡ�ļ�fail " + err);  
+            console.log("读取文件fail " + err);  
         else{  
-            // ��ȡ�ɹ�ʱ  
-            // ����ֽ�����  
+            // 读取成功时  
+            // 输出字节数组  
             console.log(data);  
-            // ������ת��Ϊgbk����  
+            // 把数组转换为gbk中文  
             var str = iconv.decode(data, 'gbk');  
             console.log(str);  
         }  
@@ -52,22 +52,22 @@ function readFile(file){
 } 
 
 
-ע1��Node��iconvģ�飬��֧��Linux����֧��Windows�����Ҫ�ô�js��iconv-lite����������˵iconv-lite�����ܸ��ã�����ο�Gitվ�㣺iconv-lite
+注1：Node的iconv模块，仅支持Linux，不支持Windows，因此要用纯js的iconv-lite，另：作者说iconv-lite的性能更好，具体参考Git站点：iconv-lite
 
-ע2�����ڲ��Զ�д�ļ�ʱ��ʼ���޷�������д���ļ���һֱ���룬��ȡ����������ͬ�°��ҷ��֣�js�ļ��ı����ʽ��ansi��nodejs�Ĵ����ļ�������utf8��ʽ
+注2：我在测试读写文件时，始终无法把中文写入文件，一直乱码，读取正常，后来同事帮我发现：js文件的编码格式是ansi，nodejs的代码文件必须是utf8格式
 
-ע3���������������ļ���������UTF8�����ʽ����ģ���ô�Ͳ���Ҫʹ��iconvģ�飬ֱ����utf8��ʽ��ȡ�ļ����ɣ��磺
+注3：如果程序操作的文件，都是以UTF8编码格式保存的，那么就不需要使用iconv模块，直接以utf8格式读取文件即可，如：
 
-// ����file�����뱣��Ϊutf8��ʽ��������������Ļ�����  
+// 参数file，必须保存为utf8格式，否则里面的中文会乱码  
 
 function readFile(file){  
-    // readFile�ĵ�2��������ʾ��ȡ�����ʽ�����δ���������������ʾ����Buffer�ֽ�����  
+    // readFile的第2个参数表示读取编码格式，如果未传递这个参数，表示返回Buffer字节数组  
     fs.readFile(file, "utf8", function(err, data){  
         if(err)  
-            console.log("��ȡ�ļ�fail " + err);  
+            console.log("读取文件fail " + err);  
         else{  
-            // ��ȡ�ɹ�ʱ  
-            console.log(data);// ֱ����������ַ�����  
+            // 读取成功时  
+            console.log(data);// 直接输出中文字符串了  
         }  
     });  
 }  

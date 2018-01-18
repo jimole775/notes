@@ -1,4 +1,4 @@
-·½·¨Ò»£º
+æ–¹æ³•ä¸€ï¼š
 
 var num = $img.length;
  
@@ -12,7 +12,7 @@ $imgs.load(function() {
 
 
 
-·½·¨¶ş£º£¨jqµÄÍ¬²½·½°¸£©
+æ–¹æ³•äºŒï¼šï¼ˆjqçš„åŒæ­¥æ–¹æ¡ˆï¼‰
 
 var defereds = [];
  
@@ -28,43 +28,43 @@ $.when.apply(null, defereds).done(function() {
 
 
 
-·½·¨Èı£º£¨²»ÍÆ¼ö´Ë·½°¸£¬¾­³£Óöµ½qim.completeÎªFalse¾ÍÌø¹ı³ÌĞòÁË,ÓĞ¿ÉÄÜÊÇä¯ÀÀÆ÷»º´æÔì³ÉµÄ£¡£©
+æ–¹æ³•ä¸‰ï¼šï¼ˆä¸æ¨èæ­¤æ–¹æ¡ˆï¼Œç»å¸¸é‡åˆ°qim.completeä¸ºFalseå°±è·³è¿‡ç¨‹åºäº†,æœ‰å¯èƒ½æ˜¯æµè§ˆå™¨ç¼“å­˜é€ æˆçš„ï¼ï¼‰
 
-qim=new Image();//ĞÂ½¨Ò»¸öÍ¼Æ¬£»
-qim.src=$preload;//Í¼Æ¬µØÖ·ÊÇÄã×¼±¸Òª¼ÓÔØµÄµØÖ·£»
-if(qim.complete){ $("#cxNfloor").html($filetoload);//qim.complete±íÊ¾Õâ¸öÍ¼Æ¬ÊÇ·ñ¼ÓÔØÍê±ÏÁË
+qim=new Image();//æ–°å»ºä¸€ä¸ªå›¾ç‰‡ï¼›
+qim.src=$preload;//å›¾ç‰‡åœ°å€æ˜¯ä½ å‡†å¤‡è¦åŠ è½½çš„åœ°å€ï¼›
+if(qim.complete){ $("#cxNfloor").html($filetoload);//qim.completeè¡¨ç¤ºè¿™ä¸ªå›¾ç‰‡æ˜¯å¦åŠ è½½å®Œæ¯•äº†
 }
 
-·½·¨ËÄ£º
+æ–¹æ³•å››ï¼š
 
-//jqueryµÄ·½Ê½
+//jqueryçš„æ–¹å¼
 $("#imageId").load(function(){
-  alert("¼ÓÔØÍê³É£¡");
+  alert("åŠ è½½å®Œæˆï¼");
 });
 
-##»òÕßÊ¹ÓÃÔ­Éú onload:
+##æˆ–è€…ä½¿ç”¨åŸç”Ÿ onload:
 
 document.getElementById("img2").onload=function(){}
 
 
-###############¼æÈİĞÔ·½·¨¼¯###########################
----µ¥¸öÍ¼Æ¬¼ÓÔØ£º
+###############å…¼å®¹æ€§æ–¹æ³•é›†###########################
+---å•ä¸ªå›¾ç‰‡åŠ è½½ï¼š
 
 function loadImage(url, callback) {
- var img = new Image(); //´´½¨Ò»¸öImage¶ÔÏó£¬ÊµÏÖÍ¼Æ¬µÄÔ¤ÏÂÔØ
+ var img = new Image(); //åˆ›å»ºä¸€ä¸ªImageå¯¹è±¡ï¼Œå®ç°å›¾ç‰‡çš„é¢„ä¸‹è½½
  img.src = url;
   
- if(img.complete) { // Èç¹ûÍ¼Æ¬ÒÑ¾­´æÔÚÓÚä¯ÀÀÆ÷»º´æ£¬Ö±½Óµ÷ÓÃ»Øµ÷º¯Êı
+ if(img.complete) { // å¦‚æœå›¾ç‰‡å·²ç»å­˜åœ¨äºæµè§ˆå™¨ç¼“å­˜ï¼Œç›´æ¥è°ƒç”¨å›è°ƒå‡½æ•°
    callback.call(img);
-   return; // Ö±½Ó·µ»Ø£¬²»ÓÃÔÙ´¦ÀíonloadÊÂ¼ş
+   return; // ç›´æ¥è¿”å›ï¼Œä¸ç”¨å†å¤„ç†onloadäº‹ä»¶
   }
- img.onload = function () { //Í¼Æ¬ÏÂÔØÍê±ÏÊ±Òì²½µ÷ÓÃcallbackº¯Êı¡£
-    callback.call(img);//½«»Øµ÷º¯ÊıµÄthisÌæ»»ÎªImage¶ÔÏó
+ img.onload = function () { //å›¾ç‰‡ä¸‹è½½å®Œæ¯•æ—¶å¼‚æ­¥è°ƒç”¨callbackå‡½æ•°ã€‚
+    callback.call(img);//å°†å›è°ƒå‡½æ•°çš„thisæ›¿æ¢ä¸ºImageå¯¹è±¡
   };
 };
 
 
----¶à¸öÍ¼Æ¬¼ÓÔØ£º
+---å¤šä¸ªå›¾ç‰‡åŠ è½½ï¼š
 
 var imgdefereds=[];
 $('img').each(function(){
@@ -72,7 +72,7 @@ $('img').each(function(){
  $(this).bind('load',function(){
  dfd.resolve();
  }).bind('error',function(){
- //Í¼Æ¬¼ÓÔØ´íÎó£¬¼ÓÈë´íÎó´¦Àí
+ //å›¾ç‰‡åŠ è½½é”™è¯¯ï¼ŒåŠ å…¥é”™è¯¯å¤„ç†
  // dfd.resolve();
  })
  if(this.complete) setTimeout(function(){
