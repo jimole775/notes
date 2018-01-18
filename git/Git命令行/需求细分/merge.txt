@@ -1,13 +1,13 @@
-1£¬mergeµÄÊ±ºò£¬Èç¹û test ·ÖÖ§µÄHEAD°æ±¾ÊÇ master µÄºóĞø£¬
-   ÄÇÃ´Ö»ÄÜÊÇÔÚ master ·ÖÖ§ÉÏÖ´ĞĞ merge ÃüÁî£¬
-   ·ñÔò»áÏÔÊ¾ already up-to-date £¬ÒòÎªÔÚtest·ÖÖ§ÉÏmerge master£¬ÄÃ²»µ½ÈÎºÎ¶«Î÷
+1ï¼Œmergeçš„æ—¶å€™ï¼Œå¦‚æœ test åˆ†æ”¯çš„HEADç‰ˆæœ¬æ˜¯ master çš„åç»­ï¼Œ
+   é‚£ä¹ˆåªèƒ½æ˜¯åœ¨ master åˆ†æ”¯ä¸Šæ‰§è¡Œ merge å‘½ä»¤ï¼Œ
+   å¦åˆ™ä¼šæ˜¾ç¤º already up-to-date ï¼Œå› ä¸ºåœ¨teståˆ†æ”¯ä¸Šmerge masterï¼Œæ‹¿ä¸åˆ°ä»»ä½•ä¸œè¥¿
 
-Àı×Ó: 
-$git master merge test  //ÕıÈ·
+ä¾‹å­: 
+$git master merge test  //æ­£ç¡®
 $git test merge master	//already up-to-date
 
-2£¬mergeµÄÊ±ºò£¬Á½¸ö¿âµÄHEAD°æ±¾³öÏÖconflect£¬
-   ¾Í±ØĞëÏÈÊ¹ÓÃdiff, ÊÖ¶¯½â¾ö¡£
+2ï¼Œmergeçš„æ—¶å€™ï¼Œä¸¤ä¸ªåº“çš„HEADç‰ˆæœ¬å‡ºç°conflectï¼Œ
+   å°±å¿…é¡»å…ˆä½¿ç”¨diff, æ‰‹åŠ¨è§£å†³ã€‚
 
 
 	

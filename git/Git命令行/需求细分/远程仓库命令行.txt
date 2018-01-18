@@ -1,16 +1,16 @@
 
-�鿴Զ�ֿ̲⣺$ git remote -v
+查看远程仓库：$ git remote -v
 
-����Զ�ֿ̲⣺$ git remote add [name] [url]
+添加远程仓库：$ git remote add [name] [url]
 
-ɾ��Զ�ֿ̲⣺$ git remote rm [name]
+删除远程仓库：$ git remote rm [name]
 
-�޸�Զ�ֿ̲⣺$ git remote set-url --push [name] [newUrl]
+修改远程仓库：$ git remote set-url --push [name] [newUrl]
 
-��ȡԶ�ֿ̲⣺$ git pull [remoteName] [localBranchName]
+拉取远程仓库：$ git pull [remoteName] [localBranchName]
 
-����Զ�ֿ̲⣺$ git push [remoteName] [localBranchName]
+推送远程仓库：$ git push [remoteName] [localBranchName]
 
-�鿴��Ŀ����Ϣ: $ git remote show [remoteName] 
+查看项目的信息: $ git remote show [remoteName] 
 
-��ʾԶ�̷�֧: $ git remote show
+显示远程分支: $ git remote show
