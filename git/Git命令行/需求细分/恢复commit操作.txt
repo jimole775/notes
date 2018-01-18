@@ -1,2 +1,2 @@
-1£¬Ê¹ÓÃ git log ²é¿´commitµÄID£»
-2£¬Ê¹ÓÃ git reset --hard commit-id »Ö¸´µ½ÏàÓ¦µÄ°æ±¾£¨commit-id¿ÉÒÔÊÇÇ°4Î»×Ö·û£©£»
+1ï¼Œä½¿ç”¨ git log æŸ¥çœ‹commitçš„IDï¼›
+2ï¼Œä½¿ç”¨ git reset --hard commit-id æ¢å¤åˆ°ç›¸åº”çš„ç‰ˆæœ¬ï¼ˆcommit-idå¯ä»¥æ˜¯å‰4ä½å­—ç¬¦ï¼‰ï¼›
