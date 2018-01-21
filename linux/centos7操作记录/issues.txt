@@ -1,0 +1,10 @@
+1, 如果ls指令下，有文件夹或者文件，但是需要打开或者进入时提示 No such file or directory,可以尝试以下两种方法
+   1)使用perl指令
+   2)加上"./"前缀
+2, 用putty ssh登陆linux时，出现 no supported authentication methods available
+   打开linux的sshd_config,尝试以下3处的修改：
+   1)StrictModes no
+   2)PasswordAuthentication yes
+   3)PremitRootLogin yes
+   修改完毕之后，service sshd restart 重启服务
+   
