@@ -25,6 +25,7 @@
             };
             xhr.send(form); //开始上传，发送form数据
         }
+        
         //上传进度实现方法，上传过程中会频繁调用该方法
         function progressFunction(evt) {
 

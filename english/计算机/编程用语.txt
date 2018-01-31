@@ -48,3 +48,4 @@ candidate: (n) 候选者
 
 increament: (v) 增长 （n）增量
 
+symbol: (n) 象征，标志，符号
