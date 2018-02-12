@@ -7,14 +7,14 @@ const vendors = [
     'iscroll',
     'json2',
     'lazyload'
-    // ...ÆäËü¿â
+    // ...å…¶å®ƒåº“
 ];
 
 module.exports = {
     output: {
         path: __dirname + "/lib",
         filename: '[name].js',
-        library: '[name]'   //dll¿âµÄÃû³Æ£¬ÔÚÊä³öµÄÎÄ¼ş"vendor.js"ÀïÃæ¿ÉÒÔ²é¿´
+        library: '[name]'   //dllåº“çš„åç§°ï¼Œåœ¨è¾“å‡ºçš„æ–‡ä»¶"vendor.js"é‡Œé¢å¯ä»¥æŸ¥çœ‹
     },
     entry: {
         vendor: vendors
@@ -22,7 +22,7 @@ module.exports = {
     plugins: [
         new webpack.DllPlugin({
             path: 'manifest.json',
-            name: '[name]', //ÔÚÕâÀïÏàµ±ÓëÒªÒıÓÃdll¿â£¬ËùÒÔÃû³Æ±ØĞëºÍ¶¨ÒåµÄ¿âÃûÒ»ÖÂ
+            name: '[name]', //åœ¨è¿™é‡Œç›¸å½“ä¸è¦å¼•ç”¨dllåº“ï¼Œæ‰€ä»¥åç§°å¿…é¡»å’Œå®šä¹‰çš„åº“åä¸€è‡´
             context:  __dirname
         })
     ]

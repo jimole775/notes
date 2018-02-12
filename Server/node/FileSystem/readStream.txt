@@ -1,0 +1,12 @@
+var rs = fs.createReadStream("...");
+rs.on("data",function(chunk){
+    console.log(chunk);
+});
+rs.on("end",function(){});
+
+
+// 也可以使用管道的方式，直接以 可写流 为参数，直接接收读出来的数据
+var ws = fs.createWriteStream(path);
+rs.pipe(ws);
+
+

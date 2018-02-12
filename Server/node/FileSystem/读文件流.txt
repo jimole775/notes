@@ -1,3 +1,0 @@
-var rs = fs.createReadStream("...");
-rs.on("data",function(){});
-rs.on("end",function(){});
