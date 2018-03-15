@@ -5,5 +5,5 @@ function print(){
     console.log("hello you");
     let foo = "bar";
 }
-
-export default print;
+if(process.env.NODE_ENV)console.log(process.env.NODE_ENV);
+// export default print;

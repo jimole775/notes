@@ -1,0 +1,4 @@
+1，script标签内；
+<script type="text/babel"></script>
+
+2，外联js；
