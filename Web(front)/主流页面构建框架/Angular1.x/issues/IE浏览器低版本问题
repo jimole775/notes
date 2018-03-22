@@ -1,0 +1,2 @@
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+// 以上意为：如果当前系统支持chrome插件，就用chrome来渲染，如果没有，就选择高版本的IE浏览器来渲染
