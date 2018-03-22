@@ -1,0 +1,3 @@
+$.ajax({
+async:true/false	//true异步，false同步
+})
