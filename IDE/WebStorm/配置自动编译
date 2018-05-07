@@ -1,0 +1,13 @@
+1 ======_less_=======
+> npm install -g less
+* file --> setting --> file wathces --> add less project 
+
+2 ======_jade_=======(同上)
+
+3 ======_typescript_=======(需要手动配置)
+> npm install -g typescript
+* file --> setting --> file watches --> add typescript project 
+# Program: ...\npm\tsc.cmd 
+# Arguments: --target "ES5" $FileName$
+# Output: $FileNameWhitoutExtension$.js
+# Working Directory: $FileDir$
