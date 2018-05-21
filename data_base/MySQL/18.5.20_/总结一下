@@ -1,0 +1,20 @@
+1，table的数据id从1开始
+2，常用指令
+ A. alter table #更改表
+ B. select from #选择表
+ C. create table #新建表
+2，常用的option记录
+ A. not null #不能为空
+ B. unique #不能重复
+ C. unsigned #不能为负
+ D. default #设定默认值
+ E. where #数据的提取范围
+ F. primary key #主键
+ G. auto_increment #自加
+ H. varchar #变量字符？
+ I. char #固定字符，如果存入的字符长度不够，用空来填补
+3，从txt文件导入数据的时候的格式问题：
+ A. 每个字段都必须保持key value的形式
+ B. 每个字段默认使用一个tab符做分隔，当然可以自定义分隔符（fields terminated by ","）
+ C. 每行数据默认使用一个换行符做分隔
+ D. 然后也可以给每个字段的key和value规定边界，默认是以字段分隔符为边界，如果要自定义的话（enclosed by '"'）
