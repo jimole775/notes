@@ -9,6 +9,8 @@
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "get-pixels": "^3.3.0",
+    "require-text": "0.0.1",
+    "requirejs-text": "^2.0.15",
     "thunkify": "^2.1.2",
     "webpack": "^3.6.0"
   },
@@ -19,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dll":"webpack --progress --colors --config ./webpack.dll.config.js"
+    "dll": "webpack --progress --colors --config ./webpack.dll.config.js"
   },
   "repository": {
     "type": "git",

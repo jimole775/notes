@@ -1,0 +1,87 @@
+方法一：
+
+var num = $img.length;
+ 
+$imgs.load(function() {
+  num--;
+  if (num > 0) {
+    return;
+  }
+  console.log('load compeleted');
+}
+
+
+
+方法二：（jq的同步方案）
+
+var defereds = [];
+ 
+$imgs.each(function() {
+  var dfd = $.Deferred();
+ 
+  $(this).load(dfd.resolve);
+  defereds.push(dfd);
+});
+$.when.apply(null, defereds).done(function() {
+  console.log('load compeleted');
+});
+
+
+
+方法三：（不推荐此方案，经常遇到qim.complete为False就跳过程序了,有可能是浏览器缓存造成的！）
+
+qim=new Image();//新建一个图片；
+qim.src=$preload;//图片地址是你准备要加载的地址；
+if(qim.complete){ $("#cxNfloor").html($filetoload);//qim.complete表示这个图片是否加载完毕了
+}
+
+方法四：
+
+//jquery的方式
+$("#imageId").load(function(){
+  alert("加载完成！");
+});
+
+##或者使用原生 onload:
+
+document.getElementById("img2").onload=function(){}
+
+
+###############兼容性方法集###########################
+---单个图片加载：
+
+function loadImage(url, callback) {
+ var img = new Image(); //创建一个Image对象，实现图片的预下载
+ img.src = url;
+  
+ if(img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+   callback.call(img);
+   return; // 直接返回，不用再处理onload事件
+  }
+ img.onload = function () { //图片下载完毕时异步调用callback函数。
+    callback.call(img);//将回调函数的this替换为Image对象
+  };
+};
+
+
+---多个图片加载：
+
+var imgdefereds=[];
+$('img').each(function(){
+ var dfd=$.Deferred();
+ $(this).bind('load',function(){
+ dfd.resolve();
+ }).bind('error',function(){
+ //图片加载错误，加入错误处理
+ // dfd.resolve();
+ })
+ if(this.complete) setTimeout(function(){
+ dfd.resolve();
+ },1000);
+ imgdefereds.push(dfd);
+})
+$.when.apply(null,imgdefereds).done(function(){
+  callback();
+});
+
+
