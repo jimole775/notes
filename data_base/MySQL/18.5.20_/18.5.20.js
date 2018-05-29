@@ -56,12 +56,48 @@ connection.connect();
 //     console.log(arguments);
 // })
 
-connection.query(`load data local infile "./test2.txt" into table test1 fields terminated by ','` ,function(){
-    console.log(arguments)
+var promise = new Promise(function(resolve,reject){
+    connection.query(`select sex1 from test1`,function(err,result){
+        if(err)reject();
+        else resolve();
+        // console.log(arguments);
+        // if(err){
+        //     connection.query(`alter table test1 add sex1 varchar(20)`,(err,reault)=>{
+        //         console.log(err);
+        // });
+        // connection.query(`select * from test1`,(err,reault)=>{
+        //         console.log(err);
+        // });
+        // }
+    });
 });
+promise.then(()=>{
+    
+    connection.query(`select * from test1`,(err,reault)=>{
+            console.log("resolve:",err,reault);
+    });
+    // connection.query(`load data local infile "./test2.txt" into table test1 fields terminated by ','` ,
+    // function(err,result){
+    //     console.log(result);
+    // });
+    connection.end();
+},()=>{
+    connection.query(`alter table test1 add sex1 varchar(20)`,(err,reault)=>{
+        console.log("reject:",arguments);
+    });
+    connection.query(`select * from test1`,(err,reault)=>{
+            console.log("reject:",arguments);
+    });
+    connection.end();
+})
 
-connection.query('select * from test1',function(){
-    console.log(arguments)
-});
 
-connection.end();
+// connection.query('ALTER TABLE test1 if exists delete sex',function(){
+//     console.log(arguments);
+// })
+
+
+
+// connection.query('select * from test1',function(err,result){
+//     console.log(result)
+// });

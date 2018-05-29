@@ -20,6 +20,7 @@ App.factory("commonFun", function () {
                     $scope.$apply(fn);
                 }
             }
+            
 })
 
 

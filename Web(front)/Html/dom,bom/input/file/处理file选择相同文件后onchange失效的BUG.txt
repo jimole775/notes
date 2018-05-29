@@ -1,9 +1,0 @@
-两种方法
-
-1、在你的input所属的form表单reset()就可以了！
-
-$(#avatorForm)[0].reset();
-
-2、设置你的input file value值为空
-
-$('.inputImage').val('');

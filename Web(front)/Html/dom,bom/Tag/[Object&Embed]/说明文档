@@ -1,0 +1,39 @@
+根据MDN的介绍，embed已属放弃类的标签，不推荐使用
+那么就剩object可以用了，不过介绍也比较简单，
+应该是都推荐h5的媒体标签了，比如 audio,video...
+
+object的用例：
+<object>
+<param></param> //object的参数
+<param></param> //object的参数
+<param></param> //object的参数
+</object>
+
+具体的param参数：
+<param name="playcount" value="1"><!--控制重复次数: “x”为几重复播放几次; x=0，无限循环。--> 
+<param name="autostart" value="0"><!--控制播放方式: x=1，打开网页自动播放; x=0，按播放键播放。--> 
+<param name="clicktoplay" value="1"><!--控制播放开关: x=1，可鼠标点击控制播放或暂停状态; x=0，禁用此功能。--> 
+<param name="displaysize" value="0"><!--控制播放画面: x=0，原始大小; x=1，一半大小; x=2，2倍大小。--> 
+<param name="enablefullscreen controls" value="1"><!--控制切换全屏: x=1，允许切换为全屏; x=0，禁用此功能。--> 
+<param name="showaudio controls" value="1"><!--控制音量: x=1，允许调节音量; x=0，禁止音量调节。--> 
+<param name="enablecontext menu" value="1"><!--控制快捷菜单: x=1，允许使用右键菜单; x=0，禁用右键菜单。--> 
+<param name="showdisplay" value="1"><!--控制版权信息: x=1，显示电影及作者信息;x=0，不显示相关信息--> 
+<param name="Balance" value="0"><!--调整左右声道平衡,同上面旧播放器代码--> 
+<param name="enabled" value="-1"><!--播放器是否可人为控制--> 
+<param name="EnableContextMenu" value="-1"><!--是否启用上下文菜单--> 
+<param name="url" value="http://1.wma"> <!--播放的文件地址-->
+<param name="PlayCount" value="1"><!--播放次数控制,为整数--> 
+<param name="rate" value="1"><!--播放速率控制,1为正常,允许小数,1.0-2.0--> 
+<param name="currentPosition" value="0"><!--控件设置:当前位置--> 
+<param name="currentMarker" value="0"><!--控件设置:当前标记--> 
+<param name="defaultFrame" value=""><!--显示默认框架--> 
+<param name="invokeURLs" value="0"><!--脚本命令设置:是否调用URL--> 
+<param name="baseURL" value=""><!--脚本命令设置:被调用的URL--> 
+<param name="stretchToFit" value="0"><!--是否按比例伸展--> 
+<param name="volume" value="50"><!--默认声音大小0%-100%,50则为50%--> 
+<param name="mute" value="0"><!--是否静音-- 
+<param name="uiMode" value="mini"><!--播放器显示模式:Full显示全部;mini最简化;None不显示播放控制,只显示视频窗口;invisible全部不显示--><param name="windowlessVideo" value="0"><!--如果是0可以允许全屏,否则只能在窗口中查看--> 
+<param name="fullScreen" value="0"><!--开始播放是否自动全屏--> 
+<param name="enableErrorDialogs" value="-1"><!--是否启用错误提示报告--> 
+<param name="SAMIStyle" value><!--SAMI样式--> 
+<param name="SAMIFilename" value><!--字幕ID--> 

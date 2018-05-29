@@ -1,0 +1,7 @@
+npm install requirejs-text
+
+语法使用：
+require(['text!./teplate.html'],function(templateText){
+    console.log(templateText);  // 当前加载出来的就是标签文本
+});
+
