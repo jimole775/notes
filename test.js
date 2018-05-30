@@ -14,11 +14,26 @@
 //var fn2 = require("./module2.js");
 //console.log("what is fn1:",fn1);
 //console.log("what is fn2:",fn2);
-var lodash = require("__");
-console.log("what is lodash:",lodash);
+// var lodash = require("__");
+// console.log("what is lodash:",lodash);
 //var babel = require("babel-core");
 //var options = {"presets":"es2015"};
 //var code = `function foo(){return "bar"}`;
 //var result = babel.transformFile(code,options,(result)=>{console.log(result)});
 //var result = babel.transformFile(__dirname + "/module2.js",options,(err,result)=>{console.log(result)});
 //console.log(result.code);
+
+const Readable = require('stream').Readable;
+const rs = Readable();
+const s = 'VaJoyashdgagdakwgik.waygdiawgdiaywgdaygwdagwdyawydaiwiydawgd';
+const l = s.length;
+let i = 0;
+rs._read = ()=>{
+    if(i == l){
+        rs.push(' is my name');
+        return rs.push(null)
+    }
+    rs.push(s[i++] + "\n")
+};
+rs.pipe(process.stdout);
+// console.log("whole row out in same time agwdiaywgdiyagwdiyawgdaw dagw dyhyag ydwa wyd!")

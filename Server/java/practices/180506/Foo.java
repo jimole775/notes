@@ -31,7 +31,7 @@ class TestFormula implements Formula{
         return a;
     }
 
-    // @Override
+    @Override
     String calc() {
         return "run calc!";
     }
