@@ -15,7 +15,7 @@ public class Foo{
 class Test{
     public void name() {
         System.out.println("apply name method!");
-    }   
+    }
 }
 
 interface Formula {
@@ -26,13 +26,13 @@ interface Formula {
 }
 
 class TestFormula implements Formula{
-    @Override
-    int trydo(int a){
+    // @Override
+    public int trydo(int a){
         return a;
     }
 
     @Override
-    String calc() {
-        return "run calc!";
+    public int calc() {
+        return 10;
     }
 }

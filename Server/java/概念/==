@@ -1,0 +1,46 @@
+在java里，==和js的基本一样，就是用于判断基础类型和引用类型的；
+而equals()方法只是用于判断内容的(根据JDK的实现会有所不同，比如Object的equals方法就是直接使用==来进行判断)
+现在的理解下:
+equals一般只判断string类型，像int，char这种类型，都是基础类型，用==判断就行，
+即使是做复合对象的判断，也只是用==和equals逐层判断对不同类型的基础值进行判断的（和js的深度拷贝差不多）
+
+String a = "hello";
+String b = new String("hello");
+a == b; //false
+a.equals(b); //true
+
+一般情况下，Object基类对象的equals方法的代码如下：
+class boolean equals(Object obj){
+    return this == obj; //this指向调用者
+}
+
+
+但是JDK中的String对象，会对equals的方法进行重写，源码如下：
+==================================================================================
+
+public boolean equals(Object anObject) {//anObject是传进来的要进行比较的对象  
+           //如果当前对象和传进来要进行比较的对象anObject是同一个对象（即地址相同eg同一辆汽车（只有一辆））则返回true  
+         if (this == anObject) {  
+                return true;  
+            }  
+            if (anObject instanceof String) {//如果传进来的需要进行比较的对象anObject是String类的实例，则把anObject转换成String类型  
+                String anotherString = (String) anObject;  
+                //value是一个private final char value[];  
+                //String类的构造函数已经给value[]初始化了  
+                //value.length代表原先要比较对象的字符个数  
+                int n = value.length;  
+                //如果两者的字符个数不相等，意味着两者不可能相等，所以返回false；否则，依次遍历比较两者的每一个字符，若每一个字符都相等则相等，否则不想等  
+                if (n == anotherString.value.length) {  
+                    char v1[] = value;  
+                    char v2[] = anotherString.value;  
+                    int i = 0;  
+                    while (n-- != 0) {  
+                        if (v1[i] != v2[i])  
+                                return false;  
+                        i++;  
+                    }  
+                    return true;  
+                }  
+            }  
+            return false;  
+        }
