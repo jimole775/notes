@@ -1,6 +1,9 @@
 
 public class Wine{
     private String name;
+    public Wine(){
+        this.setName("wine");
+    }
 
     public void setName(String name){
         this.name = name;

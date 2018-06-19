@@ -1,0 +1,16 @@
+1，自动转换：（"小"类型转成"大"类型，可以自动转）
+
+byte b;
+int i = b;
+
+char c = "c";
+int i = c;  //输出99；ascii的位置
+
+
+2，强制转换：（"大"转"小"，就需要强制转换了）
+byte,short,char三种类型是同级的(小类型)，也需要进行强制转换。
+
+同级： short i = 99; char c = (char)i; // 输出“c”
+
+异级： double i = 1.1d; int a = (int)i + 1;
+
