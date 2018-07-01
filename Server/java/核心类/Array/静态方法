@@ -1,0 +1,14 @@
+Arrays.sort();
+在js中，这个是属于实例方法；在java中，则是静态方法
+
+Arrays.toString({});
+
+Arrays.deepToString({{}});
+
+
+Arrays.fill(int[],0);   // 全部填充成0；
+
+Arrays.equals(int[] a,int[] b); //比对两个数组是否相等
+
+System.arraycopy(arr1,1,arr2,2,2);//把数组arr1的2个数复制到arr2
+
