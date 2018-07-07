@@ -1,0 +1,20 @@
+$properties: (margin, padding);
+@mixin set-value($side, $value) {
+  @each $prop in $properties {
+    //对每个在$properties中的$prop,即$properties中的margin、padding
+    #{$prop}-#{$side}: $value; //$prop连接参数$side，值为参数$value
+  }
+}
+
+.login-box {
+  @include set-value(top, 14px); //调用混合宏
+}
+
+
+
+
+/**######最后转换出来的结果#####*/
+.login-box {
+  margin-top: 14px;
+  padding-top: 14px;
+}

@@ -1,0 +1,64 @@
+/**
+ * Created by Andy on 2017/8/25.
+ */
+
+interface LabelledValue {
+    label:string;
+    width?:number;  /**可选属性*/
+}
+
+//function createSquareOrg(labelOpt:{label?:string}):any{ //不使用接口类型的情况下也可以这样使用
+//
+//}
+
+function createSquare(labelOpt:LabelledValue):any{
+    return labelOpt.label;
+}
+
+createSquare({label:"div"});
+
+
+/**只读属性*/
+interface Point {
+    //readonly  x: number;   //官网是那么写的，不知道为什么编辑器不支持，但是编译出来又是没问题的
+    //readonly  y: number;
+    x:number;
+    y:number;
+}
+
+function readPoint(coord:Point){
+    return coord.x + coord.y;
+}
+
+readPoint({x:5,y:6});
+
+let ary : ReadonlyArray<number>= [1,2.3,4];
+
+ary[0] = 2;
+
+
+/**函数接口*/
+interface Func{
+    (foo:string,bar:string):boolean;
+}
+
+let mySearch:Func;
+mySearch = function(foz,baz){ //这里不一定需要参数名相同,而且也不需要再规定类型
+    return true;
+};
+
+/**可索引的接口*/
+//创建一个只读数组，规定下标是数字类型；
+interface ReadOnlyArray{
+    //readonly [index:number]:string;
+    [index:number]:string;
+}
+let myArray : ReadOnlyArray = [1,23,4,67,8];
+myArray[0] = 2; //error
+myArray["foo"]; //error
+
+
+/***/
+
+
+

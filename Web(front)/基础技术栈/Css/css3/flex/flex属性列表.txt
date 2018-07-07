@@ -1,0 +1,21 @@
+display: flex | inline-flex;
+display: -webkit-flex | -webkit-inline-flex;
+
+***设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。
+
+
+容器属性：
+***|flex-direction【方向】
+***|flex-wrap【换行】
+***|flex-flow【简写】
+***|justify-content【主轴对齐】
+***|align-items【交叉轴对齐】
+***|align-content【多轴对齐】
+
+块属性：
+***|order【排列】
+***|flex-grow【放大】
+***|flex-shrink【缩小】
+***|flex-basis【固定大小】
+***|flex【简写】
+***|align-self【单独样式】

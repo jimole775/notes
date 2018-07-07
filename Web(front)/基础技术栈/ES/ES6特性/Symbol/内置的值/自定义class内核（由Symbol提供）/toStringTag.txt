@@ -1,0 +1,21 @@
+...创建自定义的toString结果；
+   Object.prototype.toString.call('foo');     // "[object String]"
+   Object.prototype.toString.call([1, 2]);    // "[object Array]"
+   Object.prototype.toString.call(3);         // "[object Number]"
+   Object.prototype.toString.call(true);      // "[object Boolean]"
+   Object.prototype.toString.call(undefined); // "[object Undefined]"
+   Object.prototype.toString.call(null);      // "[object Null]"
+
+   Object.prototype.toString.call(new Map());       // "[object Map]"
+   Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
+   Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
+
+   class ValidatorClass {}	//自定义类默认是Object
+   Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
+
+...以上都是内核标签；下面就自创一个
+   class ValidatorClass{
+      get [Symbol.toStringTag](){
+         return "Validator";
+      }
+   }

@@ -1,1 +1,0 @@
-$("#id").click();	//此种效果只会在 input checkbox 标签生效！

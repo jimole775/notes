@@ -1,2 +1,0 @@
-...和match,search,replace一样；
-   /-/[Symbol.split]("a-b-c");	//[a,b,c]

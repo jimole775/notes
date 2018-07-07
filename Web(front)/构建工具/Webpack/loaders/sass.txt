@@ -1,0 +1,9 @@
+$ npm install sass-loader node-sass //因为sass-loader依赖于node-sass，所以还要安装node-sass
+
+    module: {
+        loaders: [{
+            test:/\.scss$/,
+            loader:"style-loader!css-loader!sass-loader",
+            exclude: [/node_modules/,/plugins/]     //打包的时候剔除这个文件夹下面的内容
+        }]
+    }

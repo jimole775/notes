@@ -1,0 +1,7 @@
+document.onkeydown = function(e){
+
+	if(e.ctrlKey && e.keyCode==="13"){
+		//ctrl + Enter 键组合
+	}
+
+}

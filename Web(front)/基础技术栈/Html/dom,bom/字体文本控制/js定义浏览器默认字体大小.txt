@@ -1,0 +1,3 @@
+1,之前看的方法为定义  body的fontsize为62.5%;
+
+实际在chorme运行时,document.documentElement.style.fontSize = '62.5%'才生效 ====> 有待校验其他浏览器情况

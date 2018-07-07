@@ -1,0 +1,10 @@
+Blob是一大块二进制数据（Buffer），普通打印只显示一个length属性和一个type属性；
+要想读取里面的内容，必须结合浏览器的FileReader对象；
+样例：
+
+var blob = new Blob("你好",{type:"text/plain"});
+var reader = new FileReader();
+reader.readAsText(blob);
+reader.onloadend = function(){
+	console.log(reader.result);
+} 

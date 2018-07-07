@@ -1,0 +1,11 @@
+...可以把这个当成是命令行工具；
+...直接用命令行执行翻译，或者使用cli自带的babel-node直接运行ES6文件
+...| 语法：
+# 翻译单独文件
+$ babel es6.js --watch --out-file es5.js
+
+# 翻译整个目录的文件
+$ babel src --out-dir lib
+
+# 生成source map文件
+$ babel src --out-dir lib -s

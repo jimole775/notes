@@ -1,0 +1,5 @@
+“dev-mac”: " export NODE_ENV=development&&node --harmony --use_strict index.js  -w ",
+“dev-win”: " set NODE_ENV=development&&node --harmony --use_strict index.js  -w ",
+
+##上面命令设置了process.env.NODE_ENV的值是development，当然也可以随意设置任意键和值
+##设置之后，在同一个node环境下（新建一个命令行窗口将失效）都能访问的到

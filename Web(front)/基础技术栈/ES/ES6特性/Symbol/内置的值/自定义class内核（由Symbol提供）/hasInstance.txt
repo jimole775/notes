@@ -1,0 +1,8 @@
+==================|Symbol.hasInstance|==========================
+...这个值用于【自拟定】类函数的instanceOf行为；
+   class MyClass{
+      static [Symbol.hasInstance](x){
+         return Array.isArray(x);
+      }
+   }
+   [] instanceOf MyClass;   //true;

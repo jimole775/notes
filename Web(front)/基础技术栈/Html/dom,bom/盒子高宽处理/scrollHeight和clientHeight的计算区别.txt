@@ -1,0 +1,3 @@
+scrollHeight就是求父框内 子框的自身高度，但是这个值会受到 子框内的top值的影响
+
+clientHeight就是求本身的高度，和父框子框无关

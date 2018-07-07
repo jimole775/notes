@@ -1,0 +1,1 @@
+https://github.com/schmod/babel-plugin-angularjs-annotate

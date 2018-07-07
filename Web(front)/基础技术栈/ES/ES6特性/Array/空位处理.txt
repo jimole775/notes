@@ -1,0 +1,16 @@
+...ES5不会拥有空位，新创建的数组默认为 undefined
+...ES6默认为空位 [,,,]
+...空位不是undefined,undefined还是值的一种
+...可以用in运算符可以证明这一点
+   0 in [undefined]	//true;
+   0 in []	//false;
+
+...在【ES5】中，大多数情况下都会忽略空位
+...forEach(),filter(),every(),some()都会跳过空位；
+...map()会跳过空位，但是保留这个值；
+...join(),toString()会将空位转换成undefined,而undefined和null处理成空字符串；
+   [,"a",undefined,null].join("#")	//"#a##"
+   [,"a",undefined,null].toString()	//",a,,"
+
+...在【ES6】中，则明确把空位转成undefined
+...包括实例函数 entries(),keys(),values(),find(),findIndex();

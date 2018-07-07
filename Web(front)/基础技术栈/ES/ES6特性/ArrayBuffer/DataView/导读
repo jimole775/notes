@@ -1,0 +1,7 @@
+...DataView也是ArrayBuffer的视图类型，用于以数组的方式操作Buffer，和TypedArray不同的是，这个DataView可以操作【复杂类型】的buffer;
+...当然，最基础的存储单位还是8位为1字节，如果要读取一个16位的，那么就从dataView读取2字节
+_____________________________________________
+> var buffer = new DataView(10);
+> buffer.setUint8(0,244,true);  //第一字节以小端字节序写入一个8位无符号整数
+> buffer.getUint8(0);  //从第一个字节读取1个8位无符号整数。
+> buffer.getUint16(1); //从第二个字节读取1个16位无符号整数。

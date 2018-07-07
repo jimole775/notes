@@ -1,0 +1,9 @@
+...相当于同时监听多个promise实例，如果参数不是实例，默认会被强制用Promise.resolve()或者Promise.reject()进行转换。
+...有两种处理结果：
+...1，所有实例都resolve,那么就会把所有结果以数组的形式推到then后面处理；
+...2，其中有一个结果reject，那么，这个reject结果就会推到then后面处理，其他结果都会忽略。
+_____________________________________
+    Promise.all([fetch("https://www.baidu.com"),fetch("https://www.google.com")])   //有一点需要注意，参数项并非只接受数组，凡是具有iterator接口的对象都可以
+        .then(function(data){},function(err){});
+
+

@@ -1,0 +1,23 @@
+...这个选项是用于配置免webpack编译的
+
+...| 样例：
+
+<!--首先，手动加载库文件到页面-->
+    <script src="./jquery.min.js"></script>
+
+<!--然后在webpack.config.js进行配置-->
+    ...
+        externals: {
+            //在webpack中打包的原理就是使用 module.exports = window.jQuery; 指向全局的JQ对象
+            "jq": "window.jQuery"
+        }
+    }
+
+<!--最后就可以使用require()调用了-->
+    var $ = require("jq");
+
+...| 需要注意一点：
+...就是这个配置只能指向全局对象，对于那种只依赖其他库，而不对外提供单独接口的库应该是无效的。
+
+
+

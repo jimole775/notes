@@ -1,0 +1,11 @@
+...Map结构可以用于增强Object类型对于键名定义的一些短板
+...比如：Map的键名可以是任意类型的值（包括对象，包括dom）。
+_____________________________________
+   var m = new Map();
+   var o = {foo:"bar"};
+   m.set(o,"hello");
+   m.get(o);    //"hello"
+
+   var ele = document.getElementById("div");
+   m[ele] = metadata;   //使用dom作为键名
+   m[ele] //metadata;

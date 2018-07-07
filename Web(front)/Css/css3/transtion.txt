@@ -1,8 +1,0 @@
-
-// propeties | duration | time-function | delay
-.animation{
-    transtion:all 0.5s ease-in 0.2s,all 1s ease-out 0.2s;
-}
-
-//使用transtion可以制作不错的过渡动画，
-//而且因为是css,可以有很好的向下的兼容性

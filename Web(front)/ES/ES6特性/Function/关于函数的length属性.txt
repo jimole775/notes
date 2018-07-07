@@ -1,4 +1,0 @@
-...一般形态下，length属性其实就是函数当前的形参的个数，可能也就是arguments的长度
-...但是，如果使用了【解构赋值默认参数】，这个参数的长度就会被忽略掉
-   (function foo(a,b,c){}).length	//3
-   (function foo(a,b,c=0){}).length	//2

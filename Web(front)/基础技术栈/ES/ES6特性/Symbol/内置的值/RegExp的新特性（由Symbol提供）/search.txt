@@ -1,0 +1,3 @@
+...和match，replace一样，都是RegExp的一个属性，这个属性指向一个和String对象一样的方法；
+   var reg = /d/;
+   reg[Symbol.search]("asd"); //2;

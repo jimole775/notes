@@ -1,0 +1,10 @@
+   var clickTime = 0;
+    $regularLogBody.on("click",function(){
+        clickTime ++;
+        setTimeout(function(){
+            if(clickTime >= 2){
+		//do something
+            }
+            clickTime = 0;
+        },300);
+    });

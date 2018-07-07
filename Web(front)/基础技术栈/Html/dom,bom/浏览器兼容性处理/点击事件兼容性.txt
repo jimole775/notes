@@ -1,0 +1,13 @@
+
+//能过滤出事件冒泡时的所有元素，（ PC端chrome浏览器 ）有path属性；
+document.addEventListener("click",function(e){var len=e.path.length;var i = 0;var tag;while(i<len){tag=e.path[i];if(tag.onclick || $(tag).attr("ng-click")){console.log(tag);break;}i++}})
+
+
+//jq 和 js点击事件的属性的区别 （ 非IE浏览器 ）；
+addEventListener    	-- currentTarget 为undefined; target 为点击的元素， 
+$.on()     		-- currentTarget 为监听元素本身；target为点击的元素
+
+
+// *-- IE --* 的点击事件( PC端IE9测试 ),整个输出都可以转换成JSON；
+$.on   		-- target 获取的是 {} 空对象,currentTarget 获取的是 {} 空对象	
+attachEvent 	-- 整个点击对象都为空；

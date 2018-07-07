@@ -1,5 +1,0 @@
-基本思路就是:
-1，先读取到图片，不管是base64的，还是URL的，先用一个img标签把图片信息解析出来（包括高，宽，尺寸，图片类型等）！
-2，然后开启一个canvas，把图片塞进去（ctx.drawImage）
-3, 最后使用canvas.toDataURL(type,ratio)进行压缩;
-4, 最后如果需要显示，就再把压缩后的URL绑到img.src上

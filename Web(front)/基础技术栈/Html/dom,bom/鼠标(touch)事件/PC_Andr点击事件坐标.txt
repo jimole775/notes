@@ -1,0 +1,11 @@
+
+Andr端的touch事件：
+
+直接使用event.clientX是不起作用的，要使用event.changedTouches[0].clientX,
+
+如果是jquery的event对象，使用event.originalEvent.changedTouches[0].clientX
+
+PC端的mouse事件：
+
+clientX/clientY:
+	鼠标在页面上可视区域的位置,从浏览器可视区域左上角开始,即是以浏览器滑动条此刻的滑动到的位置为参考点,随滑动条移动 而变化.

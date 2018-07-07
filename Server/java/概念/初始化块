@@ -1,0 +1,11 @@
+public class Test{
+    public Test(){
+        console.log(id);
+    }
+
+    private static int id = 0;
+
+    {
+        id ++;  //这里的代码块会先于构造器运行
+    }
+}

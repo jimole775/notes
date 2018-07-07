@@ -1,0 +1,5 @@
+// System不仅可以动态加载模块，还可以对es6模块进行转译，是angular2的依赖包之一
+System.import('./es6.js').then(function(){});
+
+
+System.config();

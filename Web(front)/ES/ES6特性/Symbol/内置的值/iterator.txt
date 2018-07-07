@@ -1,9 +1,0 @@
-
-==================|Symbol.iterator|==========================
-
-...这个值指向一个实例数组的内部实现（方法），用来调取数组的【Iterator接口】的！
-   var ary = [1,2,3];
-   ary[Symbol.iterator];    //function values(){[native code]};
-...这一步获取到一个计算当前对象的values的方法
-   ary[Symbol.iterator]();  //Array Iterator{}
-...调用方法之后，就得到了一个iterator接口对象，这个对象继承有一个【next方法】，用于截取数组的每一个值

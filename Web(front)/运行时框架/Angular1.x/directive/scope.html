@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div sub-title sub-name="Andy"></div>
+    <sub-title sub-name="Luis"></sub-title>
+<script>
+    angular.module("myApp",[])
+            .directive("subTitle",function(){
+                return {
+                    template:"<div>{{name}}</div>",
+                    restrict:"EA",
+                    scope:{
+                        name:"@subName" //这里相当于把【template】的属性$scope.name绑定到标签的内部属性$scope.subName上
+                    },
+                    link:function($scope){
+                        $scope.name = "June";   //由于优先级的问题，这里的这个name属性就被遗弃了
+
+                        /**实验证明，如果想要定义一个 directive，
+                         * 然后用一个属性当作接口，注入其他组件，获取trigger,
+                         * 从而实现组件之间的 【联动】，是失败的～
+                         * 想要用directive做组件开发，还是很麻烦的
+                         * 因为directive的require属性无法实现平级调用
+                         * */
+                    }
+                }
+            });
+
+</script>
+</body>
+</html>

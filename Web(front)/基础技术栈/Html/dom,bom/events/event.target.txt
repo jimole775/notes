@@ -1,0 +1,7 @@
+
+1：
+    event.target
+        返回的是 点击到的最底层的一个元素；
+    currentTarget
+        返回的是 触发当前点击事件的元素
+        比如： $(body).on(), currentTarget就是body

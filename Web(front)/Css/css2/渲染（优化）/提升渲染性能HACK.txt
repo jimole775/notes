@@ -1,9 +1,0 @@
--webkit-transform:transition3d(0,0,0)
--webkit-transform:translateZ(0)  	--这两个属性都会开启GPU硬件加速模式
-
-一下5种情况适用：
-1，使用很多大尺寸图片(尤其是PNG24图)进行动画的页面。
-2，页面有很多大尺寸图片并且进行了css缩放处理，页面可以滚动时。
-3，使用background-size:cover设置大尺寸背景图，并且页面可以滚动时。(详见:https://coderwall.com/p/j5udlw)
-4，编写大量DOM元素进行CSS3动画时(transition/transform/keyframes/absTop&Left)
-5，使用很多PNG图片拼接成CSS Sprite时

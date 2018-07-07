@@ -1,0 +1,8 @@
+...babel-register用于改造ES6语法里面的require方法，
+...这样，当用require加载外部js文件的时候（包括.js|.jsx|.es|.es6），就不用手动翻译了，
+
+...| 语法：
+> require("babel-register");
+> require("./external.js");
+
+...不过要注意一点，babel-register只翻译外部文件，当前文件不会进行处理

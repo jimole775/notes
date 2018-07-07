@@ -1,0 +1,5 @@
+fixed:以当前显示的窗口为基点,只停留在窗口的指定位置,不会跟着scroll移动!
+
+absolute:如果父级有position属性,就以父级为基点,如果父级没有position属性,就会往上查询到document节点(估计默认document就拥有position属性)
+
+relative:只以父级为基点,不过relative的定位会跟随在其他同级position元素之后,而absolute的同级元素会重叠在一起;

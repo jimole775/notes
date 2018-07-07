@@ -1,7 +1,0 @@
-var form = new FormData();
-
-form.append("file",document.getElementById("id").file[0]);
-
-http = new XMLHttpRequest();
-http.open("POST",url,true);
-http.send(form);

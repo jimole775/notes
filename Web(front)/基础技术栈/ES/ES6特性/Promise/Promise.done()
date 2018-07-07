@@ -1,0 +1,9 @@
+...不属于标准内容，一般由自己创建，算是语义化的一种表现
+...代码：
+_____________________
+    Promise.prototype.done = function(onFulfilled,onRejected){
+        this.then(onFulfilled,onRejected)
+        .catch(function(reason){
+            setTimeout(() => console.log(reason),0);    //抛出一个全局错误
+        })
+    }
