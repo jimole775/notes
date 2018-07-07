@@ -1,7 +1,0 @@
-font-weight:lighter;
-在chrome浏览器，这个属性是无效果的；
-然而在safari所有字体都会被细化；
-
-font-weight:400，500，600...
-在chrome浏览器，这些属性在600以上才会有变化，600以下无任何效果；
-然而在safari，400以上就有效果；
