@@ -1,33 +1,19 @@
 import java.util.*;
-import com.packsomething.TestPackage;
-import com.packsomething.TestStatic;
+import com.packsomething.*;
 
 public class Test{
-    public  static void main(String[] arg){
+
+    public static void main(String[] arg){
         Random rand = new Random();
         for(int i = 0; i < rand.nextInt(10);i++){
-            TestStatic a = new TestStatic();
-            new a.TestPackageChildClass();
-        }   
-    }
-}
+     
+            // a.new TestPackageChildClass();
+        
+        } 
+        TestVistor a = new TestVistor();
 
-
-class Try{
-
-    public Try(){       
-        System.out.println(id);
-    }
-
-    public void testFn(){
-        System.out.println("is run testFn!");
-    }
-
-    private static int id;
-
-    // static
-    {
-        id ++;
+            // a.protecedName();
+            // a.defaultName();
     }
 
 }
