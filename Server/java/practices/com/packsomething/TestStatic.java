@@ -1,5 +1,19 @@
 package com.packsomething;
-public class TestStatic{
+/**test javadoc API
+ * @test again
+ */
+//A,B
+interface AA{
+
+}
+
+interface BB{
+    
+}
+
+
+
+public abstract class TestStatic{
     public TestStatic(){
         // new TestPackageChildClass();
     }
@@ -10,11 +24,7 @@ public class TestStatic{
         }
     } 
 
-    static void tryUnqiue(int a){
+    public abstract void getName();
 
-    }
-    static void tryUnqiue(String b){
-            
-    }
 }
 
