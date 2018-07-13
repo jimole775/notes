@@ -1,0 +1,11 @@
+Class.newInstance(); //构造一个对象
+
+Class.getDeclaredConstructor(); //获取（连接？）类的默认构造器，包括超类和接口
+
+Class.getDeclaredConstructor(String.class); //获取（连接？）类的单参数构造器，包括超类和接口
+
+Class.getDeclaredConstructor(String[]{String.class,String.class}); //获取（连接？）类的带参数列表的构造器，包括超类和接口
+
+Class.getConstructor(); //只能返回带有public关键字的构造函数
+
+

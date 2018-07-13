@@ -1,0 +1,7 @@
+1，for(var i = 0; i<length;i++){}
+
+2，for(Object e:Array){}
+
+3，while(true){}
+
+4，

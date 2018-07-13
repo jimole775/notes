@@ -8,6 +8,6 @@ class TestStatic{
     }
 }
 
-const a = new TestStatic();
+// const a = new TestStatic();
 
-new a.ChildClass();
+// new a.ChildClass();

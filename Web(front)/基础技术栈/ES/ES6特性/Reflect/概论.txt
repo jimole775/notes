@@ -28,3 +28,4 @@
       
       proxy.foo = "bar";
       delete proxy.foo;	
+反射，主要用于获取类的信息
