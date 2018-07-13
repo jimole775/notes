@@ -1,0 +1,6 @@
+
+public void fn(Integer... its){
+    for(Integer its: e){
+        system.out.printlin(e);
+    }
+}

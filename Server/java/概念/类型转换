@@ -20,3 +20,9 @@ int a = Integer.valueOf("1");
 
 String a = String.valueOf(1);
 
+
+
+总结：有时候，并不是总能准确知道所需要转换的两端的类型，
+如果不能捕获ClassCastException，程序就会停止执行，这种情况是绝对不允许的，
+所以，如无必要，少做类型转换，基础类型还好，Object类型无法掌控的因素太多，比较危险
+
