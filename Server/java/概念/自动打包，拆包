@@ -1,0 +1,8 @@
+这个概念是用于基础类型的；
+因为每个基础类型都会有一个对应的类，用于给它们自动打包，当需要使用的时候，编译器就会自动拆包；
+这种机制一般用于泛型定义
+
+ArrayList<Integer> stuff = new ArrayList<Integer>();
+
+stuff.add(3); //编译器就会直接翻译成 stuff.add(new Integer(3)); --打包
+stuff.get(0); //编译器就会直接翻译成 stuff.get(0).intValue(); --拆包

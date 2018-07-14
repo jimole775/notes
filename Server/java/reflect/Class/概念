@@ -1,0 +1,5 @@
+这个Class类（对象），必须使用reflect的方法才能得到！
+[instance].getClass();  //实例方法，返回Class类（对象）
+[ObjectType].class; //静态方法，返回Class类（对象）
+
+获取Class之后，就可以调用Api了
