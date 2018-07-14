@@ -5,6 +5,7 @@
 [instance].trimToSize()  //把当前数组空出来的容量给裁剪掉
 [instance].ensureCapacity(int)  //重新确定数组容量
 [instance].remove(index)  //删除指定位置元素
+[instance].contains(index)  //删除指定位置元素
 
 
 注意：java SE 5.0 以前没有泛型类，所以ArrayList统一返回Object类型，所以使用的时候必须进行转换
