@@ -1,0 +1,2 @@
+void [FieldObject].set(Object,new Object);  //设置新的域值
+Object [FieldObject].get(Object); //获取域值

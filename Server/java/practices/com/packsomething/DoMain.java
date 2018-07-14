@@ -8,13 +8,9 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
-        ArrayList<String> stuff = new ArrayList<String>(10);
+     int[] a = {1,2,3,5};
+     Object b = (Object) a;
 
-        for(Object e:stuff){
-            e.add("asd");
-        }      
-        
-        System.out.println(stuff.size());
     }
 }
 
@@ -42,8 +38,23 @@ enum CarEnum {
  
 class EnumTest {
     static CarEnum mycar;
-        public EnumTest()
-        {
-            System.out.println(mycar.BMW.getCarType());
+    public EnumTest()
+    {
+        System.out.println(mycar.BMW.getCarType());
+    }
+}
+
+class ObjectAnalyzer{
+    public String toString(Object obj){
+        String res = "[";
+        do{
+
         }
- }
+        while (false);
+
+        return res;
+    }
+}
+
+
+
