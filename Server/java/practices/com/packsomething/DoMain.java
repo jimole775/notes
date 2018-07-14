@@ -8,9 +8,9 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
-     int[] a = {1,2,3,5};
-     Object b = (Object) a;
-
+     String[] a = {"sd","d","w"};
+     Class b = a.getClass();
+        System.out.println(b.isArray());
     }
 }
 

@@ -18,8 +18,11 @@ Field[] [ClassObject].getFields(); //获取类和超类的公有域
 
 Field[] [ClassObject].getDeclaredFields(); //获取类的公有域
 
-
 Class [ClassObject].getComponentType(); //获取类的公有域
+
+Boolean [ClassObject].isPrimitive(); //此方法主要用来判断对象的类是否为基础类型（boolean、char、byte、short、int、long、float、double）。
+
+Boolean [ClassObject].isArray(); //判断一个对象的类是否是数组类
 
 
 
