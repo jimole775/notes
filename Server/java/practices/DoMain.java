@@ -8,9 +8,8 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
-        ActionListener listener = new MyTimer();
-        Timer t = new Timer(1000,listener);
-        System.out.println(t.start());
+ 
+        System.out.println("im jar!");
     }
 }
 
@@ -26,11 +25,5 @@ class ObjectAnalyzer{
     }
 }
 
-class MyTimer implements ActionListener{
-    public void actionPerformed(ActionEvent event){
-        Date now = new Date();
-        System.out.println(now);
-    }
-}
 
 
