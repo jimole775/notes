@@ -9,8 +9,11 @@ public class DoMain{
 
     static void doParam(Integer... its){   
      String[] a = {"sd","d","w"};
-     Class b = a.getClass();
-        System.out.println(b.isArray());
+     Object[] c = {a,"d","w"};
+     Object b = ((Object)a[0]).clone();
+     a[0] = "changed";
+
+     System.out.println(b.toString());
     }
 }
 
