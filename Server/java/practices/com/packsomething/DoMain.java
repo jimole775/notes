@@ -8,42 +8,9 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
-     String[] a = {"sd","d","w"};
-     Object[] c = {a,"d","w"};
-     Object b = ((Object)a[0]).clone();
-     a[0] = "changed";
-
-     System.out.println(b.toString());
-    }
-}
-
-enum LevelsType{
-    LEVEL1,
-    LEVEL2,
-    LEVEL3,
-    LEVEL4
- };
-
-enum CarEnum {
- 
-    BMW("BMW"), TOYOTA("TOYOTA"), FIAT("FIAT");
-    private String CarType;
-
-    private CarEnum(String CarType) {
-    this.CarType = CarType;
-    }
-
-    public String getCarType() {
-    return CarType;
-    }
- }
- 
- 
-class EnumTest {
-    static CarEnum mycar;
-    public EnumTest()
-    {
-        System.out.println(mycar.BMW.getCarType());
+        ActionListener listener = new MyTimer();
+        Timer t = new Timer(1000,listener);
+        System.out.println(t.start());
     }
 }
 
@@ -59,5 +26,11 @@ class ObjectAnalyzer{
     }
 }
 
+class MyTimer implements ActionListener{
+    public void actionPerformed(ActionEvent event){
+        Date now = new Date();
+        System.out.println(now);
+    }
+}
 
 
