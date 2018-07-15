@@ -1,0 +1,7 @@
+很奇怪的概念：
+既然Object本身就有clone方法，而且所有的类都是Object的子类，
+也就是说所有的类都默认继承Object，
+即使clone方法被声明为protected，子类也一样可调用的
+
+可是现在的情况必须得先实现Cloneable，
+然后定义一个clone方法，再在里面用super.clone()来进行克隆。。。
