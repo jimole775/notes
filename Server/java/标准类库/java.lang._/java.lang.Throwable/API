@@ -1,0 +1,7 @@
+(new Throwable()).toString()
+// 构造一个新的Throwable对象，这个对象没有详细的描述信息。
+
+(new Throwable()).getMessage()
+// 获取对象的详细描述信息
+
+

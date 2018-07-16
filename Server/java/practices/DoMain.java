@@ -8,8 +8,9 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
- 
-        System.out.println("im jar!");
+        // Throwable excep = new Throwable("try exception!");
+        assert its[0] >= 1 : "is not right params"; 
+        System.out.println("good run");
     }
 }
 
