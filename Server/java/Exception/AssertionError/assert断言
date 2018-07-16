@@ -1,0 +1,5 @@
+assert a > 0 : "数值a必须大于零";
+
+//断言和exception不同，exception一般都会在编译时被捕获，
+而 assert 一般用于断言值域是否正确，这样做可以方便抛出明确的信息
+起码比try catch好用许多
