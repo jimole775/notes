@@ -1,0 +1,17 @@
+Level [LogRecordObject].getLevel();
+// 获得这个日志记录的记录级别
+
+String [LogRecordObject].getLoggerName()
+// 获得正在记录这个日志记录的日志记录器名字
+
+ResourceBundle [LogRecordObject].getresourceBundle()
+String [LogRecordObject].getresourceBundleName()
+// 获得用于本地化消息的资源包或资源包的名字
+// 如果没有获得，则返回null
+
+String [LogRecordObject].getMessage()
+// 获得本地化和格式化之前的原始信息
+
+Object[] [LogRecordObject].getParameters()
+// 获得参数对象如果没有获得，则返回null.
+

@@ -1,5 +1,7 @@
 package com.packsomething;
 import java.util.*;
+import java.util.logging.*;
+
 public class DoMain{
     public static void main(String[] arg){
 
@@ -8,9 +10,8 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
-        // Throwable excep = new Throwable("try exception!");
-        assert its[0] >= 1 : "is not right params"; 
-        System.out.println("good run");
+        Logger log = Logger.getLogger("com.packsomething.DoMain");
+        log.info("aaa");
     }
 }
 
