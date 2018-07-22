@@ -1,6 +1,9 @@
 package com.packsomething;
 import java.util.*;
 import java.util.logging.*;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.File;
 
 public class DoMain{
     public static void main(String[] arg){
@@ -10,8 +13,16 @@ public class DoMain{
     }
 
     static void doParam(Integer... its){   
+        try{
         Logger log = Logger.getLogger("com.packsomething.DoMain");
-        log.info("aaa");
+        File direction = new File("");
+        File file = new File(direction.getAbsolutePath() + File.separator + "errs.log");
+        FileInputStream st = new FileInputStream(file);
+        byte[] b = new byte[1024];
+        st.read(b);
+        st.close();
+        log.info(new String(b));
+    }catch(Exception e){}
     }
 }
 
