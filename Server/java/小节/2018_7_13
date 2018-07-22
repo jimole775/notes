@@ -1,4 +1,4 @@
-初步分析，现在可知的有四种类：
+初步分析，现在可知的有四种【类】：
 1、自定义类
 
 2、通用类,可实例化，可继承类（核心类 -- [String,Object,]）
@@ -7,5 +7,4 @@
 3、不可实例化,且不可继承类（[Enum,]）
 
 
-
-3、不可继承类（final类，都是基础类型的包装器，也称作包装器类 -- [Integer,Boolean,Double,Char,Float]）
+4、不可继承类（final类，都是基础类型的包装器，也称作包装器类 -- [Integer,Boolean,Double,Char,Float]）
