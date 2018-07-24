@@ -1,4 +1,6 @@
 package common;
+
+// 对象解析器：要求全能输出成String
 public class ObjectAnalyzer{
     static String r = "";
     static String toString(Object obj){
