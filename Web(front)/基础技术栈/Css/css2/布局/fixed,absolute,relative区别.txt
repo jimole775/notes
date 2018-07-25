@@ -1,4 +1,4 @@
-fixed:以当前显示的窗口为基点,只停留在窗口的指定位置,不会跟着scroll移动!
+fixed:以当前显示的窗口为基点,只停留在窗口的指定位置,不会跟着scroll移动!不过如果使用模态框的时候，基点会是模态框的窗口
 
 absolute:如果父级有position属性,就以父级为基点,如果父级没有position属性,就会往上查询到document节点(估计默认document就拥有position属性)
 

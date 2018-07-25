@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.File;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 
 public class DoMain{
@@ -29,12 +30,12 @@ public class DoMain{
             strs = strs.append("!\n");
             byte[] b = strs.toString().getBytes("GBK");
             
-
             wt.write(b);
             wt.write(b);
             wt.close();
             log.info(new String(b));
 
+            
 
         }catch(Exception e){
 
