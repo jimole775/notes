@@ -6,7 +6,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.File;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
+import java.util.zip.ZipInputStream;
 
 
 public class DoMain{
@@ -18,11 +20,10 @@ public class DoMain{
 
     static void doParam(int... its){   
         try{
-            Logger log = Logger.getLogger("com.packsomething.DoMain");
+            
             File direction = new File("");
-            File file = new File(direction.getAbsolutePath() + File.separator + "errs.log");
 
-            FileOutputStream wt = new FileOutputStream(file.getAbsolutePath());
+            FileOutputStream zipOS = new FileOutputStream(direction.getAbsolutePath() + File.separator + "errs.zip");
             StringBuilder strs = new StringBuilder("im ");
             strs = strs.append("write ");
             strs = strs.append("down ");
@@ -30,11 +31,18 @@ public class DoMain{
             strs = strs.append("!\n");
             byte[] b = strs.toString().getBytes("GBK");
             
-            wt.write(b);
-            wt.write(b);
-            wt.close();
-            log.info(new String(b));
-
+            /**中心思想还是：
+             * 1，创建一个空的zip包（文件类型）
+             * 2，开启一条目录，然后取个名字（new ZipEntry(fileName)）
+             * 3，把zip条目对象对接到zip输出流的指定地址（putNextEntry(ze)）
+             * 4，然后持续往 指定地址 写数据
+             * 5，关闭输出流，打包完成
+            */
+            ZipOutputStream zos = new ZipOutputStream(zipOS); //把文件流转换成zip流
+            ZipEntry ze = new ZipEntry("err.log");// 创建一个zip条目，可以随便取个名字
+            zos.putNextEntry(ze); // 把刚刚创建的zip条目扔进zip输出流
+            zos.write(b,0,b.length); // 往I/O接口里面写数据
+            zos.closeEntry();   //关闭输出流
             
 
         }catch(Exception e){
