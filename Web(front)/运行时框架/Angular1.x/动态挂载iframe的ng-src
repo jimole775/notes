@@ -1,0 +1,10 @@
+在angular中使用iframe src="baidu.com" 可以正常运行！
+
+但是要动态加载src，必须使用ng-src，如果src={{url}}会报错
+
+不过，即使使用ng-src={{url}}，也会报url不安全，无法执行，
+
+在这种情况下，angular1提供了一个对象方法 $sec.trustAsResourceUrl(url);
+
+可以通过本身的安全检测！
+$scope.safeUrl = $sec.trustAsResourceUrl(url);
