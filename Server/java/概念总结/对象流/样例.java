@@ -1,33 +1,16 @@
-package com.packsomething;
-import java.util.*;
-import java.util.logging.*;
-import java.io.InputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.File;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.io.ObjectInputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipOutputStream;
-import java.util.zip.ZipInputStream;
-
+import java.io.ObjectOutputStream;
 
 public class DoMain{
+
     public static void main(String[] arg){
-
-        doParam(1,23,4);
-
-    }
-
-    static void doParam(int... its){   
         try{
-
             
             File direction = new File("");
             String filePath = direction.getAbsolutePath() + File.separator + "errs.dat";   
-
 
             ObjectAnalyzer obj = new ObjectAnalyzer();
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath));
@@ -47,13 +30,10 @@ public class DoMain{
     }
 }
 
-class ObjectAnalyzer implements Serializable{
+class ObjectAnalyzer implements Serializable{ //关键的一步：需要实现Serializable接口
     public String toString(Object obj){
         return "none";
     }
     public String name = "Andy";
     public int age = 31;
 }
-
-
-
