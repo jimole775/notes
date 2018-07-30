@@ -1,0 +1,4 @@
+1，文本流需要注意编码格式
+
+2，文本流有两个方法 String in.readLine() 和 String in.readInt() 对于处理文本很有用
+

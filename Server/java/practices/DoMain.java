@@ -26,18 +26,20 @@ public class DoMain{
 
             
             File direction = new File("");
-            String filePath = direction.getAbsolutePath() + File.separator + "errs.dat";   
+            String filePath = direction.getAbsolutePath() + File.separator + "readLineTest.txt";   
 
-
-            ObjectAnalyzer obj = new ObjectAnalyzer();
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath));
-            oos.writeObject(obj);
-            oos.close();   
-
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath));
-            ObjectAnalyzer staff = (ObjectAnalyzer)ois.readObject();     
-            ois.close();
             
+            // ObjectAnalyzer obj = new ObjectAnalyzer();
+            // ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath));
+            // oos.writeObject(obj);
+            // oos.close();   
+
+            // ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath));
+            // ObjectAnalyzer staff = (ObjectAnalyzer)ois.readObject();     
+            // ois.close();
+            
+            
+
             System.out.println(staff.name);  
        
 
