@@ -7,5 +7,13 @@ document.body.appendChild();
 2,document.body.innerHTML += "<div></div>"
 这种方法很方便,但是需要注意的是:通过这种方法添加的元素,只会进行dom渲染,会忽略内部脚本!
 
+3,ng-include
+
+4,ng-directive
+
+5,$compile()();
+
+6,ng-router
+
 ***需要注意的是:以上两种方法都会使同级下的jquery绑定事件失效!
 	        所以,当使用以上两种方法创建元素时,必须注意区分元素层级;
