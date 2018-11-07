@@ -15,10 +15,10 @@
             "args": ""
         },
         {
-            "type": "java",                 
+            "type": "java",
             "request": "launch",
-            "name": "Launch Program",           
-            "mainClass":"E:\\gitStore\\demo\\notes\\Server\\java\\概念总结\\XML\\TestDocumentBuilder.class"
+            "name": "Launch Program",
+            "mainClass": "Run"
         }
     ]
 }
