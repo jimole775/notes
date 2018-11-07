@@ -4,3 +4,9 @@
 ...这样只引用，不编译~
 ...而sass在加载模块的时候，并没有找到这个选择
 ...这样，在打包的时候就会出现重复的样式类，非常浪费
+
+
+...第三方工具：
+1，在 webstorm 配置压缩选项需要依赖到 "less-plugin-clean-css"
+ 首先，安装 yarn global add less-plugin-clean-css
+ 然后，需要在file-watcher配置里面的argument 一项 加上 --plugin=less-plugin-clean-css
