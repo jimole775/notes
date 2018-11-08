@@ -1,0 +1,12 @@
+1，一般来说，函数中的this都是谁调用就指向谁，
+2，而箭头函数中的this是，就是你书写代码的时候，它就已经确定了，而且call,bind,apply对它不会起作用的
+
+3，关于bind和call，apply的区别，
+虽然大家都是在改变this的指向，但是bind绑定后，可以得到一个新的函数，可以在需要的时候才去调用，这个有时候也会方便很多
+bind的最佳场景：
+
+for(var i = 0; i < 10; i++) {
+  setTimeout(console.log.bind(console, i), i * 1000);
+}
+
+//以上代码可以代替闭包进行正确的取值
