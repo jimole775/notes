@@ -50,7 +50,7 @@ gulp.task("runAsync",["async"],function(cb){
 #npm install --save-dev gulp-sass //sass编译
 #npm install --save-dev gulp-imagemin //图片压缩
 #npm install --save-dev gulp-livereload //监听并动态刷新页面
-
+#npm install --save-dev webpack-stream //webpack
 
 
 
