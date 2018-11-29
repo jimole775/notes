@@ -1,0 +1,59 @@
+null,undefined,Boolean,Number,String,Regxp
+Object,Function,Map,Set,WeakSet,Symbol,Date
+【typeof】
+::类型比较混乱，不建议使用typeof进行准确的类型判断
+::一般，遇到需要宽泛放行可操作对象的时候使用可以少写几行代码？实在不明白了，也许这个操作符本来就是一个比较糟糕的设计
+typeof null === 'object';
+typeof undefined === 'undefined';
+
+typeof true === 'boolean';
+typeof new Boolean(true) === 'object'; 
+
+typeof 1 === 'number';
+typeof Infinity === 'number';
+typeof NAN === 'number';
+typeof new Number(1) === 'object'; 
+
+typeof '1' === 'string';
+typeof new String('abc') === 'object';
+
+typeof new Date() === 'object';
+typeof /^\d$/ === 'object';
+typeof {a: 1} === 'object';
+
+
+
+
+【instanceof】【constructor】
+::instanceof是用来判断对象的原型的继承，也就是说，instanceof 谁的结果为true，就能使用谁的原型方法；
+::不过，因为原型链的存在，并且所有对象都来自Object，所以，这个也不是准确的判断
+::一般这个配合constructor来使用，最为合适
+::使用constructor的时候，需要注意undefined和null类型会报错
+
+::典型的例子 -->
+function Cat(){}
+function Dog(){}
+var auto = new Cat();
+Dog.prototype = Cat.prototype;
+auto instanceof Dog === true; //因为继承了猫的原型
+auto instanceof Cat === true;
+auto instanceof Object === true; //因为继承了Object的原型
+auto.constructor === Cat;
+auto.constructor !== Dog; //因为不是Dog的实例
+
+
+
+【Object.prototy.toString】
+::这个判断最直观，也最准确，而且无任何副作用
+Object.prototype.toString.call(functionLike) === '[object Function]';
+Object.prototype.toString.call(objectLike) === '[object Object]';
+Object.prototype.toString.call(arrayLike) === '[object Array]';            
+Object.prototype.toString.call(stringLike) === '[object String]';         
+Object.prototype.toString.call(numberLike) === '[object Number]';           
+Object.prototype.toString.call(booleanLike) === '[object Boolean]';     
+Object.prototype.toString.call(nullLike) === '[object Null]';          
+Object.prototype.toString.call(undefinedLike) === '[object Undefined]';
+Object.prototype.toString.call(mapLike) === '[object Map]';
+Object.prototype.toString.call(weakMapLike) === '[object WeakMap]';
+Object.prototype.toString.call(setLike) === '[object Set]';
+Object.prototype.toString.call(weakSetLike) === '[object WeakSet]';
