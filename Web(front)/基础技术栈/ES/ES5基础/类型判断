@@ -25,7 +25,7 @@ typeof {a: 1} === 'object';
 
 
 【instanceof】【constructor】
-::instanceof是用来判断对象的原型的继承，也就是说，instanceof 谁的结果为true，就能使用谁的原型方法；
+::instanceof是用来判断对象的原型的继承（对象字面量是个例外），也就是说，instanceof 谁的结果为true，就能使用谁的原型方法；
 ::不过，因为原型链的存在，并且所有对象都来自Object，所以，这个也不是准确的判断
 ::一般这个配合constructor来使用，最为合适
 ::使用constructor的时候，需要注意undefined和null类型会报错
