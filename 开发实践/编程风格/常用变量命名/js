@@ -18,5 +18,6 @@ operand ::操作数（不明所以）
 declare ::声明
 regular ::规则
 mode/model ::模式/模型
+resume ::
 
 
