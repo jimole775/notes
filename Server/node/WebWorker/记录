@@ -1,0 +1,2 @@
+1、需要node版本10.5以上
+2、运行的时候，需要加上 --experimental-worker
