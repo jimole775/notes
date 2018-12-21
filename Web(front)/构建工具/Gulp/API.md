@@ -53,5 +53,16 @@ gulp.task("runAsync",["async"],function(cb){
 #npm install --save-dev webpack-stream //webpack
 
 
+var gulp = require('gulp'),                        //基础库
+    clean = require('gulp-clean'),                 //清空文件夹
+    minify = require('gulp-minify-css'),           //css压缩
+    rename = require('gulp-rename'),               //文件重命名
+    revContent = require('gulp-rev'),                     //更改版本名
+    revCollector = require('gulp-rev-collector'),     //gulp-rev的插件，用于html文件更改
+    notify = require('gulp-notify'),               //提示
+    htmlreplace = require('gulp-html-replace'),
+    replace = require('gulp-replace'),
+    htmlmin = require('gulp-htmlmin'),
+    livereload = require('gulp-livereload');
 
 引用：https:#www.cnblogs.com/2050/p/4198792.html
