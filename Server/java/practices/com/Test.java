@@ -1,8 +1,7 @@
-// package client;
- 
-import inter.EventService;
-import inter.EventHandler;
-import interimpl.EventEmitter;
+
+import Event.EventService;
+import Event.EventHandler;
+import Event.EventEmitter;
  
 public class Test {
  
