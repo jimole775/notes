@@ -1,5 +1,4 @@
-// package callbackIml;
- 
+
 public interface EventService {
 	void on( String eventName, EventHandler e );
 	

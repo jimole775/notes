@@ -1,8 +1,4 @@
-// package callbackIml;
- 
-import inter.EventService;
-import inter.EventHandler;
- 
+package Event;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
