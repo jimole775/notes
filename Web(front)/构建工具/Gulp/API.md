@@ -52,7 +52,7 @@ gulp.task("runAsync",["async"],function(cb){
 #npm install --save-dev gulp-livereload //监听并动态刷新页面
 #npm install --save-dev webpack-stream //webpack
 
-
+```javascript
 var gulp = require('gulp'),                        //基础库
     clean = require('gulp-clean'),                 //清空文件夹
     minify = require('gulp-minify-css'),           //css压缩
@@ -64,5 +64,8 @@ var gulp = require('gulp'),                        //基础库
     replace = require('gulp-replace'),
     htmlmin = require('gulp-htmlmin'),
     livereload = require('gulp-livereload');
+```
+
+
 
 引用：https:#www.cnblogs.com/2050/p/4198792.html
