@@ -5,3 +5,5 @@ require(['text!./teplate.html'],function(templateText){
     console.log(templateText);  // 当前加载出来的就是标签文本
 });
 
+:::主要是为了能动态构建html模板，不过属实是比较鸡肋的东西，
+:::一般这种业务场景都会被其他框架诠释了，如果说在无框架的模式开发，jq也是个不二之选
