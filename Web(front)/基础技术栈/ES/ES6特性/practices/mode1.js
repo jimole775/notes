@@ -1,13 +1,30 @@
-{
+
+var A = function(){
     
-    // console.log(a,b);
+    // setTimeout(function(){
+    //     console.log("fn scope:",taht);
+    // });
 
-    let a = 0;
-    function b(){}
+    // setTimeout(()=>{
+    //     console.log("arrow scope:",this);
+    // });
 
+    function BB(){   
+        console.log("inner scope:",this);
+        setTimeout(function(){
+            console.log("inner fn scope:",this);
+        });
 
+        setTimeout(()=>{
+            console.log("inner arrow scope:",this);
+        });
+    }
+
+    BB();
+
+    // console.log("my prototype is:",this);
 }
+A();
 
-
-
-console.log(a);
+// console.log("what is b:",b);
+// console.log("what is a:",a);
