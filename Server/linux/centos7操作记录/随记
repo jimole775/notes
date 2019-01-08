@@ -16,7 +16,7 @@ vi xxx  //文件编辑指令（也可以用于创建，和vim差不多）
     node -v
     npm -v
 
-ssh密钥配置：
+ssh密钥配置：（一般需要获取root权限）
    ssh-keygen -t rsa -C 727346595@qq.com     
    获取之后的操作和windows一致
 
