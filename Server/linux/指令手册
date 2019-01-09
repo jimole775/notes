@@ -8,5 +8,14 @@ tar [tarname] 解包
 
 ln -s [path]/[commandname] /usr/bin/[commandname] 创建全局指令("/usr/bin/"是全局指令的声明目录)
 
+ls -a 显示隐藏文件 
 
+ls *[0-9]* 显示包含数字的文件名和目录名 
 
+mkdir [dirname] 创建文件夹
+
+rm -rf [dirname] 暴力删除文件夹
+
+cp [dirname]/* . 复制整个文件夹下的文件到当前目录
+
+cp -a [dirname] . 复制整个目录到当前目录
