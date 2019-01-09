@@ -20,6 +20,5 @@ ssh密钥配置：（一般需要获取root权限）
    ssh-keygen -t rsa -C 727346595@qq.com     
    获取之后的操作和windows一致
 
-root文件夹下的内容不显示：
    
 
