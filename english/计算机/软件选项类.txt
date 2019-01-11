@@ -1,4 +1,4 @@
-utils   //使用菜单
-assets  //
-Refactor
+utils: 工具集
+assets: 资源
+Refactor: 重构
 
