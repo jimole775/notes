@@ -7,4 +7,6 @@
    2)PasswordAuthentication yes
    3)PremitRootLogin yes
    修改完毕之后，service sshd restart 重启服务
-   
+3，全局安装完gulp之后，使用指令gulp之后出现 "command not found"
+   1)首先，需要使用 ln -s 来创建软链接到 usr/local/bin(一般如果使用npm安装的gulp，gulp都会在node目录的bin下)   
+   2)如果上面还不能解决，应该就是一开始安装gulp的时候，不是用的全局形式，gulp链接错了，我的解决之道就是直接重置服务器，然后再次安装的时候，直接npm install -g gulp
