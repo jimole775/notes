@@ -2,7 +2,7 @@ find / -name [filename] 查找文件
 
 sudo su root 切换到root权限
 
-wget [uri] 下载
+wget [uri] 访问地址下载
 
 tar [tarname] 解包
 
@@ -19,3 +19,4 @@ rm -rf [dirname] 暴力删除文件夹
 cp [dirname]/* . 复制整个文件夹下的文件到当前目录
 
 cp -a [dirname] . 复制整个目录到当前目录
+netstat 查看网络端口
