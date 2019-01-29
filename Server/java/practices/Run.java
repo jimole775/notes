@@ -1,7 +1,11 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Array;
+public class Run{
+    
+    public boid generic (){
 
-public class Run {
+    }
 
     public static void main(String[] arg) {
         MyArrayList arr = new MyArrayList();
