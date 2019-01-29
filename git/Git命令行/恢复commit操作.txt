@@ -1,0 +1,2 @@
+1，使用 git log 查看commit的ID；
+2，使用 git reset --hard commit-id 恢复到相应的版本（commit-id可以是前4位字符）；
