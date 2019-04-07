@@ -7,11 +7,11 @@ vi xxx  //文件编辑指令（也可以用于创建，和vim差不多）
     下载文件
     wget https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.xz
     解压文件
-    tar xvf node-v6.10.2-linux-x64.tar.xz
+    tar -xvf node-v6.10.2-linux-x64.tar.xz
     创建软链接，使node和npm命令全局有效。
     通过创建软链接的方法，使得在任意目录下都可以直接使用node和npm命令：(usr/bin 目录是注册常用命令的地方)
-    ln -s /usr/local/node-v6.10.2-linux-x64/bin/node /usr/bin/node
-    ln -s /usr/local/node-v6.10.2-linux-x64/bin/npm /usr/bin/npm
+    ln -s /usr/local/node-v6.10.2-linux-x64/bin/node /usr/bin/node (-s 表示symbol)
+    ln -s /usr/local/node-v6.10.2-linux-x64/bin/npm /usr/bin/npm (-s 表示symbol)
     通过命令查看node、npm版本来判断是否安装成功。
     node -v
     npm -v
