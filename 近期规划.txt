@@ -1,4 +1,8 @@
 1，了解语言包使用情况，包括angularjs和其他框架，及其基本原理
+语言包的四种调用方法：
+A，$translate.instant('');
+B，<div translate="语言包"></div>
+C，<div >{{"语言包"|translate}}</div>
 2，了解客户端登陆，单点登录，登陆校验，登陆缓存，过期验证，等功能模块
 3，每个框架封装一些通用控件，包括：
 下拉多选框；
@@ -21,10 +25,7 @@
 11，git做单文件上传测试，搞一个视图工具
 12，批量上传和批量下载功能
 13，pdf预览
-14，语言包的四种调用方法：
-A，$translate.instant('');
-B，<div translate="语言包"></div>
-C，<div >{{"语言包"|translate}}</div>
+
 
 
 
