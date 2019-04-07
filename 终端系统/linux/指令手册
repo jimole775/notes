@@ -2,11 +2,13 @@ find / -name [filename] 查找文件
 
 sudo su root 切换到root权限
 
-wget [uri] 访问地址下载
+wget [uri] 访问地址下载(一般这种方式在下载大型文件的时候，都会很慢，推荐使用ftp客户端工具，比如：xfpt)
 
 tar [tarname] 解包
 
 ln -s [path]/[commandname] /usr/bin/[commandname] 创建全局指令("/usr/bin/"是全局指令的声明目录)
+
+ln /usr/bin/ -l 可以显示全局软链的的全部路径(-l：呈现为list)
 
 ls -a 显示隐藏文件 
 
