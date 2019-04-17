@@ -10,9 +10,9 @@ assets: 资源, 素材
 
 compute: 计算
 
-delivered:(v) 发动, 发表, 递送, 交付
+delivered: (v) 发动, 发表, 递送, 交付
 
-enumerable:(adj) 可枚举的
+enumerable: (adj) 可枚举的
 
 iterator: 迭代器
 
@@ -65,3 +65,7 @@ exp:She considers that it is too early to form a definite conclusin.(她认为�
 exp:You should considered before you do anything.(在做任何事情之前请深思熟虑)
 
 contributor:(n) 贡献者
+
+donate:(v) 捐赠，赠送，献血
+
+preset:(n) 预设
