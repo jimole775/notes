@@ -1,9 +1,11 @@
-...公共模块提取器
-...就是从打包出来的所有模块中，选中一个或者几个整合成一个公共模块
-...但是每次webpack都会重新翻译和打包
 
-...| 样例：
+# 概述 
+公共模块提取器
+就是从打包出来的所有模块中，选中一个或者几个整合成一个公共模块
+但是每次webpack都会重新翻译和打包
 
+样例：
+```javascript
     var webpack = require("webpack");
     var commonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
@@ -22,7 +24,7 @@
 
             //这里有四种方法可以提取公共模块～
             //【first】:    默认会把所有入口节点的公共代码提取出来,生成一个common.js
-            new CommonsChunkPlugin("commonJs.js");
+            new CommonsChunkPlugin("commonJs.js"),
 
             //【second】:   下面只提取两个模块
             new CommonsChunkPlugin("admin-commons.js", ["ap1", "ap2"]),
@@ -42,3 +44,4 @@
             })
         ]
     };
+```
