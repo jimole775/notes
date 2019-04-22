@@ -30,4 +30,5 @@ var globalOptions = this.options && this.options.babel || {};
 ```
 那么说，我们就有两个选择，一个就是降低版本，第二个就是更改配置
 
-[API地址](https://babeljs.io/docs/en/env/#upgrading-to-babel-preset-env)
+[API地址](https://www.npmjs.com/package/babel-loader)
+[issue地址](https://github.com/babel/babel-loader/issues/666)
