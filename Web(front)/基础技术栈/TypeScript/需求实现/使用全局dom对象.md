@@ -1,7 +1,7 @@
 
-> tsconfig.json
 
-``` bash
+配置 tsconfig.json
+``` yml
 {
     "compilerOptions": {
         "module": "es6",
