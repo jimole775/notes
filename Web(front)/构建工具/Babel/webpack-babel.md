@@ -1,8 +1,8 @@
-...在webpack中，最主要的就是配置好加载器babel-loader；
-...还有就是确定ES的版本，在options项里面进行设置
+- 在webpack中，最主要的就是配置好加载器 ```babel-loader```
+- 还有就是确定ES的版本，在options项里面进行设置
 
-...| 样例：
-
+- 样例：
+``` js
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 module.exports = {
@@ -39,3 +39,4 @@ module.exports = {
         })
     ]
 }
+```
