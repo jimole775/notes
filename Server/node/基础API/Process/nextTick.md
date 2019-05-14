@@ -1,5 +1,6 @@
-#原生实现进程同步的关键____________________§经考察，这个方法并不能实现同步。。。§________________________
+# 原生实现进程同步的关键
 
+``` js
 var http = require('http');
 
 var wait = function (mils) {
@@ -19,3 +20,4 @@ http.createServer(function (req, res) {
     res.end('Hello World');
 }).listen(5000, '127.0.0.1');
 compute();
+```
