@@ -1,6 +1,7 @@
 ----------------FSReqWrap;
 出现在fs.open方法中的一个构造函数,new之后得到的req实例，有个oncomplete时间可以绑定callback
 代码片段：
+``` js
 fs.open = function(path, flags, mode, callback_) {
   var callback = makeCallback(arguments[arguments.length - 1]);
   mode = modeNum(mode, 0o666);
@@ -17,6 +18,6 @@ fs.open = function(path, flags, mode, callback_) {
                mode,
                req);
 };
-
+```
 
 ----------------fs.js{process.binding}
