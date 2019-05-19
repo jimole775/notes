@@ -1,0 +1,40 @@
+const http = require("https");
+let opt = {
+    protocol: 'https:',
+    port: 443,	//https的默认端口是443,http的默认端口是80
+    host: "kyfw.12306.cn",
+    rejectUnauthorized: false,//关闭【拒绝未注册登陆】
+    family: '4',
+    method: "GET",  //IPV4版本
+    path: "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-05-10&leftTicketDTO.from_station=HFH&leftTicketDTO.to_station=CDW&purpose_codes=ADULT", //path就是完整的URL
+    timeout: 5000
+    //headers: {	//header需不需要都无所谓,具体可以根据目标网站的信息,进行模拟
+        //'Accept': '*/*',
+        //'Accept-Encoding': 'gzip, deflate, sdch, br',
+        //'Accept-Language': 'zh-CN,zh;q=0.8',
+        //'Cache-Control': 'no-cache',
+        //'Connection': 'keep-alive',
+        //'Cookie': 'JSESSIONID=0A02F01A98DA97E77F7B9763E370556D0CC8576C09; __NRF=245E98C4CD6CF7C6B9E5C3914116BC7A; RAIL_EXPIRATION=1493973124490; RAIL_DEVICEID=ZcpNk1ApqtcuAH-Z3xkkk9XUfOpmVdQsmTkJcgIjHR4OL7W1hA8s_ltZ9Y35QPeY6vKF3mNLrxA5H5a48beYP3JKcsW8tkshI6SLAn1mBqmNGNUhYGEUfnZO6yGp4Ki5Q8EwlQHLlqMdVDT4dveqmv_d9IIHEKWQ; BIGipServerotn=451936778.38945.0000; RAIL_OkLJUJ=FDaVZ6lv5XSHOznttO2RxL50U7OYqm_Q; _jc_save_fromStation=%u5408%u80A5%2CHFH; _jc_save_toStation=%u6210%u90FD%2CCDW; _jc_save_fromDate=2017-05-03; _jc_save_toDate=2017-05-03; _jc_save_wfdc_flag=dc',
+        //'Host': 'kyfw.12306.cn',
+        //'If-Modified-Since': 0,
+        //'Pragma': 'no-cache',
+        //'Referer': 'https://kyfw.12306.cn/otn/leftTicket/init',
+        //'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+        //'X-Requested-With':http
+    //}
+};
+
+
+var req = http.request(opt, function (res) {
+    console.log(res);
+    res.setEncoding('utf8');  //如果不设置，下边data的chunk就是一堆buffer
+    res.on('data', function (chunk) {
+        console.log(chunk);
+    });
+});
+
+req.on('error', function (e) {
+    console.log(e);
+});
+
+req.end();//重点,如果请求没有执行END,就会被当成无响应链接,出现挂起的BUG
