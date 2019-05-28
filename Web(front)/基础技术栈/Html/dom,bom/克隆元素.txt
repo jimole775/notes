@@ -1,3 +1,0 @@
-var clone = document.getElementsById("id").cloneNode();
-
-//我坚信，在性能上，clone方法比createElement要高出许多
