@@ -1,4 +1,4 @@
-在浏览器端输出一个xml类型的数据：
+// 在浏览器端输出一个xml类型的数据：
 function stringToXML(xmlData) {
    if (window.ActiveXObject) {
       //for IE
