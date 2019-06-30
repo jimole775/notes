@@ -5,7 +5,6 @@ rongxis |7&&% steam
 166****3472 `7&&% aliyun
 166****3472 < weipay
 jim****75@163.com ] alipay
-166****3472 |7!(*& aliyun
 7273****5@qq.com `&&% github
 jim****75@163.com ~!(*& jd.com
 62178526***12654489 ] atm
