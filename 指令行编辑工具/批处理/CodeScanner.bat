@@ -19,7 +19,7 @@ FOR /R %path% %%f IN (%type%) DO (
 	IF !spinfin! EQU 6 SET spin=/
 	IF !spinfin! EQU 9 SET spin=-
 	IF !spinfin! EQU 12 SET spin=\
-        ECHO Copyright By Rongxis.
+    ECHO Copyright By Rongxis.
 	ECHO !spin! Scanning...
 	ECHO %%f
 	SET lines=0
