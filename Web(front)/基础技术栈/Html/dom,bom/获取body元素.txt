@@ -1,3 +1,0 @@
-document.body === body;
-
-document.scrollingElement === body;
