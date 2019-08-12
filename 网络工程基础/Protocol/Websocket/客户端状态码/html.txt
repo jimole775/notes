@@ -1,0 +1,6 @@
+
+WebSocket.prototype.readyState:
+0        CONNECTING      连接尚未建立
+1        OPEN            WebSocket的链接已经建立
+2        CLOSING         连接正在关闭
+3        CLOSED          连接已经关闭或不可用
