@@ -1,3 +1,4 @@
+```js
 //Nodejs  模拟IP 爬取图片  
   
 var _ = require('underscore');  
@@ -209,3 +210,4 @@ function saveImg(url, dir,name , cb){
     cb();  
   });  
 }  
+```
