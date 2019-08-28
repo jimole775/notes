@@ -2,6 +2,8 @@
 
 解析出来的dom对象可以使用jq-lite的方式去访问！！
 
+``` js
 //初始化对象
-var $ = cheerio.load(HTML);
+var $ = cheerio.load(HTML)
 console.log($(".title").innerText)
+```
