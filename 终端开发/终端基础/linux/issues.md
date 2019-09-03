@@ -18,3 +18,8 @@
 
 5. 【node错误】/usr/bin/env: node: No such file or directory
    1) 在执行 npm 指令的时候报错, 这是由于在创建软连接时, 还没有创建 node, 因为 npm 的执行需要依赖node, 正确的创建顺序应该是先创建node, 再创建npm
+
+6. 解决service iptables save出错please try to use systemctl
+https://blog.csdn.net/xu_melon/article/details/79043320   
+
+7. Failed to start nginx.service: Unit not found
