@@ -9,15 +9,15 @@ npm install ag-grid-community vue-property-decorator ag-grid-vue --save-dev
   <div>
     <!-- columnDefs表头  rowData表格数据-->
     <!-- ag-theme-balham 是ag-grid自带的表格样式类 -->
-    <ag-grid-vue class="table ag-theme-balham" :columnDefs="columnDefs" :rowData="rowData"/>
+    <ag-grid-vue :column-defs="columnDefs" :row-data="rowData" class="table ag-theme-balham" />
   </div>
 </template>
  
 <script>
 // 引入ag-grid-vue
-import { AgGridVue } from 'ag-grid-vue';
-import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
-import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css";
+import { AgGridVue } from 'ag-grid-vue'
+import "../node_modules/ag-grid-community/dist/styles/ag-grid.css"
+import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css"
 export default {
   components: { AgGridVue },
   data () {
