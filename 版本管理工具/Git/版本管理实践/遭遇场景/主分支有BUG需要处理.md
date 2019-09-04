@@ -4,3 +4,4 @@
 3. 使用 ```git checkout masterBug``` ，切换到masterBug，处理BUG
 4. 修改完毕后，切换到主分支，使用 ```git merger masterBug ```，合并分支
 5. 使用 ```git branch -D masterBug``` ，删除masterBug
+6. `git stash pop [–index] [stash_id]` 找回暂存的版本 
