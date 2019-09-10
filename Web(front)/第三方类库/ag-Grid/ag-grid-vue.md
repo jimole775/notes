@@ -1,6 +1,6 @@
 # 安装
 ``` bash
-npm install ag-grid-community vue-property-decorator ag-grid-vue --save-dev
+npm install --save-dev ag-grid-community vue-property-decorator ag-grid-vue
 ```
 
 # 样例
