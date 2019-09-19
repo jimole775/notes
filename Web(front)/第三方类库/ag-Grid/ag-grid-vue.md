@@ -14,13 +14,7 @@ npm install --save-dev ag-grid-community vue-property-decorator ag-grid-vue
     <ag-grid-vue 
           :column-defs="gridColumns" 
           :grid-options="gridOptions"
-          :row-data="gridData" 
-          :default-col-def="{ // 针对每个单元格的默认设置，可以被单元格内的定制覆盖
-            sortable: true,
-            resizable: true,
-            filter: true
-            suppressMenu: true, // 隐藏表头菜单
-          }"
+          :row-data="gridData"
           class="ag-theme-balham container-ag-table"
           @column-everything-changed="onColumnEvent" #监听任何改动
           />
@@ -106,6 +100,12 @@ export default {
        },
      ],
      gridOptions: {
+        defaultColDef: { // 针对每个单元格的默认设置
+          sortable: true,
+          resizable: true,
+          filter: true,
+          suppressMenu: true, // 隐藏表头菜单
+        },
         showToolPanel: false,  // 显示工具栏
         suppressLoadingOverlay: true, // 去掉表格加载数据提示
         suppressNoRowsOverlay: true, // 去掉表格无数据提示
@@ -117,8 +117,8 @@ export default {
         isExternalFilterPresent: () => this.filterStart, // 是否允许外部筛选
         doesExternalFilterPass: this.IfNodeVisible, // 外部筛选条件
         onFilterChanged() { // 筛选条件改变回调
-          this.api.deselectAll();
-          that.selectedRow = false;
+          this.api.deselectAll()
+          that.selectedRow = false
         },
      },
      gridData: [...]
