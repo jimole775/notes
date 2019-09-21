@@ -2,6 +2,7 @@
 ``` bash
 "ag-grid-community": "^21.2.1",
 "ag-grid-vue": "^21.2.1",
+"ag-grid-enterprise": "^21.2.1", #企业版，比公开版，多一些类似于【右键菜单】的功能，似乎企业版也没见需要收费，为了安全考虑，建议两个都安装
 npm install --save-dev ag-grid-community vue-property-decorator ag-grid-vue
 ```
 
@@ -24,6 +25,7 @@ npm install --save-dev ag-grid-community vue-property-decorator ag-grid-vue
 <script>
 // 引入ag-grid-vue
 import { AgGridVue } from 'ag-grid-vue'
+import "ag-grid-enterprise"
 // 一般都在main.js载入样式文件，因为 node_modules 目录的位置比较确定
 import "../node_modules/ag-grid-community/dist/styles/ag-grid.css"
 import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css"
@@ -96,7 +98,7 @@ export default {
          headerName: '外部组件',
          field: 'outer',
          width: 80,
-         cellRendererFramework: TableCellInput,  // 嵌套外部组件
+         cellRendererFramework: require('./TableCellInput'),  // 嵌套外部组件
        },
      ],
      gridOptions: {
