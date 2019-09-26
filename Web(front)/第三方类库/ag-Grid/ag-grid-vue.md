@@ -13,12 +13,12 @@ npm install --save-dev ag-grid-community vue-property-decorator ag-grid-vue
     <!-- columnDefs表头  rowData表格数据-->
     <!-- ag-theme-balham 是ag-grid自带的表格样式类 -->
     <ag-grid-vue 
-          :column-defs="gridColumns" 
-          :grid-options="gridOptions"
-          :row-data="gridData"
-          class="ag-theme-balham container-ag-table"
-          @column-everything-changed="onColumnEvent" #监听任何改动
-          />
+      :column-defs="gridColumns" 
+      :grid-options="gridOptions"
+      :row-data="gridData"
+      class="ag-theme-balham container-ag-table"
+      @column-everything-changed="onColumnEvent" #监听任何改动
+      />
   </div>
 </template>
  
@@ -108,7 +108,7 @@ export default {
           filter: true,
           suppressMenu: true, // 隐藏表头菜单
         },
-        showToolPanel: false,  // 显示工具栏
+        showToolPanel: false,  // 显示边侧工具栏
         suppressLoadingOverlay: true, // 去掉表格加载数据提示
         suppressNoRowsOverlay: true, // 去掉表格无数据提示
         suppressDragLeaveHidesColumns: true, // 防止拖动的时候隐藏表格列
@@ -122,11 +122,64 @@ export default {
           this.api.deselectAll()
           that.selectedRow = false
         },
+        // 定义右侧菜单，如果不显示，直接返回一个空数组就行
+        getContextMenuItems: (params) => {
+          var result = [
+              {
+                // custom item
+                name: 'Alert ' + params.value,
+                action: function() {
+                  window.alert('Alerting about ' + params.value);
+                },
+                cssClasses: ['redFont', 'bold']
+              },
+              {
+                // custom item
+                name: 'Always Disabled',
+                disabled: true,
+                tooltip: 'Very long tooltip, did I mention that I am very long, well I am! Long!  Very Long!'
+              },
+              {
+                name: 'Country',
+                subMenu: [
+                  {
+                    name: 'Ireland',
+                    action: function() {
+                      console.log('Ireland was pressed');
+                    },
+                    icon: createFlagImg('ie')
+                  },
+                ]
+              },
+              'separator',
+              {
+                // custom item
+                name: 'Checked',
+                checked: true,
+                action: function() {
+                  console.log('Checked Selected');
+                },
+                icon: '<img src="../images/skills/mac.png"/>'
+              }, // built in copy item
+              'copy',
+              'separator',
+              'chartRange'
+          ]
+          return result
+        },
+        // 选中 行 回调
+        onRowSelected: (options) => {
+          const nodes = options.node.selectionController.selectedNodes
+        },
      },
      gridData: [...]
     }
   },
   methods: {
+    // 下载excel
+    exportLineGridData() {
+      this.gridOptions.api.exportDataAsExcel()
+    },
     onColumnEvent(event) {
       // 监听整个表格的变动
     },
