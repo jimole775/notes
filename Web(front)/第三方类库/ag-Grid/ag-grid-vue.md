@@ -128,7 +128,7 @@ export default {
               {
                 // custom item
                 name: 'Alert ' + params.value,
-                action: function() {
+                action: function() { // 点击回调
                   window.alert('Alerting about ' + params.value);
                 },
                 cssClasses: ['redFont', 'bold']
@@ -136,12 +136,12 @@ export default {
               {
                 // custom item
                 name: 'Always Disabled',
-                disabled: true,
+                disabled: true, // 使用禁用
                 tooltip: 'Very long tooltip, did I mention that I am very long, well I am! Long!  Very Long!'
               },
               {
                 name: 'Country',
-                subMenu: [
+                subMenu: [ // 二级菜单
                   {
                     name: 'Ireland',
                     action: function() {
@@ -151,7 +151,7 @@ export default {
                   },
                 ]
               },
-              'separator',
+              'separator', // 分割线
               {
                 // custom item
                 name: 'Checked',
@@ -160,10 +160,10 @@ export default {
                   console.log('Checked Selected');
                 },
                 icon: '<img src="../images/skills/mac.png"/>'
-              }, // built in copy item
-              'copy',
-              'separator',
-              'chartRange'
+              }, 
+              'copy', // 调用 copy 功能模块，不用自己定义
+              'separator', // 分割线
+              'chartRange' // chartRange 功能模块
           ]
           return result
         },
