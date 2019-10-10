@@ -37,7 +37,7 @@ export default {
         {
           headerName: '选项框', 
           width: 25, 
-          checkboxSelection: true,  // 核心属性
+          checkboxSelection: true, // 核心属性
           sortable: false,
           suppressMenu: true, // 隐藏头菜单
           pinned: 'left', // 这一列固定在左边
@@ -183,6 +183,13 @@ export default {
     onColumnEvent(event) {
       // 监听整个表格的变动
     },
+    save() {
+      /**
+        * 在保存之前，一定那个要退出所有单元格的编辑状态，以处罚组件的保存功能
+        * 否则最后一个单元格的内容是无法正确记录的
+        */
+      this.gridOptions.api.stopEditing()
+    }
   }
 }
 </script>
