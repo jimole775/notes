@@ -45,11 +45,11 @@ export default {
         {
           headerName: '多层表头',
           children: [
-            {headerName: "Mobile", field: "mobile", width: 150},
-            {headerName: "Land-line", field: "landline", width: 150},
-            {headerName: "Address", field: "address", width: 500}
+            { headerName: "Mobile", field: "mobile", width: 150 },
+            { headerName: "Land-line", field: "landline", width: 150 },
+            { headerName: "Address", field: "address", width: 500 }
           ]
-        }
+        },
         {
          headerName: '嵌套元素1',
          field: 'nesting1',
@@ -57,7 +57,7 @@ export default {
          cellRenderer: (params) => { // 嵌套html元素，不支持虚拟DOM渲染
            for (const item of this.fmtcodeTypeArr) {
              if (item.value === params.data.KeyFmtcodeType) {
-               return '<span>' + item.label + '</span>';
+               return '<span>' + item.label + '</span>'
              }
            }
          },
@@ -67,10 +67,10 @@ export default {
          field: 'filter1',
          width: 130,
          valueGetter(params) {
-           return params.data.CanAddUnitid === 0 ? false : true;
+           return params.data.CanAddUnitid === 0 ? false : true
          },
          valueFormatter(params) {
-           return params.value ? '√' : '';
+           return params.value ? '√' : ''
          },
        },
        {
@@ -78,7 +78,7 @@ export default {
          field: 'filter2',
          width: 80,
          valueFormatter(params) {
-           return params.data.RegWay === 1 ? '1' : '2';
+           return params.data.RegWay === 1 ? '1' : '2'
          },
        },
        {
@@ -129,7 +129,7 @@ export default {
                 // custom item
                 name: 'Alert ' + params.value,
                 action: function() { // 点击回调
-                  window.alert('Alerting about ' + params.value);
+                  window.alert('Alerting about ' + params.value)
                 },
                 cssClasses: ['redFont', 'bold']
               },
@@ -145,7 +145,7 @@ export default {
                   {
                     name: 'Ireland',
                     action: function() {
-                      console.log('Ireland was pressed');
+                      console.log('Ireland was pressed')
                     },
                     icon: createFlagImg('ie')
                   },
@@ -157,7 +157,7 @@ export default {
                 name: 'Checked',
                 checked: true,
                 action: function() {
-                  console.log('Checked Selected');
+                  console.log('Checked Selected')
                 },
                 icon: '<img src="../images/skills/mac.png"/>'
               }, 
