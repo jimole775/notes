@@ -1,30 +1,29 @@
-1、除了for in，其他形式的循环体性能都几乎差不多；
-   使用for in遍历属性或者下标的时候必须适用hasOwnProperty方法确定是对象实例的属性，否则速度将会慢上1倍（chrome中循环100W次）
-   for in相对于forEach方法慢2-3倍（chrome中循环100W次）；
-   适用for循环相对于forEach对数组的遍历，快0.5倍（chrome中循环100W次）；
+1. 除了 `for in`, 其他形式的循环体性能都几乎差不多
+   使用 `for in` 遍历属性或者下标的时候必须适用hasOwnProperty方法确定是对象实例的属性，否则速度将会慢上1倍（chrome中循环100W次）
+   `for in` 相对于 forEach 方法慢2-3倍（chrome中循环100W次）
+   适用for循环相对于 forEach 对数组的遍历，快0.5倍（chrome中循环100W次）
 
 结论：for > forEach > for in
 
-2、大多数情况，如果要遍历数组或者对象属性，一般都会先用字面量或者局部变量的形式获取长度，这样会比每次都计算数组或对象的长度省时许多。
-   exp:      var len = array.length;
+2. 大多数情况, 如果要遍历数组或者对象属性, 一般都会先用字面量或者局部变量的形式获取长度, 这样会比每次都计算数组或对象的长度省时许多
+   `exp:     var len = array.length`
 
-3、执行倒序循环 总体 比正序操作量少；
-   exp:      for(var i = item.length, i --){}	//这样的循环少了一部操作就是：不用比对 i值和数组长度的大小； 
+3. 执行倒序循环 总体 比正序操作量少
+   `exp:     for(var i = item.length, i --){}`	// 这样的循环少了一部操作就是：不用比对 i值和数组长度的大小
 
-4、基于函数的循环体 要比 基于循环的循环体要慢 8 倍；
-   tips:     所以，如果对于性能有考虑的话应该使用 for, while； 而不要使用原生的forEach()； 
+4. 基于函数的循环体 要比 基于循环的循环体要慢 8 倍
+   tips:     所以，如果对于性能有考虑的话应该使用 for, while 而不要使用原生的forEach()
 
-5、如无必要，尽量创建局部变量，不仅是因为维护的原因，也和性能有关；
-   实验证明：创建N个gobal对象，会比，把所有对象当成一个gobal对象的属性，消耗的时间多一倍；因为涉及到预加载，所有gobal对象都会进行预加载，而gobal下的属性不会；
+5. 如无必要, 尽量创建局部变量, 不仅是因为维护的原因, 也和性能有关
+   实验证明：创建N个gobal对象，会比，把所有对象当成一个gobal对象的属性，消耗的时间多一倍；因为涉及到预加载，所有gobal对象都会进行预加载，而gobal下的属性不会
 
-6、document.write和直接把标签写进body消耗的时间差不多；
+6. document.write和直接把标签写进body消耗的时间差不多
 
-7、尽量减少直接创建全局对象（window）；
-
+7. 尽量减少直接创建全局对象（window）
    在IE8的测试：对window的全局对象访问10W次，需要消耗2-3秒的间；而只访问同一个全局对象下次级对象，只消耗了200-300毫秒，也就是10倍的差距
 
-8、如果能准确的知道键名，使用一个对象做MAP比使用一个数组做MAP要高效N倍
-   obj["key"] //消耗0ms；
-   ary.forEach(function(item){if(item == ary[key])return item}); //消耗 N ms
+8. 如果能准确的知道键名, 使用一个对象做MAP比使用一个数组做MAP要高效N倍
+   obj["key"] // 消耗0ms
+   ary.forEach(function(item){if(item == ary[key])return item}) // 消耗 N ms
    
    	
