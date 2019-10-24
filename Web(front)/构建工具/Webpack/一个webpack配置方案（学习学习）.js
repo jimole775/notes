@@ -46,7 +46,6 @@ var getAlias = function(env) {
     return {
         // 特殊
         'jquery': path.resolve(__dirname, '../src/vendor/jquery2/jquery.js'),
-
         // 正常第三方库
         'jquery.js': path.resolve(__dirname, '../src/vendor/jquery2/jquery.js'),
     };

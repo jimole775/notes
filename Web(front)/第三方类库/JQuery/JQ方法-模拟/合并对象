@@ -1,9 +1,0 @@
-
-function extend(des, src){
-                for( var j in src){
-                    if(src.hasOwnProperty(j)){
-                        des[j] = src[j];
-                    }
-                }
-                return des;
-            }

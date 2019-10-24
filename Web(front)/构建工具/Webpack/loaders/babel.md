@@ -12,13 +12,12 @@ npm install babel-loader@7 @babel/core @babel/preset-env --save-dev
 ```
 
 # 配置
-
 ``` javascript
     module: {
          loaders: [{
              test: /\.(js|jsx)$/,
              loaders: ['babel-loader?presets=env'],
-             exclude: [/node_modules/,/plugins/]     //打包的时候剔除这个文件夹下面的内容
+             exclude: [/node_modules/,/plugins/] // 打包的时候剔除这个文件夹下面的内容
          }]
     }
 ```    
