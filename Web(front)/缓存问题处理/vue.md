@@ -1,0 +1,1 @@
+还是关于keepAlive和window.history的问题，在vue专栏有记录
