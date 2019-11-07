@@ -5,7 +5,7 @@
 但是每次webpack都会重新翻译和打包
 
 样例：
-```javascript
+``` js
     var webpack = require("webpack");
     var commonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
