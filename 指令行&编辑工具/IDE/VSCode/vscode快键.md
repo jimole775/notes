@@ -13,3 +13,6 @@
 在光标的下一行insert: ctrl + enter
 
 删除行：ctrl + delete
+
+行代码上移：alt + up
+行代码下移：alt + down
