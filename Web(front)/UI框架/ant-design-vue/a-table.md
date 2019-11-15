@@ -91,4 +91,43 @@ export default {
 </script>
 ```
 
+# 设置单元格样式
+``` html
+<template>
+    <a-table 
+       :dataSource="dataSource" 
+       :columns="columns" 
+       :rowClassName="record => 'table-row'">
+    </a-table>
+</template>
+<script>
+export default {
+    data(){
+        return {
+            dataSource: [
+                {
+                    key: '',
+                    title: '',
+                    children: [{
+                        key: '',
+                        title: '',
+                        children: []
+                    }]
+                }
+            ]
+        }
+    }
+}
+</script>
+<style>
+ .table-row td {}
+.table-row td:nth-child(1){
+ //设置第一个td
+ }
+.table-row td:last-child{
+ //最后一个td
+ }
+</style>
+```
+
 
