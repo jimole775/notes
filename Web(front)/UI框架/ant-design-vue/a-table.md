@@ -1,6 +1,6 @@
 # 嵌套表格
 
-# 嵌套组件
+# 嵌套单元格组件
 <template>
     <a-table :dataSource="dataSource" :columns="columns" >
         <template slot="age" slot-scope="text, record, index">
@@ -23,7 +23,35 @@ export default {
     }
 }
 </script>
-# customRow用法
+
+# 嵌套表头组件
+``` html
+<template>
+    <a-table :dataSource="dataSource" :columns="columns" >
+        <span slot="key_head">年龄</span> <!--这里不用template嵌套-->
+    </a-table>
+</template>
+<script>
+export default {
+    data(){
+        return {
+            columns: [
+                  {
+                    // title: '年龄', // 嵌套表头的时候，不能设置title
+                    dataIndex: 'key',
+                    slots: { title: 'key_head' }, // 定义表头的插槽名
+                    scopedSlots: { 
+                        customRender: 'key',
+                    }
+                  }
+            ]
+        }
+    }
+}
+</script>
+```
+
+# 绑定row事件
 
 ``` html
 <template>
@@ -78,7 +106,7 @@ export default {
                 {
                     key: '',
                     title: '',
-                    children: [{
+                    children: [{ // 直接设置定义children字段就行
                         key: '',
                         title: '',
                         children: []
@@ -104,17 +132,6 @@ export default {
 export default {
     data(){
         return {
-            dataSource: [
-                {
-                    key: '',
-                    title: '',
-                    children: [{
-                        key: '',
-                        title: '',
-                        children: []
-                    }]
-                }
-            ]
         }
     }
 }
@@ -129,5 +146,4 @@ export default {
  }
 </style>
 ```
-
 
