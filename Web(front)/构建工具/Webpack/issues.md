@@ -39,3 +39,25 @@ module.exports = {
   ]
 }
 ```
+
+# webpack-dev-server BaseClient.js 报错
+### 原因
+由于webpack和webpack-dev-server版本的不对应造成的错误
+
+这种BUG经常出现在架构工具更新的时候
+
+以后应该记录出对应的配合比较稳定的工具版本
+
+### 解决
+- webpack@4
+``` js
+    "webpack": "4.16.5",
+    "webpack-bundle-analyzer": "2.13.1",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "3.1.5",
+    "webpack-merge": "4.1.4"
+```
+- webpack@3
+``` js
+
+```
