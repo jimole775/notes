@@ -34,3 +34,23 @@ crontab 是 ...
 # 地址
 
 https://www.cnblogs.com/itech/archive/2011/02/09/1950226.html
+
+# 注意事项
+
+- 引入环境变量
+``` bash
+source /etc/profile
+```
+- 如果不引入，可以使用全局路径来调用启动程序
+``` bash
+* * * * * /bin/echo "test" >> /tmp/txt
+```
+
+- 新创建的cron job, 不会马上执行, 至少要过2分钟才执行.
+
+- 如果重启cron则马上执行. 当crontab突然失效时，可以尝试`/etc/init.d/crond restart`解决问题. 或者查看日志看某个job有没有执行/报错`tail -f /var/log/cron`
+
+- 千万别乱运行`crontab -r`, 它从Crontab目录（/var/spool/cron）中删除用户的Crontab文件, 删除了该用户的所有crontab都没了.
+
+- 在crontab中%是有特殊含义的，表示换行的意思, 如果要用的话必须进行转义\%，如经常用的 `date ‘+%Y%m%d’` 在crontab里是不会执行的，应该换成 `date ‘+\%Y\%m\%d`
+
