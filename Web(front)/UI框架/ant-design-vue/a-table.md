@@ -76,7 +76,7 @@ export default {
                         mouseleave: (event) => {},   // mouse leave row
                     },
                     }
-                )},
+                },
             customHeaderRow(column) {
                 return {
                     on: {
