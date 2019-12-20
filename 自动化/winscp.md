@@ -27,7 +27,7 @@
 - `synchronize` 用一个本地目录同步远程目录
 
 # 小样
-> script.txt
+> script.txt #注意是txt文件，没测试过其他类型文件
 ``` bash
 option echo off #关闭控制台输出
 option transfer binary #规定为二进制传输
