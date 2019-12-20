@@ -19,7 +19,7 @@ FOR /R %path% %%f IN (%type%) DO ( #循环path目录下的js类型的文件， /
 	IF !spinfin! EQU 6 SET spin=/
 	IF !spinfin! EQU 9 SET spin=-
 	IF !spinfin! EQU 12 SET spin=\
-	ECHO !spin! Scanning...
+	ECHO !spin! Scanning... #输出加载动画
 	ECHO %%f #f为文件名
 	SET lines=0
 	FOR /F "eol=/ tokens=*" %%l IN (%%f) DO ( #读取文件内的行数，用变量 lines 存储
