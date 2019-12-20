@@ -28,7 +28,7 @@
 
 # 小样
 > script.txt
-``` txt
+``` bash
 option echo off #关闭控制台输出
 option transfer binary #规定为二进制传输
 open <name>:<password>@<IP>:<PORT> #建立连接
@@ -38,6 +38,6 @@ synchronize remote -resumesuport=on E:\test /tmp/test #同步本地test目录到
 exit #退出
 ```
 > winscp.bat
-``` batch
+``` bash
 winscp /script=script.txt #运行脚本
 ```
