@@ -32,8 +32,9 @@
 option echo off #关闭控制台输出
 option transfer binary #规定为二进制传输
 open <name>:<password>@<IP>:<PORT> #建立连接
-cd /tmp #winscp命令行
-put E:\testwinscp.txt #winscp命令行
+cd /tmp #进入远程的 tmp 目录
+put E:\testwinscp.txt #上传文件，只限文件，如果是文件夹的话，需要使用 synchronize 指令
+synchronize remote -resumesuport=on E:\test /tmp/test #同步本地test目录到远程test目录，resumesuport是端点续传，目录比较大的时候，必须设置为on
 exit #退出
 ```
 > winscp.bat
