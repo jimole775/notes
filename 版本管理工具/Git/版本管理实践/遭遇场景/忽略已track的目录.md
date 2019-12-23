@@ -1,1 +1,0 @@
-1. git rm -r --cached [file or dist]
