@@ -37,7 +37,7 @@ put E:\testwinscp.txt #上传文件，只限文件，如果是文件夹的话，
 synchronize remote -resumesuport=on E:\test /tmp/test #同步本地test目录到远程test目录，resumesuport是端点续传，目录比较大的时候，必须设置为on
 exit #退出
 ```
-> winscp.bat
+> winscp.bat #这里是使用winscp提供的命令行来调用脚本文件
 ``` bash
 winscp /script=script.txt #运行脚本
 ```
