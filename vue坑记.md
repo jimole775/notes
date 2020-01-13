@@ -6,3 +6,4 @@
 设置冻结列的时候，必须根据fixed:left和fixed:right的区别，把column对象分别插入到数组的最左边和最右边
 
 # a-select的处理
+如果开启search模式，必须添加属性（:filterOption="false"），否则只能根据value值搜索，而不能根据展示的文本值搜索    
