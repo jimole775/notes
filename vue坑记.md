@@ -7,3 +7,22 @@
 
 # a-select的处理
 如果开启search模式，必须添加属性（:filterOption="false"），否则只能根据value值搜索，而不能根据展示的文本值搜索    
+
+# watch深度监听时，内部this的指向问题处理
+``` js
+watch: {
+  handler: () => {
+    console.log(this) // 此时this指向 watch 对象，但是watch内部时没有this的，所以打印 undefined
+  },
+  deep: true,
+}
+```
+
+``` js
+watch: {
+  handler() {
+    console.log(this) // 此时this指向 $vue 对象，因为watch对象没有this，所以会一直向上层查找
+  },
+  deep: true,
+}
+```
