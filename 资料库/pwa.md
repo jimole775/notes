@@ -2,7 +2,7 @@
 r****huanda `7!(*& taobao
 r***xis |7&&% steam
 7273****5@qq.com `&&% aliyun
-166****3472 `7&&% aliyun
+166****3472 |7&&% aliyun
 166****3472 < weipay
 jim****75@163.com ] alipay
 7273****5@qq.com `&&% github
