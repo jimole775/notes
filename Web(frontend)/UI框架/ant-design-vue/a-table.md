@@ -1,6 +1,7 @@
 # 嵌套表格
 
 # 嵌套单元格组件
+``` html
 <template>
     <a-table :dataSource="dataSource" :columns="columns" >
         <template slot="age" slot-scope="text, record, index">
@@ -22,6 +23,7 @@ export default {
         }
     }
 }
+```
 </script>
 
 # 嵌套表头组件
