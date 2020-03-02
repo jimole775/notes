@@ -8,3 +8,5 @@
 2. 尝试收集筹码分布信息，因为股吧里面只能保存3个月的量
 
 [蒙娜丽莎的筹码分布地址](http://quote.eastmoney.com/concept/sz002918.html#chart-k-cyq)
+
+3. 
