@@ -24,7 +24,7 @@ jim----75@163.com `&&% wexin-dispatcher
 `7&&% googlemail
 `7!(*& baiduyun
 7273----5@qq.com `&&% 91avfuli
-r----is_cmd@1976016301107497.onal-y-n.c-m 
+r----is_cmd@1976016301107497.onal-y-n.com
 ${accesskeyid}_(base.btoa*2)VEZSQlNUUkdZbmR3UlRGMFJuVTNUWGxIU25KVlkydE0=
 ${accesskeysecret}_(base.btoa*2)YnpaYU9XNVBaVWhRTUdscFJYRmFka3hZTjBaaFptOTZXVTVuUzNWdA==
 wooow775/wow77540519/中心小学
