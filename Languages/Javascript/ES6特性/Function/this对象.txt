@@ -1,2 +1,28 @@
-...ES5中this会动态改变，所以经常会看到在函数内部要使用that把this对象存起来；
-...ES6中this会被固定，大可以略过这个形式；（还有其他的特性的话还得研究研究）
+this只有在Function和箭头函数中有区别
+#### Function
+1. this总是代表它的直接调用者, 例如 obj.function ,那么function中的this就是obj;
+
+2.在默认情况(非严格模式下,未使用 'use strict'),没找到直接调用者,则this指的是 window;
+
+3.在严格模式下,没有直接调用者的函数中的this是 undefined;
+
+4.使用call,apply,bind(ES5新增)绑定的,this指的是 绑定的对象。
+``` js
+ run({
+    start: 'xxx',
+    end: function(status) {
+      if (status === 'not end') run(this) // 这里的this，指向当前的参数对象, 这样就可以形成函数循环调用
+    }
+  })
+```
+#### Arrow Function
+1. 箭头函数中的this会指向当前上下文的this，如果上层没有，就会逐级向上找，直到找到全局对象，查找逻辑是在编译时执行的，也可以当作一个静态对象
+2. 因为箭头函数本身没有this对象，所以call，bind无法改变this的指向
+``` js
+ run({
+    start: 'xxx',
+    end: (status) => {
+      if (status === 'not end') run(this) // 这里的this，指向global，因为这里的this的上层就是run的执行环境了
+    }
+  })
+```
