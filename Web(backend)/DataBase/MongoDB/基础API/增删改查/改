@@ -1,2 +1,0 @@
-改：
-db.foo.update(old,new,bolean);
