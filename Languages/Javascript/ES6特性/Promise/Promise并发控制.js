@@ -3,7 +3,7 @@ let taskQueue = [] // 存储队列
 let max = 5
 
 function bunch(task) {
-  // 任务多出限制，就存储
+  // 任务多出限制，存储
   if (taskLiving >= max) {
     taskQueue.push(task)
   } else {
