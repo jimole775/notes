@@ -1,8 +1,0 @@
-...所有对象都是一个构造函数的实例；
-
-...像以下写法就比较直观：
-___var ary = new Array();
-___var obj = new Object();
-___var str = new String();
-___var num = new Number();
-___var fn = new Function();

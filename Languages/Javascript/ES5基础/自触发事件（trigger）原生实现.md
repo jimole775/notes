@@ -1,5 +1,6 @@
 
-==============================================>prototype.js源码
+# prototype.js源码
+``` js
 var fireEvent = function(element,event){
  if (document.createEventObject){
   // IE浏览器支持fireEvent方法
@@ -14,10 +15,11 @@ var fireEvent = function(element,event){
   evt.initEvent(event, true, true);  
   return !element.dispatchEvent(evt);
  }
-};
+}
+```
 
-==============================================>jquery.js源码
-
+# jquery.js源码
+``` js
 /**
  * 事件触发器
  * @param { Object } DOM元素
@@ -59,3 +61,4 @@ trigger : function( elem, event, data, isStopPropagation ){
   this.trigger( parent, event, data );
  }
 }
+```
