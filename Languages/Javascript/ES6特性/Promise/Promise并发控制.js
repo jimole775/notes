@@ -1,21 +1,24 @@
 let taskLiving = 0
-let taskQueue = []
+let taskQueue = [] // 存储队列
 let max = 5
 
-function bunch(cb) {
+function bunch(task) {
+  // 任务多出限制，就存储
   if (taskLiving >= max) {
-    taskQueue.push(cb)
+    taskQueue.push(task)
   } else {
-    promiseEmit(cb)
+    // 任务少于限制，调用
+    promiseEmit(task)
   }
   taskLiving ++
 }
 
-function promiseEmit(cb) {
-  return new Promise((s, j) => {cb(s, j)})
-  .finally(() => {
+function promiseEmit(task) {
+  return new Promise((s, j) => { task(s, j) })
+  .finally(() => { // 以finally方法，当作并发异步任务的状态观测点
     taskLiving --
     if (taskQueue.length > 0) {
+      // 递归操作
       promiseEmit(taskQueue.shift())
     }
   })
