@@ -1,20 +1,20 @@
-let taskRunning = 0
+let taskLiving = 0
 let taskQueue = []
 let max = 5
 
 function bunch(cb) {
-  if (taskRunning >= max) {
+  if (taskLiving >= max) {
     taskQueue.push(cb)
   } else {
     promiseEmit(cb)
   }
-  taskRunning ++
+  taskLiving ++
 }
 
 function promiseEmit(cb) {
   return new Promise((s, j) => {cb(s, j)})
   .finally(() => {
-    taskRunning --
+    taskLiving --
     if (taskQueue.length > 0) {
       promiseEmit(taskQueue.shift())
     }
