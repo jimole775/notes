@@ -38,5 +38,13 @@
       if(item == ary[key]) return item
    })
 ```   
+
+9. undefined和null
+
+- undefined 代表未定义，已经申请栈内存，并进行了一定的初始化，但是没有指向堆对象
+
+- null 代表空或者置空，可以理解为，已经申请了栈内存，但没有初始化，也没有指向堆对象
+
+- 按照这么推断：null所占字节数小于undefined的
    
    	
