@@ -20,8 +20,9 @@ jim----75@163.com `7!(*& battleNet
 10177938 > HuaSheng-ZhengQuan
 610000799187 ] CaiFu-ZhengQuan
 r----is |!(*& pbccrc.org.cn
-7273----5@qq.com `&&% wexin-public
-jim----75@163.com `&&% wexin-dispatcher
+7273----5@qq.com `&&% wx-public
+jim----75@163.com `&&% wx-dispatcher
+3159576252@qq.com |7&&% wx-applet => 166----3472
 7273----5 ~2!(*& qq
 `7&&% googlemail
 `7!(*& baiduyun
