@@ -6,5 +6,11 @@ H5以后，这种漏洞场景都只出现在富文本编辑器，因为需要以
 
 - on[event](https://www.w3.org/TR/html50/webappapis.html#event-handler-attributes)
 - href="javascript:alert(1)"
+``` html
+<!--比较需要的是onerror的用法-->
+<img src="#" onerror="alert(1)"/>
+<!--src没有加载到正确的资源，所以会触发onerror事件-->
+```
+
 
 :: 一般情况下，富文本编辑工具都会对直接输入的内容进行转义，所以，要模拟攻击，需要借助工具 `fiddler` 
