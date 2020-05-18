@@ -63,7 +63,42 @@ iptables -nL
 - `-i, --in-interface name`: 限定报文仅能够从指定的接口流入
 - `-o, --out-interface name`: 限定报文仅能够从指定的接口流出
 ### 2. 扩展匹配条件
-#### 2.1 隐含扩展匹配条件
+#### 2-1 隐含扩展匹配条件
 - `-p tcp`: 可直接使用tcp扩展模块的专用选项
-
-- ``
+- - `[!] --source-port, --sport port[:port]` 匹配报文源端口; 可以给出多个端口, 但只能是连续的端口范围
+- - `[!] --destination-port, --dport port[:port]` 匹配报文目标端口; 可以给出多个端口, 但只能是连续的端口范围
+- - `[!] --tcp-flags mask comp` 匹配报文中的tcp协议的标志位; Flags are: SYN ACK FIN RST URG PSH ALL NONE; mask: 要检查的FLAGS list, 以逗号分隔; comp: 在mask给定的诸多的FLAGS中, 其值必须位1的FLAGS列表, 余下的其值必须为0
+- - `[!] --syn: --tcp-flags SYN,ACK,FIN,RST SYN`
+- `-p udp`: 可直接使用udp协议扩展模块的专用选项:
+- - `[i] --source-port, --sport port[:port]`
+- - `[i] --destination-port, --dport port[:port]`
+- `-p icmp`
+- - `[i] --icmp-type {type[/code]|typename}`
+- - - 0/0: echo reply
+- - - 8/0: echo request
+#### 2-2 显示扩展匹配条件
+必须用 `-m option` 选项指定扩展匹配的类型，常见的有以下几种
+##### A. multiport
+以离散或者连续的方式定义多端口匹配条件，最多15个
+- `[!] --source-ports, --sports port[,port|,port:port]...`: 指定多个源端口
+- `[!] --destination-ports, --dports port[,port|,port:port]...`: 指定多个目标端口
+``` bash
+iptables -I INPUT -d 172.16.0.7 -p tcp -m multiport --dports 22,80,139,445,3306 -j ACCEPT
+```
+##### B. iprange
+以连续地址块的方式来指明多IP地址匹配条件
+- `[i] --src-range from[-to]`
+- `[i] --dst-range from[-to]`
+``` bash
+iptables -I INPUT -d 172.16.0.7 -p tcp -m multiport --dports 22,80,139,445,3306 -m iprange --src-range 172.16.0.61-172.16.0.70 -j REJECT
+```
+##### C. time
+匹配数据包到达的时间
+- `--timestart hh:mm[:ss]`
+- `--timestop hh:mm[:ss]`
+- `[!] --weekdays day[,day...]`
+- `[!] --monthdays day[,day...]`
+- `--datestart YYYY[-MM[-DD[Thh[:mm[:ss]]]]]`
+- `--datestop YYYY[-MM[-DD[Thh[:mm[:ss]]]]]`
+- `--kerneltz: 使用内核配置的时区而非默认的UTC`
+##### 
