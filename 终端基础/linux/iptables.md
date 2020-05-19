@@ -101,4 +101,38 @@ iptables -I INPUT -d 172.16.0.7 -p tcp -m multiport --dports 22,80,139,445,3306 
 - `--datestart YYYY[-MM[-DD[Thh[:mm[:ss]]]]]`
 - `--datestop YYYY[-MM[-DD[Thh[:mm[:ss]]]]]`
 - `--kerneltz: 使用内核配置的时区而非默认的UTC`
-##### 
+##### D. string
+匹配数据包中的字符
+- `--algo {bm|kmp}`
+- - `[!] --string pattern`
+- - `[!] --hex-string pattern`
+- `--from offset`
+- `--to offset`
+``` bash
+iptables -I OUTPUT -m string --algo bm --string "gay" -j REJECT
+```
+
+##### E. connlimit
+用于限制同一IP可建立的连接数目
+- `--connlimit-upto n`
+- `--connlimit-above n`
+``` bash
+iptables -I INPUT -d 172.16.0.7 -p tcp --syn --dport 22 -m connlimit --connlimit-above 2 -j REJECT
+```
+##### F. limit
+限制收发数据包的速率
+- `--limit rate[/second|/minute|/hour|/day]`
+- `--limit-burst number`
+``` bash
+iptables -I OUTPUT -s 172.16.0.7 -p icmp --icmp-type 0 -j ACCEPT
+```
+
+##### G. state
+限制收发包的状态
+- `[!]--state state`
+- - `INVALID, ESTABLISHED, NEW, RELATED or UNTRACKED`
+- - `NEW`: 新连接请求
+- - `ESTABLISHED`: 无法识别的连接
+- - `INVALID`: 相关联的连接，当前连接是一个新的请求，但附属于某个已存在的连接
+- - `UNTRACKED`: 未追踪的连接
+
