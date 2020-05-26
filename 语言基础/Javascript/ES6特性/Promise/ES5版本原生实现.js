@@ -1,7 +1,7 @@
-function MyPromise(bootStrap) {
-  this.taskResponse = null
-  this.taskErrInfo = null
-  this.taskQueue = [] // 任务队列，由 'this.then' 被调用的时候存储
+export default function $Promise(bootStrap) {
+  this.state = 'unstart'
+  this.resovleTaskQueue = [] // 任务队列，由 'this.then' 被调用的时候存储
+  this.rejectTaskQueue = [] // 任务队列，由 'this.then' 被调用的时候存储
 
   // 由于ES5函数内部this的指向问题，
   // 这里必须先固定指向MyPromise内部
@@ -10,77 +10,80 @@ function MyPromise(bootStrap) {
 
   // taskQueue队列调用的开关
   var solve = function(response) {
-    that.taskResponse = response
-    that.callTasks(that.taskResponse)
+    that.callTasks(response, null)
   }
 
   // 异常处理的开关
   var reject = function(response) {
-    that.taskErr = response
-    that.errHandler(that.taskErr)
+    // that.errHandler('reject: ', response)
+    that.callTasks(null, response)
   }
-
-  // 默认处理异常的函数
-  this.errHandler = function() {
-    throw this.taskErrInfo
-  }
-
-  // 默认终点的执行函数
-  this.finallyHandler = function() {}
 
   bootStrap && bootStrap(solve, reject)
 }
 
-MyPromise.prototype.callTasks = function(taskResponse) {
+$Promise.prototype.errHandler = function(errInfo) {
+  // 原生错误处理器，直接抛出错误，打断流程
+  throw errInfo
+}
+
+$Promise.prototype.finallyHandler = function() {}
+
+$Promise.prototype.callTasks = function(solveResponse, rejectResponse) {
   try {
     // 直接执行 then 存储的任务
-    const nextResponse = this.taskQueue.shift()(taskResponse)
-    if (this.taskQueue.length) {
-      this.callTasks(nextResponse || taskResponse)
+    const nextResponse = this.resovleTaskQueue.shift()(solveResponse)
+    if (this.resovleTaskQueue.length) {
+      this.state = 'pending'
+      this.callTasks(nextResponse || solveResponse)
     } else if (this.finallyQueue.length) {
-      this.finallyHandler(nextResponse || taskResponse)
+      this.state = 'pending'
+      this.finallyHandler(nextResponse || solveResponse)
+    } else {
+      this.state = 'end'
     }
   } catch (error) {
     this.errHandler(error)
   }
 }
 
-MyPromise.prototype.then = function(task) {
-  this.taskQueue.push(task)
+$Promise.prototype.then = function(resovleTask, rejectTask) {
+  this.resovleTaskQueue.push(resovleTask)
+  this.rejectTaskQueue.push(rejectTask)
   return this
 }
 
-MyPromise.prototype.catch = function(errHandler) {
+$Promise.prototype.catch = function(errHandler) {
   this.errHandler = errHandler
   return this
 }
 
-MyPromise.prototype.finally = function(finallyHandler) {
+$Promise.prototype.finally = function(finallyHandler) {
   this.finallyHandler = finallyHandler
   return this
 }
 
 // usage:
 // 输出 'then1: 1  then2: 2  finally: 3'
-let tick = 0
-const promise = new MyPromise(function(s, j) {
-  setTimeout(() => {
-    s(++tick)
-  }, 1000)
-})
+// let tick = 0
+// const promise = new MyPromise(function(s, j) {
+//   setTimeout(() => {
+//     s(++tick)
+//   }, 1000)
+// })
 
-promise
-  .then(data => {
-    console.log("then1:", data)
-    return data + 1
-  })
-  .then(data => {
-    console.log("then2:", data)
-    return data + 1
-  })
-  .catch(data => {
-    console.log("err:", data)
-  })
-  .finally(data => {
-    console.log("finally:", data)
-  })
+// promise
+//   .then(data => {
+//     console.log("then1:", data)
+//     return data + 1
+//   })
+//   .then(data => {
+//     console.log("then2:", data)
+//     return data + 1
+//   })
+//   .catch(data => {
+//     console.log("err:", data)
+//   })
+//   .finally(data => {
+//     console.log("finally:", data)
+//   })
