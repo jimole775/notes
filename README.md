@@ -15,7 +15,7 @@ Notes: root
   - OLM
   - 版本管理工具
     - Git
-    -SVN
+    - SVN
 - 开发实践
   - 常见业务
   - 开发模式
