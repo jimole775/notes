@@ -1,4 +1,4 @@
-<img src="xzz.png" width="66px" alt="新之助">
+<img src="xzz.png" alt="新之助">
 <!-- <img src="xx.png" width="66px"> -->
 
 ### 学习笔记
