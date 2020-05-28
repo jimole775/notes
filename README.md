@@ -87,15 +87,15 @@ Notes: root
   - 算法基础
   - 编码
 - 语言基础
-  - Css
-  - English
-  - Html
+  - Css[Css](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/Css)
+  - English[English](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/English)
+  - Html[Html](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/Html)
   - [Java](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/Java)
-  - Javascript
-  - RegExp
-  - TypeScript
+  - [Javascript](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/Javascript)
+  - [RegExp](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/RegExp)
+  - [TypeScript](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/TypeScript)
   - kotlin
-  - node
-  - python
+  - [node](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/node)
+  - [python](https://github.com/jimole775/notes/tree/home/%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/python)
 - 资料库
 - 面试
