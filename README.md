@@ -2,7 +2,6 @@
 偶尔整理，随记居多。
 
 ### 结构
-```
 Notes: root
 - AR开发
 - web开发
@@ -100,4 +99,3 @@ Notes: root
   - python
 - 资料库
 - 面试
-```
