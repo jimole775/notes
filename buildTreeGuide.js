@@ -27,8 +27,8 @@ function spill (preUrl, prePath, preFloders, level) {
     const curPath = path.join(prePath, floder)
     const curFloders = takeFloders(curPath)
     content.push(`${injectTabChar(level)}- [${floder}](${curUrl})`)
-    // 只显示3层
-    if (curFloders.length && level < 2) spill(curUrl, curPath, curFloders, level+1)
+    // 只显示2层
+    if (curFloders.length && level < 1) spill(curUrl, curPath, curFloders, level+1)
   })
 }
 
