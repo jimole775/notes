@@ -6,8 +6,8 @@
 - 通知（Advice）：具体的横切逻辑；
 
 #### Spring中有四种Advice：
-  - 前置通知（Before Advice）
-  - 后置通知（After Advice）
-  - 返回通知（After Return Advice）
-  - 环绕通知（Around Advice）
-  - 抛出异常后通知（After Throwing Advice）
+1. 前置通知（Before Advice）
+1. 后置通知（After Advice）
+1. 返回通知（After Return Advice）
+1. 环绕通知（Around Advice）
+1. 抛出异常后通知（After Throwing Advice）
