@@ -44,7 +44,7 @@ PO和VO都应该属于它
 
 ### DAO: data access object数据访问对象
 1. 主要用来封装对DB的访问（CRUD操作）。
-2. 通过接收BUsiness层的数据，把POJO持久化为PO。
+2. 通过接收Business层的数据，把POJO持久化为PO。
 
 
 
