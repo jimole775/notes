@@ -1,5 +1,4 @@
 <img src="yyxzz.png" alt="新之助">
-<!-- <img src="xx.png" width="66px"> -->
 
 ### 学习笔记
 偶尔整理，随记居多。
