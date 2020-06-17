@@ -86,3 +86,10 @@ module.exports = {
 "no-whitespace-before-property": "error"    # 禁止属性前有空格，如obj. a
 "keyword-spacing":["error",{"before": true, "after": true}] # 关键字前后必须有空格 如 } else {
 ```
+# 插件集
+- "@vue/cli-plugin-eslint": "^3.7.0" # vue-cli3的eslint接口
+- "@vue/eslint-config-prettier": "^4.0.1" # vue-cli3的prettier配置项
+- "@vue/eslint-config-standard": "^4.0.0" # vue-cli3的标准配置项
+- "babel-eslint": "^10.0.1" # babel的eslint接口
+- "eslint": "^5.16.0"
+- "eslint-plugin-vue": "^5.0.0" # vue-cli2的eslint接口
