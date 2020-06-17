@@ -28,10 +28,10 @@ def get_demo():
     params = urllib.parse.urlencode({})
     # 请求头
     headers = {'Referer': 'http://t66y.com/index.php', 'User-Agent': random.choice(USER_AGENTS), 'Accept-Language': 'zh-CN,zh;q=0.9', 'Cookie': '_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEzNCwiaWF0IjoxNTkyMzYyMzkzLCJleHAiOjE1OTI5NjcxOTN9.7MjJ3SR39Ul-QNBXkl5WjtLfuth13FDccAnimukvN8o; _yapi_uid=134'}
-    # @param host, port, options
-    conn = http.client.HTTPConnection("10.167.20.124", '3000', timeout=10)
+    # @param host, port, options 如果是域名，就不需要端口号
+    conn = http.client.HTTPConnection('100.27.30.111', '3000', timeout=10)
     # @param method, path?qury, params, headers
-    conn.request("GET", "/api/interface/get?id=6785", params, headers)
+    conn.request('GET', '/api/interface/get?id=6785', params, headers)
     # res session
     res = conn.getresponse()
 
