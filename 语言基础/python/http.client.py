@@ -47,18 +47,12 @@ def get_demo():
         print('fail conn')
 
 def post_demo():
-    params = urllib.parse.urlencode({'qruuid': 'asdf', 'user_uuid': '3423412dfasf'})
-    headers = {'Content-type': 'application/x-www-form-urlencoded',
-               'Accept': 'application/json'}
-    conn = http.client.HTTPSConnection('www.baidu.com')
-    conn.request('POST', '/api/qrcode', params, headers)
-    response = conn.getresponse()
-    print(response.status, response.reason)
-
-    if not response.closed:
-        data = response.read()
-        print(data, type(data.decode('utf-8')))
-
+    conn = http.client.HTTPConnection("httpbin.org") # 直接用域名
+    data = '{"name":"张三", "age": 12}'.encode('utf-8') # 或data = json.dumps({"name":"张三", "age": 12})
+    headers = {"Content-Type": "application/json"}
+    conn.request("POST", '/post', data, headers)
+    res = conn.getresponse()
+    print(res.read().decode("utf-8"))
     conn.close()
 
 if __name__ == '__main__':
