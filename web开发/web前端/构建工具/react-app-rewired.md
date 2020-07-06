@@ -49,3 +49,5 @@ module.exports = override(
   addCustomize()
 );
 ```
+- 文档地址 
+https://github.com/timarney/react-app-rewired/blob/HEAD/README_zh.md
