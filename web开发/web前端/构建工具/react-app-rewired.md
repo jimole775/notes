@@ -1,5 +1,8 @@
-react的集中式的构建工具，类似于vue的vue-cli，把常用的webpack配置和业务需求都进行了整合，并提供了覆盖接口，用户可以通过override的方式进行统一配置修改
-配置样例：
+react的集中式的构建工具，类似于vue的vue-cli，把常用的webpack配置和业务需求都进行了整合（具体整合的内容，可以到项目的node_modules里面找）
+
+并提供了覆盖接口，用户可以通过override的方式进行统一配置修改
+
+- 配置样例：
 config-overrides.js
 ``` js
 const {
