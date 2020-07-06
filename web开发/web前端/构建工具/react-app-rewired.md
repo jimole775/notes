@@ -2,6 +2,10 @@ react的集中式的构建工具，类似于vue的vue-cli，把常用的webpack�
 
 并提供了覆盖接口，用户可以通过override的方式进行统一配置修改
 
+- 文档地址 
+
+https://github.com/timarney/react-app-rewired/blob/HEAD/README_zh.md
+
 - 配置样例：
 config-overrides.js
 ``` js
@@ -49,5 +53,3 @@ module.exports = override(
   addCustomize()
 );
 ```
-- 文档地址 
-https://github.com/timarney/react-app-rewired/blob/HEAD/README_zh.md
