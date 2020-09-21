@@ -7,3 +7,4 @@ const store = () => createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
 ```
+# 源码分析
