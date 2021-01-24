@@ -1,2 +1,0 @@
-### tesseract
-windows下载地址： https://digi.bib.uni-mannheim.de/tesseract/
