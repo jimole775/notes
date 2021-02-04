@@ -1,6 +1,6 @@
 <template>
   <div class="moveBox">
-    <OmsTabsPlus :ref="'OmsTabsRef'" :tab-proxy="tabProxy" />
+    <TabsPlus :ref="'OmsTabsRef'" :tab-proxy="tabProxy" />
     <div v-if="tabProxy.showList">
       <ProjectList
         :key="new Date().getTime()"
@@ -34,9 +34,8 @@
 </template>
 <script>
 // import api from '@/api'
-import OmsTabsPlus from '@/components/OmsTabsPlus'
-import baseMixins from '@/mixins/baseMixins'
-import todoMixins from '@/mixins/todoMixins'
+import TabsPlus from '../todo/TabsPlus'
+import todomixin from '../todo/todomixin'
 import ProjectList from './list'
 import ProjectApply from './apply'
 import ProjectApproval from './approval'
@@ -46,12 +45,12 @@ import { applyModulesMap } from './config/apply/modules.map'
 import { approvalModulesMap } from './config/approval/modules.map'
 export default {
   components: {
-    OmsTabsPlus,
+    TabsPlus,
     ProjectList,
     ProjectApply,
     ProjectApproval
   },
-  mixins: [baseMixins, todoMixins],
+  mixins: [todomixin],
   data () {
     return {
       tabProxy: {
