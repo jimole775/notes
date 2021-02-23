@@ -9,7 +9,6 @@
 3. 集成审批操作（导出，批量操作：放弃，驳回，通过，撤回，关闭）
 
 4. 树型表单（通过 "expand-api" 属性开启）
-
 ### 样例
 ``` vue
 <template>
@@ -58,15 +57,20 @@ const columns = [
 // 查询头组件
 const searchor = [
   {
-    title: 'ant组件',
+    title: 'antd组件',
     key: 'key',
     component: 'AInput' // 普通Input类型的查询框
   },
   {
     title: '角色组件',
-    keys: ['key1', 'key2'], // 查询需要的字段，和 optionKeys 一一对应
+    keys: ['key', 'value'], // 查询需要的字段，和 optionKeys 一一对应
     optionKeys: ['key', 'label'], // 选项的取值字段
-    component: 'UserSelect'
+    component: 'compname'
+  },
+  {
+    title: '角色组件1',
+    key: 'key2',
+    component: 'compname'
   },
   {
     title: '字典组件',
@@ -75,23 +79,23 @@ const searchor = [
       'value-field': 'itemCode', // DictSelect 需要 valueField 去对应获取 选项的取值字段
     },
     key: 'key',
-    component: 'DictSelect'
+    component: 'compname'
   },
   {
     title: '被依赖组件',
     key: 'key',
-    component: 'CitySelect'
+    component: 'compname'
   },
   {
     title: '依赖组件',
     dependKey: 'cityName', // 依赖【城市】的值，【工作地点】才获取下拉选项
     key: 'key',
-    component: 'WorkplaceSelect'
+    component: 'compname'
   },
   {
     title: '周期组件', 
     keys: ['applyStartDate', 'applyEndDate'], // 选择时间范围
-    component: 'RangePicker'
+    component: 'compname'
   }
 ]
 export default {
