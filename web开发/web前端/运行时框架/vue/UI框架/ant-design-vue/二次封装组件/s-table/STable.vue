@@ -121,7 +121,7 @@
       </div>
       <a-table
         bordered
-        :columns="selfColumns"
+        :columns="columns"
         :data-source="dataList"
         :pagination="isPagination ? pagination : false"
         :scroll="autoScroll"
@@ -131,12 +131,9 @@
         @expand="expandEvent"
         @change="onChangePage"
       >
-        <template slot="index" slot-scope="text, record, index">
-          {{ (index + 1) + (pagination.current - 1) * pagination.pageSize }}
-        </template>
-        <template v-for="columnSlot in columnScopedSlots" :slot="columnSlot.scopedSlots?columnSlot.scopedSlots.customRender:''" slot-scope="text, record, index">
-          <span v-if="columnSlot.customRender" :key="columnSlot.dataIndex">{{ columnSlot.customRender(text, record, index) }}</span>
-          <slot v-else :name="columnSlot.scopedSlots?columnSlot.scopedSlots.customRender:''" v-bind="record" />
+        <template v-for="columnSlot in columnScopedSlots" :slot="columnSlot.scopedSlots?columnSlot.scopedSlots.customRender:''" slot-scope="text, record">
+          <!-- <template v-if="columnSlot.customRender" v-html="coverRender(columnSlot.customRender, text, record, index)" /> -->
+          <slot v-bind="record" :name="columnSlot.scopedSlots?columnSlot.scopedSlots.customRender:''" />
         </template>
         <template v-for="columnSlot in columnSlots" :slot="columnSlot.slots?columnSlot.slots.title:''">
           <slot :name="columnSlot.slots?columnSlot.slots.title:''" />
@@ -272,6 +269,7 @@ export default {
       queryObj: {},
       dataList: [],
       fileList: [],
+      hasIndexColumn: false,
       isLoading: false,
       isSearchorExpand: true,
       searchorGroups: [], // 显示搜索栏
@@ -309,6 +307,7 @@ export default {
       handler (val = []) {
         this.columnSlots = []
         this.columnScopedSlots = []
+        this.insertIndexCol(val)
         this.flattenColumns(val, this.columnSlots, this.columnScopedSlots)
       },
       immediate: true
@@ -361,30 +360,32 @@ export default {
     },
     modalColumns () {
       const res = []
-      this.selfColumns.forEach((colItem) => {
+      this.columns.forEach((colItem) => {
         if (res.length < 5) {
           res.push(colItem)
         }
       })
       return res
     },
-    selfColumns () {
-      const copy = JSON.parse(JSON.stringify(this.columns))
-      if (this.showRank) {
-        copy.unshift({
-          title: '序号',
-          width: '50',
-          dataIndex: 'index',
-          align: 'center',
-          scopedSlots: { customRender: 'index' }
-        })
-      }
-      return copy
-    },
+    // selfColumns () {
+    //   if (this.showRank) {
+    //     this.columns.unshift({
+    //       title: '序号',
+    //       width: '50',
+    //       dataIndex: 'index',
+    //       align: 'center',
+    //       scopedSlots: { customRender: 'index' }
+    //     })
+    //   }
+    //   return this.columns
+    // },
     autoScroll () {
       const scroll = { x: 0 }
-      this.countColumnsSize(this.selfColumns, scroll)
+      this.countColumnsSize(this.columns, scroll)
       return scroll
+    },
+    currentDomain () { // '域名'
+      return this.$store.getters.getCurrentDomain()
     },
     supportSeries () {
       const dicts = this.$store.getters.getDictByGroupCode('upload_file_suffix_while_list')
@@ -400,6 +401,20 @@ export default {
   },
   methods: {
     moment,
+    insertIndexCol (val) {
+      if (this.showRank && !this.hasIndexColumn) {
+        this.hasIndexColumn = true
+        val.unshift({
+          title: '序号',
+          width: '50',
+          dataIndex: 'index',
+          align: 'center',
+          customRender: (text, record, index) => {
+            return (index + 1) + (this.pagination.current - 1) * this.pagination.pageSize
+          }
+        })
+      }
+    },
     countColumnsSize (columns, scrollObj) {
       columns && columns.forEach(col => {
         if (col.width) {
@@ -410,24 +425,39 @@ export default {
         }
       })
     },
-    implColumnRender (colItem) {
-      if (colItem.customRender) {
-        colItem.scopedSlots = { customRender: colItem.dataIndex }
-      }
-    },
     flattenColumns (columns, columnSlots, columnScopedSlots) {
       columns && columns.forEach(col => {
-        this.implColumnRender(col)
         if (col.slots) {
           columnSlots.push(col)
         }
         if (col.scopedSlots) {
           columnScopedSlots.push(col)
         }
+        if (!col.children && !col.customRender && !col.scopedSlots) {
+          col.customRender = this.fixTextWrapper()
+        }
         if (col.children && col.children.length) {
           this.flattenColumns(col.children, columnSlots, columnScopedSlots)
         }
       })
+    },
+    fixTextWrapper () {
+      // 如果文本长度超过20，就省略掉
+      const h = this.$createElement
+      const maxLen = 20
+      return (text, record, index) => {
+        if (utils.isString(text) && text.length > maxLen) {
+          return h('a-tooltip', {
+            props: {
+              title: text
+            }
+          }, [
+            h('span', text.substring(0, maxLen) + '...')
+          ])
+        } else {
+          return text
+        }
+      }
     },
     validRowsStatus (selectedRows) {
       let pass = true
@@ -643,6 +673,7 @@ export default {
       const ref = `${searchItem.component}${searchItem.key ? searchItem.key : searchItem.keys[0]}`
       if (this.$refs[ref] && this.$refs[ref][0]) {
         this.$set(this.$refs[ref][0], 'value', view)
+        // this.$refs[ref][0].value = view
       } else {
         return setTimeout(() => {
           this.setComponentView(searchItem, view)
