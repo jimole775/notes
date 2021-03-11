@@ -1,0 +1,15 @@
+
+document origin:
+dom.innerHTML = [dom string];
+dom.appendChild([dom]);
+
+jquery:
+$(dom).html([dom string]);
+$(dom).modal([boolean]);
+
+angularjs:
+$templateCache.put([templateName],[dom string]);
+$compile([dom string])($scope);
+module.directive();
+
+
