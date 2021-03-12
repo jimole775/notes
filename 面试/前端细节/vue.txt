@@ -13,13 +13,16 @@ E，beforeDestory;
 
 5. 它们有什么不同的地方
 
-6. 如何克隆一个dom子元素
+6. 如何克隆一个dom子元素，动态创建dom的方法
 
 4. computed和watch
+
+6. 父子传值，全局变量定义
 
 5. computed和普通函数的区别
 
 5. keepalive原理
+
 
 
 
