@@ -3,15 +3,15 @@
 2，一个生命周期会经历哪些钩子函数？
 A，beforeCreated;
 B，created;
-C，mounted;//挂载
+C，mounted; //挂载
 D，destoryed;
 E，beforeDestory;
 
-3，描述一下双向绑定的原理
+3. 强制刷新页面方法有多少种
 
-4，描述一下虚拟dom或者原生dom的结构
+3. 描述一下双向绑定的原理
 
-5. 它们有什么不同的地方
+4，描述一下虚拟dom或者原生dom的结构, 它们有什么不同的地方
 
 6. 如何克隆一个dom子元素，动态创建dom的方法
 
