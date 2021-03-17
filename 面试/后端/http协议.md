@@ -13,5 +13,3 @@
 5. keepalive原理
 
 7. http, 缓存的类型有多少种, xmlhttprquest跨域的实现和解决？
-
-8. nginx代理，反向代理
