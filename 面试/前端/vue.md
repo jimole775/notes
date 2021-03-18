@@ -4,6 +4,7 @@
   A. beforeCreated;
   B. created;
   C. mounted;//挂载
+  D. update;
   D. destoryed;
   E. beforeDestory;
 
