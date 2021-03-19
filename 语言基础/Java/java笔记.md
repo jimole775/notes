@@ -9,15 +9,16 @@
 
 5, main方法的arg参数，接受的是命令行字段，参数之间用空格来分割
 > java Hello -n -t
-public class Hello{
-    public static main(String arg[]){
-        if(arg[0].equals("-n")){
-            string name = "Andy";
-        }
-        if(arg[1].equals("-t")){
-            int time = new Date();
-        }
-        
-        System.out.println("Hello" + name + time);
+``` java
+public class Hello {
+  public static main(String arg[]) {
+    if (arg[0].equals("-n")) {
+      string name = "Andy";
     }
+    if (arg[1].equals("-t")) {
+      int time = new Date();
+    }
+    System.out.println("Hello" + name + time);
+  }
 }
+```
