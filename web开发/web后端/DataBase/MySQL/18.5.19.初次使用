@@ -1,5 +1,0 @@
-//去下载了一个yiibai.sql的表
-> mysql -hlocalhost -uroot -p
-mysql> CREATE DATABASE IF NOT EXISTS yiibaidb DEFAULT CHARSET utf8 COLLATE utf8_general_ci; //新建一个表（如果不存在）？后面的指令还不清楚什么意思！
-mysql> use yiibaidb;    //类似于git的checkout branch
-mysql> source D:/work_space/yiibai.sql      //导入sql表 
