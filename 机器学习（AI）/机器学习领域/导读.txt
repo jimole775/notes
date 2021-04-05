@@ -1,3 +1,0 @@
-github开源的机器学习框架TensorFlow
-
-其实也未必需要直接从框架入手，先玩玩unity3D的游戏AI也是不错的！
