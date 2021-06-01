@@ -3,15 +3,15 @@
 # 嵌套单元格组件
 ``` html
 <template>
-    <a-table :dataSource="dataSource" :columns="columns" >
+    <a-table :dataSource="dataSource" :columns="columns">
         <template slot="age" slot-scope="text, record, index">
-            <a>{{ text + record.age + index}}</a> <!--text:单元格文本, record: 行数据, index: 行下标-->
+            <a>{{ text + record.age + index }}</a> <!--text:单元格文本, record: 行数据, index: 行下标-->
         </template>
     </a-table>
 </template>
 <script>
 export default {
-    data(){
+    data () {
         return {
             columns: [
                 {
@@ -29,13 +29,13 @@ export default {
 # 嵌套表头组件
 ``` html
 <template>
-    <a-table :dataSource="dataSource" :columns="columns" >
+    <a-table :dataSource="dataSource" :columns="columns">
         <span slot="key_head">年龄</span> <!--这里不用template嵌套-->
     </a-table>
 </template>
 <script>
 export default {
-    data(){
+    data () {
         return {
             columns: [
                   {
@@ -58,7 +58,6 @@ export default {
 ``` html
 <template>
     <a-table :customRow="customRow">
-    
     </a-table>
 </template>
 <script>
@@ -97,7 +96,6 @@ export default {
 ``` html
 <template>
     <a-table :dataSource="dataSource" :columns="columns" >
-    
     </a-table>
 </template>
 <script>
@@ -132,20 +130,20 @@ export default {
 </template>
 <script>
 export default {
-    data(){
+    data () {
         return {
         }
     }
 }
 </script>
 <style>
- .table-row td {}
-.table-row td:nth-child(1){
- //设置第一个td
- }
-.table-row td:last-child{
- //最后一个td
- }
+.table-row td {}
+.table-row td:nth-child(1) {
+// 设置第一个td
+}
+.table-row td:last-child {
+// 最后一个td
+}
 </style>
 ```
 
