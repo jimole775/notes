@@ -4,12 +4,12 @@
 1. http的状态码都有哪些？
 【怎么区别】
 
-2. 304, 缓存方案有哪些
+2. http的缓存方案有哪些
 
 4. 在url中携带参数的方式
 
 3. 在vue中, 如果重新赋值href, 会触发哪些流程
 
-5. keepalive原理
+5. vue中keepalive原理
 
-7. http, 缓存的类型有多少种, xmlhttprquest跨域的实现和解决？
+7. http, xmlhttprquest跨域的实现和解决？
