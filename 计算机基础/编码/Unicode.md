@@ -18,3 +18,4 @@
 
 # 备注
 js中的charCodeAt, codeAt, fromCharCode方法都是以unicode为基础进行计算的！！
+
