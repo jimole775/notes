@@ -7,3 +7,5 @@
 4. webpack怎么和自动化进行配合？
 
 5. 怎么判断项目的运行环境 process.env
+
+6. vue-cli3 都使用了webpack 的哪些特性或者配置
