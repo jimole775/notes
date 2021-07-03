@@ -6,12 +6,12 @@
 比如:
 ``` ts
     interface Example{
-        name:any;        
+        name: any
     } 
 
-    class Example{
-        getName(){
-            return this.name = "Rongxis";
+    class Example {
+        getName () {
+            return this.name = "Rongxis"
         }
     }
 ```
