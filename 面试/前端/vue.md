@@ -1,12 +1,14 @@
 1. 描述一下vue的生命周期
 
-2. 简单说一下声明周期
+2. 简单说一下声明周期，data，computed，watch，他们运行的顺序
   A. beforeCreated;
   B. created;
   C. mounted;
   D. update; // 在什么情况下会触发update，有强制刷新的方法吗
   D. destoryed;
   E. beforeDestory;
+
+13. data, compouted和watch，哪个先实例化
 
 9. 诱发视图刷新的情况有多少种
  - a. 修改视图数据，包括直接修改data数据，form表单的设置
@@ -81,5 +83,4 @@ vm对象的data数据对象，在create的时候，对面里面的set方法会�
 一个审批流程，有3-5个审批节点，但是不同的人能看到不同的节点
 如果不同的人看到不同的字段
 
-13. data, compouted和watch，哪个先实例化
 
