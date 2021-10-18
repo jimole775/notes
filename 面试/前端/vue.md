@@ -4,8 +4,8 @@
   A. beforeCreated;
   B. created;
   C. mounted;
-  D. update; // 在什么情况下会触发update，有强制刷新的方法吗
-  D. destoryed;
+  D. update; # 在什么情况下会触发update，有强制刷新的方法吗
+  D. destoryed; # 在什么情况下会使用，销毁的什么东西
   E. beforeDestory;
 
 13. data, compouted和watch，哪个先实例化
