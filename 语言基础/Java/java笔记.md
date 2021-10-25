@@ -11,7 +11,7 @@
 > java Hello -n -t
 ``` java
 public class Hello {
-  public static main(String arg[]) {
+  public static void main(String arg[]) {
     if (arg[0].equals("-n")) {
       string name = "Andy";
     }
