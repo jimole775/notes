@@ -1,0 +1,1 @@
+`int abstract [InputStream].read();`

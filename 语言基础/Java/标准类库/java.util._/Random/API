@@ -1,1 +1,0 @@
-(new Random).nextInt(n) // 返回一个 0 ~ n-1 的随机数
