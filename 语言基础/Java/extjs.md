@@ -41,8 +41,4 @@ mainLayout.add('north', new Ext.ContentPanel('north-div', {
 Ext.EventManager.onDocumentReady(Simple.init, Simple, true);
 ```
 
-
-
-
-
 批量导入出现空指针异常；

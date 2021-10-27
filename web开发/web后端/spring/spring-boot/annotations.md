@@ -8,7 +8,9 @@
 
 - @SpringBootApplication: Sprnig Boot项目的核心注解，主要目的是开启自动配置
 
-- @RestController: 修饰Controller类，用来对接http接口
+- @RestController: 修饰Controller类，改造当前类来对接http接口
+
+- @RequestMapping: 修饰http接口路径
 
 - @Value("${com.xxx.xx}"): 用来修饰变量，附默认值
 
@@ -17,3 +19,5 @@
 - @Configuration: 
 
 - @MapperScan: 
+
+- @AliasFor:
