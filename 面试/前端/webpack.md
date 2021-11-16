@@ -9,3 +9,5 @@
 5. 怎么判断项目的运行环境 process.env
 
 6. vue-cli3 都使用了webpack 的哪些特性或者配置
+
+7. webpack打包有哪些优化操作
