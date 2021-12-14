@@ -5,6 +5,9 @@
 【怎么区别】
 
 2. http的缓存方案有哪些
+- expires 过期时间
+- Last-Modified 最后更新时间
+- cache-control: max-age=xxx秒
 
 4. 在url中携带参数的方式
 
