@@ -1,6 +1,6 @@
 1. postion属性每个值的意义：
 fixed，relative，absolute，static，unset，inherit
-【进击】 如果我想要用覆盖的形式取消某个元素的position属性，要如何做
+【进击】如果我想要用覆盖的形式取消某个元素的position属性，要如何做
 【进击】css样式覆盖的详细规则
 
 2. display属性常用值的意义：

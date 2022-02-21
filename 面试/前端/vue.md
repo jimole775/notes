@@ -8,8 +8,6 @@
   D. destoryed; # 在什么情况下会使用，销毁的什么东西
   E. beforeDestory;
 
-## 3. data, compouted和watch，哪个先实例化
-
 ## 9. 诱发视图刷新的情况有多少种
  - a. 修改视图数据，包括直接修改data数据，form表单的设置
  - a. this.$forceupdate()
