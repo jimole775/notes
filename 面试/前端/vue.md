@@ -15,6 +15,7 @@
 ## 3. 描述一下双向绑定的原理
 input输入框用@input或者@change事件来改变vm对象的数据
 vm对象的data数据对象，在create的时候，对面里面的set方法会被重写，重写的内容包括但不限于改变数据，触发watch函数，触发update钩子
+怎么避免无限循环
 
 ## 4. 知道缓存吗？一个后台管理项目，哪些地方会用到缓存？
   A. 页面浏览缓存
@@ -37,6 +38,10 @@ vm对象的data数据对象，在create的时候，对面里面的set方法会�
 如果“不同权限可观看到不同元素”，你要怎么做
 
 ## 7.2 computed，在什么情况下要使用computed，为什么要用computed，function函数不一样吗？
+1. computed可以理解为: data的属性，重写他们的get和set
+2. computed的原理: 因为它的get方法被注册到了watcher，watcher.dirty === true 的话就可以重新计算，否则返回 watcher.value
+3. computed和function的区别就是: computed被注册到了watcher对象，里面被监听数据没有变更过，那么会直接返回原来的值的，就是有一个缓存的效果
+4. computed的缺陷: 就是全程都被监听，所以没有初始状态，类似于watch属性的immediate
 
 ## 8. computed和function的区别
  - a. computed和function都是返回一个计算的结果，但是computed会缓存当前值，如果没有变化，就不会再调用，
@@ -81,7 +86,6 @@ keepalive F5刷新后会发生什么
 
 ## 一个审批流程，有3-5个审批节点，但是不同的人能看到不同的节点
 如果不同的人看到不同的字段
-
 
 ## slots
 使用了slot之后，里面的slot的内容有生命周期吗
