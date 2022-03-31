@@ -1,3 +1,0 @@
-exp:
-ping -n 2 127.1 >nul
-START "C:\Users\Andy\AppData\Local\Google\\Chrome SxS\Application\chrome.exe" "http://192.168.1.26:80"
