@@ -1,4 +1,6 @@
 ## 1. 描述一下vue的生命周期
+new Vue => router, store, 全局组件, 加载插件 => beforeCreate => data, computed, watcher, Dep => watcher immediate => created
+
 
 ## 2. 简单说一下声明周期，data，computed，watch，他们运行的顺序
   A. beforeCreated;
