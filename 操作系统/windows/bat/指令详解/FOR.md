@@ -13,16 +13,18 @@
 如果启用命令扩展，则会支持下列 FOR 命令的其他格式:
 
 1. `FOR /D %variable IN (set) DO command [command-parameters]`
-
 如果集中包含通配符，则指定与目录名匹配，而不与文件名匹配。
 
 2. `FOR /R [[drive:]path] %variable IN (set) DO command [command-parameters]`
-    检查以 [drive:]path 为根的目录树，指向每个目录中的 FOR 语句。
-    如果在 /R 后没有指定目录规范，则使用当前目录。如果集仅为一个单点(.)字符，则枚举该目录树。
+检查以 [drive:]path 为根的目录树，指向每个目录中的 FOR 语句。
+如果在 /R 后没有指定目录规范，则使用当前目录。如果集仅为一个单点(.)字符，则枚举该目录树。
 
 3. `FOR /L %variable IN (start,step,end) DO command [command-parameters]`
-    该集表示以增量形式从开始到结束的一个数字序列。因此，(1,1,5)将产生序列
-    1 2 3 4 5，(5,-1,1)将产生序列(5 4 3 2 1)
+
+该集表示以增量形式从开始到结束的一个数字序列。因此，(1,1,5)将产生序列 1 2 3 4 5，(5,-1,1) 将产生序列(5 4 3 2 1)
+
+4. `FOR /F "usebackq delims==" %i IN (`set`) DO @echo %i`
+
 ``` bat
 FOR /F ["options"] %variable IN (file-set) DO command [command-parameters]
 
@@ -58,11 +60,10 @@ FOR /F ["options"] %variable IN ('command') DO command [command-parameters]
 在作为命令执行一个后引号的字符串并且一个单引号字符为文字字符串命令并允许在 file-set 中使用双引号扩起文件名称。
 
 
-4. `FOR /F "usebackq delims==" %i IN (`set`) DO @echo %i`
-
 某些范例可能有助:
-
-`FOR /F "eol=; tokens=2,3* delims=, " %i in (myfile.txt) do @echo %i %j %k`
+``` bat
+FOR /F "eol=; tokens=2,3* delims=, " %i in (myfile.txt) do @echo %i %j %k
+```
 
 会分析 myfile.txt 中的每一行，忽略以分号打头的那些行，将每行中的第二个和第三个符号传递给 for 函数体，用逗号和/或空格分隔符号。
 
