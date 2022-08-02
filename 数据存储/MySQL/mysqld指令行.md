@@ -1,0 +1,1 @@
+1. mysqld -initialize --console // 初始化数据库
