@@ -31,3 +31,11 @@ FLUSH PRIVILEGES;
 
 alter user 'root'@'localhost' identified by '123456';
 ```
+
+
+## 6. 无法启动MySQL服务 报错1067
+这种报错信息，可以通过windows的日志查看详情
+
+> 右键我的电脑 > 管理 > 系统工具 > 事件查看器 > windows日志 > 应用程序
+
+最后可根据日志的详细信息进行百度|谷歌
