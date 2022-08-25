@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react", /* 用于检查jsx语法 */
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true, /** "experimentalDecorators" 的依赖项 */
+        "experimentalDecorators": true, /** 使用实验性的Decorators特性，跳过语法警告 */
+        "lib":[
+            "dom","dom.iterable" /* 用于检查类似于 document 之类的对象 */
+        ],
+        "typeRoots": [
+            "node_modules/@types", /* 可下载的公共类型，用angular-cli新建的项目会自动下载 */
+            "./.d.ts" /* 自己定义的类型 */
+        ],
+    },
+    "include": [
+        "./src/"
+    ]
+}

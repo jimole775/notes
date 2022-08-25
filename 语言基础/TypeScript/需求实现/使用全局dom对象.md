@@ -1,5 +1,3 @@
-
-
 配置 tsconfig.json
 ``` yml
 {

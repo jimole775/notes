@@ -7,15 +7,15 @@
    使用for循环相对于 forEach 对数组的遍历，`快0.5倍`（chrome中循环100W次）
 
    **结论**：`for > forEach > for in`
- 
+
 2. 大多数情况, 如果要遍历数组或者对象属性, 一般都会先用 `字面量` 或者 `局部变量` 的形式获取长度, 这样会比每次都计算数组或对象的长度省时许多
 
 
 3. 执行倒序循环 总体 比正序操作量少
 
-   `exp:     for(var i = item.length, i --){}`	// 这样的循环少了一部操作就是：不用比对 i值和数组长度的大小
+   `exp: for(var i = item.length, i --){}` // 这样的循环少了一部操作就是：不用比对 i值和数组长度的大小
 
-4. `基于函数` 的循环体要比 `基于循环` 的循环体要 `慢8倍` 
+4. `基于函数` 的循环体要比 `基于循环` 的循环体要 `慢8倍`
 
    **tips**: 所以，如果对于性能有考虑的话应该使用 for, while 而不要使用原生的forEach()
 
@@ -35,9 +35,9 @@
 
    // 消耗 N ms
    ary.forEach(function(item) {
-      if(item == ary[key]) return item
+      if (item == ary[key]) return item
    })
-```   
+```
 
 9. undefined和null
 
@@ -46,5 +46,3 @@
 - null 代表空或者置空，可以理解为，已经申请了栈内存，但没有初始化，也没有指向堆对象
 
 - 按照这么推断：null所占字节数小于undefined的
-   
-   	
