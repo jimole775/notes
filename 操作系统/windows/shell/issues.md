@@ -13,3 +13,13 @@ rm -rf /f/test # 有可能出现需要管理员权限的情况
 cd f:
 rm -rf test
 ```
+
+# 使用管理员权限运行 powershell
+1. win + r 输入 powershell
+2. 输入 `Start-Process powershell -Verb runAs`
+
+# 远程调用去掉权限校验
+
+比如： vscode 的powershell，运行ts-node的时候会报错，需要关掉powershell被其他程序调用时的校验
+
+流程：使用管理员权限运行 powershell => 输入 `Set-ExecutionPolicy RemoteSigned`

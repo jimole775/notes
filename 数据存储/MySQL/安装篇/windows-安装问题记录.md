@@ -1,6 +1,7 @@
 ## 1. TIMESTAMP with implicit DEFAULT value is deprecated.
 执行 `mysqld --initialize` 后出现上述告警，可以在 `my.ini` 配置中 `explicit_defaults_for_timestamp=true`
 
+
 ## 2. --secure-file-priv is set to NULL.
 执行 `mysqld --initialize` 后出现上述告警，可以在 `my.ini` 配置中 
 `secure-file-priv="D:/"`
@@ -19,17 +20,17 @@
 
 ## 5. navicat authentication plugin 'caching_sha2_password' cannot be loaded!
 密码缓存的问题，需要重新刷新，并重置密码；
-``` mysql
+``` sql
 
-# 修改账户密码加密规则并更新用户密码
+-- 修改账户密码加密规则并更新用户密码
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 
-# 刷新权限并重置密码
+-- 刷新权限并重置密码
 FLUSH PRIVILEGES;
 
-alter user 'root'@'localhost' identified by '123456';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 ```
 
 
