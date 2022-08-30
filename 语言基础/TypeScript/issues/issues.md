@@ -44,8 +44,57 @@
 主要是 `npm install -g ts-node typescript` 的时候出现的问题
 原因是vscode中powershell的权限问题，需要使用`管理员权限`启动powershell，运行指令 `Set-ExecutionPolicy RemoteSigned`
 
-# vscode 一直提示语法报错，即使安装了 @types/node 和配置了 .d.ts
+# vscode 一直提示类型报错，即使安装了 @types/node 和配置了 .d.ts
 
-如果tsc能正常编译ts文件，但是vscode一直提示类型报错，那么可以把ts的校验设置给去掉
+比如: `Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.ts(7017)`
 
-在vscode的setting界面搜索 `Typescript Validation`，去掉勾选就行
+原因: `@types/node` 中的声明文件 `globals.global.d.ts`，只声明了 global 的命名空间，但是当我们把变量绑到 global 的属性上面时，就会提示属性未定义
+
+- 解决办法：
+一般这种情况我们需要自己声明global的属性
+
+命名文件：`global.d.ts`
+
+``` ts
+declare global {
+  var env: string;
+  var business: string;
+  var crossEnv: object;
+}
+
+export {}
+```
+
+然后接下来的重要步骤，就是把声明文件加到 `tsconfig.json` 中
+
+``` json
+{
+  "include": [
+    "global.d.ts" /* 这里用于IDE的类型校验，如果这里不写，那么IDE会一直出现类型报错 */
+  ],
+  "compilerOptions": {
+    "typeRoots": [
+      "global.d.ts" /* 用于tsc编译 */
+    ]
+  }
+}
+```
+
+# ts-node 无法调试
+
+# error TS1219: Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning
+
+解决：
+在IDE中的setting中搜索 experimentalDecorators，并勾选对应的选项
+
+# 'this' implicitly has type 'any' because it does not have a type annotation.
+- **问题描述**：当在一个 **function函数** 中使用 this 对象时，会报这个错误
+- **解决办法**: 
+``` ts
+function foo (this: global, p1: string) {
+    console.log(this) // output global object
+    console.log(p1) // ouput 'foo'
+}
+
+foo('foo')
+```
