@@ -98,3 +98,12 @@ function foo (this: global, p1: string) {
 
 foo('foo')
 ```
+
+# Object is possibly 'undefined'.ts(2532)
+- **问题描述**：给变量指定类型的时候，加上了 `?` 或者 `| undefined`
+- **解决办法**：访问变量前，加上 `if` 语句就行 
+
+# Type 'string' is not assignable to type 'never'
+- **问题描述**：
+- **解决办法**：
+- 1. 首先需要查看一下是否有重复定义的类型，一般出现在参数和原型重名的情况
