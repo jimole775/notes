@@ -80,7 +80,25 @@ export {}
 }
 ```
 
-# ts-node 无法调试
+# ts-node 无法默认加载 types 文件
+
+- 解决办法：
+- 1. 命令行可以直接使用 `ts-node --files main.ts`
+- 2. 使用 `///<reference path="">` 语句在指定代码块去引用types
+- 3. 如果是vscpde调试，可以在 `tsconfig` 中加入 `ts-node` 的配置
+``` ts
+{
+  "ts-node": {
+    "files": true // 增加这一条配置即可，其他同默认配置
+  },
+  "include": [
+  ],
+  "exclude": [
+  ],
+  "compilerOptions": {
+  }
+}
+```
 
 # error TS1219: Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning
 
