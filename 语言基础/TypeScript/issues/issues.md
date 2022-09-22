@@ -116,3 +116,37 @@ function foo (this: global, p1: string) {
 
 foo('foo')
 ```
+
+# Object is possibly 'undefined'.ts(2532)
+- **问题描述**：给变量指定类型的时候，加上了 `?` 或者 `| undefined`
+- **解决办法**：访问变量前，加上 `if` 语句就行 
+
+# Type 'string' is not assignable to type 'never'
+- **问题描述**：
+- **解决办法**：
+- 1. 首先需要查看一下是否有重复定义的类型，一般出现在参数和原型重名的情况
+
+# Cannot redeclare block-scoped variable 'xxx'.ts(2451)
+- **问题描述**:
+当ts在编译阶段，tsc会把我们声明的变量、具名函数、class都放在了全局作用域，在生成js文件后，js文件里的变量、函数、class会跟ts文件的重复
+- **解决办法**:
+1. 把 module.exports<commonjs> 改为 export<es6> /** 推荐 */
+2. 直接修改变量名 /** 这样做会导致变量冗余 */
+3. 把变量定义放在入口模块，直接当作全局变量使用 /** 这样做会导致单元测试比较麻烦 */
+4. 在单模块的顶部使用`export {}` /** 不建议，因为这样会让模块看起来比较怪 */
+
+# Type '{}' is missing the following properties from type 'xxx': xx, xxxx, xxxxxxx, xxxxxx, and 79 more.ts(2740)
+- **问题描述**:
+在一个类中，当一个变量被声明了**特定类型**(非普通的 object, number....，有可能是自定义类型，或第三方类库的类型)，在 constructor 初始化的时候，给它赋值字面量数据就会报错
+
+- **解决办法**:
+1. 使用 **联合类型** 对变量进行声明
+2. 使用 **强制转换** 来对变量进行初始化
+``` ts
+class A {
+  public b: Type | {} // 方法1
+  constructor () {
+    this.b = {} as Type // 方法2
+  }
+}
+```
