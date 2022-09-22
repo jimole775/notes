@@ -80,12 +80,11 @@ export {}
 }
 ```
 
-# ts-node 无法默认加载 types 文件
+# ts-node 无法默认加载 types 声明文件
 
 - 解决办法：
 - 1. 命令行可以直接使用 `ts-node --files main.ts`
-- 2. 使用 `///<reference path="">` 语句在指定代码块去引用types
-- 3. 如果是vscpde调试，可以在 `tsconfig` 中加入 `ts-node` 的配置
+- 2. 如果是vscpde调试，可以在 `tsconfig` 中加入 `ts-node` 的配置
 ``` ts
 {
   "ts-node": {
