@@ -149,3 +149,41 @@ class A {
   }
 }
 ```
+
+# tsconfig的paths属性无法正确编译
+- **问题描述**:
+tsconfig里面的paths可以当路径别名使用，但是ts-node运行的时候，paths属性会被覆盖，所以需要第三方库协助
+
+
+- **解决办法**:
+可以使用 `tsconfig-paths` 包对 paths 进行封装
+
+然后在运行指令上，再加上 `-r tsconfig-paths/register` 句柄
+
+如果是使用 *vscode* 的 *lunch.json*，可以参考以下配置
+``` json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "ts-stock",
+  "runtimeArgs": [
+    "-r",
+    "tsconfig-paths/register"
+  ]
+}
+```
+
+> 可参考 https://www.5axxw.com/wiki/content/ggzyrr
+
+# TypeError: Unable to require file: xxx
+- **问题描述**:
+这个问题是我在使用 ts-node 的 `export * from 'xxx'` 时语法造成的，
+
+但在 ts-node 的 [issues](https://github.com/typestrong/ts-node/issues/990) 中和我的不是一个场景，但是似乎原因是一致的
+
+- **解决办法**:
+这里只针对 `export * from 'xxx'` 的语法造成的问题
+
+只要将其改成 `export xxx from 'xxx'` 就可以顺利编译
+
+
