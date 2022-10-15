@@ -1,1 +1,1 @@
-MySQL Workbench，数据库的链接工具
+MySQL Workbench，操作数据库的图形工具，主要的特点是免费

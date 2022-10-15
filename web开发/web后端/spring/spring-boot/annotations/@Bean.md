@@ -1,0 +1,1 @@
+用来标注类的方法，ComponentScan阶段会被执行，需要在类上面标注 @Configuration | @Component
