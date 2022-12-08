@@ -23,3 +23,14 @@
 https://blog.csdn.net/xu_melon/article/details/79043320   
 
 7. Failed to start nginx.service: Unit not found
+
+8. 执行 .sh 脚本时，提示 **$'\r': command not found**
+- **原因**：
+
+主要是 windows 和 unix 版本的换行符的不兼容造成的。
+一般情况下，比较高版本的系统应该没有这种问题，像 virtualbox 这种装在了低版本的裸机系统会有这种问题。
+
+- **解决**：
+解决的办法就是一个思路，就是把在windows系统中的 **CRLF** 类型转换成 **LF** 类型。
+
+> 比如：在 vscode 中，点击右下角的 **CRLF** 就可以切换了
