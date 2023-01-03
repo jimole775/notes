@@ -1,11 +1,16 @@
-# 安装centos/7的工具包
+# ==============================
+# 本脚本主要用于 centos/7 镜像系统
+# 的初始化工作
+# ==============================
+
+# 安装 centos/7 的工具包
 yum -y install wget
 yum -y install net-tools
 yum -y install telnet
 yum -y install kernel kernel-devel kernel-headers gcc make
 
 # 开启虚拟光驱
-mkdir /media/cdrom # 创建 cdrom 文件要存储的位置
+mkdir /media/cdrom # 创建cdrom文件要存储的位置
 lsscsi # 查看虚拟设备映射的位置
 mount /dev/sr0 /media/cdrom # 把光盘文件挂载到 /media/cdrom
 
@@ -14,4 +19,5 @@ mount /dev/sr0 /media/cdrom # 把光盘文件挂载到 /media/cdrom
 # 设置防火墙自启动
 systemctl enable firewalld
 
-reboot # 重启
+# 重启
+reboot
