@@ -14,7 +14,7 @@ new Vue => router, store, 全局组件, 加载插件 => beforeCreate => data, co
  - a. 修改视图数据，包括直接修改data数据，form表单的设置
  - a. this.$forceupdate()
 
-## 3. 描述一下双向绑定的原理
+## 3. 描述一下双向绑定的原理，单向绑定？
 input输入框用@input或者@change事件来改变vm对象的数据
 vm对象的data数据对象，在create的时候，对面里面的set方法会被重写，重写的内容包括但不限于改变数据，触发watch函数，触发update钩子
 
