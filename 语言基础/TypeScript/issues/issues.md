@@ -186,4 +186,17 @@ tsconfig里面的paths可以当路径别名使用，但是ts-node运行的时候
 
 只要将其改成 `export xxx from 'xxx'` 就可以顺利编译
 
+# Property '...' has no initializer and is not definitely assigned in the constructor
 
+- **问题描述**:
+一个变量在初始化的时候，必须需要给它赋个初始值，如果初始值不符合声明的类型，就会报这个问题
+
+- **解决办法**：
+直接在 tsconfig.json 中，把初始化校验去掉就行
+
+``` ts
+"compilerOptions": {
+  "strictPropertyInitialization": false,
+  ...
+}
+```

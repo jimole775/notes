@@ -38,3 +38,5 @@
 	- C. canvas导入，canvas处理能加载，展示图片，还能对图片做些什么？canvas能加载哪些类型的图片，能加载SVG吗？了解SVG吗？
 	- E. icon-font, icon-font的优劣
 `进击`图片的解析方式呢？a:base64，b:url地址，c:二进制流（encodeURL）
+
+## 6. 如何监听一个dom的变化？样式变化、新增节点、渲染完毕？
