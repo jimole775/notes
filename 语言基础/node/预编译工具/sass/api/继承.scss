@@ -1,0 +1,9 @@
+.class1 {
+  border:1px solid #ddd;
+}
+
+.class2 {
+  @extend .class1; // 类似jq的扩展方法
+  font-size:120%;
+}
+

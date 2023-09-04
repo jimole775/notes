@@ -1,0 +1,20 @@
+/** 定义 */
+@mixin left {
+  float:left;
+  margin-left:10px;	
+}
+
+/** 调用 */
+div {
+  @include left;
+}
+
+/** 可设置参数 */
+@mixin right($size) {
+  width:$size;
+  height:$size;
+}
+
+div {
+  @include right(100px);
+}

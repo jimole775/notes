@@ -1,0 +1,107 @@
+周小辉是一名高级软件工程师，从事Java和Web程序开发，近期项目是基于Angular框架开发的web项目，今天他为大家带来项目开发中碰到的难点，该问题是Angular框架下实现动态加载架构的有效方案，希望对大家有所启发。
+
+
+
+有这样一个需求，存在父子页面，子页面有个输入框，父页面有个提交按钮，点击提交按钮，触发子页面的输入框参数校验，如果校验失败，则显示提示信息。iframe子页面与父页面通信根据iframe中src属性是同域链接还是跨域链接，通信方式也不同。这里主要描述重点是基于Angular开发语言的交互，因此以同域链接场景为例。
+
+我们知道同域链接场景父页面调用子页面方法： 
+
+FrameName.window.childMethod();
+
+当获得子iframe窗口的window对象时就可以交互，子页面在基于传统的js框架，如jquery实现的话，会是下面这样
+
+function childMethod(){
+
+   var number=    $('#number').value();
+
+   if(number=='' || number.length>10){
+
+   alert('号码范围为1-10位数字');
+
+   }
+
+ }
+
+   jquery是基于dom开发的，但是在angular下，我们不直接操作dom，我们一般定义一个ngModel绑定到页面上，通过ngModel来获取值，这时，实现就无从下手了，好在Angular1.0提供了api，而Angular2.0没有开放任何接口
+
+  Angular1.0
+
+index.html中实现childMethod
+
+function childMethod(){
+
+
+var controllerScope = $('html[ng-controller="MainCtrl"]').scope(); 
+
+controllerScope.check();
+
+}
+
+//相应的controller实现一个check方法，并声明为rootscope方法就行了
+
+app.controller('MainCtrl', function($scope, $rootScope) {
+
+
+
+});
+
+app.controller('ChildCtrl', function($scope, $rootScope) {
+
+   $scope.number = '';
+
+   $rootScope.check = function() {
+
+      if(number=='' || number.length>10){
+
+      alert('号码范围为1-10位数字');
+
+   }
+
+});
+
+
+
+ Angular2.0
+
+
+index.html中实现childMethod
+
+function childMethod(){
+
+var component =  window['child'];
+
+component .check();
+
+}
+
+
+
+组件实现check方法
+
+export class ChildComponent implements OnInit {
+
+    number:string;
+
+    constructor(public changedDetector: ChangeDetectorRef, public translate: TranslateService) {
+
+        window['child'] = this;
+
+    }
+
+    check(){
+
+      if(number=='' || number.length>10){
+
+      alert('号码范围为1-10位数字');
+
+  
+
+      this.changedDetector.markForCheck();    //解决变量修改失效问题
+
+      this.changedDetector.detectChanges();
+
+     }  
+
+    }
+
+可以看到，我们在ChildCompent的构造方法中，给window扩展了一个child属性，然后在子页面的index.html可以通过这个属性访问到该组件，是一个比较讨巧的用法；但是这样直接使用会有问题，当我们在ChildComponent 组件的check方法中操作原生的js语法时不会有问题，但是当我们需要修改某个ngModel的值时，会发现失效了，原因是我们通过 window['child'].check()时，浏览器没有监听到事件变化，因而没有重新渲染ChildComponent，我的理解是一般事件都是监听鼠标触发的，此时没有产生鼠标事件，自然监听不到；解决方案就是手动通知组件重新渲染，代码就是ChangeDetectorRef提供的markForCheck,detectChanges方法

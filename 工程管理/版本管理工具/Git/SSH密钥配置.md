@@ -14,7 +14,7 @@ $ git config --global user.email haiyan.xu.vip@gmail.com
 #### 2. 生成密钥：
 
   ``` bash
-  $ ssh-keygen -t rsa 727346595@qq.com
+  $ ssh-keygen -t rsa
   ```
   按3个回车，密码为空。
 

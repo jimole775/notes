@@ -1,0 +1,8 @@
+require();
+
+require(['A','B','C'],function(A,B,C){}) //AMD形式的依赖注入
+
+// require的加载次序会在define方法之后，
+// require和define的区别，
+// require会兼容到由module对象（require内置类的实例）的导出对象，也就是它实现了类似nodejs的模块的接口
+// 而define只是单纯的通过script标签动态创建js执行域，并通过dom对象的complete事件来调用回调来实现AMD

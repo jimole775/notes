@@ -1,0 +1,26 @@
+...babel-core提供了一些API给应用内部调用；
+
+...| 安装：
+$ npm install --save babel-core
+
+...其作用相当于给JS动态的转码，不过根据转换出来的结果是个json，code的内容格式是个字符串来看
+...前端的使用场景就相当的少了，（制作一个在线的ES版本转码工具？）
+...在node里面的用处应该比较大
+...包括:
+
+...| babel.transform
+> var babel = require("babel-core");    //如果是html，可以直接用script标签引入，做全局对象使用
+> var code = "let foo = 'bar'";
+> var option = {presets:["es2015"]};
+> var result = babel.transform(code,option).code;
+> console.log(result);
+> //"use strict";
+> //var foo = "bar";
+
+...| babel.transformFile    //根据这分API的性质，只能在node环境种使用了
+> var option = {presets:["es2015"]};
+> babel.transformFile(__dirname + "/file.js",option,(err,result) => {console.log(result)});
+> //"use strict";
+> //var foo = ".....
+
+...| babel.transformFileSync    //和上面的格式差不多

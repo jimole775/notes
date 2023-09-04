@@ -1,0 +1,10 @@
+// 原生 css 导入外部文件的时候, 都会通过浏览器加载(CDN模式)
+// sass 同样的 "@import" 命令, 却是在打包的时候进行本地打包的
+// 不过, 以下三种情况, "@import" 命令会以原生的方式解析:
+
+// 被导入文件的名字以.css 结尾
+// 被导入文件的名字是一个URL地址(比如http://www.sass.hk/css/css.css), 由此可用谷歌字体API提供的相应服务
+// 被导入文件的名字是CSS的url()值
+
+@import "./mixin.css"; // 在这种情况下的时候, 由于, sass兼容原生的css语法, 直接把文件后缀改成scss就可以了
+@import "./mixin.scss";
