@@ -1,3 +1,0 @@
-var $scope = angular.element($0).scope();
-
-$0就是当前选中的元素

@@ -101,7 +101,7 @@ export {}
 
 # error TS1219: Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning
 
-解决：
+- 解决：
 在IDE中的setting中搜索 experimentalDecorators，并勾选对应的选项
 
 # 'this' implicitly has type 'any' because it does not have a type annotation.
